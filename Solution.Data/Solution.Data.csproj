@@ -60,9 +60,17 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\202002291545457_kindergarten.cs" />
-    <Compile Include="Migrations\202002291545457_kindergarten.designer.cs">
-      <DependentUpon>202002291545457_kindergarten.cs</DependentUpon>
+    <Compile Include="Migrations\202003021806395_kindergarten.cs" />
+    <Compile Include="Migrations\202003021806395_kindergarten.designer.cs">
+      <DependentUpon>202003021806395_kindergarten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003022018078_kindergarten2.cs" />
+    <Compile Include="Migrations\202003022018078_kindergarten2.designer.cs">
+      <DependentUpon>202003022018078_kindergarten2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003022119267_kindergarten3.cs" />
+    <Compile Include="Migrations\202003022119267_kindergarten3.designer.cs">
+      <DependentUpon>202003022119267_kindergarten3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -83,8 +91,14 @@
     <Folder Include="CustomConventions\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002291545457_kindergarten.resx">
-      <DependentUpon>202002291545457_kindergarten.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003021806395_kindergarten.resx">
+      <DependentUpon>202003021806395_kindergarten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003022018078_kindergarten2.resx">
+      <DependentUpon>202003022018078_kindergarten2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003022119267_kindergarten3.resx">
+      <DependentUpon>202003022119267_kindergarten3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

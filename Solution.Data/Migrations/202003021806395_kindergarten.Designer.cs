@@ -13,7 +13,7 @@ namespace Solution.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202002291545457_kindergarten"; }
+            get { return "202003021806395_kindergarten"; }
         }
         
         string IMigrationMetadata.Source

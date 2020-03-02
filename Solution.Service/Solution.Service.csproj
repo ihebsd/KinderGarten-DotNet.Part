@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="EventService.cs" />
+    <Compile Include="IEventService.cs" />
     <Compile Include="IKinderGartenService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="KinderGartenService.cs" />

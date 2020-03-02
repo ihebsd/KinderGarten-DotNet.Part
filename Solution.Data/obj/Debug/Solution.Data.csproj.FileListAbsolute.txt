@@ -28,3 +28,21 @@ C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\obj\D
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.pdb
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.Migrations.kindergarten.resources
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.csproj.GenerateResource.cache
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Data.dll.config
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Data.dll
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Data.pdb
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.dll
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Domain.dll
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Domain.pdb
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Domain.dll.config
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.xml
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.csprojAssemblyReference.cache
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.csproj.CopyComplete
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.dll
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.pdb
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.Migrations.kindergarten.resources
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.csproj.GenerateResource.cache
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.Migrations.kindergarten2.resources
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.Migrations.kindergarten3.resources

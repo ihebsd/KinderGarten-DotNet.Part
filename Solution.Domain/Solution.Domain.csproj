@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Entities\Directeur.cs" />
+    <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\KinderGarten.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

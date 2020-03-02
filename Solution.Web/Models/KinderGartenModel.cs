@@ -6,6 +6,7 @@ using System.Web;
 
 namespace Solution.Web.Models
 {
+
     public class KinderGartenModel
     {
         [Key]

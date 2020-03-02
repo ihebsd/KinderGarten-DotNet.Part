@@ -238,3 +238,6 @@ C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\obj\De
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.csproj.CopyComplete
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.dll
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.pdb
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.csprojAssemblyReference.cache
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.dll
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.pdb
