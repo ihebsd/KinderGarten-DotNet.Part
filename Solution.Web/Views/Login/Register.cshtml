@@ -1,0 +1,91 @@
+﻿@model Solution.Domain.Entities.User
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+
+}
+<html lang="zxx">
+
+<!-- Mirrored from fvdthemes.com/html/yeahkids/reg.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:49:47 GMT -->
+
+
+<body>
+
+
+    <section id="authorization_page" class="authorization_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 dot">
+                    <h2 class="section-title">Register</h2>
+                    <p class="section-description">Already have an account? - <a href="/Login/Login">Log In</a></p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    @using (Html.BeginForm("Register", "Login", htmlAttributes: new { id = "registerform" }, method: FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="reg_box">
+                            @Html.TextBoxFor(model => model.prenom, new { @class = "form-control", @placeholder = "First Name" })
+                            @Html.ValidationMessageFor(model => model.prenom, "", new { @class = "text-danger" })
+
+                            @Html.TextBoxFor(m => m.nom, new { @class = "form-control", @placeholder = "Last Name" })
+                            @Html.ValidationMessageFor(model => model.nom, "", new { @class = "text-danger" })
+
+                            @Html.TextBoxFor(m => m.login, new { @class = "form-control", @placeholder = "Username" })
+                            @Html.ValidationMessageFor(model => model.login, "", new { @class = "text-danger" })
+
+                            <DIV ALIGN="CENTER">
+                                @Html.EnumDropDownListFor(model => model.role, new { @class = "form-control", style = "width: 350px" })
+                            </DIV><br />
+                            @Html.TextBoxFor(m => m.email, new { @class = "form-control", @placeholder = "Email" })
+                            @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+
+
+                            @Html.PasswordFor(m => m.password, new { @class = "form-control", @placeholder = "Password" })
+                            @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+
+                            @Html.PasswordFor(m => m.Confirmpassword, new { @class = "form-control", @placeholder = "Confirm Password" })
+                            @Html.ValidationMessageFor(model => model.Confirmpassword, "", new { @class = "text-danger" })
+
+
+
+                        </div>
+                        <div class="reg_checkbox">
+                            <input type="checkbox" class="checkbox" id="checkbox" />
+                            <label for="checkbox"></label>
+                            <span>I agree to the <a href="#">Terms of service</a></span>
+                        </div>
+                        <button class="button" type="submit" value="Register">Register</button>
+                    }
+                    <script>
+                        var form = document.getElementById('registerform');
+
+                        function myFunction() {
+                            if (form.checkValidity()) {
+                                alert("Registred succesfully ! Check your email to verify your account");
+                            }
+                        }
+                    </script>
+                    @Html.ActionLink("You have already an account ?", "Login", "Register")
+
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+   
+
+</body>
+
+<!-- Mirrored from fvdthemes.com/html/yeahkids/reg.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:49:47 GMT -->
+</html>
+
+
+
+

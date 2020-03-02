@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "VerifyAccount";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from fvdthemes.com/html/yeahkids/reset_password.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:57:31 GMT -->
+
+
+
+
+<body>
+
+
+
+
+
+    <section id="authorization_page" class="authorization_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                    <h2 class="section-title">
+                        @if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+                        {
+                            <div class="alert alert-success">
+                                <strong>Success!</strong> Your account has been activated successfully. Click here to @Html.ActionLink("Login", "Login", "Login")
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-danger">
+                                <strong>Error!</strong> @ViewBag.Message
+                            </div>
+                        }
+                                    </h2>
+                    <p class="section-description">
+                        
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <DIV ALIGN="CENTER">
+                        <div class="text-success">
+                            <h1> @ViewBag.Message</h1>
+                        </div>
+                        <div class="reg_box">
+
+                        </div>
+
+                    </DIV>
+                </div>
+            </div>
+    </section>
+
+    <!--End JS -->
+
+
+</body>
+
+<!-- Mirrored from fvdthemes.com/html/yeahkids/reset_password.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:57:31 GMT -->
+</html>
+
+

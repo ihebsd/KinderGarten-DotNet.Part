@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6CEFB13-F213-4D22-B762-08E2F865DCB2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solution.Web</RootNamespace>
+    <AssemblyName>Solution.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44326</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KinderGartenController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\KinderGartenModel.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ResetPasswordModel.cs" />
+    <Compile Include="Models\UserLogin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Front\a.vimeocdn.com\js\froogaloop2.min.js" />
+    <Content Include="Content\Front\backblue.gif" />
+    <Content Include="Content\Front\fade.gif" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\404.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\about_us.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\blog.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\blog_article.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\contact.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\animate\animate.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\font-awesome\font-awesome.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\fonts.min.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\fonts\glyphicons-halflings-regular-3.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\fonts\glyphicons-halflings-regular-4.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\fonts\glyphicons-halflings-regular-5.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\fonts\glyphicons-halflings-regulard41d.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\magnific-popup\magnific-popup.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\mediab6ae.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\owl.carousel\owl.carousel.min.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\owl.carousel\owl.theme.default.min.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\owl.carousel\owl.video.play.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\slick\ajax-loader.gif" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\slick\slick-theme.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\slick\slick.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\slider-pro-master\images\closedhand.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\slider-pro-master\images\openhand.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\slider-pro-master\slider-pro.min.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\style2b44.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\css\style5fd0.css" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\event.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\events.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\FAQ.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\fontawesome\fontawesome-webfont3e6e.svg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\gallery.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\about\about_img.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\about\yeahkids_bg_violet_01.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\about\yeahkids_grass_bg_repeat-x_01.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\author.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\author1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\author2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\author3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\author4.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\author5.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\author6.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\author7.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\blog_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\blog_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\blog_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\blog_4.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\blog_page_img_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\blog_page_img_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\blog_page_img_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\blog_page_img_4.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\last_news_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\last_news_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\last_news_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\related_posts_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\related_posts_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\blog\related_posts_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_4.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_5.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_6.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_gallery_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_gallery_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_gallery_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_gallery_4.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\events\events_single.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\favicon\apple-touch-icon-114x114.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\favicon\apple-touch-icon-72x72.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\favicon\apple-touch-icon.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\favicon\favicon1.ico" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\footer_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\footer_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\footer_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\footer_4.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\footer_5.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\footer_6.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\slider_footer_v2.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\slider_footer_v3.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\yeahkids_footer_imgs_bg_repeat-x_01-1.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\yeahkids_footer_imgs_bg_repeat-x_01-2.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\yeahkids_footer_imgs_bg_repeat-x_01-3.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\yeahkids_footer_sky_bg_repeat_v02.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\yeahkids_header_imgs_repeat-x_v01-4.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\footer\yeahkids_slider_land_bg_repeat_v01.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\header\logo.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\about_bear.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\about_img.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\activities.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\ball.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\bottom_stories_blue.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\bottom_stories_green.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\bottom_stories_red.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\clouds.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\clouds_1.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\clouds_2.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\clouds_3.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\clouds_4.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\clouds_5.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\copter.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\development.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\education.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\friendship.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\globe.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\menu_bg_pattern_18_01.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\menu_bg_pattern_18_02.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\plain.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v10.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v11.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v12.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v4.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v5.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v6.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v7.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v8.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_background_v9.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_home_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_home_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\slider_home_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\sun.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\sun_v2.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\sun_without.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\top_stories_blue.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\top_stories_green.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\top_stories_red.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\yeahkids_bg_green_01.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\yeahkids_bg_violet_02.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\yeahkids_flags_bg_repeat-x_01.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\yeahkids_leaves_1_bg_repeat-x_01.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\yeahkids_leaves_2_bg_repeat-x_01.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\home\yeahkids_leaves_3_bg_repeat-x_01.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\bell.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\check.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\flag.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\koma.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\koma_grey.svg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\koma_r.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\koma_red.svg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\koma_w.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\koma_white.svg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\marker.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\marker_event.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\no-check.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\rocket.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\search_gallery.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\ship.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\icons\video_gallery.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\1-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\10-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\11-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\12-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\2-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\3-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\4-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\5-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\6-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\7-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\8-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\portfolio\9-thumb.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\service\activities.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\service\development.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\service\education.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\service\friendship.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\service\kids_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\service\kids_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\service\kids_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\service\kids_4.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\service\yeahkids_bg_repeat-x-y_02.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\shop\best_price.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\shop\item-1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\shop\item-2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\shop\item-3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\shop\item-4.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\shop\item-5.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\shop\item-6.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\shop\item-8.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\shop\new.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\shop\popular.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\table\lion.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\table\lion_only.png" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\certificate_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\certificate_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\certificate_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\certificate_full_1.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\certificate_full_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\certificate_full_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\stock-photo-education.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\teacher_1.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\teacher_2.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\teacher_3.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\teacher_4.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\teacher_5.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\teacher_6.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\teacher_7.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\img\teacher\teacher_8.jpg" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\index.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\bootstrap\bootstrap.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\count\jquery.countdown.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\count\jquery.countup.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\functionsf899.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\imagesloaded\imagesloaded.pkgd.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\isotope\isotope.pkgd.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\jquery-ui\jQuery-UITouchPunch.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\jquery\jquery.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\magnific-popup\magnific-popup.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\object-fit-images\ofi.browser.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\owl.carousel\owl.carousel.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\page-scroll-to-id\jquery.malihu.PageScroll2id.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\parallax-object\parallax.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\parallax\parallax.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\send28fd.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\sendcf2e.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\slick\slick.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\slider-pro-master\jquery.sliderPro.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\sticky-kit-master\sticky-kit.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\validate\validate.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\waypoints\jquery.waypoints.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\wow\wow.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\login.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\Popover requires tooltip.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\post_children-take-care-of-nature.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\post_preparing-for-the-new-year-holiday.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\post_report-children-s-birthdays.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\post_week-of-football-competitions.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\price-table_a.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\price-table_b.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\reg.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\reset_password.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\reviews.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\service_v1.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\service_v2.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\shop_cart.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\shop_cart_empty.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\shop_grid.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\shop_item.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\shop_list.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\teacher.html" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\teachers.html" />
+    <Content Include="Content\Front\hts-cache\new.lst" />
+    <Content Include="Content\Front\hts-cache\new.txt" />
+    <Content Include="Content\Front\hts-cache\readme.txt" />
+    <Content Include="Content\Front\hts-log.txt" />
+    <Content Include="Content\Front\index.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\Boogaloo\Boogaloo-Regular.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\Boogaloo\Boogaloo-Regular.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\Boogaloo\Boogaloo-Regular.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\Boogaloo\Boogaloo-Regulard41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\fontawesome\fontawesome-webfont3e6e.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\fontawesome\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\fontawesome\fontawesome-webfont3e6e.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\fontawesome\fontawesome-webfont3e6e.woff2" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\fontawesome\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansBoldItalic\OpenSansBoldItalic.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansBoldItalic\OpenSansBoldItalic.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansBoldItalic\OpenSansBoldItalic.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansBoldItalic\OpenSansBoldItalicd41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansBold\OpenSansBold.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansBold\OpenSansBold.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansBold\OpenSansBold.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansBold\OpenSansBoldd41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansExtraBoldItalic\OpenSansExtraBoldItalic.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansExtraBoldItalic\OpenSansExtraBoldItalic.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansExtraBoldItalic\OpenSansExtraBoldItalic.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansExtraBoldItalic\OpenSansExtraBoldItalicd41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansExtraBold\OpenSansExtraBold.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansExtraBold\OpenSansExtraBold.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansExtraBold\OpenSansExtraBold.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansExtraBold\OpenSansExtraBoldd41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansItalic\OpenSansItalic.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansItalic\OpenSansItalic.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansItalic\OpenSansItalic.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansItalic\OpenSansItalicd41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansLight\OpenSansLight.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansLight\OpenSansLight.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansLight\OpenSansLight.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansLight\OpenSansLightd41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansRegularItalic\OpenSansRegularItalic.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansRegularItalic\OpenSansRegularItalic.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansRegularItalic\OpenSansRegularItalic.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansRegularItalic\OpenSansRegularItalicd41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansRegular\OpenSansRegular.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansRegular\OpenSansRegular.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansRegular\OpenSansRegular.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansRegular\OpenSansRegulard41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansSemiBoldItalic\OpenSansSemiBoldItalic.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansSemiBoldItalic\OpenSansSemiBoldItalic.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansSemiBoldItalic\OpenSansSemiBoldItalic.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansSemiBoldItalic\OpenSansSemiBoldItalicd41d.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansSemiBold\OpenSansSemiBold.eot" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansSemiBold\OpenSansSemiBold.ttf" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansSemiBold\OpenSansSemiBold.woff" />
+    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\fonts\OpenSans\OpenSansSemiBold\OpenSansSemiBoldd41d.eot" />
+    <Content Include="Content\Front\hts-cache\doit.log" />
+    <Content Include="Content\Front\hts-cache\new.zip" />
+    <Content Include="Content\Front\hts-cache\winprofile.ini" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Login\ForgotPassword.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Views\Login\VerifyAccount.cshtml" />
+    <Content Include="Views\Shared\_MyLayout.cshtml" />
+    <Content Include="Views\Login\ResetPassword.cshtml" />
+    <Content Include="Views\KinderGarten\Create.cshtml" />
+    <Content Include="Views\KinderGarten\Index.cshtml" />
+    <Content Include="Views\KinderGarten\Details.cshtml" />
+    <Content Include="Views\KinderGarten\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Service.Pattern\Service.Pattern.csproj">
+      <Project>{55c21f7d-4c89-4051-8c58-b91881eb668c}</Project>
+      <Name>Service.Pattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Data\Solution.Data.csproj">
+      <Project>{E08A17C8-A617-448E-9B5A-5170C11F1DDF}</Project>
+      <Name>Solution.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Domain\Solution.Domain.csproj">
+      <Project>{9ffed16b-ee87-404c-9d3f-1bff425d5f41}</Project>
+      <Name>Solution.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solution.Service\Solution.Service.csproj">
+      <Project>{ebcb25f5-49a8-4224-8069-f078a356a522}</Project>
+      <Name>Solution.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6415</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44326/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
