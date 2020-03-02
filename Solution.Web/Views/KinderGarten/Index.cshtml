@@ -39,7 +39,7 @@
                                 <p class="grids_description t_grey">@Html.DisplayFor(modelItem => item.Description)</p>
                                 @if (Session["idu"].Equals(item.DirecteurId))
                                 {
-                                    6<p>@Html.ActionLink("Supprimer", "Delete", new { id = item.KinderGartenId })</p>
+                                   <p>@Html.ActionLink("Supprimer", "Delete", new { id = item.KinderGartenId })</p>
                             }
                             </div>
                         </div>
