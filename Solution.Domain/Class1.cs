@@ -9,7 +9,6 @@ namespace Solution.Domain
 {
     public class Class1
     {
-        git push --set-upstream origin hsine
 
     }
 }
