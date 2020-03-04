@@ -8,7 +8,10 @@ namespace Solution.Domain.Entities
 {
     public class Directeur:User
     {
+        public int Echelon { get; set; }
         public virtual ICollection<KinderGarten> Kindergartens { get; set; }
+        public virtual ICollection<Event> Events { get; set; }
+
 
     }
 }

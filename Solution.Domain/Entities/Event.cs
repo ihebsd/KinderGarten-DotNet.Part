@@ -28,6 +28,6 @@ namespace Solution.Domain.Entities
 
         //prop de navig
         [ForeignKey("DirecteurFk")]
-        public virtual User User { get; set; }
+        public virtual Directeur Directeur { get; set; }
     }
 }

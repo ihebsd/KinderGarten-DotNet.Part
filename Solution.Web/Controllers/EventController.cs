@@ -89,11 +89,12 @@ namespace Solution.Web.Controllers
             Event ev = new Event();
 
             ev.Name = em.Name;         
-            ev.AdminConfirmtion = em.AdminConfirmtion;
+            ev.AdminConfirmtion = false;
             ev.Category = em.Category;
             ev.DateEvent = em.DateEvent;
             ev.Description = em.Description;
-            ev.image = em.image;
+            ev.image = Image.FileName;
+            ev.number_P = em.number_P;
             ev.DirecteurFk = (int)Session["idu"];
             EventService.Add(ev);
             EventService.Commit();

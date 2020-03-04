@@ -46,3 +46,4 @@ C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solut
 C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.csproj.GenerateResource.cache
 C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.Migrations.kindergarten2.resources
 C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.Migrations.kindergarten3.resources
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.Migrations.seconmig.resources

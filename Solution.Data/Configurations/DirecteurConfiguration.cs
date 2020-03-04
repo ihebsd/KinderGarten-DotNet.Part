@@ -13,6 +13,7 @@ namespace Solution.Data.Configurations
         public DirecteurConfiguration()
         {
             HasMany(u => u.Kindergartens).WithRequired(k => k.Directeur).HasForeignKey(p => p.DirecteurId).WillCascadeOnDelete(true);
+            HasMany(u => u.Events).WithRequired(k => k.Directeur).HasForeignKey(p => p.DirecteurFk).WillCascadeOnDelete(true);
 
         }
     }
