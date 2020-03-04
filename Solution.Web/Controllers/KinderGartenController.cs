@@ -140,8 +140,7 @@ namespace Solution.Web.Controllers
             KinderGartenModel tm = new KinderGartenModel();
 
             tm.Name = t.Name;
-            //ImageUrl = Image.FileName,
-            tm.DateCreation = t.DateCreation;
+            tm.Image = t.Image;
             tm.Address = t.Address;
             tm.Cost = t.Cost;
             tm.Description = t.Description;
@@ -152,19 +151,31 @@ namespace Solution.Web.Controllers
 
         // POST: KinderGarten/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, KinderGartenModel tm, HttpPostedFileBase Image)
         {
             try
             {
-                // TODO: Add update logic here
-
+                KinderGarten  t = KindergartenService.GetById(id);
+                t.Name = tm.Name;
+                t.Image = Image.FileName;
+                t.Description = tm.Description;
+                t.NbrEmp = tm.NbrEmp;
+                t.Phone = tm.Phone;
+                t.Address = tm.Address;
+                t.Cost = tm.Cost;
+                
+                 var path = Path.Combine(Server.MapPath("~/Content/Uploads"), Image.FileName);
+                Image.SaveAs(path);
+                KindergartenService.Update(t);
+                KindergartenService.Commit();
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                return View(tm);
             }
         }
+
 
         // GET: KinderGarten/Delete/5
         public ActionResult Delete(int id)

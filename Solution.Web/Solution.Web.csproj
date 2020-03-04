@@ -560,6 +560,7 @@
     <Content Include="Views\KinderGarten\Create.cshtml" />
     <Content Include="Views\KinderGarten\Index.cshtml" />
     <Content Include="Views\KinderGarten\Details.cshtml" />
+    <Content Include="Views\KinderGarten\Edit.cshtml" />
     <Content Include="Views\KinderGarten\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>

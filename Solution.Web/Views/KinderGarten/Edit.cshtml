@@ -1,10 +1,10 @@
-﻿@model Solution.Domain.Entities.KinderGarten
+﻿@model Solution.Web.Models.KinderGartenModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
 }
 
-<h2>Create Kindergarten</h2>
+<h2>Edit Kindergarten</h2>
 
 <html lang="zxx">
 
@@ -20,32 +20,32 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    @using (Html.BeginForm("Create", "Kindergarten", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    @using (Html.BeginForm("Edit", "Kindergarten", FormMethod.Post, new { enctype = "multipart/form-data" }))
                     {
                         @Html.AntiForgeryToken()
 
                     <div class="reg_box">
                         <DIV ALIGN="CENTER">
                             <h3>Name</h3>
-                        </DIV>
+                        </DIV>   
                         @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = " Name" })
                         @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
 
                         <DIV ALIGN="CENTER">
                             <h3>Description</h3>
-                        </DIV>
+                        </DIV>  
                         @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = " Description" })
                         @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
 
                         <DIV ALIGN="CENTER">
                             <h3>Address</h3>
-                        </DIV>
+                        </DIV>   
                         @Html.TextBoxFor(model => model.Address, new { @class = "form-control", @placeholder = " Address" })
                         @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
 
                         <DIV ALIGN="CENTER">
                             <h3>Cost</h3>
-                        </DIV>
+                        </DIV>  
                         @Html.TextBoxFor(model => model.Cost, new { @class = "form-control", @placeholder = " Cost" })
                         @Html.ValidationMessageFor(m => m.Cost, "", new { @class = "text-danger" })
 
@@ -64,7 +64,7 @@
                         <DIV ALIGN="CENTER">
                             <h3>Picture</h3>
 
-                        </DIV>
+                        </DIV>     
                         @Html.TextBox("Image", null, new
 {
   type = "file",
@@ -72,11 +72,10 @@
 })
                         @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
 
-
                     </div>
 
 
-                        <button class="button" type="submit" value="Create">Create</button>
+                        <button class="button" type="submit" value="Edit">Edit</button>
 
 
 
@@ -95,7 +94,8 @@
 
 </html>
 
-
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+

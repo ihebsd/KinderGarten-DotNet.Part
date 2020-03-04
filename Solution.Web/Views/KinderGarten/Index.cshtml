@@ -39,42 +39,44 @@
                                 <p class="grids_description t_grey">@Html.DisplayFor(modelItem => item.Description)</p>
                                 @if (Session["idu"].Equals(item.DirecteurId))
                                 {
-                                    <p>@Html.ActionLink("Supprimer", "Delete", new { id = item.KinderGartenId })</p>
-                            }
+                                    <p>@Html.ActionLink("Delete", "Delete", new { id = item.KinderGartenId })</p>
+                                    <p>@Html.ActionLink("Edit", "Edit", new { id = item.KinderGartenId })</p>
+
+                                }
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <br />
-            <br />
-            <br />
-            <br /> <br />
-            <br />
-            <br />
 
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-        }
+        } <br />
+        <br />
+        <br />
+        <br /> <br />
+        <br />
+        <br />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
     </body>
