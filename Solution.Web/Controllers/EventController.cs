@@ -65,7 +65,7 @@ namespace Solution.Web.Controllers
             }
             EventModel es = new EventModel()
             {
-                AdminConfirmtion = e.AdminConfirmtion,
+               // AdminConfirmtion = e.AdminConfirmtion,
                 DateEvent = e.DateEvent,
                 Category = e.Category,
                 image = e.image,
@@ -108,8 +108,17 @@ namespace Solution.Web.Controllers
         // GET: Event/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Event e = EventService.GetById(id);
+            EventModel em = new EventModel();
+            em.Name = e.Name;
+            em.number_P = e.number_P;
+            em.image = e.image;
+            em.Category = e.Category;
+            em.DateEvent = e.DateEvent;
+            em.Description = e.Description;
+            return View(em);
         }
+
 
         // POST: Event/Edit/5
         [HttpPost]
@@ -122,7 +131,8 @@ namespace Solution.Web.Controllers
             //ImageUrl = Image.FileName,
             em.Category = e.Category;
             em.DateEvent = e.DateEvent;
-            em.Description = e.Description;            
+            em.Description = e.Description;
+            em.number_P = e.number_P;            
             return View(em);
         }
 

@@ -564,6 +564,9 @@
     <Content Include="Views\KinderGarten\Details.cshtml" />
     <Content Include="Views\KinderGarten\Delete.cshtml" />
     <Content Include="Views\Event\Create.cshtml" />
+    <Content Include="Views\Event\Edit.cshtml" />
+    <Content Include="Views\Event\Details.cshtml" />
+    <Content Include="Views\Event\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
