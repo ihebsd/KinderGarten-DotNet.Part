@@ -19,3 +19,14 @@ C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Domain\obj
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Domain\obj\Debug\Solution.Domain.dll
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Domain\obj\Debug\Solution.Domain.pdb
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Domain\obj\Debug\Solution.Domain.csprojAssemblyReference.cache
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\bin\Debug\Solution.Domain.dll.config
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\bin\Debug\Solution.Domain.dll
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\bin\Debug\Solution.Domain.pdb
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.csprojAssemblyReference.cache
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.csproj.CopyComplete
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.dll
+C:\Users\Rosewild\Desktop\Pi PaaS SaaS Kindergarten\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.pdb
