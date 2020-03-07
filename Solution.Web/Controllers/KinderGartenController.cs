@@ -180,19 +180,56 @@ namespace Solution.Web.Controllers
         // GET: KinderGarten/Delete/5
         public ActionResult Delete(int id)
         {
-          
-            return View();
+
+            if (id == null)
+
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            KinderGarten p = KindergartenService.GetById(id);
+            KinderGartenModel p1 = new KinderGartenModel()
+            {
+                Name = p.Name,
+                Image = p.Image,
+                Address = p.Address,
+                NbrEmp = p.NbrEmp,
+               Cost  = p.Cost,
+               Phone  = p.Phone,
+               Description=p.Description,
+               
+
+            };
+            if (p == null)
+                return HttpNotFound();
+            return View(p1);
         }
 
         // POST: KinderGarten/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, KinderGartenModel tm)
+        public ActionResult Delete(int id, KinderGartenModel evm)
         {
-            KinderGarten t = KindergartenService.GetById(id);
-            KindergartenService.Delete(t);
-            KindergartenService.Commit();
+            
+                    if (id == null)
+                        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                    KinderGarten p = KindergartenService.GetById(id);
+                    evm = new KinderGartenModel()
+                    {
+                        Name = p.Name,
+                        Image = p.Image,
+                        Address = p.Address,
+                        NbrEmp = p.NbrEmp,
+                        Cost = p.Cost,
+                        Phone = p.Phone,
+                        Description = p.Description,
 
-            return RedirectToAction("Index");
+                    };
+                    if (p == null)
+                        return HttpNotFound();
+                    Console.WriteLine("deletedddddddddddddddddddddddddddddddd");
+                    KindergartenService.Delete(p);
+                    KindergartenService.Commit();
+                    // Service.Dispose();
+
+                    return RedirectToAction("Index");
+                
         }
     }
 }
