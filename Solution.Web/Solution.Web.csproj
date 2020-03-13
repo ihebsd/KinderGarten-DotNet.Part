@@ -462,6 +462,7 @@
     <Content Include="Content\Front\hts-cache\readme.txt" />
     <Content Include="Content\Front\hts-log.txt" />
     <Content Include="Content\Front\index.html" />
+    <Content Include="Content\Uploads\event_page.jpg.PNG" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -570,7 +571,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -76,6 +76,10 @@
     <Compile Include="Migrations\202003040920160_seconmig.designer.cs">
       <DependentUpon>202003040920160_seconmig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003131335321_eventmiggg.cs" />
+    <Compile Include="Migrations\202003131335321_eventmiggg.designer.cs">
+      <DependentUpon>202003131335321_eventmiggg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003040920160_seconmig.resx">
       <DependentUpon>202003040920160_seconmig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003131335321_eventmiggg.resx">
+      <DependentUpon>202003131335321_eventmiggg.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

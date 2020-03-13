@@ -95,6 +95,8 @@ namespace Solution.Web.Controllers
             ev.Description = em.Description;
             ev.image = Image.FileName;
             ev.number_P = em.number_P;
+            ev.HeureD = em.HeureD;
+            ev.HeureF = em.HeureF;
             ev.DirecteurFk = (int)Session["idu"];
             EventService.Add(ev);
             EventService.Commit();

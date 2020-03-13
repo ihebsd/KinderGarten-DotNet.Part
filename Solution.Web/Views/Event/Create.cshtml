@@ -15,46 +15,55 @@
             <h4>Event</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="reg_box">
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = " Name", style = "width: 350px" })
+        <div class="reg_box">
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = " Name", style = "width: 350px" })
 
-                </div>
-
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = " Description", style = "width: 350px" })
-                </div>
-
-
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.number_P, new { @class = "form-control", @placeholder = " Number of participants", style = "width: 350px" })
-                </div>
-
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.DateEvent, new { @class = "form-control", @placeholder = " Date", style = "width: 350px" })
-                </div>
-
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.Category, new { @class = "form-control", @placeholder = " Category", style = "width: 350px" })
-                </div>
-
-
-
-
-
-               
-
-                <div class="col-md-10">
-                    @Html.TextBox("Image", null, new
-                         {
-                             type = "file",
-                             @class = "form-input-styled"
-                         })
-                    @Html.ValidationMessageFor(model => model.image, "", new { @class = "text-danger" })
-
-
-                </div>
             </div>
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = " Description", style = "width: 350px" })
+            </div>
+
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.number_P, new { @class = "form-control", @placeholder = " Number of participants", style = "width: 350px" })
+            </div>
+
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DateEvent, new { @class = "form-control", @placeholder = " Date", style = "width: 350px" })
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.HeureD, new { @class = "form-control", @placeholder = " Date", style = "width: 350px" })
+            </div>
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.HeureF, new { @class = "form-control", @placeholder = " Date", style = "width: 350px" })
+            </div>
+
+
+
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.Category, "", new { @class = "form-control", @placeholder = " Date", style = "width: 350px" })
+                @Html.ValidationMessageFor(model => model.Category, "")
+            </div>
+
+
+
+
+
+
+
+            <div class="col-md-10">
+                @Html.TextBox("Image", null, new
+                     {
+                         type = "file",
+                         @class = "form-input-styled"
+                     })
+                @Html.ValidationMessageFor(model => model.image, "", new { @class = "text-danger" })
+
+
+            </div>
+        </div>
 
             <button class="button" type="submit" onclick="create()">Create</button>
 

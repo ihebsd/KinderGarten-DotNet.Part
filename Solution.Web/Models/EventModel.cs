@@ -16,6 +16,8 @@ namespace Solution.Web.Models
         public int number_P { get; set; }
         [DataType(DataType.Date)]
         public DateTime DateEvent { get; set; }
+        public DateTime HeureD { get; set; }
+        public DateTime HeureF { get; set; }
         public string Description { get; set; }
         public string image { get; set; }
         public bool AdminConfirmtion { get; set; }
