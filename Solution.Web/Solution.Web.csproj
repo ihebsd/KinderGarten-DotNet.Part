@@ -180,6 +180,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ClaimController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KinderGartenController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -187,6 +188,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ClaimModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\KinderGartenModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -561,6 +563,8 @@
     <Content Include="Views\KinderGarten\Index.cshtml" />
     <Content Include="Views\KinderGarten\Details.cshtml" />
     <Content Include="Views\KinderGarten\Delete.cshtml" />
+    <Content Include="Views\Claim\Create.cshtml" />
+    <Content Include="Views\Claim\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

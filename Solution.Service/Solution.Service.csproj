@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaimService.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="IClaimService.cs" />
     <Compile Include="IKinderGartenService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="KinderGartenService.cs" />

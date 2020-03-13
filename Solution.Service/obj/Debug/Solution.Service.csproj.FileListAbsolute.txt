@@ -30,3 +30,19 @@ C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\ob
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.csproj.CopyComplete
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.dll
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Solution.Service.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Solution.Service.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Service.Pattern.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Solution.Data.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Solution.Domain.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\EntityFramework.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Solution.Data.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Solution.Data.dll.config
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Solution.Domain.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Solution.Domain.dll.config
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\EntityFramework.xml
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\obj\Debug\Solution.Service.csprojAssemblyReference.cache
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\obj\Debug\Solution.Service.csproj.CopyComplete
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\obj\Debug\Solution.Service.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\obj\Debug\Solution.Service.pdb

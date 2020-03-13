@@ -15,7 +15,7 @@ namespace Solution.Data
         }
         public DbSet<User> Users { get; set; }
         public DbSet<KinderGarten> KinderGartens { get; set; }
-
+        public DbSet<Claim> Claims { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

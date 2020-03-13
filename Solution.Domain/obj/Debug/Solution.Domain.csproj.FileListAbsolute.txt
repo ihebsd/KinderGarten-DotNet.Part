@@ -19,3 +19,13 @@ C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Domain\obj
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Domain\obj\Debug\Solution.Domain.dll
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Domain\obj\Debug\Solution.Domain.pdb
 C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Domain\obj\Debug\Solution.Domain.csprojAssemblyReference.cache
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\bin\Debug\Solution.Domain.dll.config
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\bin\Debug\Solution.Domain.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\bin\Debug\Solution.Domain.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.csproj.CopyComplete
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.pdb
