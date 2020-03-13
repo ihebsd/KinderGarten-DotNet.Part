@@ -54,6 +54,10 @@ namespace Solution.Web.Controllers
         public ActionResult Details(int? id)
         {
             var userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -71,11 +75,12 @@ namespace Solution.Web.Controllers
                 image = e.image,
                 Description = e.Description,
                 EventId = e.EventId,
-                Name= e.Name,      
+                Name= e.Name,
+                
                 
                 
             };
-            return View();
+            return View(es);
         }
         public ActionResult Create()
         {         
@@ -138,21 +143,60 @@ namespace Solution.Web.Controllers
             return View(em);
         }
 
+
         // GET: Event/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+
+            if (id == null)
+
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            Event p = EventService.GetById(id);
+            EventModel p1 = new EventModel()
+            {
+                Name = p.Name,
+                Category = p.Category,
+                DateEvent = p.DateEvent,
+                image = p.image,
+                HeureF = p.HeureF,
+                HeureD=p.HeureD,           
+                Description = p.Description,         
+
+
+            };
+            if (p == null)
+                return HttpNotFound();
+            return View(p1);
         }
 
         // POST: Event/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, EventModel EventModel)
+        public ActionResult Delete(int id, EventModel evm)
         {
-            Event t = EventService.GetById(id);
-            EventService.Delete(t);
+
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            Event p = EventService.GetById(id);
+            evm = new EventModel()
+            {
+                Name = p.Name,
+                Category = p.Category,
+                DateEvent = p.DateEvent,
+                image = p.image,
+                HeureF = p.HeureF,
+                HeureD = p.HeureD,
+                Description = p.Description,
+
+            };
+            if (p == null)
+                return HttpNotFound();
+            Console.WriteLine("deletedddddddddddddddddddddddddddddddd");
+            EventService.Delete(p);
             EventService.Commit();
+            // Service.Dispose();
 
             return RedirectToAction("Index");
+
         }
     }
 }

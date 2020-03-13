@@ -11,13 +11,13 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="blog_block">
-                        <h3 class="blog_title">Children take care of nature</h3>
+                        <h3 class="blog_title">@Html.DisplayFor(model => model.Name)</h3>
                         <div class="row blog_info">
                             <div class="col-md-2 col-sm-2 col-xs-12 pr_0">
                                 <div class="date">
                                     <ul>
-                                        <li class="number">21</li>
-                                        <li class="date_month">dec<br>2017</li>
+                                        <li class="number">@Html.DisplayFor(model => model.DateEvent.Day)</li>
+                                        <li class="date_month">@Convert.ToDateTime(Model.DateEvent).ToString("MMM-yyyy")</li>
                                     </ul>
                                 </div>
                             </div>
