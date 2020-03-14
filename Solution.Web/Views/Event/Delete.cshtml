@@ -4,34 +4,83 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<br />
+<br />
+
+<br />
+
+
 
 <DIV ALIGN="CENTER">
 
-    <h3>Are you sure you want to delete this?</h3>
+    <h2>Are you sure you want to delete this Event?</h2>
+    <br />
+    <br />
     <div>
-        <h4>Event</h4>
         <hr />
 
-        <dl class="dl-horizontal">
-            <h3>
-                @Html.DisplayNameFor(model => model.Name):
+            <div class="shop_block_list">
+                <div class="col-md-5">
+                    <div class="shop_item">
+                        <div class="shop_block_img">
+                            @{string path = "~/Content/Uploads/" + @Html.DisplayFor(model => model.image);}
 
-                @Html.DisplayFor(model => model.Name)
-            </h3>
+                            <img src="@Url.Content(path)" alt="">
+                        </div>
+                        <div class="item_describe">
+                            <h5>
+                                <a href="shop_item.html">
+                                    @Html.DisplayNameFor(model => model.Category):
 
-        </dl>
+                                    @Html.DisplayFor(model => model.Category)
+                                </a>
+                            </h5>
+                            <h5>
+                                <a href="shop_item.html">
+                                    @Html.DisplayNameFor(model => model.Name):
 
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
+                                    @Html.DisplayFor(model => model.Name)
+                                </a>
+                            </h5>
 
-            <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
-                @Html.ActionLink("Back to List", "Index")
+                            <div class="item_rate">
+                                <ul>
+                                    <li class="t_red"><i class="fa fa-star"></i></li>
+                                    <li class="t_red"><i class="fa fa-star"></i></li>
+                                    <li class="t_red"><i class="fa fa-star"></i></li>
+                                    <li class="t_red"><i class="fa fa-star"></i></li>
+                                    <li class="t_stars"><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+
+                            <div class="item_price">
+                                <span class="price">
+                                    @Html.DisplayNameFor(model => model.number_P):
+
+                                    @Html.DisplayFor(model => model.number_P)
+                                </span>
+                            </div>
+
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+
+                        <div class="button b_green_green_light">
+                            <input type="submit" value="Delete" class="btn btn-default" /> |  @Html.ActionLink("Back to List", "Index")
+
+                        </div>
+
+
+                            }
+                        </div>
+                            </div>
+
+                   
+                </div>
             </div>
-        }
-    </div>
+        </div>
+
+
 
     <br />
     <br />
@@ -47,5 +96,34 @@
     <br />
     <br />
     <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
 
 </DIV>
