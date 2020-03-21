@@ -3,6 +3,7 @@ using Solution.Service;
 using Solution.Web.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,6 +12,7 @@ namespace Solution.Web.Controllers
 {
     public class ClaimController : Controller
     {
+       
         IClaimService ClaimsService;
         public ClaimController()
         {
@@ -19,14 +21,38 @@ namespace Solution.Web.Controllers
         // GET: Claim
         public ActionResult Index()
         {
-            var claims = new List<ClaimModel>();
-            return View(claims);
+            List<ClaimModel> Claim = new List<ClaimModel>();
+            List<Claim> Claims = ClaimsService.GetMany().ToList();
+            foreach (Claim c in Claims)
+            {
+                Claim.Add(new ClaimModel
+                {    
+                    Description = c.Description,
+                    ClaimDate = c.ClaimDate,
+                    ParentId = c.ParentId,
+                    ClaimType = c.ClaimType,
+                    status = c.status
+                });
+
+            }
+            return View(Claim);
         }
 
         // GET: Claim/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Claim c;
+            c = ClaimsService.GetById((int)id);
+            ClaimModel Cm = new ClaimModel()
+            {
+                Description = c.Description,
+                ClaimDate = c.ClaimDate,
+                ParentId = c.ParentId,
+                ClaimType = c.ClaimType,
+                status = c.status
+                
+            };
+            return View(Cm);
         }
 
         // GET: Claim/Create
@@ -58,22 +84,41 @@ namespace Solution.Web.Controllers
         // GET: Claim/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Claim c = ClaimsService.GetById(id);
+            ClaimModel cm = new ClaimModel();
+
+            cm.Description = c.Description;
+            cm.ClaimDate = c.ClaimDate;
+            cm.ParentId = c.ParentId;
+            cm.ClaimType = c.ClaimType;
+            cm.status = c.status;
+
+
+
+            return View(cm);
         }
 
         // POST: Claim/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, ClaimModel cm)
         {
             try
             {
-                // TODO: Add update logic here
+                Claim c = ClaimsService.GetById(id);
+                
+                c.Description = cm.Description;
+                c.ClaimDate = cm.ClaimDate;
+                c.ParentId = cm.ParentId;
+                c.ClaimType= cm.ClaimType;
+                c.status = cm.status;
+                ClaimsService.Update(c);
+                ClaimsService.Commit();
 
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View(cm);
             }
         }
 
@@ -87,16 +132,10 @@ namespace Solution.Web.Controllers
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            Claim C = ClaimsService.GetById((int)id);
+            ClaimsService.Delete(C);
+            ClaimsService.Commit();
+            return RedirectToAction("Index");
         }
     }
 }

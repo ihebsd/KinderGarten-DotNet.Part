@@ -1,0 +1,55 @@
+﻿@model Solution.Web.Models.ClaimModel
+
+@{
+    ViewBag.Title = "Details";
+}
+    <body>
+        <h2>Details</h2>
+
+        <div>
+            <h4>ClaimModel</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ClaimDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ClaimDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ParentId)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ParentId)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ClaimType)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ClaimType)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.status)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.status)
+                </dd>
+
+            </dl>
+        </div>
+    </body>

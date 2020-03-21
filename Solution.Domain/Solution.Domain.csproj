@@ -55,6 +55,7 @@
     <Compile Include="Entities\Claim.cs" />
     <Compile Include="Entities\Directeur.cs" />
     <Compile Include="Entities\KinderGarten.cs" />
+    <Compile Include="Entities\Reputation.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
