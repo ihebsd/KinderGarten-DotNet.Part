@@ -74,7 +74,7 @@ namespace Solution.Web.Controllers
         // GET: Claim/Create
         public ActionResult Create()
         {
-            //var userId = (int)Session["idu"];
+            
             return View();
         }
 
@@ -101,7 +101,18 @@ namespace Solution.Web.Controllers
         // GET: Claim/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            if (id == null)
+
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+           
+            Claim e = ClaimsService.GetById(id);
+            ClaimModel em = new ClaimModel();
+           em.Description = e.Description;
+            em.ClaimDate = e.ClaimDate;
+            em.ParentId = e.ParentId;
+            em.ClaimType = e.ClaimType;
+            em.status = e.status;
+            return View(em);
         }
         // POST: Claim/Edit/5
          [HttpPost]
@@ -116,7 +127,7 @@ namespace Solution.Web.Controllers
             c.status = cm.status;
             ClaimsService.Update(c);
             ClaimsService.Commit();
-            return RedirectToAction("Index");
+            return View (cm);
             /*
          }
 
