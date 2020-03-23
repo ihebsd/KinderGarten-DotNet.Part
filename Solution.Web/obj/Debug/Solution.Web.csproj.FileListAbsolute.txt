@@ -1,0 +1,481 @@
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.csprojAssemblyReference.cache
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Web.dll.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Web.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Web.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csc.exe
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csc.exe.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csc.rsp
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csi.exe
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csi.exe.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csi.rsp
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.AppContext.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Console.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.IO.Compression.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.IO.Pipes.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Claims.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.ValueTuple.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Xml.XPath.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\vbc.exe
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\vbc.exe.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\vbc.rsp
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Antlr3.Runtime.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\EntityFramework.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Newtonsoft.Json.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Owin.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Service.Pattern.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Domain.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Service.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Net.Http.Formatting.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Helpers.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Http.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Http.WebHost.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Mvc.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Optimization.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Razor.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\WebGrease.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Data.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Service.Pattern.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Domain.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Domain.dll.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Service.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Helpers.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Mvc.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Optimization.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Razor.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Newtonsoft.Json.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Antlr3.Runtime.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Net.Http.Formatting.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Http.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Http.WebHost.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\EntityFramework.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Data.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\bin\Solution.Data.dll.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.csproj.CopyComplete
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Web.dll.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Web.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Web.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csc.exe
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csc.exe.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csc.rsp
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csi.exe
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csi.exe.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\csi.rsp
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.AppContext.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Console.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.IO.Compression.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Claims.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.ValueTuple.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\vbc.exe
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\vbc.exe.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\vbc.rsp
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Antlr3.Runtime.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\EntityFramework.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Newtonsoft.Json.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Owin.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Service.Pattern.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Domain.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Service.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Net.Http.Formatting.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Helpers.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Http.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Http.WebHost.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Mvc.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Optimization.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Razor.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\WebGrease.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Data.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Service.Pattern.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Domain.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Domain.dll.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Service.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Helpers.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Mvc.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Optimization.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Razor.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Newtonsoft.Json.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Antlr3.Runtime.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Net.Http.Formatting.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Http.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\System.Web.Http.WebHost.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\EntityFramework.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Data.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\bin\Solution.Data.dll.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.csprojAssemblyReference.cache
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.csproj.CopyComplete
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.pdb
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Web.dll.config
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Web.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Web.pdb
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\csc.exe
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\csc.exe.config
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\csc.rsp
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\csi.exe
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\csi.exe.config
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\csi.rsp
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.AppContext.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Console.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.IO.Compression.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.IO.Pipes.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Security.Claims.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.ValueTuple.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Xml.XPath.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\vbc.exe
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\vbc.exe.config
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\vbc.rsp
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Antlr3.Runtime.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\EntityFramework.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Newtonsoft.Json.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Owin.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Service.Pattern.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Data.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Domain.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Service.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Net.Http.Formatting.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Helpers.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Http.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Http.WebHost.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Mvc.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Optimization.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Razor.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.WebPages.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\WebGrease.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Service.Pattern.pdb
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Data.pdb
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Data.dll.config
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Domain.pdb
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Domain.dll.config
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Solution.Service.pdb
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Helpers.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Mvc.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Optimization.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Razor.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.WebPages.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Newtonsoft.Json.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Antlr3.Runtime.pdb
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Net.Http.Formatting.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Http.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\System.Web.Http.WebHost.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\EntityFramework.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\obj\Debug\Solution.Web.csprojAssemblyReference.cache
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\obj\Debug\Solution.Web.csproj.CopyComplete
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\obj\Debug\Solution.Web.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Web\obj\Debug\Solution.Web.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Web.dll.config
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Web.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Web.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\csc.exe
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\csc.exe.config
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\csc.rsp
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\csi.exe
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\csi.exe.config
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\csi.rsp
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.AppContext.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Collections.Immutable.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Console.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.IO.Compression.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.IO.FileSystem.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.IO.Pipes.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Security.AccessControl.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Security.Claims.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Security.Principal.Windows.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.ValueTuple.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Xml.XPath.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\vbc.exe
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\vbc.exe.config
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\vbc.rsp
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\VBCSCompiler.exe
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\roslyn\VBCSCompiler.exe.config
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Antlr3.Runtime.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\EntityFramework.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\EntityFramework.SqlServer.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Newtonsoft.Json.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Owin.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Service.Pattern.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Data.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Domain.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Service.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Net.Http.Formatting.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Helpers.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Http.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Http.WebHost.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Mvc.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Optimization.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Razor.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.WebPages.Deployment.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.WebPages.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.WebPages.Razor.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\WebGrease.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Service.Pattern.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Data.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Data.dll.config
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Domain.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Domain.dll.config
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Service.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Helpers.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Mvc.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Optimization.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Razor.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.WebPages.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.WebPages.Deployment.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.WebPages.Razor.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Newtonsoft.Json.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Antlr3.Runtime.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Net.Http.Formatting.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Http.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\System.Web.Http.WebHost.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\EntityFramework.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\EntityFramework.SqlServer.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\obj\Debug\Solution.Web.csprojAssemblyReference.cache
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\obj\Debug\Solution.Web.csproj.CopyComplete
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\obj\Debug\Solution.Web.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\obj\Debug\Solution.Web.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Web\bin\Solution.Service.dll.config

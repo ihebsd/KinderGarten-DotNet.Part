@@ -1,0 +1,65 @@
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.csprojAssemblyReference.cache
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Data.dll.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Data.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Data.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Domain.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Domain.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Domain.dll.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.csproj.CopyComplete
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Data.dll.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Data.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Data.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Domain.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Domain.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\bin\Debug\Solution.Domain.dll.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.csprojAssemblyReference.cache
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.csproj.CopyComplete
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.Migrations.kindergarten.resources
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Data\obj\Debug\Solution.Data.csproj.GenerateResource.cache
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\bin\Debug\Solution.Data.dll.config
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\bin\Debug\Solution.Data.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\bin\Debug\Solution.Data.pdb
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\bin\Debug\EntityFramework.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\bin\Debug\Solution.Domain.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\bin\Debug\Solution.Domain.pdb
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\bin\Debug\Solution.Domain.dll.config
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\bin\Debug\EntityFramework.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\obj\Debug\Solution.Data.csprojAssemblyReference.cache
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.kindergarten.resources
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\obj\Debug\Solution.Data.csproj.GenerateResource.cache
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\obj\Debug\Solution.Data.csproj.CopyComplete
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\obj\Debug\Solution.Data.dll
+C:\Users\hamme\Source\Repos\KinderGarten\Solution.Data\obj\Debug\Solution.Data.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\Solution.Data.dll.config
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\Solution.Data.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\Solution.Data.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\EntityFramework.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\Solution.Domain.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\Solution.Domain.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\Solution.Domain.dll.config
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\EntityFramework.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.csprojAssemblyReference.cache
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.csproj.CopyComplete
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.pdb
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.Dead.resources
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.csproj.GenerateResource.cache
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.Pooool.resources
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.check.resources
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.indexx.resources

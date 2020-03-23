@@ -1,0 +1,117 @@
+﻿@model Solution.Web.Models.CarPoolModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutCarpool.cshtml";
+
+}
+
+<html lang="zxx">
+
+<!-- Mirrored from fvdthemes.com/html/yeahkids/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:49:44 GMT -->
+
+
+<body>
+
+
+    <section id="authorization_page" class="authorization_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 dot">
+                    <h2 class="section-title">CarPooling</h2>
+                    <p class="section-description pb_20">Log in to your account<br>Don’t have an account yet? - <a href="">Show More</a></p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    @using (Html.BeginForm())
+                    {
+                      
+                        @Html.AntiForgeryToken()
+                        <div class="text-success">
+                            <h3>@ViewBag.Message</h3>
+                        </div>
+                        <div class="reg_box">
+                            <h3 align="left">Which Of your kids will be in this carpool?</h3>
+                            <br />
+                            @Html.DropDownList("idKid", (SelectList)ViewData["Mykid"], new { @class = "form-control", @placeholder = "Kid", style = "width:1000px" })
+                            @Html.ValidationMessageFor(model => model.idKid, "", new { @class = "text-danger" })
+
+                            <br />
+                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", @placeholder = "Title", style = "width:1000px" } })
+                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                            @Html.EditorFor(model => model.From, new { htmlAttributes = new { @class = "form-control", @placeholder = "From", style = "width:1000px" } })
+                            @Html.ValidationMessageFor(model => model.From, "", new { @class = "text-danger" })
+                            @Html.EditorFor(model => model.To, new { htmlAttributes = new { @class = "form-control", @placeholder = "To", style = "width:1000px" } })
+                            @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })
+
+                            @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control", @placeholder = "Time", style = "width:1000px" } })
+                            @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+
+                            @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date", style = "width:1000px" } })
+                            @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                            @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @placeholder = "Message", style = "width:1000px" } })
+                            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                           
+
+                        </div>
+
+
+
+                            <button class="button" type="submit" value="Create" onclick="SaveKid()" style="width:500px">Submit </button>
+
+
+                            }
+
+
+                        </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var SaveKid = function() {
+
+            var arrItem = [];
+            var commaSeparatedIds = "";
+            $("#ItemList li  inpuu[type=checkbox]").each(function (index, val) {
+
+                debugger
+                var checkedId = $(val).attr("Id");
+                var arr = checkedId.split("_");
+                var currentCheckedboxId = arr[1];
+                var Ischecked = $("#" + checkedId).is(":cheked", true);
+                if (Ischecked) {
+                    arrItem.push(currentCheckedboxId);
+                }
+
+
+            })
+
+            if (arrItem.length != 0) {
+                commaSeparatedIds = arrItem.toString();
+
+                $.ajax({
+                    url: "/CarPool/create",
+                    type: "post",
+                    data: { ItemList: commaSeparatedIds },
+                    success: function (response) {
+                        //Vcode
+                    }
+                })
+
+
+                }
+
+
+
+        }
+    </script>
+
+</body>
+
+
+</html>
+
+

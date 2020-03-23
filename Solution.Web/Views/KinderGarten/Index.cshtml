@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Solution.Web.Models.KinderGartenModel>
+
+@{
+    ViewBag.Title = "Index";   
+}
+    <body>
+
+        @foreach (var item in Model)
+        {
+
+            <div class="row">
+                <div class="col-md-12 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="full_grid mb_50">
+                        <div class="events_grid_img">
+                            @{string path = "~/Content/Uploads/" + @item.Image;}
+
+                            <img src="@Url.Content(path)" width="50" height="50" />
+                        </div>
+                        <div class="events_one_block">
+                            <div class="events_one_block_left tac">
+                                <div class="events_one_top b_red">
+                                    <p class="pb_10">
+                                        <span>
+                                            @Html.DisplayFor(modelItem => item.DateCreation.Day)
+                                        </span>
+                                    </p>
+
+                                    <p>@Convert.ToDateTime(item.DateCreation).ToString("MMM-yyyy")</p>
+                                </div>
+                                <div class="events_one_center b_red_dark">
+                                    <p class="block_time"><i class="fa fa-clock-o"><span></span></i>@Html.DisplayFor(modelItem => item.Phone)</p>
+                                </div>
+                                <div class="events_one_bottom b_grey_light">
+
+                                    <p><i class="fa fa-map-marker"><span></span></i>@Html.DisplayFor(modelItem => item.Address)</p>
+                                </div>
+                            </div>
+                            <div class="grids_brief ml_250">
+                                <h4 class="grids_title t_red"><a href="Details/@Html.DisplayFor(modelItem => item.KinderGartenId)">@Html.DisplayFor(modelItem => item.Name)</a></h4>
+                                <p class="grids_description t_grey">@Html.DisplayFor(modelItem => item.Description)</p>
+                                @if (Session["idu"].Equals(item.DirecteurId))
+                                {
+                                    <p>@Html.ActionLink("Supprimer", "Delete", new { id = item.KinderGartenId })</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+   
+        <br />
+        <br />
+        <br />
+        <br /> <br />
+        <br />
+        <br />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+    </body>
