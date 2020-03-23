@@ -6,10 +6,20 @@
 }
     <body>
         <h2>Index</h2>
-
         <p>
             @Html.ActionLink("Create New", "Create")
         </p>
+        @using (Html.BeginForm())
+        {<table>
+                <tr>
+                    <td>
+                        <div>
+                            Search by title: @Html.TextBox("searchString")
+                        </div>
+                    </td>
+                    <td> <input type="submit" value="Search" id="submit" /> </td>
+                </tr>
+            </table>}
         <table class="table">
             <tr>
                 <th>
@@ -54,7 +64,48 @@
                         @Html.ActionLink("Delete", "Delete", new { id = item.ComplaintId })
                     </td>
                 </tr>
+
             }
 
         </table>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
     </body>

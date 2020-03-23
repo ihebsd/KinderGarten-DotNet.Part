@@ -10,6 +10,6 @@ namespace Solution.Service
 {
     public interface IClaimService : IService<Claim>
     {
-
+        IEnumerable<Claim> SearchKClaimByName(string searchString);
     }
 }

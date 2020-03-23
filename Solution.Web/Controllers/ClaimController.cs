@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -14,16 +15,18 @@ namespace Solution.Web.Controllers
     {
        
         IClaimService ClaimsService;
+        IUserService userService;
         public ClaimController()
         {
             ClaimsService = new ClaimService();
+            userService = new UserService();
         }
         // GET: Claim
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             List<ClaimModel> Claim = new List<ClaimModel>();
             List<Claim> Claims = ClaimsService.GetMany().ToList();
-            foreach (Claim c in Claims)
+            foreach (Claim c in ClaimsService.SearchKClaimByName(searchString))
             {
                 Claim.Add(new ClaimModel
                 {    
@@ -41,23 +44,37 @@ namespace Solution.Web.Controllers
         // GET: Claim/Details/5
         public ActionResult Details(int id)
         {
+           /* var userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;*/
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
             Claim c;
             c = ClaimsService.GetById((int)id);
-            ClaimModel Cm = new ClaimModel()
+            if (c == null)
             {
+                return HttpNotFound();
+            }
+                ClaimModel cm = new ClaimModel()
+            {
+                ComplaintId = c.ComplaintId,
                 Description = c.Description,
                 ClaimDate = c.ClaimDate,
                 ParentId = c.ParentId,
                 ClaimType = c.ClaimType,
                 status = c.status
-                
             };
-            return View(Cm);
+            return View(cm);
         }
 
         // GET: Claim/Create
         public ActionResult Create()
         {
+            //var userId = (int)Session["idu"];
             return View();
         }
 
@@ -84,44 +101,49 @@ namespace Solution.Web.Controllers
         // GET: Claim/Edit/5
         public ActionResult Edit(int id)
         {
-            Claim c = ClaimsService.GetById(id);
-            ClaimModel cm = new ClaimModel();
-
-            cm.Description = c.Description;
-            cm.ClaimDate = c.ClaimDate;
-            cm.ParentId = c.ParentId;
-            cm.ClaimType = c.ClaimType;
-            cm.status = c.status;
-
-
-
-            return View(cm);
+            return View();
         }
-
         // POST: Claim/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, ClaimModel cm)
-        {
-            try
-            {
-                Claim c = ClaimsService.GetById(id);
-                
-                c.Description = cm.Description;
-                c.ClaimDate = cm.ClaimDate;
-                c.ParentId = cm.ParentId;
-                c.ClaimType= cm.ClaimType;
-                c.status = cm.status;
-                ClaimsService.Update(c);
-                ClaimsService.Commit();
+         [HttpPost]
+         public ActionResult Edit(int id, Claim cm)
+         {
+            Claim c = ClaimsService.GetById(id);
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View(cm);
-            }
+            c.Description = cm.Description;
+            c.ClaimDate = cm.ClaimDate;
+            c.ParentId = cm.ParentId;
+            c.ClaimType = cm.ClaimType;
+            c.status = cm.status;
+            ClaimsService.Update(c);
+            ClaimsService.Commit();
+            return RedirectToAction("Index");
+            /*
+         }
+
+         // POST: Claim/Edit/5
+        /* [HttpPost]
+         public ActionResult Edit(int id, ClaimModel cm)
+         {
+             try
+             {
+                 Claim c = ClaimsService.GetById(id);
+
+                 c.Description = cm.Description;
+                 c.ClaimDate = cm.ClaimDate;
+                 c.ParentId = cm.ParentId;
+                 c.ClaimType= cm.ClaimType;
+                 c.status = cm.status;
+                 ClaimsService.Update(c);
+                 ClaimsService.Commit();
+
+                 return RedirectToAction("Index");
+             }
+             catch
+             {
+                 return View(cm);
+             }*/
         }
-
+         
         // GET: Claim/Delete/5
         public ActionResult Delete(int id)
         {

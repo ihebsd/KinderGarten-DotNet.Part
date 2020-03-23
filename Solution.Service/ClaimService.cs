@@ -24,5 +24,15 @@ namespace Solution.Service
         {
             utk.Dispose();
         }
+        public IEnumerable<Claim> SearchKClaimByName(string searchString)
+        {
+            IEnumerable<Claim> ClaimDomain = GetMany();
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                ClaimDomain = GetMany(x => x.ClaimType.Contains(searchString));
+            }
+
+            return ClaimDomain;
+        }
     }
 }
