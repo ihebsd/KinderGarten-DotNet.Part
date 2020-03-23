@@ -29,7 +29,7 @@ namespace Solution.Web.Controllers
             foreach (Claim c in ClaimsService.SearchKClaimByName(searchString))
             {
                 Claim.Add(new ClaimModel
-                {    
+                {    ComplaintId=c.ComplaintId,
                     Description = c.Description,
                     ClaimDate = c.ClaimDate,
                     ParentId = c.ParentId,
@@ -101,59 +101,61 @@ namespace Solution.Web.Controllers
         // GET: Claim/Edit/5
         public ActionResult Edit(int id)
         {
-            if (id == null)
-
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-           
+            if (id == 0)
+            { return new HttpStatusCodeResult(HttpStatusCode.BadRequest); }
+              else
+            {
             Claim e = ClaimsService.GetById(id);
             ClaimModel em = new ClaimModel();
-           em.Description = e.Description;
+            em.Description = e.Description;
             em.ClaimDate = e.ClaimDate;
             em.ParentId = e.ParentId;
             em.ClaimType = e.ClaimType;
             em.status = e.status;
             return View(em);
         }
-        // POST: Claim/Edit/5
-         [HttpPost]
-         public ActionResult Edit(int id, Claim cm)
-         {
-            Claim c = ClaimsService.GetById(id);
-
-            c.Description = cm.Description;
-            c.ClaimDate = cm.ClaimDate;
-            c.ParentId = cm.ParentId;
-            c.ClaimType = cm.ClaimType;
-            c.status = cm.status;
-            ClaimsService.Update(c);
-            ClaimsService.Commit();
-            return View (cm);
-            /*
-         }
-
-         // POST: Claim/Edit/5
-        /* [HttpPost]
-         public ActionResult Edit(int id, ClaimModel cm)
-         {
-             try
-             {
-                 Claim c = ClaimsService.GetById(id);
-
-                 c.Description = cm.Description;
-                 c.ClaimDate = cm.ClaimDate;
-                 c.ParentId = cm.ParentId;
-                 c.ClaimType= cm.ClaimType;
-                 c.status = cm.status;
-                 ClaimsService.Update(c);
-                 ClaimsService.Commit();
-
-                 return RedirectToAction("Index");
-             }
-             catch
-             {
-                 return View(cm);
-             }*/
         }
+        /* // POST: Claim/Edit/5
+         [HttpPost]
+          public ActionResult Edit(int id, FormCollection collection)
+          {
+             Claim c = ClaimsService.GetById(id);
+             ClaimModel cm = new ClaimModel();
+             cm.Description = c.Description;
+             cm.ClaimDate = c.ClaimDate;
+             cm.ParentId = c.ParentId;
+             cm.ClaimType = c.ClaimType;
+             cm.status = c.status;
+             ClaimsService.Update(c);
+             ClaimsService.Commit();
+             return View (cm);
+
+          }*/
+
+        // POST: Claim/Edit/5
+        [HttpPost]
+        public ActionResult Edit(int id, ClaimModel cm)
+        {
+            try
+            {
+                Claim c = ClaimsService.GetById(id);
+
+                c.Description = cm.Description;
+                c.ClaimDate = cm.ClaimDate;
+                c.ParentId = cm.ParentId;
+                c.ClaimType = cm.ClaimType;
+                c.status = cm.status;
+                ClaimsService.Update(c);
+                ClaimsService.Commit();
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View(cm);
+            }
+        }
+        
          
         // GET: Claim/Delete/5
         public ActionResult Delete(int id)

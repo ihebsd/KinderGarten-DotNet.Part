@@ -64,6 +64,10 @@
     <Compile Include="Migrations\202003131456053_mymig.designer.cs">
       <DependentUpon>202003131456053_mymig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003231602023_repmig.cs" />
+    <Compile Include="Migrations\202003231602023_repmig.designer.cs">
+      <DependentUpon>202003231602023_repmig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +89,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202003131456053_mymig.resx">
       <DependentUpon>202003131456053_mymig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003231602023_repmig.resx">
+      <DependentUpon>202003231602023_repmig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
