@@ -2,57 +2,60 @@
 
 @{
     ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+    <div class="card height-auto">
+        <div class="card-body">
+            <div class="heading-layout1">
+                <div class="item-title">
+                    <h3>Claim details</h3>
+                </div>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button"
+                       data-toggle="dropdown" aria-expanded="false">...</a>
 
-<h2>Details</h2>
+                    <div class="dropdown-menu dropdown-menu-right">  
+                        <a class="dropdown-item" href="@Url.Action("index","Claim")"><i class="fas fa-cogs text-dark-pastel-green"></i>Back to list</a>
+                    </div>
+                </div>
+            </div>
+            <div class="single-info-details">
+                
+                <div class="item-content">
+                    
+                   
+                    <div class="info-table table-responsive">
+                        <table class="table text-nowrap">
+                            <tbody>
+                                <tr>
+                                    <td>  @Html.DisplayNameFor(model => model.Name)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.Name)</td>
+                                </tr>
+                                <tr>
+                                    <td>  @Html.DisplayNameFor(model => model.Description)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.Description)</td>
+                                </tr>
+                                <tr>
+                                    <td>  @Html.DisplayNameFor(model => model.ClaimDate)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.ClaimDate)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.ParentId)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.ParentId)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.ClaimType)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.ClaimType)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.status)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.ClaimType)</td>
+                                </tr>
 
-<div>
-    <h4>ClaimModel</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ClaimDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ClaimDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ParentId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ParentId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ClaimType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ClaimType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.status)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.status)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ComplaintId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

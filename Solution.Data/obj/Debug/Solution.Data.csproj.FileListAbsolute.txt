@@ -45,3 +45,4 @@ C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.mymig.resources
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.csproj.GenerateResource.cache
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.repmig.resources
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.newtemp.resources

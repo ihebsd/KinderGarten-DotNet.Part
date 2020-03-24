@@ -24,12 +24,15 @@ namespace Solution.Web.Controllers
         // GET: Claim
         public ActionResult Index(string searchString)
         {
+            
             List<ClaimModel> Claim = new List<ClaimModel>();
             List<Claim> Claims = ClaimsService.GetMany().ToList();
             foreach (Claim c in ClaimsService.SearchKClaimByName(searchString))
             {
                 Claim.Add(new ClaimModel
-                {    ComplaintId=c.ComplaintId,
+                {    
+                    ComplaintId=c.ComplaintId,
+                    Name = c.Name,
                     Description = c.Description,
                     ClaimDate = c.ClaimDate,
                     ParentId = c.ParentId,
@@ -62,6 +65,7 @@ namespace Solution.Web.Controllers
                 ClaimModel cm = new ClaimModel()
             {
                 ComplaintId = c.ComplaintId,
+                Name = c.Name,
                 Description = c.Description,
                 ClaimDate = c.ClaimDate,
                 ParentId = c.ParentId,
@@ -85,6 +89,7 @@ namespace Solution.Web.Controllers
             DateTime today = DateTime.Now;
             Claim claims = new Claim()
             {
+                Name=claimM.Name,
                 Description = claimM.Description,
                 ClaimDate = today,
                 ParentId = claimM.ParentId,
@@ -107,6 +112,7 @@ namespace Solution.Web.Controllers
             {
             Claim e = ClaimsService.GetById(id);
             ClaimModel em = new ClaimModel();
+            em.Name = e.Name;
             em.Description = e.Description;
             em.ClaimDate = e.ClaimDate;
             em.ParentId = e.ParentId;
@@ -139,7 +145,7 @@ namespace Solution.Web.Controllers
             try
             {
                 Claim c = ClaimsService.GetById(id);
-
+                c.Name = cm.Name;
                 c.Description = cm.Description;
                 c.ClaimDate = cm.ClaimDate;
                 c.ParentId = cm.ParentId;
@@ -167,10 +173,18 @@ namespace Solution.Web.Controllers
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
-            Claim C = ClaimsService.GetById((int)id);
-            ClaimsService.Delete(C);
-            ClaimsService.Commit();
-            return RedirectToAction("Index");
+                Claim C = ClaimsService.GetById((int)id);
+            if (C.status == "Complete")
+            {
+                ClaimsService.Delete(C);
+                ClaimsService.Commit();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewBag.DEL = "You should update the reclamation First";
+            }
+            return View();
         }
     }
 }

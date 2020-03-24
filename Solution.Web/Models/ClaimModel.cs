@@ -10,7 +10,7 @@ namespace Solution.Web.Models
     {
         [System.ComponentModel.DataAnnotations.Key]
         public int ComplaintId { get; set; }
-
+        public string Name { get; set; }
         [Display(Name = "Description")]
         [DataType(DataType.Text)]
         [Required(ErrorMessage = "this field is required")]
