@@ -4,55 +4,56 @@
     ViewBag.Title = "Create";
 }
 
-
-
-<section id="authorization_page" class="authorization_page">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 dot">
-                <h2 class="section-title">Create reputation</h2>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                @using (Html.BeginForm("Create", "reputation", htmlAttributes: new { id = "createform" }, method: FormMethod.Post))
-                {
-                    @Html.AntiForgeryToken()
-
-                    <div class="reg_box">
-                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Name" })
-
-                        @Html.TextBoxFor(m => m.Description, new { @class = "form-control", @placeholder = "Description" })
-
+    <body>
+        <section id="authorization_page" class="authorization_page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 dot">
+                        <h2 class="section-title">Create reputation</h2>
                     </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        @using (Html.BeginForm("Create", "Reputation", htmlAttributes: new { id = "createform" }, method: FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
 
-                    <button class="button" type="submit" value="Create">Create</button>
-                }
-                <script>
+                            <div class="reg_box">
+                                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" ,  @placeholder = "Reputation name" })
+                                @Html.TextAreaFor(model => model.Description, new { @class = "form-control",rows = "3", cols = "2", @placeholder = "Description" })
+                      
+
+                            </div>
+
+                            <button class="button" type="submit" value="Create">Create</button>
+                        }
+                        <script>
                                 var form = document.getElementById('createform');
 
                                 function myFunction() {
                                     if (form.checkValidity()) {
-                                        alert("Your claim was successufully created");
+                                        alert("Your reputation was successufully created");
                                     }
                                 }
-                </script>
+                        </script>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-</section>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+        </section>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
+
+    </body>

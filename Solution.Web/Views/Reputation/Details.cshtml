@@ -2,82 +2,52 @@
 
 @{
     ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Details</h2>
+    <div class="card height-auto">
+        <div class="card-body">
+            <div class="heading-layout1">
+                <div class="item-title">
+                    <h3>Reputation details</h3>
+                </div>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button"
+                       data-toggle="dropdown" aria-expanded="false">...</a>
 
-<div>
-    <h4>ReputationModel</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="@Url.Action("index","Reputation")"><i class="fas fa-cogs text-dark-pastel-green"></i>Back to list</a>
+                    </div>
+                </div>
+            </div>
+            <div class="single-info-details">
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+                <div class="item-content">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReputationDate)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReputationDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ReputationId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
+                    <div class="info-table table-responsive">
+                        <table class="table text-nowrap">
+                            <tbody>
+                                <tr>
+                                    <td>  @Html.DisplayNameFor(model => model.Name)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.Name)</td>
+                                </tr>
+                                <tr>
+                                    <td>  @Html.DisplayNameFor(model => model.Description)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.Description)</td>
+                                </tr>
+                                <tr>
+                                    <td>  @Html.DisplayNameFor(model => model.ReputationDate)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.ReputationDate)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.ParentId)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.ParentId)</td>
+                                </tr>                             
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -29,3 +29,4 @@ C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\bin\Debug\EntityF
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.csproj.CopyComplete
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.dll
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.csprojAssemblyReference.cache

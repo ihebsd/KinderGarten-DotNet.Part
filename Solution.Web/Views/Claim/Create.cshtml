@@ -21,11 +21,9 @@
 
                             <div class="reg_box">
                                 @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Claim name" })
-                                @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = "Description" })
+                                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "5", cols = "3" , @placeholder = "Description" })
 
                                 @Html.TextBoxFor(m => m.ClaimType, new { @class = "form-control", @placeholder = "claim type" })
-
-                                @Html.TextBoxFor(m => m.ParentId, new { @class = "form-control", @placeholder = "parent" })
 
                                 @Html.TextBoxFor(m => m.status, new { @class = "form-control", @placeholder = "status" })
 

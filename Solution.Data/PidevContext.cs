@@ -22,6 +22,8 @@ namespace Solution.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new DirecteurConfiguration());
+            modelBuilder.Configurations.Add(new ClaimConfiguration());
+            modelBuilder.Configurations.Add(new ReputationConfiguration());
 
 
 

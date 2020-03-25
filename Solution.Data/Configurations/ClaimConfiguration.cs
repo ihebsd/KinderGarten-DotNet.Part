@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace Solution.Data.Configurations
 {
-   public class DirecteurConfiguration: EntityTypeConfiguration<Directeur>
+   public class ClaimConfiguration : EntityTypeConfiguration<Parent>
     {
-        public DirecteurConfiguration()
+        public ClaimConfiguration()
         {
-            HasMany(u => u.Kindergartens).WithRequired(k => k.Directeur).HasForeignKey(p => p.DirecteurId).WillCascadeOnDelete(true);
-
+            HasMany(u => u.Claims).WithRequired(k => k.Parent).HasForeignKey(p => p.ParentId).WillCascadeOnDelete(true);
         }
-       
     }
 }

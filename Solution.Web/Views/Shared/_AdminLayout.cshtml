@@ -99,16 +99,17 @@
                             <div class="item-header">
                                 <h6 class="item-title">Steven Zone</h6>
                             </div>
-                            <div class="item-content">
-                                <ul class="settings-list">
-                                    <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
-                                    <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
-                                    <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
-                                    <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>
-                                    <li><a href="login.html"><i class="flaticon-turn-off"></i>Log Out</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                           
+                                    <div class="item-content">
+                                        <ul class="settings-list">
+                                            <li><a href="#"><i class="flaticon-user"></i>My Profile</a></li>
+                                            <li><a href="#"><i class="flaticon-list"></i>Task</a></li>
+                                            <li><a href="#"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines"></i>Message</a></li>
+                                            <li><a href="#"><i class="flaticon-gear-loading"></i>Account Settings</a></li>                                          
+                                            <li><a href="javascript:document.getElementById('logoutForm').submit()"><i class="flaticon-turn-off"></i>Log Out</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                     </li>
                     <li class="navbar-item dropdown header-message">
                         <a class="navbar-nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
@@ -410,12 +411,20 @@
                                         Claims
                                     </a>
                                 </li>
+                                
+                            </ul>
+                        </li>
+                        <li class="nav-item sidebar-nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Reputations</span>
+                            </a>
+                            <ul class="nav sub-group-menu">
                                 <li class="nav-item">
-                                    <a href="add-class.html" class="nav-link">
-                                        <i class="fas fa-angle-right"></i>Add New
-                                        Class
+                                    <a href="@Url.Action("index","Reputation")" class="nav-link">
+                                        <i class="fas fa-angle-right"></i>All
+                                        reputations
                                     </a>
-                                </li>
+                                </li>                               
                             </ul>
                         </li>
                         <li class="nav-item">

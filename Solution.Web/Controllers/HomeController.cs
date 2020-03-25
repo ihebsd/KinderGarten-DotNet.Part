@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Solution.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,18 @@ namespace Solution.Web.Controllers
 {
     public class HomeController : Controller
     {
+        IUserService userService;
+        public HomeController()
+        {        
+            userService = new UserService();
+        }
         public ActionResult Index()
         {
+            var userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;
             return View();
         }
 

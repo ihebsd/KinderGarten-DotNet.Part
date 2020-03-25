@@ -9,7 +9,7 @@ namespace Solution.Domain.Entities
 {
     public enum role
     {
-         Manager, Directeur, Parent, Prospect, Docteur
+         Manager, Directeur, Parent, Prospect, Docteur , admin
     }
     [Serializable()]
     public class User
@@ -40,7 +40,7 @@ namespace Solution.Domain.Entities
         public System.Guid ActivationCode { get; set; }
         public string ResetPasswordCode { get; set; }
         public role role { get; set; }
-     
+        public virtual ICollection<Reputation> Reputations { get; set; }
 
         public override string ToString()
         {

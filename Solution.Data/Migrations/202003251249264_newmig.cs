@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class mymig : DbMigration
+    public partial class newmig : DbMigration
     {
         public override void Up()
         {
@@ -12,13 +12,35 @@
                 c => new
                     {
                         ComplaintId = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
                         Description = c.String(nullable: false),
                         ClaimDate = c.DateTime(nullable: false),
-                        ParentId = c.Int(),
+                        ParentId = c.Int(nullable: false),
                         ClaimType = c.String(),
                         status = c.String(),
                     })
-                .PrimaryKey(t => t.ComplaintId);
+                .PrimaryKey(t => t.ComplaintId)
+                .ForeignKey("dbo.Users", t => t.ParentId, cascadeDelete: true)
+                .Index(t => t.ParentId);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        idUser = c.Int(nullable: false, identity: true),
+                        nom = c.String(nullable: false, maxLength: 30),
+                        prenom = c.String(nullable: false, maxLength: 30),
+                        login = c.String(nullable: false, maxLength: 30),
+                        email = c.String(nullable: false),
+                        password = c.String(nullable: false),
+                        Confirmpassword = c.String(nullable: false),
+                        IsEmailVerified = c.Boolean(nullable: false),
+                        ActivationCode = c.Guid(nullable: false),
+                        ResetPasswordCode = c.String(),
+                        role = c.Int(nullable: false),
+                        Discriminator = c.String(nullable: false, maxLength: 128),
+                    })
+                .PrimaryKey(t => t.idUser);
             
             CreateTable(
                 "dbo.KinderGartens",
@@ -40,32 +62,27 @@
                 .Index(t => t.DirecteurId);
             
             CreateTable(
-                "dbo.Users",
+                "dbo.Reputations",
                 c => new
                     {
-                        idUser = c.Int(nullable: false, identity: true),
-                        nom = c.String(nullable: false, maxLength: 30),
-                        prenom = c.String(nullable: false, maxLength: 30),
-                        login = c.String(nullable: false, maxLength: 30),
-                        email = c.String(nullable: false),
-                        password = c.String(nullable: false),
-                        Confirmpassword = c.String(nullable: false),
-                        IsEmailVerified = c.Boolean(nullable: false),
-                        ActivationCode = c.Guid(nullable: false),
-                        ResetPasswordCode = c.String(),
-                        role = c.Int(nullable: false),
-                        Discriminator = c.String(nullable: false, maxLength: 128),
+                        ReputationId = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false),
+                        ReputationDate = c.DateTime(nullable: false),
+                        Description = c.String(),
                     })
-                .PrimaryKey(t => t.idUser);
+                .PrimaryKey(t => t.ReputationId);
             
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.KinderGartens", "DirecteurId", "dbo.Users");
+            DropForeignKey("dbo.Claims", "ParentId", "dbo.Users");
             DropIndex("dbo.KinderGartens", new[] { "DirecteurId" });
-            DropTable("dbo.Users");
+            DropIndex("dbo.Claims", new[] { "ParentId" });
+            DropTable("dbo.Reputations");
             DropTable("dbo.KinderGartens");
+            DropTable("dbo.Users");
             DropTable("dbo.Claims");
         }
     }

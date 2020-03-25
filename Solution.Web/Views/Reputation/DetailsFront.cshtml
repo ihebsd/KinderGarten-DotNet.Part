@@ -1,0 +1,119 @@
+﻿@model Solution.Web.Models.ReputationModel
+
+@{
+    ViewBag.Title = "DetailsFront";
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Admin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/normalize.css")>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/main.css")>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/bootstrap.min.css")>
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/all.min.css")>
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/fonts/flaticon.css")>
+    <!-- Full Calender CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/fullcalendar.min.css")>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/animate.min.css")>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/style.css")>
+    <!-- Modernize js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/modernizr-3.6.0.min.js")></script>
+</head>
+<body>
+    <div class="card height-auto">
+        <div class="card-body">
+            <div class="heading-layout1">
+                <div class="item-title">
+                    <h3>Claim details</h3>
+                </div>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button"
+                       data-toggle="dropdown" aria-expanded="false">...</a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="@Url.Action("indexFront","Reputation")"><i class="fas fa-cogs text-dark-pastel-green"></i>Back to list</a>
+                    </div>
+                </div>
+            </div>
+            <div class="single-info-details">
+
+                <div class="item-content">
+
+
+                    <div class="info-table table-responsive">
+                        <table class="table text-nowrap">
+                            <tbody>
+                                <tr>
+                                    <td>  @Html.DisplayNameFor(model => model.Name)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.Name)</td>
+                                </tr>
+                                <tr>
+                                    <td>  @Html.DisplayNameFor(model => model.Description)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.Description)</td>
+                                </tr>
+                                <tr>
+                                    <td>  @Html.DisplayNameFor(model => model.ReputationDate)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.ReputationDate)</td>
+                                </tr>
+                                <tr>
+                                    <td>@Html.DisplayNameFor(model => model.ParentId)</td>
+                                    <td class="font-medium text-dark-medium">@Html.DisplayFor(model => model.ParentId)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<footer class="footer-wrap-layout1">
+
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/jquery-3.3.1.min.js")></script>
+    <!-- Plugins js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/plugins.js")></script>
+    <!-- Popper js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/popper.min.js")></script>
+    <!-- Bootstrap js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/bootstrap.min.js")></script>
+    <!-- Counterup Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/jquery.counterup.min.js")></script>
+    <!-- Moment Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/moment.min.js")></script>
+    <!-- Waypoints Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/jquery.waypoints.min.js")></script>
+    <!-- Scroll Up Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/jquery.scrollUp.min.js")></script>
+    <!-- Full Calender Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/fullcalendar.min.js")></script>
+    <!-- Chart Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/Chart.min.js")></script>
+    <!-- Custom Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/main.js")></script>
+</footer>

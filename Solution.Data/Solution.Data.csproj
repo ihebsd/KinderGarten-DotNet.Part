@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Configurations\ClaimConfiguration.cs" />
     <Compile Include="Configurations\DirecteurConfiguration.cs" />
+    <Compile Include="Configurations\ReputationConfiguration.cs" />
     <Compile Include="Infrastructures\DatabaseFactory.cs" />
     <Compile Include="Infrastructures\Disposable.cs" />
     <Compile Include="Infrastructures\IDatabaseFactory .cs" />
@@ -60,17 +62,13 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\202003131456053_mymig.cs" />
-    <Compile Include="Migrations\202003131456053_mymig.designer.cs">
-      <DependentUpon>202003131456053_mymig.cs</DependentUpon>
+    <Compile Include="Migrations\202003251249264_newmig.cs" />
+    <Compile Include="Migrations\202003251249264_newmig.designer.cs">
+      <DependentUpon>202003251249264_newmig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003231602023_repmig.cs" />
-    <Compile Include="Migrations\202003231602023_repmig.designer.cs">
-      <DependentUpon>202003231602023_repmig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003241625090_newtemp.cs" />
-    <Compile Include="Migrations\202003241625090_newtemp.designer.cs">
-      <DependentUpon>202003241625090_newtemp.cs</DependentUpon>
+    <Compile Include="Migrations\202003251412414_mymig.cs" />
+    <Compile Include="Migrations\202003251412414_mymig.designer.cs">
+      <DependentUpon>202003251412414_mymig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -91,14 +89,11 @@
     <Folder Include="CustomConventions\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003131456053_mymig.resx">
-      <DependentUpon>202003131456053_mymig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003251249264_newmig.resx">
+      <DependentUpon>202003251249264_newmig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003231602023_repmig.resx">
-      <DependentUpon>202003231602023_repmig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003241625090_newtemp.resx">
-      <DependentUpon>202003241625090_newtemp.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003251412414_mymig.resx">
+      <DependentUpon>202003251412414_mymig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

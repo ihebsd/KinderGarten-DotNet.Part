@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Login";
-        Layout = "~/Views/Shared/_MyLayout.cshtml";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
 
 }
 
@@ -33,7 +33,7 @@
                                 <h3>@ViewBag.Message</h3> 
                             </div>
                             <div class="reg_box">
-                                @Html.TextBoxFor(m => m.email, new { @class = "form-control", @placeholder = "Username" })
+                                @Html.TextBoxFor(m => m.email, new { @class = "form-control", @placeholder = "Your mail" })
                                 @Html.ValidationMessageFor(m => m.email, "", new { @class = "text-danger" })
                                 @Html.PasswordFor(m => m.password, new { @class = "form-control", @placeholder = "Password" })
                                 @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })

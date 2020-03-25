@@ -128,11 +128,11 @@ namespace Solution.Presentation.Controllers
                         Session["v"] = v.role;
                         if (Session["v"].ToString() == "admin")
                         {
-                            return RedirectToAction("Index", "UserBack");
+                            return RedirectToAction("Index", "Admin");
                         }
                         else
                         {
-                            return RedirectToAction("Index", "KinderGarten");
+                            return RedirectToAction("Index", "Home");
                         }
 
                     }

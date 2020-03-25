@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,9 @@ namespace Solution.Domain.Entities
         public string Description { get; set; }
         [DataType(DataType.Date)]
         public DateTime ClaimDate { get; set; }
-        public int? ParentId { get; set; }//nullable
+        public int? ParentId { get; set; }
+        [ForeignKey("ParentId ")]
+        public virtual Parent Parent { get; set; }
         // public string recsender { get; set; }
         public string ClaimType { get; set; }
         public string status { get; set; }

@@ -1,0 +1,183 @@
+﻿@model IEnumerable<Solution.Web.Models.ClaimModel>
+
+@{
+    ViewBag.Title = "IndexFront";
+
+}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Admin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/favicon.png">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/normalize.css")>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/main.css")>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/bootstrap.min.css")>
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/all.min.css")>
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/fonts/flaticon.css")>
+    <!-- Full Calender CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/fullcalendar.min.css")>
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/animate.min.css")>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/style.css")>
+    <!-- Modernize js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/modernizr-3.6.0.min.js")></script>
+</head>
+
+<div class="card height-auto">
+    <div class="card-body">
+        <div class="heading-layout1">
+            <div class="item-title">
+                <h3>All claims</h3>
+            </div>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                   aria-expanded="false">...</a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-times text-orange-red"></i>Close
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-cogs text-dark-pastel-green"></i>Edit
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <i class="fas fa-redo-alt text-orange-peel"></i>Refresh
+                    </a>
+                </div>
+            </div>
+        </div>
+        <form class="mg-b-20">
+            <p>
+                @Html.ActionLink("Create new claim", "Create")
+            </p>
+            <div class="row gutters-8">
+
+
+                <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">
+                    Search by name: @Html.TextBox("searchString")
+                </div>
+                <div class="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">
+                    <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
+                </div>
+            </div>
+        </form>
+        <div class="table-responsive">
+            <table class="table display data-table text-nowrap">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input checkAll">
+                                <label class="form-check-label">ID</label>
+                            </div>
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ClaimDate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ParentId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ClaimType)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.status)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input">
+                                    <label class="form-check-label"> @Html.DisplayFor(modelItem => item.ComplaintId)</label>
+                                </div>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ClaimDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ParentId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ClaimType)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.status)
+                            </td>
+
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.ComplaintId }) |
+                                @Html.ActionLink("Details", "DetailsFront", new { id = item.ComplaintId }) |
+                                @Html.ActionLink("Delete", "DeleteFront", new { id = item.ComplaintId })
+                            </td>
+
+                        </tr>
+                    }
+
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<footer class="footer-wrap-layout1">
+
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/jquery-3.3.1.min.js")></script>
+    <!-- Plugins js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/plugins.js")></script>
+    <!-- Popper js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/popper.min.js")></script>
+    <!-- Bootstrap js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/bootstrap.min.js")></script>
+    <!-- Counterup Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/jquery.counterup.min.js")></script>
+    <!-- Moment Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/moment.min.js")></script>
+    <!-- Waypoints Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/jquery.waypoints.min.js")></script>
+    <!-- Scroll Up Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/jquery.scrollUp.min.js")></script>
+    <!-- Full Calender Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/fullcalendar.min.js")></script>
+    <!-- Chart Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/Chart.min.js")></script>
+    <!-- Custom Js -->
+    <script src=@Url.Content("/Content/Front1/www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/main.js")></script>
+</footer>
+

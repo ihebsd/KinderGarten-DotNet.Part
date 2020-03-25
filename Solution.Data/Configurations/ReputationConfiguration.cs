@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace Solution.Data.Configurations
 {
-   public class DirecteurConfiguration: EntityTypeConfiguration<Directeur>
+    class ReputationConfiguration : EntityTypeConfiguration<User>
     {
-        public DirecteurConfiguration()
+        public ReputationConfiguration()
         {
-            HasMany(u => u.Kindergartens).WithRequired(k => k.Directeur).HasForeignKey(p => p.DirecteurId).WillCascadeOnDelete(true);
-
+            HasMany(u => u.Reputations).WithRequired(k => k.Parent).HasForeignKey(p => p.ParentId).WillCascadeOnDelete(true);
         }
-       
     }
 }

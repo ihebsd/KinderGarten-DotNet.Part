@@ -29,7 +29,7 @@ namespace Solution.Service
             IEnumerable<Claim> ClaimDomain = GetMany();
             if (!String.IsNullOrEmpty(searchString))
             {
-                ClaimDomain = GetMany(x => x.ClaimType.Contains(searchString));
+                ClaimDomain = GetMany(x => x.Name.Contains(searchString));
             }
 
             return ClaimDomain;

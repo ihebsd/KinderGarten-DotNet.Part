@@ -4,104 +4,58 @@
     ViewBag.Title = "Edit";
 }
     <body>
-        <h2>Edit</h2>
+            <section id="authorization_page" class="authorization_page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 dot">
+                            <h2 class="section-title">Update claim</h2>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            @using (Html.BeginForm("Edit", "Claim", htmlAttributes: new { id = "createform" }, method: FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
 
-        @using (Html.BeginForm())
-        {
+                                <div class="reg_box">
+                                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Claim name" })
+                                    @Html.TextAreaFor(model => model.Description, new { @class = "form-control",rows = "5", cols = "3" , @placeholder = "Description" })
 
+                                    @Html.TextBoxFor(m => m.ClaimType, new { @class = "form-control", @placeholder = "claim type" })
 
-    <div class="form-horizontal">
-        <h4>ClaimModel</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.ComplaintId)
+                                    @Html.TextBoxFor(m => m.status, new { @class = "form-control", @placeholder = "status" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ClaimDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ClaimDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ClaimDate, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                <button class="button" type="submit" value="Create">Update</button>
+                            }
+                            <script>
+                                var form = document.getElementById('updateform');
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ParentId, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ParentId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ParentId, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                                function myFunction() {
+                                    if (form.checkValidity()) {
+                                        alert("Your claim was successfully updated");
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.ClaimType, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ClaimType, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ClaimType, "", new { @class = "text-danger" })
-            </div>
-        </div>
+            </section>
+           
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.status, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-        }
-
-        <div>
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+        </body>
         <br />
         <br />
         <br />
-        <br /> <br />
+        <br />
+         <br />
         <br />
         <br />
 
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-    </body>

@@ -32,6 +32,7 @@ namespace Solution.Web.Controllers
                     Name =r.Name,
                     ReputationDate = r.ReputationDate,
                     Description = r.Description,
+                    ParentId =r.ParentId,
                 });
 
             }
@@ -57,6 +58,7 @@ namespace Solution.Web.Controllers
                 Name = r.Name,
                 Description = r.Description,
                 ReputationDate = r.ReputationDate,
+                ParentId=r.ParentId,
                 
             };
             return View(rm);
@@ -65,6 +67,11 @@ namespace Solution.Web.Controllers
         // GET: Reputation/Create
         public ActionResult Create()
         {
+            var userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;
             return View();
         }
 
@@ -78,18 +85,24 @@ namespace Solution.Web.Controllers
                 Name = rm.Name,
                 ReputationDate = today,
                 Description = rm.Description,
+                ParentId = (int)Session["idu"],
 
             };
             RepService.Add(rep);
             RepService.Commit();
 
 
-            return RedirectToAction("Index");
+            return RedirectToAction("IndexFront");
         }
 
         // GET: Reputation/Edit/5
         public ActionResult Edit(int id)
         {
+            var userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;
             if (id == 0)
             { return new HttpStatusCodeResult(HttpStatusCode.BadRequest); }
             else
@@ -109,16 +122,17 @@ namespace Solution.Web.Controllers
         [HttpPost]
         public ActionResult Edit(int id, ReputationModel rm)
         {
+            DateTime today = DateTime.Now;
             try
             {
                 Reputation r = RepService.GetById(id);
                 r.Name = rm.Name;
-                r.ReputationDate = rm.ReputationDate;
+                r.ReputationDate = today;
                 r.Description = rm.Description;
                 RepService.Update(r);
                 RepService.Commit();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexFront");
             }
             catch
             {
@@ -141,5 +155,73 @@ namespace Solution.Web.Controllers
             RepService.Commit();
             return RedirectToAction("Index");
         }
+        // GET: ReputationFront
+        public ActionResult IndexFront(string searchString)
+        {
+            var userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;
+            List<ReputationModel> Reputation = new List<ReputationModel>();
+            List<Reputation> Rep = RepService.GetMany().ToList();
+            foreach (Reputation r in RepService.SearchKReputationByName(searchString))
+            {
+                Reputation.Add(new ReputationModel
+                {
+                    ReputationId = r.ReputationId,
+                    Name = r.Name,
+                    ReputationDate = r.ReputationDate,
+                    Description = r.Description,
+                    ParentId =r.ParentId,
+                });
+
+            }
+            return View(Reputation);
+        }
+        // GET: Reputation/DetailsFront/5
+        public ActionResult DetailsFront(int id)
+        {
+            var userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Reputation r;
+            r = RepService.GetById((int)id);
+            if (r == null)
+            {
+                return HttpNotFound();
+            }
+            ReputationModel rm = new ReputationModel()
+            {
+                ReputationId = r.ReputationId,
+                Name = r.Name,
+                Description = r.Description,
+                ReputationDate = r.ReputationDate,
+                ParentId = r.ParentId,
+            };
+            return View(rm);
+        }
+        // GET: Reputation/DeleteFront/5
+        public ActionResult DeleteFront(int id)
+        {
+            return View();
+        }
+
+        // POST: Reputation/DeleteFront/5
+        [HttpPost]
+        public ActionResult DeleteFront(int id, FormCollection collection)
+        {
+            Reputation C = RepService.GetById((int)id);
+            RepService.Delete(C);
+            RepService.Commit();
+            return RedirectToAction("IndexFront");
+        }
     }
+
 }
