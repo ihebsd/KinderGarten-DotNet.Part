@@ -1,4 +1,5 @@
 ﻿using Service.Pattern;
+using Solution.Data;
 using Solution.Data.Infrastructure;
 using Solution.Domain.Entities;
 using System;
@@ -19,7 +20,10 @@ namespace Solution.Service
         }
         public IEnumerable<Kid> GetKidByName(string FirstName)
         {
+        
             return GetMany(f => f.FirstName.Contains(FirstName));
+          
         }
+      
     }
 }

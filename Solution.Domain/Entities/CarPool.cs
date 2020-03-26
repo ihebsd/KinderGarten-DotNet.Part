@@ -24,6 +24,7 @@ namespace Solution.Domain.Entities
         public DateTime Time { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Date is required")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Date { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Message is required")]
         public string Message { get; set; }

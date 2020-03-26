@@ -1,10 +1,12 @@
-﻿using Solution.Domain.Entities;
+﻿using Solution.Data;
+using Solution.Domain.Entities;
 using Solution.Service;
 using Solution.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -16,6 +18,8 @@ namespace Solution.Web.Controllers
 {
     public class CarPoolController : Controller
     {
+
+        private PidevContext db = new PidevContext();
         IUserService Service;
         IKidService ServicePar;
         ICarPoolService sc = new CarPoolService();
@@ -31,6 +35,9 @@ namespace Solution.Web.Controllers
         {
             List<Kid> Kids = ServicePar.GetMany().ToList();
             ViewBag.MyKid = new SelectList(Kids, "IdKid", "FirstName");
+
+            List<User> Parents = Service.GetMany().ToList();
+            ViewBag.MyParent = new SelectList(Parents, "IdUser", "nom");
             var carps = new List<CarPoolModel>();
             foreach (CarPool c in sc.SearchCarpoolByTo(searchString))
             {
@@ -62,15 +69,20 @@ namespace Solution.Web.Controllers
         // GET: CarPool/Create
         public ActionResult Create()
         {
-            List<Kid> Kids = ServicePar.GetMany().ToList();
-            ViewBag.MyKid = new SelectList(Kids, "IdKid", "FirstName");
+            //List<Kid> Kids = ServicePar.GetMany().ToList();
+
+            var userId = (int)Session["idu"];
+            var kidss = db.Kids;
+            var query = kidss.Where(z => z.idParent == userId).Select(z=>z.FirstName).ToList();
+            ViewBag.MyKid = new SelectList(query, "IdKid", "FirstName");
+           
             return View();
             
         }
 
         // POST: CarPool/Create
         [HttpPost]
-        public ActionResult create(CarPoolModel collection , string ItemList)
+            public ActionResult create(CarPoolModel collection )
         {
 
             ICarPoolService sc = new CarPoolService();
@@ -86,8 +98,7 @@ namespace Solution.Web.Controllers
             c.Time = collection.Time;
             c.Date = collection.Date;
             c.Message = collection.Message;
-
-                c.idKid = collection.idKid;
+            c.idKid = collection.idKid;
                
             sc.Add(c);
             sc.Commit();

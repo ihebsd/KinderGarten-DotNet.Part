@@ -63,3 +63,5 @@ D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.S
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Service\obj\Debug\Solution.Service.dll
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Service\obj\Debug\Solution.Service.pdb
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Service\bin\Debug\Solution.Service.dll.config
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Service\bin\Debug\EntityFramework.SqlServer.dll
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Service\bin\Debug\EntityFramework.SqlServer.xml

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Solution.Web.Models
 {
-    public class ParentMoel : User
+    public class ParentModel : User
     {
         public virtual ICollection<CarPool> CarPools { get; set; }
         public virtual ICollection<Kid> Kids { get; set; }

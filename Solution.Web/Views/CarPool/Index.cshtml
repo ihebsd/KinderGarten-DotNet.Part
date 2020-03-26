@@ -13,73 +13,90 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table">
-                        <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Kids.FirstName)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Parent.nom)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Title)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.From)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.To)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Time)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Date)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Message)
-                            </th>
-                            <th></th>
-                        </tr>
 
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>
+                    @foreach (var item in Model)
+                    {
 
-                                    @Html.DisplayFor(modelItem => item.idKid)
-                                    <!--Html.DisplayFor(modelItem => item.Parent.nom)   hethi mamchetch ken  id       -->
 
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.idParent)
-                                    <!--Html.DisplayFor(modelItem => item.Kids.FirstName)   hethi mamchetch ken  id     -->
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Title)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.From)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.To)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Time)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Date)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Message)
-                                </td>
-                                <td>
-                                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                                </td>
-                            </tr>
-                        }
+                        <div class="shop_item" align="left">
+                            <div class="shop_block_img">
+                                <a href="shop_item.html"><img src="img/shop/item-4.jpg" alt=""></a>
+                            </div>
+                            <div class="item_describe" align="left">
+                                <h5>
+                                    <a href="shop_item.html">
 
-                    </table>
-</div></div></div></section>
+                                        @foreach (var p in ViewBag.MyParent)
+                                        {
+
+
+                                            if (Convert.ToInt32(@p.Value) == @item.idParent)
+                                            {
+                                                @p.Text;
+
+                                            }
+
+
+                                        }
+
+
+                                    </a>
+                                </h5>
+                                <div class="item_rate">
+                                    <ul>
+                                        <li class="t_red"><i class="fa fa-star"></i></li>
+                                        <li class="t_red"><i class="fa fa-star"></i></li>
+                                        <li class="t_red"><i class="fa fa-star"></i></li>
+                                        <li class="t_red"><i class="fa fa-star"></i></li>
+                                        <li class="t_stars"><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <div class="item_content" align="left">
+                                    <p>
+                                        Kids in This CarPool :
+                                        @foreach (var m in ViewBag.MyKid)
+                                        {
+
+
+                                            if (Convert.ToInt32(@m.Value) == @item.idKid)
+                                            {
+                                                @m.Text;
+
+                                            }
+
+
+                                        }
+                                    </p><br />
+                                    <p>
+                                        @Html.DisplayFor(modelItem => item.Title)
+                                    </p><br />
+
+                                    <p> @Html.DisplayFor(modelItem => item.From)</p><br />
+                                    <p> @Html.DisplayFor(modelItem => item.To)</p><br />
+                                    <p> @Html.DisplayFor(modelItem => item.Time)</p><br />
+                                    <p> @Html.DisplayFor(modelItem => item.Date)</p><br />
+                                    <p>
+                                        @Html.DisplayFor(modelItem => item.Message)
+                                    </p><br />
+                                </div>
+                               
+                                <a href="#" class="button b_green_green_light">Reserver</a>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+                      
+
+                       
+
+
+                    }
+
+
+                </div></div></div></section>

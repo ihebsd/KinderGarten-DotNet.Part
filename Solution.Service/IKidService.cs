@@ -11,6 +11,6 @@ namespace Solution.Service
     public interface IKidService : IService<Kid>
     {
         IEnumerable<Kid> GetKidByName(string FirstName);
-
+       
     }
 }

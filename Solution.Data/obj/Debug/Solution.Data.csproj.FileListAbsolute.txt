@@ -63,3 +63,4 @@ D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.D
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.Pooool.resources
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.check.resources
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.indexx.resources
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.kidlist.resources

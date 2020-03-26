@@ -3,6 +3,7 @@ using Service.Pattern;
 using Solution.Data.Infrastructure;
 using Solution.Domain;
 using Solution.Domain.Entities;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Solution.Service
@@ -20,5 +21,10 @@ namespace Solution.Service
             var userr = GetMany(u => u.login == login && u.password == pwd).First();
             return userr;
         }
+        public IEnumerable<User> GetParentByName(string nom)
+        {
+            return GetMany(f => f.nom.Contains(nom));
+        }
+        
     }
 }
