@@ -198,6 +198,7 @@
     <Compile Include="Models\ReputationModel.cs" />
     <Compile Include="Models\ResetPasswordModel.cs" />
     <Compile Include="Models\UserLogin.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -792,11 +793,7 @@
     <Content Include="Views\KinderGarten\Index.cshtml" />
     <Content Include="Views\KinderGarten\Details.cshtml" />
     <Content Include="Views\KinderGarten\Delete.cshtml" />
-    <Content Include="Views\Claim\Create.cshtml" />
-    <Content Include="Views\Claim\Edit.cshtml" />
-    <Content Include="Views\Claim\Details.cshtml" />
     <Content Include="Views\Claim\Delete.cshtml" />
-    <Content Include="Views\Claim\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Claim\IndexFront.cshtml" />
@@ -810,6 +807,11 @@
     <Content Include="Views\Reputation\Delete.cshtml" />
     <Content Include="Views\Reputation\DeleteFront.cshtml" />
     <Content Include="Views\Reputation\DetailsFront.cshtml" />
+    <Content Include="Views\Claim\EditBack.cshtml" />
+    <Content Include="Views\Claim\Index.cshtml" />
+    <Content Include="Views\Claim\Create.cshtml" />
+    <Content Include="Views\Claim\Details.cshtml" />
+    <Content Include="Views\Claim\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

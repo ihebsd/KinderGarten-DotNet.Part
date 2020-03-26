@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Solution.Web.Models.ClaimModel>
+﻿@model IEnumerable<Solution.Domain.Entities.Claim>
 
 @{
     ViewBag.Title = "IndexFront";
@@ -90,7 +90,7 @@
                             @Html.DisplayNameFor(model => model.ClaimDate)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.ParentId)
+                            @Html.DisplayNameFor(model => model.Parent.prenom)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.ClaimType)
@@ -121,7 +121,7 @@
                                 @Html.DisplayFor(modelItem => item.ClaimDate)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.ParentId)
+                                @Html.DisplayFor(modelItem => item.Parent.prenom)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.ClaimType)

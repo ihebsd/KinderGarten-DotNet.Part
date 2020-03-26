@@ -1,37 +1,38 @@
-﻿@model Solution.Web.Models.ClaimModel
+﻿
+@model Solution.Web.Models.ClaimModel
 
 @{
     ViewBag.Title = "Create";
 }
-    <body>
-            <section id="authorization_page" class="authorization_page">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-10 dot">
-                            <h2 class="section-title">Create claim</h2>
+<body>
+    <section id="authorization_page" class="authorization_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 dot">
+                    <h2 class="section-title">Create claim</h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    @using (Html.BeginForm("Create", "Claim", htmlAttributes: new { id = "createform" }, method: FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="reg_box">
+                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Claim name" })
+                            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "5", cols = "3", @placeholder = "Description" })
+
+                            @Html.TextBoxFor(m => m.ClaimType, new { @class = "form-control", @placeholder = "claim type" })
+                            @Html.HiddenFor(m => m.status)
+
+
                         </div>
-                        <div class="col-md-1"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            @using (Html.BeginForm("Create", "Claim", htmlAttributes: new { id = "createform" }, method: FormMethod.Post))
-                            {
-                                @Html.AntiForgeryToken()
 
-                            <div class="reg_box">
-                                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Claim name" })
-                                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "5", cols = "3" , @placeholder = "Description" })
-
-                                @Html.TextBoxFor(m => m.ClaimType, new { @class = "form-control", @placeholder = "claim type" })
-
-                                @Html.TextBoxFor(m => m.status, new { @class = "form-control", @placeholder = "status" })
-
-                            </div>
-                                
-                                <button class="button" type="submit" value="Create">Create</button>
-                            }
-                            <script>
+                        <button class="button" type="submit" value="Create">Create</button>
+                    }
+                    <script>
                                 var form = document.getElementById('createform');
 
                                 function myFunction() {
@@ -39,23 +40,23 @@
                                         alert("Your claim was successufully created");
                                     }
                                 }
-                            </script>
-                        </div>
-                    </div>
+                    </script>
                 </div>
+            </div>
+        </div>
 
-            </section>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
-        
-    </body>
+
+</body>

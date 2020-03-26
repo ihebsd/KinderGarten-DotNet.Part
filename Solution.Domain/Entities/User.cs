@@ -41,6 +41,7 @@ namespace Solution.Domain.Entities
         public string ResetPasswordCode { get; set; }
         public role role { get; set; }
         public virtual ICollection<Reputation> Reputations { get; set; }
+        public virtual ICollection<Claim> claims { get; set; }
 
         public override string ToString()
         {

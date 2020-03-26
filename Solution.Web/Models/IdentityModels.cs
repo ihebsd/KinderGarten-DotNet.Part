@@ -30,6 +30,6 @@ namespace Solution.Web.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<Solution.Web.Models.ClaimModel> ClaimModels { get; set; }
+        
     }
 }

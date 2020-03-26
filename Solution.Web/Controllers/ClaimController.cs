@@ -30,23 +30,16 @@ namespace Solution.Web.Controllers
             String mail = userService.GetById(userId).email;
             ViewBag.home = mail;
             ViewBag.phone = Phone2;*/
-            List<ClaimModel> Claim = new List<ClaimModel>();
+            
             List<Claim> Claims = ClaimsService.GetMany().ToList();
-            foreach (Claim c in ClaimsService.SearchKClaimByName(searchString))
+            if (!String.IsNullOrEmpty(searchString))
             {
-                Claim.Add(new ClaimModel
-                {    
-                    ComplaintId=c.ComplaintId,
-                    Name = c.Name,
-                    Description = c.Description,
-                    ClaimDate = c.ClaimDate,
-                    ParentId = c.ParentId,
-                    ClaimType = c.ClaimType,
-                    status = c.status
-                });
-
+                Claims = Claims.Where(m => m.Name.Equals(searchString)).ToList();
             }
-            return View(Claim);
+
+
+
+            return View(Claims);
         }
 
         // GET: Claim/Details/5
@@ -96,20 +89,19 @@ namespace Solution.Web.Controllers
         [HttpPost]
         public ActionResult Create(ClaimModel claimM)
         {
+            
             DateTime today = DateTime.Now;
             Claim claims = new Claim()
             {
-                Name=claimM.Name,
+                Name = claimM.Name,
                 Description = claimM.Description,
                 ClaimDate = today,
                 ParentId = (int)Session["idu"],
                 ClaimType = claimM.ClaimType,
-                status = claimM.status
+                status ="In_progress"
             };
             ClaimsService.Add(claims);
             ClaimsService.Commit();
-
-
             return RedirectToAction("IndexFront");
         }
 
@@ -210,29 +202,17 @@ namespace Solution.Web.Controllers
         // GET: ClaimFront
         public ActionResult IndexFront(string searchString)
         {
-
             var userId = (int)Session["idu"];
             String login = userService.GetById(userId).login;
             String mail = userService.GetById(userId).email;
             ViewBag.home = mail;
             ViewBag.phone = login;
-            List<ClaimModel> Claim = new List<ClaimModel>();
             List<Claim> Claims = ClaimsService.GetMany().ToList();
-            foreach (Claim c in ClaimsService.SearchKClaimByName(searchString))
+            if (!String.IsNullOrEmpty(searchString))
             {
-                Claim.Add(new ClaimModel
-                {
-                    ComplaintId = c.ComplaintId,
-                    Name = c.Name,
-                    Description = c.Description,
-                    ClaimDate = c.ClaimDate,
-                    ParentId = c.ParentId,
-                    ClaimType = c.ClaimType,
-                    status = c.status
-                });
-
+                Claims = Claims.Where(m => m.Name.Equals(searchString)).ToList();
             }
-            return View(Claim);
+            return View(Claims);            
         }
         // GET: Claim/DeleteFront/5
         public ActionResult DeleteFront(int id)
@@ -284,6 +264,44 @@ namespace Solution.Web.Controllers
                 status = c.status
             };
             return View(cm);
+        }
+        // GET: Claim/EditBack/5
+        public ActionResult EditBack(int id)
+        {
+
+           /* var userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;*/
+            if (id == 0)
+            { return new HttpStatusCodeResult(HttpStatusCode.BadRequest); }
+            else
+            {
+                Claim e = ClaimsService.GetById(id);
+                ClaimModel em = new ClaimModel();
+                em.status = e.status;
+                return View(em);
+            }
+        }
+        // POST: Claim/EditBack/5
+        [HttpPost]
+        public ActionResult EditBack(int id, ClaimModel cm)
+        {
+            
+            try
+            {
+                Claim c = ClaimsService.GetById(id);
+                c.status = cm.status;
+                ClaimsService.Update(c);
+                ClaimsService.Commit();
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View(cm);
+            }
         }
     }
 }

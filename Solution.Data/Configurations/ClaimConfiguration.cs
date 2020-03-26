@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Solution.Data.Configurations
 {
-   public class ClaimConfiguration : EntityTypeConfiguration<Parent>
+   public class ClaimConfiguration : EntityTypeConfiguration<User>
     {
         public ClaimConfiguration()
         {
-            HasMany(u => u.Claims).WithRequired(k => k.Parent).HasForeignKey(p => p.ParentId).WillCascadeOnDelete(true);
+          //  HasMany(u => u.claims).WithRequired(k => k.Parent).HasForeignKey(p => p.ParentId).WillCascadeOnDelete(true);
         }
     }
 }

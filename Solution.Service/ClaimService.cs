@@ -26,7 +26,7 @@ namespace Solution.Service
         }
         public IEnumerable<Claim> SearchKClaimByName(string searchString)
         {
-            IEnumerable<Claim> ClaimDomain = GetMany();
+            IEnumerable<Claim> ClaimDomain = GetMany().ToList();
             if (!String.IsNullOrEmpty(searchString))
             {
                 ClaimDomain = GetMany(x => x.Name.Contains(searchString));
