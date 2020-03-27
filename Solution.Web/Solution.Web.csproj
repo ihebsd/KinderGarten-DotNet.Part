@@ -466,6 +466,8 @@
     <Content Include="Content\Front\hts-cache\readme.txt" />
     <Content Include="Content\Front\hts-log.txt" />
     <Content Include="Content\Front\index.html" />
+    <Content Include="Content\Uploads\67073055_2132007100435973_726767406319403008_n.jpg" />
+    <Content Include="Content\Uploads\cute-success-kid-1920x1080.0.0.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -570,10 +572,12 @@
     <Content Include="Views\Shared\_LayoutCarpool.cshtml" />
     <Content Include="Views\CarPool\create.cshtml" />
     <Content Include="Views\CarPool\Index.cshtml" />
+    <Content Include="Views\CarPool\MyIndex.cshtml" />
+    <Content Include="Views\CarPool\Delete.cshtml" />
+    <Content Include="Views\CarPool\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Uploads\" />
     <Folder Include="Views\Transport\" />
   </ItemGroup>
   <ItemGroup>

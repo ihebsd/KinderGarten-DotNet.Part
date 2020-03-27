@@ -28,7 +28,7 @@
                 <div class="col-md-12">
                     @using (Html.BeginForm())
                     {
-                      
+
                         @Html.AntiForgeryToken()
                         <div class="text-success">
                             <h3>@ViewBag.Message</h3>
@@ -36,7 +36,8 @@
                         <div class="reg_box">
                             <h3 align="left">Which Of your kids will be in this carpool?</h3>
                             <br />
-                            @Html.DropDownList("idKid", (SelectList)ViewData["Mykid"], new { @class = "form-control", @placeholder = "Kid", style = "width:1000px" })
+
+                            @Html.DropDownList("idKid", ViewBag.MyKid as SelectList, "Select a Kid", new { @class = "form-control", style = "width:1000px" })
                             @Html.ValidationMessageFor(model => model.idKid, "", new { @class = "text-danger" })
 
                             <br />
@@ -54,61 +55,24 @@
                             @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
                             @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @placeholder = "Message", style = "width:1000px" } })
                             @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
-                           
-
-                        </div>
-
-
-
-                            <button class="button" type="submit" value="Create" onclick="SaveKid()" style="width:500px">Submit </button>
-
-
-                            }
 
 
                         </div>
+
+
+
+                        <button class="button" type="submit" value="Create" onclick="SaveKid()" style="width:500px">Submit </button>
+
+
+                    }
+
+
+                </div>
             </div>
         </div>
     </section>
-    <script>
-        var SaveKid = function() {
 
-            var arrItem = [];
-            var commaSeparatedIds = "";
-            $("#ItemList li  inpuu[type=checkbox]").each(function (index, val) {
-
-                debugger
-                var checkedId = $(val).attr("Id");
-                var arr = checkedId.split("_");
-                var currentCheckedboxId = arr[1];
-                var Ischecked = $("#" + checkedId).is(":cheked", true);
-                if (Ischecked) {
-                    arrItem.push(currentCheckedboxId);
-                }
-
-
-            })
-
-            if (arrItem.length != 0) {
-                commaSeparatedIds = arrItem.toString();
-
-                $.ajax({
-                    url: "/CarPool/create",
-                    type: "post",
-                    data: { ItemList: commaSeparatedIds },
-                    success: function (response) {
-                        //Vcode
-                    }
-                })
-
-
-                }
-
-
-
-        }
-    </script>
-
+    @Url.Action("Index", "Carpool")
 </body>
 
 

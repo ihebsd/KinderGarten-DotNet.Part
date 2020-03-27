@@ -21,10 +21,13 @@ namespace Solution.Service
             var userr = GetMany(u => u.login == login && u.password == pwd).First();
             return userr;
         }
-        public IEnumerable<User> GetParentByName(string nom)
+        public IEnumerable<User> GetParentByName(string prenom)
+        {
+            return GetMany(f => f.prenom.Contains(prenom));
+        }
+        public IEnumerable<User> GetParentByPrenom(string nom)
         {
             return GetMany(f => f.nom.Contains(nom));
         }
-        
     }
 }

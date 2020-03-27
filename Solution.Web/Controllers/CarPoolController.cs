@@ -9,6 +9,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
@@ -37,7 +38,10 @@ namespace Solution.Web.Controllers
             ViewBag.MyKid = new SelectList(Kids, "IdKid", "FirstName");
 
             List<User> Parents = Service.GetMany().ToList();
-            ViewBag.MyParent = new SelectList(Parents, "IdUser", "nom");
+            ViewBag.MyParent = new SelectList(Parents, "IdUser", "prenom");
+            List<User> Parentn = Service.GetMany().ToList();
+            ViewBag.MyParentn = new SelectList(Parentn, "IdUser", "nom");
+
             var carps = new List<CarPoolModel>();
             foreach (CarPool c in sc.SearchCarpoolByTo(searchString))
             {
@@ -59,22 +63,59 @@ namespace Solution.Web.Controllers
             }
             return View(carps);
         }
+        // GET: CarPool
+        public ActionResult MyIndex(string searchString)
+        {
+            List<Kid> Kids = ServicePar.GetMany().ToList();
+            ViewBag.MyKid = new SelectList(Kids, "IdKid", "FirstName");
 
-        // GET: CarPool/Details/5
-        public ActionResult Details(int id)
+            List<User> Parents = Service.GetMany().ToList();
+            ViewBag.MyParent = new SelectList(Parents, "IdUser", "prenom");
+
+            List<User> Parentn = Service.GetMany().ToList();
+            ViewBag.MyParentn = new SelectList(Parentn, "IdUser", "nom");
+
+            var userId = (int)Session["idu"];
+            var carps = new List<CarPoolModel>();
+            
+
+            foreach (CarPool c in sc.SearchCarpoolByTo(searchString))
+            {
+                if (c.idParent == userId) { 
+                CarPoolModel cs = new CarPoolModel()
+                {
+
+                    Id = c.Id,
+                    Title = c.Title,
+                    From = c.From,
+                    To = c.To,
+                    Time = c.Time,
+                    Date = c.Date,
+                    Message = c.Message,
+                    idKid = c.idKid,
+                    idParent = c.idParent,
+                };
+
+                carps.Add(cs);
+            }
+
+            }
+            return View(carps);
+        }
+            // GET: CarPool/Details/5
+            public ActionResult Details(int id)
         {
             return View();
         }
 
         // GET: CarPool/Create
-        public ActionResult Create()
+        public ActionResult Create(string FirstName)
         {
-            //List<Kid> Kids = ServicePar.GetMany().ToList();
-
-            var userId = (int)Session["idu"];
-            var kidss = db.Kids;
-            var query = kidss.Where(z => z.idParent == userId).Select(z=>z.FirstName).ToList();
-            ViewBag.MyKid = new SelectList(query, "IdKid", "FirstName");
+            List<Kid> query = ServicePar.GetMany().ToList();    
+            //var userId = (int)Session["idu"];
+            // var kidss = db.Kids;
+            //  var query = kidss.Where(z => z.idParent == userId).Select(z=>z.FirstName).ToList();
+            ViewBag.MyKid = new SelectList(query,"IdKid","FirstName");
            
             return View();
             
@@ -115,15 +156,36 @@ namespace Solution.Web.Controllers
         // GET: CarPool/Edit/5
         public ActionResult Edit(int id)
         {
+            List<Kid> query = ServicePar.GetMany().ToList();
+            //var userId = (int)Session["idu"];
+            // var kidss = db.Kids;
+            //  var query = kidss.Where(z => z.idParent == userId).Select(z=>z.FirstName).ToList();
+            ViewBag.MyKid = new SelectList(query, "IdKid", "FirstName");
+
             return View();
+
         }
 
         // POST: CarPool/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, CarPoolModel collection)
         {
             try
             {
+                CarPool c = sc.GetById(id);
+                c.Id = collection.Id;
+                c.Title = collection.Title;
+                c.From = collection.From;
+                c.To = collection.To;
+                c.Time = collection.Time;
+                c.Date = collection.Date;
+                c.Message = collection.Message;
+                c.idKid = collection.idKid;
+
+                sc.Update(c);
+                sc.Commit();
+
+
                 // TODO: Add update logic here
 
                 return RedirectToAction("Index");
@@ -137,13 +199,19 @@ namespace Solution.Web.Controllers
         // GET: CarPool/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            CarPool c = sc.GetById(id);
+
+            sc.Delete(c);
+            sc.Commit();
+            return RedirectToAction("MyIndex");
         }
 
         // POST: CarPool/Delete/5
-        [HttpPost]
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, FormCollection collection)
         {
+           
             try
             {
                 // TODO: Add delete logic here

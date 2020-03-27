@@ -77,9 +77,9 @@
     <Compile Include="Migrations\202003231433416_indexx.designer.cs">
       <DependentUpon>202003231433416_indexx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003251902589_kidlist.cs" />
-    <Compile Include="Migrations\202003251902589_kidlist.designer.cs">
-      <DependentUpon>202003251902589_kidlist.cs</DependentUpon>
+    <Compile Include="Migrations\202003261608459_tt1.cs" />
+    <Compile Include="Migrations\202003261608459_tt1.designer.cs">
+      <DependentUpon>202003261608459_tt1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -112,8 +112,8 @@
     <EmbeddedResource Include="Migrations\202003231433416_indexx.resx">
       <DependentUpon>202003231433416_indexx.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003251902589_kidlist.resx">
-      <DependentUpon>202003251902589_kidlist.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003261608459_tt1.resx">
+      <DependentUpon>202003261608459_tt1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,5 +9,6 @@ namespace Solution.Service
     {
          User GetUserByLoginAndPassword(string login, string pwd);
         IEnumerable<User> GetParentByName(string nom);
+        IEnumerable<User> GetParentByPrenom(string prenom);
     }
 }
