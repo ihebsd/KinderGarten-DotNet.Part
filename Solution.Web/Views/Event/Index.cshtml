@@ -1,206 +1,215 @@
 ﻿@model IEnumerable<Solution.Web.Models.EventModel>
 
+
 @{
     ViewBag.Title = "Index";
 }
 
-    <body>
-        
-        <section id="events_header" class="events_header" data-parallax="scroll" data-bleed="200" data-z-index="-100" data-speed="0.1" data-image-src="~/Content/Uploads/event_page.jpg" data-over-scroll-fix="true">
-            <div class="overlay_opacity"></div>
-            <div class="events_wave"></div>
-            <div class="container front_index">
-                <div class="row">
-                    <div class="col-md-12 t_white">
-                        <ol class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active">Events</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-10">
-                        <h2 class="section-title">Events</h2>
-                        <p class="section-description">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. </p>
-                        <div class="events_button">
-                            <ul>
-                                <li class="active"><a href="#">Upcoming Events</a></li>
-                                <li><a href="#">Past Events</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-1"></div>
+<body>
+
+    <section id="events_header" class="events_header" data-parallax="scroll" data-bleed="200" data-z-index="-100" data-speed="0.1" data-image-src="~/Content/Uploads/event_page.jpg" data-over-scroll-fix="true">
+        <div class="overlay_opacity"></div>
+        <div class="events_wave"></div>
+        <div class="container front_index">
+            <div class="row">
+                <div class="col-md-12 t_white">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active">Events</li>
+                    </ol>
                 </div>
             </div>
-        </section>
-        <div class="text-center section">
-            <ul class="filter">
-                <li class="active"><a href="#" data-filter="*">All</a></li>
-                <li><a href="#" data-filter=".drawing">Entertainment</a></li>
-                <li><a href="#" data-filter=".events">Educative</a></li>
-                <li><a href="#" data-filter=".reading">Other</a></li>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2 class="section-title">Events</h2>
+                    <p class="section-description">Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. </p>
+                    <div class="events_button">
+                        <ul>
+                            <li class="active"><a href="#">Upcoming Events</a></li>
+                            <li><a href="#">Past Events</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </section>
+    <div class="text-center section">
+        <ul class="filter">
+            <li class="active"><a href="#" data-filter="*">All</a></li>
+            <li><a href="#" data-filter=".drawing">Entertainment</a></li>
+            <li><a href="#" data-filter=".events">Educative</a></li>
+            <li><a href="#" data-filter=".reading">Other</a></li>
 
-                @using (Html.BeginForm())
-                {
-                    <table>
-                        <tr>
-                            <td>
-
-                                <div id="search_open" class="gc_search_box" style="display: block;">
-                                    @Html.TextBox("searchString")
-                                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-}
-            </ul>
-
-            @foreach (var item in Model)
+            @using (Html.BeginForm())
             {
+                <table>
+                    <tr>
+                        <td>
 
-                <div class="triple_grids">
-                    <div class="col-md-4 wow fadeInUp">
-                        <div class="grids_block">
-                            <div class="grids_block_top">
-                                @{string path = "~/Content/Uploads/" + @item.image;}
+                            <div id="search_open" class="gc_search_box" style="display: block;">
+                                @Html.TextBox("searchString")
+                                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            }
+        </ul>
 
-                                <img src="@Url.Content(path)" width="50" height="50" />
-                            </div>
-                            <div class="grids_block_center">
-                                <div class="date_events_left b_yellow_light">
-                                    <div class="date_middle">
-                                        <p class="pb_10"><span>@Html.DisplayFor(modelItem => item.DateEvent.Day)</span></p>
-                                        <p>@Convert.ToDateTime(item.DateEvent).ToString("MMM-yyyy")</p>
-                                    </div>
+        @foreach (var item in Model)
+        {
+
+            <div class="triple_grids">
+                <div class="col-md-4 wow fadeInUp">
+                    <div class="grids_block">
+                        <div class="grids_block_top">
+                            @{string path = "~/Content/Uploads/" + @item.image;}
+
+                            <img src="@Url.Content(path)" width="50" height="50" />
+                        </div>
+                        <div class="grids_block_center">
+                            <div class="date_events_left b_yellow_light">
+                                <div class="date_middle">
+                                    <p class="pb_10"><span>@Html.DisplayFor(modelItem => item.DateEvent.Day)</span></p>
+                                    <p>@Convert.ToDateTime(item.DateEvent).ToString("MMM-yyyy")</p>
                                 </div>
-                                <div class="date_events_right b_green_green_light">
-                                    <p class="block_time pb_10"><i class="fa fa-clock-o"><span></span></i>8:00 am - 2:00 pm</p>
-                                    <p class="block_time normal"><i class="fa fa-map-marker"><span></span></i>@Html.DisplayFor(modelItem => item.Category)</p>
-                                </div>
                             </div>
-                            <div class="grids_brief">
-                                <h4 class="grids_title t_green_green_light"><a href="event.html">@Html.DisplayFor(modelItem => item.Category)</a></h4>
-                                <p class="grids_title t_red">@Html.DisplayFor(modelItem => item.Description)</p>
+                            <div class="date_events_right b_green_green_light">
+                                <p class="block_time pb_10"><i class="fa fa-clock-o"><span></span></i>8:00 am - 2:00 pm</p>
+                                <p class="block_time normal"><i class="fa fa-map-marker"><span></span></i>@Html.DisplayFor(modelItem => item.Category)</p>
                             </div>
+                        </div>
+                        <div class="grids_brief">
+                            <h4 class="grids_title t_green_green_light"><a href="event.html">@Html.DisplayFor(modelItem => item.Category)</a></h4>
+                            <p class="grids_title t_red">@Html.DisplayFor(modelItem => item.Description)</p>
+                        </div>
+                        <div class="grids_brief">
+                            @Html.ActionLink("Details", "Details", new { id = item.EventId })    |    
+                            @Html.ActionLink("Edit", "Edit", new { id = item.EventId })    |   
+                            @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
+
+
                         </div>
                     </div>
                 </div>
+            </div>
 
 
-            }
-            <div class="blog_nav">
-								<ul class="pagination">
-									<li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-									<li class="active"><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#">4</a></li>
-									<li><a href="#">5</a></li>
-									<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-								</ul>
-							</div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-    </body>
+}
+
+        <div class="blog_nav">
+            <ul class="pagination">
+                <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+</body>

@@ -9,6 +9,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace Solution.Web.Controllers
 {
     public class EventController : Controller
@@ -22,8 +23,9 @@ namespace Solution.Web.Controllers
             userService = new UserService();
         }
         // GET: Event
-        public ActionResult Index(string searchString)
-        {
+
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
+        { 
             var userId = (int)Session["idu"];
             String Phone2 = userService.GetById(userId).login;
             String mail = userService.GetById(userId).email;
@@ -46,6 +48,7 @@ namespace Solution.Web.Controllers
                 };
                 events.Add(es);
             }
+         
             return View(events);
 
         }
@@ -129,18 +132,25 @@ namespace Solution.Web.Controllers
 
         // POST: Event/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, EventModel em)
         {
-            Event e = EventService.GetById(id);
-            EventModel em = new EventModel();
-
-            em.Name = e.Name;
-            //ImageUrl = Image.FileName,
-            em.Category = e.Category;
-            em.DateEvent = e.DateEvent;
-            em.Description = e.Description;
-            em.number_P = e.number_P;            
-            return View(em);
+            try
+            {
+                Event e = EventService.GetById(id);
+                em.Name = e.Name;
+                //ImageUrl = Image.FileName,
+                em.Category = e.Category;
+                em.DateEvent = e.DateEvent;
+                em.Description = e.Description;
+                em.number_P = e.number_P;
+                EventService.Update(e);
+                EventService.Commit();
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View(em);
+            }
         }
 
 

@@ -4,113 +4,95 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Edit Event</h2>
 
-@using (Html.BeginForm("Edit", "Event", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    @Html.AntiForgeryToken()
+<html lang="zxx">
 
-    <div class="container">
-        <div class="row">
-            <h4>Event</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="reg_box">
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = " Name", style = "width: 350px" })
-
-                </div>
-
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = " Description", style = "width: 350px" })
-                </div>
+<!-- Mirrored from fvdthemes.com/html/yeahkids/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:49:44 GMT -->
 
 
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.number_P, new { @class = "form-control", @placeholder = " Number of participants", style = "width: 350px" })
-                </div>
-
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.DateEvent, new { @class = "form-control", @placeholder = " Date", style = "width: 350px" })
-                </div>
-
-                <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.Category, new { @class = "form-control", @placeholder = " Category", style = "width: 350px" })
-                </div>
+<body>
 
 
+    <section id="authorization_page" class="authorization_page">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    @using (Html.BeginForm("Edit", "Event", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="reg_box">
+                            <DIV ALIGN="CENTER">
+                                <h3>Name</h3>
+                            </DIV>
+                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = " Name" })
+                            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+
+                            <DIV ALIGN="CENTER">
+                                <h3>Description</h3>
+                            </DIV>
+                            @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = " Description" })
+                            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+
+                            <DIV ALIGN="CENTER">
+                                <h3>Address</h3>
+                            </DIV>
+                            @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = " Address" })
+                            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+
+                            <DIV ALIGN="CENTER">
+                                <h3>Cost</h3>
+                            </DIV>
+                            @Html.TextBoxFor(model => model.Category, new { @class = "form-control", @placeholder = " Cost" })
+                            @Html.ValidationMessageFor(m => m.Category, "", new { @class = "text-danger" })
+
+                            <DIV ALIGN="CENTER">
+                                <h3>Phone</h3>
+                            </DIV>
+                            @Html.TextBoxFor(model => model.DateEvent, new { @class = "form-control", @placeholder = " Phone" })
+                            @Html.ValidationMessageFor(m => m.DateEvent, "", new { @class = "text-danger" })
+
+                            <DIV ALIGN="CENTER">
+                                <h3>Number employees</h3>
+                            </DIV>
+                            @Html.TextBoxFor(model => model.number_P, new { @class = "form-control", @placeholder = " Number of employees" })
+                            @Html.ValidationMessageFor(m => m.number_P, "", new { @class = "text-danger" })
+
+                            <DIV ALIGN="CENTER">
+                                <h3>Picture</h3>
+
+                            </DIV>
+                            @Html.TextBox("Image", null, new
+    {
+      type = "file",
+      @class = "form-input-styled"
+    })
+                            @Html.ValidationMessageFor(model => model.image, "", new { @class = "text-danger" })
+
+                        </div>
+
+
+                        <button class="button" type="submit" value="Edit">Edit</button>
 
 
 
 
-
-                <div class="col-md-10">
-                    @Html.TextBox("Image", null, new
-                         {
-                             type = "file",
-                             @class = "form-input-styled"
-                         })
-                    @Html.ValidationMessageFor(model => model.image, "", new { @class = "text-danger" })
+                    }
 
 
                 </div>
             </div>
-
-            <button class="button" type="submit" onclick="Edit()">Edit</button>
-
-
-            <script type="text/javascript">
-
-                function Edit() {
-                    toastr.success("Your Project was create succefully !");
-                }
-            </script>
         </div>
-    </div>
+    </section>
 
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
 
-}
+</body>
+
+</html>
 
 <div>
     @Html.ActionLink("Back to List", "Index")

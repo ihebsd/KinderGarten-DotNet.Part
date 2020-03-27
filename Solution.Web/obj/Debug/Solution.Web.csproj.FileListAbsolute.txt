@@ -358,3 +358,7 @@ C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solut
 C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Web\obj\Debug\Solution.Web.csproj.CopyComplete
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Web\bin\PagedList.dll
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Web\bin\PagedList.Mvc.dll
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Web\bin\PagedList.xml
+C:\Users\Culer\Desktop\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Web\bin\PagedList.Mvc.xml
