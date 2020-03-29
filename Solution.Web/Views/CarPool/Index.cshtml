@@ -11,102 +11,139 @@
 
                 <div class="col-md-1"></div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    @foreach (var item in Model)
-                    {
-                        <div class="row review_comment comment_green">
-                            <div class="comment_grid">
-                                <div class="col-md-12 last_week_c reviews_block comment_grid_item">
-                                    <div class="author_block">
-                                        <div class="shop_block_img">
-                                            <a href=""> <img style="width:100px;height:100px;" class="author_avatar" src="~/Content/Uploads/67073055_2132007100435973_726767406319403008_n.jpg" alt=""></a>
-                                            </div>
-                                            <p class="author_name">
 
-                                                @foreach (var p in ViewBag.MyParent)
-                                                {
+            <section id="reviews_page" class="reviews_page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10 dot">
+                            <h2 class="section-title">Kid Carpool Safety</h2>
+                            <p class="section-description">When it comes to arranging carpools for kids, carpool safety should always be at the top of your list. At GoKid, car safety for kids is one of our top priorities, 
+                                                           and we’ve even designed our app to maximize your child’s safety during each and every carpool.</p>
+                            <div class="leave_review">
+                                <a href="#contact_us" class="button scrollpage">Leave a Review</a>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+            </section>
 
+            <div id="reviews_content" class="section-block-page reviews_content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 pb_40">
+                            <ul class="filter">
+                                <li class="active"><a href="#" data-filter="*">All</a></li>
+                                <li><a href="#" data-filter=".last_week_c">Daily</a></li>
+                                <li><a href="#" data-filter=".month_c">Weekly</a></li>
+                                <li><a href="#" data-filter=".year_c">EveryWeekDay</a></li>
+                            </ul>
+                            <div class="shop_sorting">
 
-                                                    if (Convert.ToInt32(@p.Value) == @item.idParent)
-                                                    {
-                                                        @p.Text;
-
-                                                    }
-
-
-                                                }
-                                                @foreach (var p in ViewBag.MyParentn)
-                                                {
-
-
-                                                    if (Convert.ToInt32(@p.Value) == @item.idParent)
-                                                    {
-                                                        @p.Text;
-
-                                                    }
-
-
-                                                }
-                                            </p>
-                                            <h5 class="author_description">
-                                                <b> Kids in This CarPool :</b><br /><br />
-                                                <img style="width:50px;height:50px;" class="author_avatar" src="~/Content/Uploads/cute-success-kid-1920x1080.0.0.jpg" alt=""><br />
+                            </div>
+                        </div>
+                    </div>
 
 
-                                                @foreach (var m in ViewBag.MyKid)
-                                                {
-
-
-                                                    if (Convert.ToInt32(@m.Value) == @item.idKid)
-                                                    {
-                                                        @m.Text;
-
-                                                    }
-
-
-                                                }
-                                            </h5>
-                                        </div>
-                                        <div class="comment_block">
-                                            <div class="comment_title">
-                                                <p><i>@Html.DisplayFor(modelItem => item.Title)</i></p>
-                                                <hr />
-                                            </div>
-
-
-                                            <div class="title">
-
-
-                                                <div style="width:60%;display:inline-block;height: 150px;">
-                                                    <p> @Html.DisplayFor(modelItem => item.Message)</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            @foreach (var item in Model)
+                            {
+                                <div class="row review_comment comment_green">
+                                    <div class="comment_grid">
+                                        <div class="col-md-12 last_week_c reviews_block comment_grid_item">
+                                            <div class="author_block">
+                                                <div class="shop_block_img">
+                                                    <a href=""> <img style="width:100px;height:100px;" class="author_avatar" src="~/Content/Uploads/67073055_2132007100435973_726767406319403008_n.jpg" alt=""></a>
                                                 </div>
-                                                <div style="width:30%;display:inline-block;padding-left:15%;">
-                                                    <h3> From</h3><p align="left">@Html.DisplayFor(modelItem => item.From) </p><br />
-                                                    <h4> To   </h4><p align="left">@Html.DisplayFor(modelItem => item.To) </p><br />
+                                                <p class="author_name">
+
+                                                    @foreach (var p in ViewBag.MyParent)
+                                                    {
+
+
+                                                        if (Convert.ToInt32(@p.Value) == @item.idParent)
+                                                        {
+                                                            @p.Text;
+
+                                                        }
+
+
+                                                    }
+                                                    @foreach (var p in ViewBag.MyParentn)
+                                                    {
+
+
+                                                        if (Convert.ToInt32(@p.Value) == @item.idParent)
+                                                        {
+                                                            @p.Text;
+
+                                                        }
+
+
+                                                    }
+                                                </p>
+                                                <h5 class="author_description">
+                                                    <b> Kids in This CarPool :</b><br /><br />
+                                                    <img style="width:50px;height:50px;" class="author_avatar" src="~/Content/Uploads/cute-success-kid-1920x1080.0.0.jpg" alt=""><br />
+
+
+                                                    @foreach (var m in ViewBag.MyKid)
+                                                    {
+
+
+                                                        if (Convert.ToInt32(@m.Value) == @item.idKid)
+                                                        {
+                                                            @m.Text;
+
+                                                        }
+
+
+                                                    }
+                                                </h5>
+                                            </div>
+                                            <div class="comment_block">
+                                                <div class="comment_title">
+                                                    <p><i>@Html.DisplayFor(modelItem => item.Title)</i></p>
+                                                    <hr />
                                                 </div>
 
 
-                                            </div>
+                                                <div class="title">
 
 
-                                            <div class="comment_date">
-                                                <span><i class="fa fa-calendar"></i>Date : @Html.DisplayFor(modelItem => item.Date)</span><br />
-                                                <span><i class="fa fa-times"></i>   Time :@Html.DisplayFor(modelItem => item.Time)</span>
-                                                <div class="button">
-                                                    <a href="#">Contact</a>
+                                                    <div style="width:60%;display:inline-block;height: 150px;">
+                                                        <p> @Html.DisplayFor(modelItem => item.Message)</p>
+                                                    </div>
+                                                    <div style="width:30%;display:inline-block;padding-left:15%;">
+                                                        <h3> From</h3><p align="left">@Html.DisplayFor(modelItem => item.From) </p><br />
+                                                        <h4> To   </h4><p align="left">@Html.DisplayFor(modelItem => item.To) </p><br />
+                                                    </div>
+
+
+                                                </div>
+
+
+                                                <div class="comment_date">
+                                                    <span><i class="fa fa-calendar"></i>Date : @Html.DisplayFor(modelItem => item.Date)</span><br />
+                                                    <span><i class="fa fa-times"></i>   Time :@Html.DisplayFor(modelItem => item.Time)</span>
+                                                    <div class="button">
+                                                        <a href="#">Contact</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                            </div>
+                                </div>
+
+
+
+
+                            }
+
+
                         </div>
-
-
-
-
-                    }
-
-
+                    </div>
                 </div>
-                </div></div></section>
+</section>

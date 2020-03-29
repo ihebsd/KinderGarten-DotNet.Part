@@ -35,6 +35,8 @@
                         </div>
                         <div class="reg_box">
                             <h3 align="left">Which Of your kids will be in this carpool?</h3>
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.HiddenFor(model => model.Id)
                             <br />
 
                             @Html.DropDownList("idKid", ViewBag.MyKid as SelectList, "Select a Kid", new { @class = "form-control", style = "width:1000px" })

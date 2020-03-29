@@ -10,7 +10,6 @@
 
 <!-- Mirrored from fvdthemes.com/html/yeahkids/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:49:44 GMT -->
 
-
 <body>
 
 
@@ -33,9 +32,9 @@
                         <div class="text-success">
                             <h3>@ViewBag.Message</h3>
                         </div>
-                        <div class="reg_box">
+                        <div class="bg">
                             <h3 align="left">Which Of your kids will be in this carpool?</h3>
-                            <br />
+
 
                             @Html.DropDownList("idKid", ViewBag.MyKid as SelectList, "Select a Kid", new { @class = "form-control", style = "width:1000px" })
                             @Html.ValidationMessageFor(model => model.idKid, "", new { @class = "text-danger" })
@@ -43,34 +42,100 @@
                             <br />
                             @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", @placeholder = "Title", style = "width:1000px" } })
                             @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                            <br />
                             @Html.EditorFor(model => model.From, new { htmlAttributes = new { @class = "form-control", @placeholder = "From", style = "width:1000px" } })
                             @Html.ValidationMessageFor(model => model.From, "", new { @class = "text-danger" })
+                            <br />
                             @Html.EditorFor(model => model.To, new { htmlAttributes = new { @class = "form-control", @placeholder = "To", style = "width:1000px" } })
                             @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })
-
+                            <br />
                             @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control", @placeholder = "Time", style = "width:1000px" } })
                             @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
-
+                            <br />
                             @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date", style = "width:1000px" } })
                             @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                            <br />
                             @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @placeholder = "Message", style = "width:1000px" } })
                             @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                            <br />
+                        </div>
+                        <div class="reg_checkbox">
+                            <div>
+                                <input type="checkbox" class="form-check-input filled-in"
+                                       style="padding-left:7%;align-items:flex-start;" id="trigger" />
+                                <label for="trigger"></label>
+                                <span>Repeat</span>
+                            </div>
+                        </div>
+                        <div class="bg">
+                            <div id="hidden_fields" style="padding-top:20px">
+                                <div class="chiller_cb">
+                                    <input type="checkbox" name="hidden_field" id="hidden_field1" value="1" tabIndex="1" onClick="ckChange(this)" />
+                                    <label for="hidden_field1">EvereyWeekDay (Monday To Friday)</label>
+                                    <span></span>
+                                </div>
+                                <br />
+                                <div class="chiller_cb">
+                                    <input type="checkbox" name="hidden_field" id="hidden_field2" value="1" tabIndex="1" onClick="ckChange(this)" />
+                                    <label for="hidden_field2">Daily</label>
+                                    <span></span>
+                                </div>
+                                <br />
+                                <div class="chiller_cb">
+                                    <input type="checkbox" name="hidden_field" id="hidden_field3" value="1" tabIndex="1" onClick="ckChange(this)" />
+                                    <label for="hidden_field3">Weekly</label>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="bg">
+                           <div id="weekly" style="padding-top:20px">
+                               
+
+                               <br />
+                               @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date", style = "width:1000px" } })
+                               @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
 
 
+                           </div>
                         </div>
 
+                        <script>
+                            function ckChange(ckType) {
+                                var ckName = document.getElementsByName(ckType.name);
+                                var checked = document.getElementById(ckType.id);
 
+                                if (checked.checked) {
+                                    for (var i = 0; i < ckName.length; i++) {
 
-                        <button class="button" type="submit" value="Create" onclick="SaveKid()" style="width:500px">Submit </button>
+                                        if (!ckName[i].checked) {
+                                            ckName[i].disabled = true;
+                                        } else {
+                                            ckName[i].disabled = false;
+                                        }
+                                    }
+                                }
+                                else {
+                                    for (var i = 0; i < ckName.length; i++) {
+                                        ckName[i].disabled = false;
+                                    }
+                                }
+                            }
+                        </script>
 
+                        <div>
 
+                            <button class="button" type="submit" value="Create" onclick="SaveKid()" style="width:500px">Submit </button>
+
+                        </div>
                     }
 
 
                 </div>
-            </div>
+                    </div>
         </div>
     </section>
+
 
     @Url.Action("Index", "Carpool")
 </body>

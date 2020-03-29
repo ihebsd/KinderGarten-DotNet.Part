@@ -28,18 +28,12 @@ namespace Solution.Web.Models
         public DateTime Date { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Message is required")]
         public string Message { get; set; }
-        /* [Required]
-         [DataType(DataType.Date)]
-         public DateTime Daily { get; set; }
-         [Required]
-         [DataType(DataType.Time)]
-         public DateTime  EveryWeekDay { get; set; }
-         [Required]
-         [DataType(DataType.Date)]
-         public DateTime weekly { get; set; }
-         [Required]
-         [DataType(DataType.Date)]
-         public DateTime Until { get; set; }*/
+        public bool? Daily { get; set; }
+        public bool? Weekly { get; set; }
+        public bool? EveryWeekDay { get; set; }
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime? UntilDate { get; set; }
         public int? idParent { get; set; }
         [ForeignKey("idParent")]
         public virtual Parent Parent { get; set; }
