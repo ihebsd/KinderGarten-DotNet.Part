@@ -14,6 +14,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Services;
 using System.Web.UI.WebControls;
 
 
@@ -42,8 +43,17 @@ namespace Solution.Web.Controllers
 
             List<User> Parents = Service.GetMany().ToList();
             ViewBag.MyParent = new SelectList(Parents, "IdUser", "prenom");
+
             List<User> Parentn = Service.GetMany().ToList();
             ViewBag.MyParentn = new SelectList(Parentn, "IdUser", "nom");
+
+            var Carpool = db.CarPools;
+            var daily = Carpool.Where(z => z.Daily == true).ToString();
+            var everyweekday = Carpool.Where(z => z.EveryWeekDay == true).ToString();
+            var weekly = Carpool.Where(z => z.Weekly == true).ToString();
+            ViewBag.weekly = new SelectList(weekly);
+            ViewBag.everyweekday = new SelectList(everyweekday);
+            ViewBag.weekly = new SelectList(daily);
 
             var carps = new List<CarPoolModel>();
             foreach (CarPool c in sc.SearchCarpoolByTo(searchString))
@@ -59,6 +69,9 @@ namespace Solution.Web.Controllers
                     Date = c.Date,
                     Message = c.Message,
                     idKid = c.idKid,
+                    Daily=c.Daily,
+                    Weekly=c.Weekly,
+                    EveryWeekDay=c.EveryWeekDay,
                     idParent = c.idParent,
                 };
 
@@ -78,14 +91,16 @@ namespace Solution.Web.Controllers
             List<User> Parentn = Service.GetMany().ToList();
             ViewBag.MyParentn = new SelectList(Parentn, "IdUser", "nom");
 
+            
+
             var userId = (int)Session["idu"];
             var carps = new List<CarPoolModel>();
-
-
-            foreach (CarPool c in sc.SearchCarpoolByTo(searchString))
+           
+                foreach (CarPool c in sc.SearchCarpoolByTo(searchString))
             {
                 if (c.idParent == userId)
                 {
+                   ;
                     CarPoolModel cs = new CarPoolModel()
                     {
 
@@ -127,15 +142,34 @@ namespace Solution.Web.Controllers
 
         // POST: CarPool/Create
         [HttpPost]
-        public ActionResult create(CarPoolModel collection)
+        [WebMethod]
+        public ActionResult create(CarPoolModel collection, bool hidden_field1 = false , bool hidden_field2 = false, bool hidden_field3 = false)
         {
-
+         
             ICarPoolService sc = new CarPoolService();
-
+           
             CarPool c = new CarPool();
             if (ModelState.IsValid)
             {
                 
+
+                if (hidden_field1)
+                   c.Daily= true;
+
+                else
+                    c.Daily = false;
+
+                if (hidden_field2)
+                    c.EveryWeekDay = true;
+
+                else
+                    c.EveryWeekDay = false;
+
+                if (hidden_field3)
+                    c.Weekly = true;
+
+                else
+                    c.Weekly = false;
 
                 c.idParent = (int)Session["idu"];
                 c.Id = collection.Id;
@@ -146,7 +180,7 @@ namespace Solution.Web.Controllers
                 c.Date = collection.Date;
                 c.Message = collection.Message;
                 c.idKid = collection.idKid;
-
+               
                 sc.Add(c);
                 sc.Commit();
 
@@ -157,8 +191,7 @@ namespace Solution.Web.Controllers
                 return View();
             }
         }
-
-
+       
         // GET: CarPool/Edit/5
         public ActionResult Edit(int? id)
         {

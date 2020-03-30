@@ -47,9 +47,10 @@
 
 
                     <div class="row">
-                        <div class="col-md-12">
-                            @foreach (var item in Model)
-                            {
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-md-8 contact_link">
+
                                 <div class="row review_comment comment_green">
                                     <div class="comment_grid">
                                         <div class="col-md-12 last_week_c reviews_block comment_grid_item">
@@ -137,13 +138,134 @@
                                     </div>
                                 </div>
 
+                            </div>
+                           
+                               
+                            
+
+                                    if (item.Daily)
+                                    {
+                                        <div class="col-md-4">
+                                            <div class="sidebar">
+                                                <div class="working_hours">
+                                                    <h4><span><i class="fa fa-clock-o"></i></span>Daily</h4>
+                                                    <ul>
+                                                        <li class="day">Monday</li>
+                                                        <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="day">Tuesday</li>
+                                                        <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="day">Wednesday</li>
+                                                        <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="day">Thursday</li>
+                                                        <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="day">Friday</li>
+                                                        <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="day">Saturday</li>
+                                                        <li>NotDispo</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="day">Sunday</li>
+                                                        <li>NotDispo</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
 
 
-
+                               if (item.Weekly)
+                            {
+                                <div class="col-md-4">
+                                    <div class="sidebar">
+                                        <div class="working_hours">
+                                            <h4><span><i class="fa fa-clock-o"></i></span>Weekly</h4>
+                                            <ul>
+                                                <li class="day">Monday</li>
+                                                <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Tuesday</li>
+                                                <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Wednesday</li>
+                                                <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Thursday</li>
+                                                <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Friday</li>
+                                                <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Saturday</li>
+                                                <li>NotDispo</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Sunday</li>
+                                                <li>NotDispo</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             }
+                            
+                                  if (item.EveryWeekDay)
+                            {
+                                <div class="col-md-4">
+                                    <div class="sidebar">
+                                        <div class="working_hours">
+                                            <h4><span><i class="fa fa-clock-o"></i></span>EveryWeekDay</h4>
+                                            <ul>
+                                                <li class="day">Monday</li>
+                                                <li>@Html.DisplayFor(modelItem => item.UntilDate)</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Tuesday</li>
+                                                <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Wednesday</li>
+                                                <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Thursday</li>
+                                                <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Friday</li>
+                                                <li>@Html.DisplayFor(modelItem => item.Time)</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Saturday</li>
+                                                <li>NotDispo</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="day">Sunday</li>
+                                                <li>NotDispo</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
 
-
-                        </div>
+                    </div>
+                       
+             </div>
                     </div>
                 </div>
+     
 </section>

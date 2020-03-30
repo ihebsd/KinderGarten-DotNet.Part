@@ -85,6 +85,7 @@
                                             <div style="width:30%;display:inline-block;padding-left:15%;">
                                                 <h3> From</h3><p align="left">@Html.DisplayFor(modelItem => item.From) </p><br />
                                                 <h4> To   </h4><p align="left">@Html.DisplayFor(modelItem => item.To) </p><br />
+                                                <h4> Daily  </h4><p align="left">@Html.DisplayFor(modelItem => item.Daily) </p><br />
                                             </div>
 
 
@@ -99,7 +100,7 @@
                                                     <li><a href="@Url.Action("Edit", new {id = item.Id})"
                                                            onclick="return confirm('Are you sure you want to Edit?')"><i class="fa fa-edit"></i></a> </li>
                                                     <li>
-                                                        <a class="mfp-wrap" href="@Url.Action("Delete", new {id = item.Id})"
+                                                        <a href="@Url.Action("Delete", new {id = item.Id})"
                                                            onclick="return confirm('Are you sure you want to Delete?')" 
                                                            style="background-color:crimson"><i class="fa fa-remove"></i></a>
                                                     </li>

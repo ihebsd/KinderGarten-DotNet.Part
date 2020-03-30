@@ -81,9 +81,13 @@
     <Compile Include="Migrations\202003261608459_tt1.designer.cs">
       <DependentUpon>202003261608459_tt1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003290228162_WEBTEST.cs" />
-    <Compile Include="Migrations\202003290228162_WEBTEST.designer.cs">
-      <DependentUpon>202003290228162_WEBTEST.cs</DependentUpon>
+    <Compile Include="Migrations\202003291614456_WEBTEST.cs" />
+    <Compile Include="Migrations\202003291614456_WEBTEST.designer.cs">
+      <DependentUpon>202003291614456_WEBTEST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003300233324_daily.cs" />
+    <Compile Include="Migrations\202003300233324_daily.designer.cs">
+      <DependentUpon>202003300233324_daily.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -119,8 +123,11 @@
     <EmbeddedResource Include="Migrations\202003261608459_tt1.resx">
       <DependentUpon>202003261608459_tt1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003290228162_WEBTEST.resx">
-      <DependentUpon>202003290228162_WEBTEST.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003291614456_WEBTEST.resx">
+      <DependentUpon>202003291614456_WEBTEST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003300233324_daily.resx">
+      <DependentUpon>202003300233324_daily.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

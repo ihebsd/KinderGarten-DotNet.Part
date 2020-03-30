@@ -32,7 +32,6 @@ namespace Solution.Data
 
         public System.Data.Entity.DbSet<Solution.Domain.Entities.Parent> Parents { get; set; }
 
-    
     }
 }
 

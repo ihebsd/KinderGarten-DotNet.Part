@@ -58,6 +58,7 @@
                             @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @placeholder = "Message", style = "width:1000px" } })
                             @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
                             <br />
+                          
                         </div>
                         <div class="reg_checkbox">
                             <div>
@@ -70,21 +71,23 @@
                         <div class="bg">
                             <div id="hidden_fields" style="padding-top:20px">
                                 <div class="chiller_cb">
-                                    <input type="checkbox" name="hidden_field" id="hidden_field1" value="1" tabIndex="1" onClick="ckChange(this)" />
-                                    <label for="hidden_field1">EvereyWeekDay (Monday To Friday)</label>
+                                    <input  type="checkbox" name="hidden_field1" id="hidden_field1" value="true" class="group1" onClick="ckChange(this)" runat="server" />
+                                    <label for="hidden_field1">Daily</label>
                                     <span></span>
                                 </div>
                                 <br />
                                 <div class="chiller_cb">
-                                    <input type="checkbox" name="hidden_field" id="hidden_field2" value="1" tabIndex="1" onClick="ckChange(this)" />
-                                    <label for="hidden_field2">Daily</label>
+                                    <input type="checkbox" name="hidden_field2" id="hidden_field2" value="true" class="group1"  onClick="ckChange(this)" runat="server" />
+                                    <label for="hidden_field2">EvereyWeekDay (Monday To Friday)</label>
                                     <span></span>
                                 </div>
                                 <br />
                                 <div class="chiller_cb">
-                                    <input type="checkbox" name="hidden_field" id="hidden_field3" value="1" tabIndex="1" onClick="ckChange(this)" />
+                                    <input type="checkbox" name="hidden_field3" id="hidden_field3" value="true" class="group1"  onClick="ckChange(this)" runat="server"/>
                                     <label for="hidden_field3">Weekly</label>
+
                                     <span></span>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -93,39 +96,36 @@
                                
 
                                <br />
-                               @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date", style = "width:1000px" } })
-                               @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                               @Html.EditorFor(model => model.UntilDate, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date", style = "width:1000px" } })
+                               @Html.ValidationMessageFor(model => model.UntilDate, "", new { @class = "text-danger" })
 
 
                            </div>
                         </div>
 
                         <script>
-                            function ckChange(ckType) {
-                                var ckName = document.getElementsByName(ckType.name);
-                                var checked = document.getElementById(ckType.id);
 
-                                if (checked.checked) {
-                                    for (var i = 0; i < ckName.length; i++) {
+                            var daily = $("input[name=hidden_field2],input[name=hidden_field3]");
+                            var everyweekday = $("input[name=hidden_field1],input[name=hidden_field3]");
+                            var weekly = $("input[name=hidden_field1],input[name=hidden_field2]");
+                            $("input[name='hidden_field1']").change(function() {
+                            daily.prop("disabled",this.checked);
+                             });                      
 
-                                        if (!ckName[i].checked) {
-                                            ckName[i].disabled = true;
-                                        } else {
-                                            ckName[i].disabled = false;
-                                        }
-                                    }
-                                }
-                                else {
-                                    for (var i = 0; i < ckName.length; i++) {
-                                        ckName[i].disabled = false;
-                                    }
-                                }
-                            }
+                            $("input[name='hidden_field2']").change(function() {
+                            everyweekday.prop("disabled",this.checked);
+                            });    
+                            $("input[name='hidden_field3']").change(function() {
+                            weekly.prop("disabled",this.checked);
+                            });    
+
+
+                                   
                         </script>
 
                         <div>
 
-                            <button class="button" type="submit" value="Create" onclick="SaveKid()" style="width:500px">Submit </button>
+                            <button id ="Button" class="button" type="submit" value="Create" style="width:500px">Submit </button>
 
                         </div>
                     }

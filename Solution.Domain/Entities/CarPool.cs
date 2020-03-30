@@ -28,9 +28,9 @@ namespace Solution.Domain.Entities
         public DateTime Date { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Message is required")]
         public string Message { get; set; }
-        public bool? Daily { get; set; }
-        public bool? Weekly { get; set; }
-        public bool? EveryWeekDay { get; set; }
+        public bool Daily { get; set; }
+        public bool Weekly { get; set; }
+        public bool EveryWeekDay { get; set; }
         [DataType(DataType.Time)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? UntilDate { get; set; }

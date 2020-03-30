@@ -575,6 +575,7 @@
     <Content Include="Views\CarPool\MyIndex.cshtml" />
     <Content Include="Views\CarPool\Delete.cshtml" />
     <Content Include="Views\CarPool\Edit.cshtml" />
+    <Content Include="Views\CarPool\Weekly.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
