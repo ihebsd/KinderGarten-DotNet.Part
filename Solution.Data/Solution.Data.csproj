@@ -80,6 +80,10 @@
     <Compile Include="Migrations\202003131335321_eventmiggg.designer.cs">
       <DependentUpon>202003131335321_eventmiggg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004011837132_migjdida.cs" />
+    <Compile Include="Migrations\202004011837132_migjdida.designer.cs">
+      <DependentUpon>202004011837132_migjdida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003131335321_eventmiggg.resx">
       <DependentUpon>202003131335321_eventmiggg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004011837132_migjdida.resx">
+      <DependentUpon>202004011837132_migjdida.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

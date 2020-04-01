@@ -1,9 +1,10 @@
-﻿@model IEnumerable<Solution.Web.Models.EventModel>
-
+﻿@model IPagedList<Solution.Web.Models.EventModel>
 
 @{
     ViewBag.Title = "Index";
 }
+@using PagedList.Mvc;
+@using PagedList;
 
 <body>
 
@@ -86,8 +87,8 @@
                             <p class="grids_title t_red">@Html.DisplayFor(modelItem => item.Description)</p>
                         </div>
                         <div class="grids_brief">
-                            @Html.ActionLink("Details", "Details", new { id = item.EventId })    |    
-                            @Html.ActionLink("Edit", "Edit", new { id = item.EventId })    |   
+                            @Html.ActionLink("Details", "Details", new { id = item.EventId })    |
+                            @Html.ActionLink("Edit", "Edit", new { id = item.EventId })    |
                             @Html.ActionLink("Delete", "Delete", new { id = item.EventId })
 
 
@@ -97,17 +98,19 @@
             </div>
 
 
-}
+        }
+
+
+
+
 
         <div class="blog_nav">
             <ul class="pagination">
-                <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+              
+                <li>
+                    @Html.PagedListPager(Model, i => Url.Action("Index", "Event", new { i, searchString = Request.QueryString["searchString"] }))
+                </li>
+               
             </ul>
         </div>
         <br />

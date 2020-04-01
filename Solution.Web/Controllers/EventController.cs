@@ -8,6 +8,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
+
 
 
 namespace Solution.Web.Controllers
@@ -24,7 +27,7 @@ namespace Solution.Web.Controllers
         }
         // GET: Event
 
-        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
+        public ActionResult Index(string searchString, int? i)
         { 
             var userId = (int)Session["idu"];
             String Phone2 = userService.GetById(userId).login;
@@ -49,7 +52,7 @@ namespace Solution.Web.Controllers
                 events.Add(es);
             }
          
-            return View(events);
+            return View(events.ToList().ToPagedList(i ?? 1, 3));
 
         }
 
