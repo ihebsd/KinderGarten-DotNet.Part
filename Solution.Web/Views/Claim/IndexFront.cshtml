@@ -43,31 +43,10 @@
                 </div>
             </div>
             <div class="col-md-9">
-                <div class="card height-auto">
-                    <div class="card-body">
-                        <div class="heading-layout1">
-                            <div class="item-title">
-                                <h3>All claims</h3>
-                            </div>
-                            <div class="dropdown">
-                                <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                   aria-expanded="false">...</a>
-
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a class="dropdown-item" href="#">
-                                        <i class="fas fa-times text-orange-red"></i>Close
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="fas fa-cogs text-dark-pastel-green"></i>Edit
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="fas fa-redo-alt text-orange-peel"></i>Refresh
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shop_item">
-                            <a href="@Url.Action("create","Claim")" class="button b_green_green_light">Add claim</a>
+                <div class="shop_nav">
+                    <div class="shop_block_list">
+                        <div class="item-title">
+                            <h3>All claims</h3>
                         </div>
                         <form class="mg-b-20">
 
@@ -81,87 +60,37 @@
                                     <button class="button" type="submit">search</button>
                                 </div>
                             </div>
+                            <a href="@Url.Action("create", "Claim")" class="button b_green_green_light">Add claim</a>
                         </form>
+                        @foreach (var item in Model)
+                        {
+                            <div class="shop_item">
+                                <div class="shop_block_img">
+                                    <a href="shop_item.html"><img src="img/shop/item-1.jpg" alt=""></a>
+                                </div>
+                                <div class="item_describe">
+                                    <h5><a href="shop_item.html">@Html.DisplayFor(modelItem => item.Name)</a></h5>
 
-                        <div class="table-responsive">
-                            <table class="table display data-table text-nowrap">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input checkAll">
-                                                <label class="form-check-label">ID</label>
-                                            </div>
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.Name)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.Description)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.ClaimDate)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.Parent.prenom)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.ClaimType)
-                                        </th>
-                                        <th>
-                                            @Html.DisplayNameFor(model => model.status)
-                                        </th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var item in Model)
-                                    {
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input">
-                                                    <label class="form-check-label"> @Html.DisplayFor(modelItem => item.ComplaintId)</label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Name)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Description)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.ClaimDate)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Parent.prenom)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.ClaimType)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.status)
-                                            </td>
-
-                                            <td>
-                                                @Html.ActionLink("Edit", "EditBack", new { id = item.ComplaintId }) |
-                                                @Html.ActionLink("Details", "Details", new { id = item.ComplaintId }) |
-                                                @Html.ActionLink("Delete", "Delete", new { id = item.ComplaintId })
-                                            </td>
-
-                                        </tr>
-                                    }
-                            </table>
-
-                        </div>
+                                    <div class="item_content">
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </div>
+                                    <div class="item_price">
+                                        @Html.DisplayFor(modelItem => item.ClaimType)
+                                    </div>
+                                    <div>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.ComplaintId }) |
+                                        @Html.ActionLink("Details", "DetailsFront", new { id = item.ComplaintId }) |
+                                        @Html.ActionLink("Delete", "DeleteFront", new { id = item.ComplaintId })
+                                    </div>
+                                </div>
+                            </div>
+                        }                      
                     </div>
+                    
+
                 </div>
-
             </div>
-
-        </div>
-
-
+            </div>
     </div>
 </section>
  

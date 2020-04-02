@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace Solution.Service
 {
-    public interface IClaimService : IService<Claim>
+    public interface IAnotifService : IService<AdminNotif>
     {
-        IEnumerable<Claim> SearchKClaimByName(string searchString);
-        bool SendEmail(string toEmail, string subject, string emailBody);
-
+         List<AdminNotif> getNotifs();
+        IEnumerable<AdminNotif> SearchnotifBystat(string searchString);
     }
 }

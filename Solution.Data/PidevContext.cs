@@ -17,6 +17,7 @@ namespace Solution.Data
         public DbSet<KinderGarten> KinderGartens { get; set; }
         public DbSet<Claim> Claims { get; set; }
         public DbSet<Reputation> Reputations { get; set; }
+        public DbSet<AdminNotif> Anotifs { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

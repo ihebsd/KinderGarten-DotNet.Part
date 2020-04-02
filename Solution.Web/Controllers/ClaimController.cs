@@ -4,10 +4,12 @@ using Solution.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+
 
 namespace Solution.Web.Controllers
 {
@@ -36,9 +38,6 @@ namespace Solution.Web.Controllers
             {
                 Claims = Claims.Where(m => m.Name.Equals(searchString)).ToList();
             }
-
-
-
             return View(Claims);
         }
 
@@ -63,6 +62,7 @@ namespace Solution.Web.Controllers
                 ClaimModel cm = new ClaimModel()
             {
                 ComplaintId = c.ComplaintId,
+                
                 Name = c.Name,
                 Description = c.Description,
                 ClaimDate = c.ClaimDate,
@@ -87,9 +87,9 @@ namespace Solution.Web.Controllers
 
         // POST: Claim/Create
         [HttpPost]
-        public ActionResult Create(ClaimModel claimM)
+        public ActionResult Create(ClaimModel claimM,string name)
         {
-            
+
             DateTime today = DateTime.Now;
             Claim claims = new Claim()
             {
@@ -98,10 +98,19 @@ namespace Solution.Web.Controllers
                 ClaimDate = today,
                 ParentId = (int)Session["idu"],
                 ClaimType = claimM.ClaimType,
-                status ="In_progress"
+                status = "In_progress"
+            };
+            DateTime today2 = DateTime.Now;
+            AdminNotif comp2 = new AdminNotif()
+            {
+                Datenotif = today2,
+                msg = claims.ClaimType,
+                UserId= (int)Session["idu"]
             };
             ClaimsService.Add(claims);
             ClaimsService.Commit();
+            bool result2 = false;
+            result2 = ClaimsService.SendEmail("raslensafsaf@gmail.com", "You've got a new claim to treat", "<p><h1>Mister Admin you've got a new claim to treat: </h1><br /><b> *** Claim Type : </b></p>" + claims.ClaimType + "<p><b> *** Claim status Status : </b></p>" + claims.status + "<p><b> *** Claim description : </b></p>" + claims.Description + "<p><b> *** Claim Name : </b></p>" + claims.Name + "<p><b> *** Claim Date : </b></p>" + claims.ClaimDate + "<p><h4><a href='http://localhost:44326//Claim/Index'>Please Check your claims Here</a></h4></p>");
             return RedirectToAction("IndexFront");
         }
 
@@ -120,6 +129,7 @@ namespace Solution.Web.Controllers
             {
             Claim e = ClaimsService.GetById(id);
             ClaimModel em = new ClaimModel();
+            
             em.Name = e.Name;
             em.Description = e.Description;
             em.ClaimDate = e.ClaimDate;
@@ -153,6 +163,7 @@ namespace Solution.Web.Controllers
             try
             {
                 Claim c = ClaimsService.GetById(id);
+                
                 c.Name = cm.Name;
                 c.Description = cm.Description;
                 c.ClaimDate = today;
@@ -256,6 +267,7 @@ namespace Solution.Web.Controllers
             ClaimModel cm = new ClaimModel()
             {
                 ComplaintId = c.ComplaintId,
+                
                 Name = c.Name,
                 Description = c.Description,
                 ClaimDate = c.ClaimDate,

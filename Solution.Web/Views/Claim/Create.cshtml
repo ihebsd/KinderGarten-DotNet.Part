@@ -32,16 +32,23 @@
                     @using (Html.BeginForm("Create", "Claim", htmlAttributes: new { id = "createform" }, method: FormMethod.Post))
                     {
                         @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="reg_box">
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Claim name" })
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "3", cols = "3", @placeholder = "Description" })
 
-                        <div class="reg_box">
-                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Claim name" })
-                            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "3", cols = "3", @placeholder = "Description" })
+                        @Html.DropDownListFor(m => m.ClaimType, new List<SelectListItem>
+              { new SelectListItem{Text="On_Teachers", Value="On_Teachers" },
+                new SelectListItem{Text="On_KinderGarten", Value="On_KinderGarten"},
+                 new SelectListItem{Text="On_Services", Value="On_Services"},
+                 new SelectListItem{Text="Other", Value="Other"},
+                }, "Choose Type", new { @class = "form-control" })
+                        @Html.HiddenFor(m => m.status)
+                        
 
-                            @Html.TextBoxFor(m => m.ClaimType, new { @class = "form-control", @placeholder = "claim type" })
-                            @Html.HiddenFor(m => m.status)
 
 
-                        </div>
+                    </div>
 
                         <button class="button" type="submit" value="Create">Create</button>
                     }

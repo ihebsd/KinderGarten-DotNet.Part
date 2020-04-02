@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\AdminNotif.cs" />
     <Compile Include="Entities\Claim.cs" />
     <Compile Include="Entities\Directeur.cs" />
     <Compile Include="Entities\KinderGarten.cs" />

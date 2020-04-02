@@ -42,6 +42,7 @@ namespace Solution.Domain.Entities
         public role role { get; set; }
         public virtual ICollection<Reputation> Reputations { get; set; }
         public virtual ICollection<Claim> claims { get; set; }
+        public virtual ICollection<AdminNotif> AdminNotifs { get; set; }
 
         public override string ToString()
         {
