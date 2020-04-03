@@ -30,13 +30,8 @@
         </div>
         <form class="mg-b-20">
             <div class="row gutters-8">
-
-                <div class="col-4-xxxl col-xl-4 col-lg-3 col-12 form-group">
-                    Search by name: @Html.TextBox("searchString")
-                </div>
-                <div class="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">
-                    <button type="submit" class="fw-btn-fill btn-gradient-yellow">SEARCH</button>
-                </div>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                <input type="text" id="Search" placeholder="Search" class="form-control" />
             </div>
         </form>
         <div class="table-responsive">
@@ -73,7 +68,7 @@
                 <tbody>
                     @foreach (var item in Model)
                     {
-                        <tr>
+                        <tr class="Search">
                             <td>
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input">
@@ -111,5 +106,24 @@
         </div>
     </div>
 </div>
-
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function contains(text_one, text_two) {
+            if (text_one.indexOf(text_two) != -1)
+                return true;
+        }
+        $("#Search").keyup(function () {
+            var searchText = $("#Search").val().toLowerCase();
+            $(".Search").each(function () {
+                if (!contains($(this).text().toLowerCase(), searchText)) {
+                    $(this).hide();
+                }
+                else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>
 

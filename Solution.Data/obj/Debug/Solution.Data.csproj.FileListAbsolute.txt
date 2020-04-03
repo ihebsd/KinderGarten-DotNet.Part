@@ -42,8 +42,9 @@ C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.csproj.CopyComplete
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.dll
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.pdb
-C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.newmig.resources
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.mymig.resources
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.csproj.GenerateResource.cache
-C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.newmig1.resources
-C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.newmig2.resources
-C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.newmig3.resources
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\bin\Debug\Algolia.Search.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\bin\Debug\Algolia.Search.xml
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\bin\Debug\Newtonsoft.Json.xml

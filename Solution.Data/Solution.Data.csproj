@@ -34,11 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Algolia.Search, Version=6.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Algolia.Search.6.6.0\lib\net45\Algolia.Search.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -62,21 +68,9 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\202004021427390_newmig.cs" />
-    <Compile Include="Migrations\202004021427390_newmig.designer.cs">
-      <DependentUpon>202004021427390_newmig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004021545471_newmig1.cs" />
-    <Compile Include="Migrations\202004021545471_newmig1.designer.cs">
-      <DependentUpon>202004021545471_newmig1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004021608145_newmig2.cs" />
-    <Compile Include="Migrations\202004021608145_newmig2.designer.cs">
-      <DependentUpon>202004021608145_newmig2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004021719347_newmig3.cs" />
-    <Compile Include="Migrations\202004021719347_newmig3.designer.cs">
-      <DependentUpon>202004021719347_newmig3.cs</DependentUpon>
+    <Compile Include="Migrations\202004031448073_mymig.cs" />
+    <Compile Include="Migrations\202004031448073_mymig.designer.cs">
+      <DependentUpon>202004031448073_mymig.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -97,17 +91,8 @@
     <Folder Include="CustomConventions\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004021427390_newmig.resx">
-      <DependentUpon>202004021427390_newmig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004021545471_newmig1.resx">
-      <DependentUpon>202004021545471_newmig1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004021608145_newmig2.resx">
-      <DependentUpon>202004021608145_newmig2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004021719347_newmig3.resx">
-      <DependentUpon>202004021719347_newmig3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004031448073_mymig.resx">
+      <DependentUpon>202004031448073_mymig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

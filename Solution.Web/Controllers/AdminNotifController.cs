@@ -31,9 +31,8 @@ namespace Solution.Web.Controllers
                     Id = p.Id,
                     msg = p.msg,
                     Datenotif = p.Datenotif,
-                    userid = p.userid,
-                    username = p.username
-
+                    UserId = p.UserId
+                   
                 });
             }
             int listfilms = notifs.Count();
@@ -62,12 +61,11 @@ namespace Solution.Web.Controllers
             {
                 Datenotif = today,
                 msg = adm.msg,
-                userid = "1",
-                username = "raslen12"
+               UserId= (int)Session["idu"]
             };
             MyService.Add(comp);
             MyService.Commit();
-            return RedirectToAction("Index", "Reclamation");
+            return RedirectToAction("Index", "Claim");
         }
 
         // GET: AdminNotif/Edit/5

@@ -1,4 +1,5 @@
-﻿using Solution.Domain.Entities;
+﻿using Solution.Data;
+using Solution.Domain.Entities;
 using Solution.Service;
 using Solution.Web.Models;
 using System;
@@ -27,18 +28,19 @@ namespace Solution.Web.Controllers
         public ActionResult Index(string searchString)
         {
 
-           /* var userId = (int)Session["idu"];
-            String Phone2 = userService.GetById(userId).login;
-            String mail = userService.GetById(userId).email;
-            ViewBag.home = mail;
-            ViewBag.phone = Phone2;*/
-            
-            List<Claim> Claims = ClaimsService.GetMany().ToList();
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                Claims = Claims.Where(m => m.Name.Equals(searchString)).ToList();
-            }
-            return View(Claims);
+            /* var userId = (int)Session["idu"];
+             String Phone2 = userService.GetById(userId).login;
+             String mail = userService.GetById(userId).email;
+             ViewBag.home = mail;
+             ViewBag.phone = Phone2;*/
+
+            /* List<Claim> Claims = ClaimsService.GetMany().ToList();
+             if (!String.IsNullOrEmpty(searchString))
+             {
+                 Claims = Claims.Where(m => m.Name.Equals(searchString)).ToList();
+             }*/
+            PidevContext db = new PidevContext();
+            return View(db.Claims.ToList());
         }
 
         // GET: Claim/Details/5
@@ -110,7 +112,7 @@ namespace Solution.Web.Controllers
             ClaimsService.Add(claims);
             ClaimsService.Commit();
             bool result2 = false;
-            result2 = ClaimsService.SendEmail("raslensafsaf@gmail.com", "You've got a new claim to treat", "<p><h1>Mister Admin you've got a new claim to treat: </h1><br /><b> *** Claim Type : </b></p>" + claims.ClaimType + "<p><b> *** Claim status Status : </b></p>" + claims.status + "<p><b> *** Claim description : </b></p>" + claims.Description + "<p><b> *** Claim Name : </b></p>" + claims.Name + "<p><b> *** Claim Date : </b></p>" + claims.ClaimDate + "<p><h4><a href='http://localhost:44326//Claim/Index'>Please Check your claims Here</a></h4></p>");
+            result2 = ClaimsService.SendEmail("raslensafsaf@gmail.com", "You've got a new claim to treat", "<p><h1>Mister Admin you've got a new claim to treat: </h1><br /><b> *** Claim Type : </b></p>" + claims.ClaimType + "<p><b> *** Claim status Status : </b></p>" + claims.status + "<p><b> *** Claim description : </b></p>" + claims.Description + "<p><b> *** Claim Name : </b></p>" + claims.Name + "<p><b> *** Claim Date : </b></p>" + claims.ClaimDate + "<p><h4><a href='https://localhost:44326/Login/Login/Claim/index'>Please Check your claims Here</a></h4></p>");
             return RedirectToAction("IndexFront");
         }
 

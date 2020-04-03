@@ -77,6 +77,12 @@
                                     <div class="item_price">
                                         @Html.DisplayFor(modelItem => item.ClaimType)
                                     </div>
+                                    <div class="item_content">
+                                        @Html.DisplayFor(modelItem => item.ClaimDate)
+                                    </div>
+                                    <div class="item_price">
+                                        @Html.DisplayFor(modelItem => item.status)
+                                    </div>
                                     <div>
                                         @Html.ActionLink("Edit", "Edit", new { id = item.ComplaintId }) |
                                         @Html.ActionLink("Details", "DetailsFront", new { id = item.ComplaintId }) |

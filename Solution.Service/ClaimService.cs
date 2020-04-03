@@ -1,4 +1,5 @@
-﻿using Service.Pattern;
+﻿
+using Service.Pattern;
 using Solution.Data.Infrastructure;
 using Solution.Domain.Entities;
 using System;
@@ -59,6 +60,5 @@ namespace Solution.Service
                 return false;
             }
         }
-        
     }
 }
