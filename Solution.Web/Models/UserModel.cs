@@ -35,7 +35,7 @@ namespace Solution.Web.Models
         public System.Guid ActivationCode { get; set; }
         public string ResetPasswordCode { get; set; }
         public role role { get; set; }
-        public virtual ICollection<Reputation> Reputations { get; set; }
+        public virtual ICollection<FeedBack> Reputations { get; set; }
         public virtual ICollection<Claim> claims { get; set; }
 
         public override string ToString()

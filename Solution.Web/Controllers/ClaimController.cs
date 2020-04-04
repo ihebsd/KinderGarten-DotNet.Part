@@ -200,7 +200,7 @@ namespace Solution.Web.Controllers
         public ActionResult Delete(int id, FormCollection collection)
         {
             Claim C = ClaimsService.GetById((int)id);
-            if (C.status == "Complete")
+            if (C.status == "Resolved")
             {
                 ClaimsService.Delete(C);
                 ClaimsService.Commit();
@@ -302,15 +302,13 @@ namespace Solution.Web.Controllers
         [HttpPost]
         public ActionResult EditBack(int id, ClaimModel cm)
         {
-            
             try
             {
                 Claim c = ClaimsService.GetById(id);
-                c.status = cm.status;
+                c.status = "Resolved";
                 ClaimsService.Update(c);
                 ClaimsService.Commit();
-
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexFront");
             }
             catch
             {

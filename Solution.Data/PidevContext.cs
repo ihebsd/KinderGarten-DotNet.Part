@@ -16,20 +16,23 @@ namespace Solution.Data
         public DbSet<User> Users { get; set; }
         public DbSet<KinderGarten> KinderGartens { get; set; }
         public DbSet<Claim> Claims { get; set; }
-        public DbSet<Reputation> Reputations { get; set; }
+        public DbSet<FeedBack> Reputations { get; set; }
         public DbSet<AdminNotif> Anotifs { get; set; }
+        
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new DirecteurConfiguration());
            // modelBuilder.Configurations.Add(new ClaimConfiguration());
-            modelBuilder.Configurations.Add(new ReputationConfiguration());
+           // modelBuilder.Configurations.Add(new ReputationConfiguration());
 
 
 
 
         }
+
+        
     }
 }
 

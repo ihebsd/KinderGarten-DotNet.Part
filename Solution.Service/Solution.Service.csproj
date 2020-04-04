@@ -53,11 +53,11 @@
     <Compile Include="IAnotifService.cs" />
     <Compile Include="IClaimService.cs" />
     <Compile Include="IKinderGartenService.cs" />
-    <Compile Include="IReputationService.cs" />
+    <Compile Include="IFeedBackService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="KinderGartenService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReputationService.cs" />
+    <Compile Include="FeedBackService.cs" />
     <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +75,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

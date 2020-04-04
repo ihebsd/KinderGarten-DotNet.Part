@@ -35,11 +35,7 @@
                         <div class="reg_box">
                             @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Claim name" })
                             @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "5", cols = "3", @placeholder = "Description" })
-
                             @Html.TextBoxFor(m => m.ClaimType, new { @class = "form-control", @placeholder = "claim type" })
-
-
-
                         </div>
 
                         <button class="button" type="submit" value="Create">Update</button>

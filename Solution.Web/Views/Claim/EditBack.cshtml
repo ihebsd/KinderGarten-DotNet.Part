@@ -111,96 +111,55 @@
     <!-- /theme JS files -->
 </head>
 <body>
-    <div class="card height-auto">
-        <div class="card-body">
-            <div class="heading-layout1">
-                <div class="item-title">
-                    <h3>Update claim status</h3>
-                </div>
-                <div class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button"
-                       data-toggle="dropdown" aria-expanded="false">...</a>
-
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="@Url.Action("index","Claim")"><i class="fas fa-times text-orange-red"></i>Back to list</a>
-                    </div>
-                </div>
-            </div>
-
-
-            @using (Html.BeginForm("EditBack", "Claim", htmlAttributes: new { id = "createform" }, method: FormMethod.Post))
+        <div style="margin-left:10%" class="col-md-9">
+            @using (Html.BeginForm())
             {
-                @Html.AntiForgeryToken()
+                @Html.AntiForgeryToken() <form action="#">
+                    <div class="card">
+                        <div class="card-header bg-white header-elements-inline">
+                            <h6 class="card-title">Updating Reclamation</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                    <a class="list-icons-item" data-action="remove"></a>
+                                </div>
+                            </div>
+                        </div>
 
-
-
-                <form class="new-added-form">
-                    <div class="row">
-
-                        @Html.DropDownListFor(m => m.status, new List<SelectListItem>
-                 { new SelectListItem{Text="In_progress", Value="In_progress" },
-                new SelectListItem{Text="Resolved", Value="Resolved"},
-                 new SelectListItem{Text="Unresolved", Value="Unresolved"},
-                }, "Choose claim status", new { @class = "form-control-select2-icons" })
-
-                        <div class="col-md-3 d-none d-xl-block form-group">
+                        <div class="alert alert-info border-0 alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                            <div class="pace-demo">
+                                <div class="theme_xbox_sm">
+                                    <div class="pace_progress" data-progress-text="60%" data-progress="60"></div>
+                                    <div class="pace_activity"></div>
+                                </div>
+                            </div>
+                            <span style="margin-left:10%" class="font-weight-semibold">Heads up!</span> This alert needs your attention, it's <a href="#" class="alert-link">super important</a>. Does this reclamation <a href="#" class="alert-link">Corrected ?</a>
 
                         </div>
-                        <div class="col-12 form-group mg-t-8">
-                            <button type="submit" class="btn-fill-lg btn-gradient-yellow btn-hover-bluedark">Update</button>
+
+                        <div style="margin-left:83%" class="form-check form-check-switchery form-check-switchery-double">
+                            <label class="form-check-label">
+                                <b>Not Done</b>
+                                <input type="checkbox" class="form-check-input-switchery" data-fouc>
+                                <b>Done</b>
+                            </label>
                         </div>
-                    </div>
-                </form>
-
-            }
-        </div>
-    </div>
-    <div style="margin-left:10%" class="col-md-9">
-        <form action="#">
-            <div class="card">
-                <div class="card-header bg-white header-elements-inline">
-                    <h6 class="card-title">Updating Reclamation</h6>
-                    <div class="header-elements">
-                        <div class="list-icons">
-                            <a class="list-icons-item" data-action="collapse"></a>
-                            <a class="list-icons-item" data-action="reload"></a>
-                            <a class="list-icons-item" data-action="remove"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="alert alert-info border-0 alert-dismissible">
-                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
-                    <div class="pace-demo">
-                        <div class="theme_xbox_sm">
-                            <div class="pace_progress" data-progress-text="60%" data-progress="60"></div>
-                            <div class="pace_activity"></div>
-                        </div>
-                    </div>
-                    <span style="margin-left:10%" class="font-weight-semibold">Heads up!</span> This alert needs your attention, it's <a href="#" class="alert-link">super important</a>. Does this reclamation <a href="#" class="alert-link">Corrected ?</a>
-
-                </div>
-
-                <div style="margin-left:83%" class="form-check form-check-switchery form-check-switchery-double">
-                    <label class="form-check-label">
-                        <b>Not Done</b>
-                        <input type="checkbox" class="form-check-input-switchery" data-fouc>
-                        <b>Done</b>
-                    </label>
-                </div>
-                <div class="card-footer bg-white">
-                    <div class="row">
-                        <div class="col-lg-10 ml-lg-auto">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="submit" style="margin-left:-20%" class="btn btn-light">@Html.ActionLink("Back to List", "Index")</button>
-                                <button type="submit" class="btn bg-green-400 ml-3">Update <i class="icon-reload-alt ml-2"></i></button>
+                        <div class="card-footer bg-white">
+                            <div class="row">
+                                <div class="col-lg-10 ml-lg-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button type="submit" style="margin-left:-20%" class="btn btn-light">@Html.ActionLink("Back to List", "Index")</button>
+                                        <button type="submit" class="btn bg-green-400 ml-3">Update <i class="icon-reload-alt ml-2"></i></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</body>
+                </form>
+            }
+        </div>
+    </body>
 </html>
 

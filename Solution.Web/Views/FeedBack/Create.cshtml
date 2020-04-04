@@ -1,0 +1,72 @@
+﻿@model Solution.Web.Models.FeedBackModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+    <section id="about">
+        <div class="overlay_one">
+            <div class="bg_top"></div>
+            <div class="bg_bottom"></div>
+        </div>
+        <div class="overlay_two">
+            <div class="bg_top"></div>
+            <div class="bg_bottom"></div>
+        </div>
+        <div class="overlay_three">
+            <div class="bg_top"></div>
+            <div class="bg_bottom"></div>
+        </div>
+        <div class="container">          
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="about_tabs">
+                        <div class="about_bear_img hidden-sm hidden-xs">
+                            <img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/home/about_bear.png" alt="">
+                        </div>
+                        
+                        <div class="tab-content about_tabs_content">
+                            <div class="tab-pane tab_red active" id="education">
+                                <h3>Give us your FeedBack</h3>
+                                <div class="col-md-5" id="create">
+                                    @using (Html.BeginForm("Create", "FeedBack", htmlAttributes: new { id = "createform" }, method: FormMethod.Post))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        <div class="reg_box">
+                                            
+                                            @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "3", cols = "3", @placeholder = "Description" })
+                                        </div>
+
+                                        <button class="button" type="submit" value="Create">Submit</button>
+                                    }
+                                    <script>
+                                        var form = document.getElementById('createform');
+
+                                        function myFunction() {
+                                            if (form.checkValidity()) {
+                                                alert("Your claim was successufully created");
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                                <div class="col-md-5 hidden-sm hidden-xs about_img_content">
+                                    <img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/home/education.jpg" alt="">
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <br />
+   <br /><br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <br /><br />

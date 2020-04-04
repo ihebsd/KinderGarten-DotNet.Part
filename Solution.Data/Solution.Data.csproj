@@ -60,7 +60,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Configurations\ClaimConfiguration.cs" />
     <Compile Include="Configurations\DirecteurConfiguration.cs" />
-    <Compile Include="Configurations\ReputationConfiguration.cs" />
+    <Compile Include="Configurations\FeedBackConfiguration.cs" />
     <Compile Include="Infrastructures\DatabaseFactory.cs" />
     <Compile Include="Infrastructures\Disposable.cs" />
     <Compile Include="Infrastructures\IDatabaseFactory .cs" />
@@ -68,9 +68,21 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\202004031448073_mymig.cs" />
-    <Compile Include="Migrations\202004031448073_mymig.designer.cs">
-      <DependentUpon>202004031448073_mymig.cs</DependentUpon>
+    <Compile Include="Migrations\202004041400011_mymig.cs" />
+    <Compile Include="Migrations\202004041400011_mymig.designer.cs">
+      <DependentUpon>202004041400011_mymig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004041437495_mymig1.cs" />
+    <Compile Include="Migrations\202004041437495_mymig1.designer.cs">
+      <DependentUpon>202004041437495_mymig1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004041636306_mymig2.cs" />
+    <Compile Include="Migrations\202004041636306_mymig2.designer.cs">
+      <DependentUpon>202004041636306_mymig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004041658215_mymig3.cs" />
+    <Compile Include="Migrations\202004041658215_mymig3.designer.cs">
+      <DependentUpon>202004041658215_mymig3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -91,8 +103,17 @@
     <Folder Include="CustomConventions\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004031448073_mymig.resx">
-      <DependentUpon>202004031448073_mymig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004041400011_mymig.resx">
+      <DependentUpon>202004041400011_mymig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004041437495_mymig1.resx">
+      <DependentUpon>202004041437495_mymig1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004041636306_mymig2.resx">
+      <DependentUpon>202004041636306_mymig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004041658215_mymig3.resx">
+      <DependentUpon>202004041658215_mymig3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

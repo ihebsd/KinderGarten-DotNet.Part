@@ -49,3 +49,5 @@ C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\obj\Debug\Soluti
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Aspose.Email.dll
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\System.Text.Encoding.CodePages.dll
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Aspose.Email.xml
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Solution.Service.dll.config
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Service\bin\Debug\Service.Pattern.dll.config

@@ -40,7 +40,7 @@ namespace Solution.Domain.Entities
         public System.Guid ActivationCode { get; set; }
         public string ResetPasswordCode { get; set; }
         public role role { get; set; }
-        public virtual ICollection<Reputation> Reputations { get; set; }
+        public virtual ICollection<FeedBack> FeedBacks { get; set; }
         public virtual ICollection<Claim> claims { get; set; }
         public virtual ICollection<AdminNotif> AdminNotifs { get; set; }
 
