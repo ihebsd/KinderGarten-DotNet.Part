@@ -14,6 +14,10 @@
 
 
     <style>
+        #maps {
+            height: 400px;
+        }
+
         body {
             height: 100vh;
             padding: 0;
@@ -161,7 +165,7 @@
                 if (weekly.is(':checked')) {
 
                     hidenn.show();
-                   
+
 
                 } else {
 
@@ -248,6 +252,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 									</g>
 								</svg>
                                     @ViewBag.phone
@@ -267,6 +289,30 @@
                                                     <path class="svg_icons svg_key" d="M0,11.5l0,1.8C0,13.7,0.3,14,0.7,14h1.8c0.2,0,0.4-0.1,0.5-0.2l0.5-0.5v-1.4h1.4v-1.4h1.4l1-1
 									c0.5,0.2,1.1,0.3,1.8,0.3c2.7,0,4.9-2.2,4.9-4.9S11.8,0,9.1,0S4.2,2.2,4.2,4.9c0,0.6,0.1,1.2,0.3,1.8L0.2,11C0.1,11.1,0,11.3,0,11.5
 									z M8.4,3.8c0-1,0.8-1.8,1.8-1.8s1.8,0.8,1.8,1.8s-0.8,1.8-1.8,1.8S8.4,4.8,8.4,3.8z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -298,6 +344,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 								</svg>
 
                                             Log out
@@ -322,18 +392,25 @@
                                 <div class="search hidden-sm hidden-xs">
                                     <div class="icon_search hidden-sm hidden-xs">
                                         <a class="btnopen" href="#"><i class="fa fa-search"></i></a>
+
                                     </div>
-                                    <div class="input_search">
-                                        <input type="text" placeholder="Search...">
-                                        <a class="btnclose" href="#">×</a>
-                                        <a class="btnsearch" href="#"><i class="fa fa-search"></i></a>
-                                    </div>
+                                    <form asp-action="index">
+                                        <div class="input_search">
+                                            <button type="submit" hidden></button>
+                                            <i class="btnsearch"><i class="fa fa-search"></i></i>
+                                            <i> <a class="btnclose" href="#">×</a></i>
+                                            @Html.TextBox("searchString")
+
+
+
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="mnu hidden-sm hidden-xs">
                                     <ul>
                                         <li class="drop7">
                                             <div class="col-lg-offset-3" style="border: 1px solid black">
-                                                <a class="fa fa-plus" href="@Url.Action("create", "CarPool")"> Create </a>
+                                                <a class="fa fa-plus"> Create </a>
                                             </div>
                                         </li>
 
@@ -342,6 +419,7 @@
                                         <li>
                                         </li>
                                         <li>
+
                                         </li>
                                         <li class="drop6">
                                             <a class="fa fa-home" href="@Url.Action("index", "KinderGarten")"> Home</a>
@@ -356,11 +434,11 @@
                                     </ul>
 
                                 </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
         </header>
         <div>

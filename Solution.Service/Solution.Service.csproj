@@ -60,7 +60,9 @@
   <ItemGroup>
     <Compile Include="CarPoolService.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="GeoLocationService.cs" />
     <Compile Include="ICarPoolService.cs" />
+    <Compile Include="IGeoLocationService.cs" />
     <Compile Include="IKidService.cs" />
     <Compile Include="IKinderGartenService.cs" />
     <Compile Include="IUserService.cs" />

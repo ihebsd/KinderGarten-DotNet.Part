@@ -54,6 +54,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Entities\CarPool.cs" />
     <Compile Include="Entities\Directeur.cs" />
+    <Compile Include="Entities\GeoLocation.cs" />
     <Compile Include="Entities\Kid.cs" />
     <Compile Include="Entities\KinderGarten.cs" />
     <Compile Include="Entities\Parent.cs" />

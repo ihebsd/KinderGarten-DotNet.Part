@@ -1,4 +1,6 @@
-﻿using Service.Pattern;
+﻿using PagedList;
+using PagedList.Mvc;
+using Service.Pattern;
 using Solution.Data;
 using Solution.Domain.Entities;
 using Solution.Service;
@@ -12,6 +14,7 @@ using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Services;
@@ -36,7 +39,7 @@ namespace Solution.Web.Controllers
         }
 
         // GET: CarPool
-        public ActionResult Index(string searchString)
+        public ActionResult Index(string searchString,int? i)
         {
             List<Kid> Kids = ServicePar.GetMany().ToList();
             ViewBag.MyKid = new SelectList(Kids, "IdKid", "FirstName");
@@ -47,17 +50,18 @@ namespace Solution.Web.Controllers
             List<User> Parentn = Service.GetMany().ToList();
             ViewBag.MyParentn = new SelectList(Parentn, "IdUser", "nom");
 
-            var Carpool = db.CarPools;
-            var daily = Carpool.Where(z => z.Daily == true).ToString();
-            var everyweekday = Carpool.Where(z => z.EveryWeekDay == true).ToString();
-            var weekly = Carpool.Where(z => z.Weekly == true).ToString();
-            ViewBag.weekly = new SelectList(weekly);
-            ViewBag.everyweekday = new SelectList(everyweekday);
-            ViewBag.weekly = new SelectList(daily);
+         //   var Carpool = db.CarPools;
+          //  var daily = Carpool.Where(z => z.Daily == true).ToString();
+          //  var everyweekday = Carpool.Where(z => z.EveryWeekDay == true).ToString();
+          //  var weekly = Carpool.Where(z => z.Weekly == true).ToString();
+          //  ViewBag.weekly = new SelectList(weekly);
+          //  ViewBag.everyweekday = new SelectList(everyweekday);
+          //  ViewBag.weekly = new SelectList(daily);
 
             var carps = new List<CarPoolModel>();
             foreach (CarPool c in sc.SearchCarpoolByTo(searchString))
             {
+
                 CarPoolModel cs = new CarPoolModel()
                 {
 
@@ -72,15 +76,30 @@ namespace Solution.Web.Controllers
                     Daily=c.Daily,
                     Weekly=c.Weekly,
                     EveryWeekDay=c.EveryWeekDay,
+                    UntilDate=c.UntilDate,
+                    NbPlaceDispo = c.NbPlaceDispo,
                     idParent = c.idParent,
                 };
 
                 carps.Add(cs);
             }
-            return View(carps);
+            if (searchString == null)
+            {
+                //just load the main index 
+                return View(carps.ToPagedList(i ?? 1, 7));
+            }
+            else { 
+                return View(carps.Where(car => car.To == searchString).ToPagedList(i ?? 1, 7));
+            }
         }
+
+        //[HttpPost]
+        //public ActionResult Search(string searchString)
+        //{
+        //    return View(carps.Where(car => car.To == searchString));
+        //}
         // GET: CarPool
-        public ActionResult MyIndex(string searchString)
+        public ActionResult MyIndex(string searchString, string map)
         {
             List<Kid> Kids = ServicePar.GetMany().ToList();
             ViewBag.MyKid = new SelectList(Kids, "IdKid", "FirstName");
@@ -91,7 +110,7 @@ namespace Solution.Web.Controllers
             List<User> Parentn = Service.GetMany().ToList();
             ViewBag.MyParentn = new SelectList(Parentn, "IdUser", "nom");
 
-            
+
 
             var userId = (int)Session["idu"];
             var carps = new List<CarPoolModel>();
@@ -112,6 +131,11 @@ namespace Solution.Web.Controllers
                         Date = c.Date,
                         Message = c.Message,
                         idKid = c.idKid,
+                        Daily = c.Daily,
+                        Weekly = c.Weekly,
+                        EveryWeekDay = c.EveryWeekDay,
+                        UntilDate = c.UntilDate,
+                        NbPlaceDispo=c.NbPlaceDispo,
                         idParent = c.idParent,
                     };
 
@@ -128,7 +152,7 @@ namespace Solution.Web.Controllers
         }
 
         // GET: CarPool/Create
-        public ActionResult Create(string FirstName)
+        public ActionResult Create(string FirstName )
         {
             List<Kid> query = ServicePar.GetMany().ToList();
             //var userId = (int)Session["idu"];
@@ -143,12 +167,13 @@ namespace Solution.Web.Controllers
         // POST: CarPool/Create
         [HttpPost]
         [WebMethod]
-        public ActionResult create(CarPoolModel collection, bool hidden_field1 = false , bool hidden_field2 = false, bool hidden_field3 = false)
+        public ActionResult create(CarPoolModel collection, GeoLocation geo, string address,string latlng, bool hidden_field1 = false, bool hidden_field2 = false, bool hidden_field3 = false)
         {
          
             ICarPoolService sc = new CarPoolService();
-           
+            IGeoLocationService ge = new GeoLocationService();
             CarPool c = new CarPool();
+            GeoLocation g = new GeoLocation();
             if (ModelState.IsValid)
             {
                 
@@ -170,6 +195,7 @@ namespace Solution.Web.Controllers
 
                 else
                     c.Weekly = false;
+                    c.UntilDate = collection.UntilDate;
 
                 c.idParent = (int)Session["idu"];
                 c.Id = collection.Id;
@@ -179,11 +205,18 @@ namespace Solution.Web.Controllers
                 c.Time = collection.Time;
                 c.Date = collection.Date;
                 c.Message = collection.Message;
+                c.NbPlaceDispo = collection.NbPlaceDispo;
                 c.idKid = collection.idKid;
-               
+
+                g.latlng = latlng;
+                g.Address = address;
+                g.IdParent= (int)Session["idu"];
+
+                
                 sc.Add(c);
                 sc.Commit();
-
+                
+                
                 return RedirectToAction("Index");
             }
             else
@@ -195,6 +228,8 @@ namespace Solution.Web.Controllers
         // GET: CarPool/Edit/5
         public ActionResult Edit(int? id)
         {
+          
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -204,13 +239,14 @@ namespace Solution.Web.Controllers
             {
                 return HttpNotFound();
             }
-            return View(collection);
             List<Kid> query = ServicePar.GetMany().ToList();
             //var userId = (int)Session["idu"];
             // var kidss = db.Kids;
             //  var query = kidss.Where(z => z.idParent == userId).Select(z=>z.FirstName).ToList();
             ViewBag.MyKid = new SelectList(query, "IdKid", "FirstName");
             return View();
+
+
 
         }
 

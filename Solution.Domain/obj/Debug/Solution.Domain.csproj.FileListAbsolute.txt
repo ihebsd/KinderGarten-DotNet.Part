@@ -40,4 +40,3 @@ D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.D
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.csproj.CopyComplete
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.dll
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.pdb
-D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Domain\obj\Debug\Solution.Domain.csprojAssemblyReference.cache

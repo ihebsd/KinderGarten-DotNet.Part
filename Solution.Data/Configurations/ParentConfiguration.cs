@@ -18,6 +18,7 @@ namespace Solution.Data.Configurations
             HasMany(par => par.Kids).WithOptional(kid => kid.Parent)
            .HasForeignKey(kid => kid.idParent)
            .WillCascadeOnDelete(false);
+            HasRequired(a => a.GetLocation).WithRequiredPrincipal(b => b.Parent);
         }
     }
 }

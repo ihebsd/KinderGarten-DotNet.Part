@@ -58,7 +58,10 @@
                             @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @placeholder = "Message", style = "width:1000px" } })
                             @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
                             <br />
-                          
+                            @Html.EditorFor(model => model.NbPlaceDispo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Number of places available", style = "width:1000px" } })
+                            @Html.ValidationMessageFor(model => model.NbPlaceDispo, "", new { @class = "text-danger" })
+                            <br />
+
                         </div>
                         <div class="reg_checkbox">
                             <div>
@@ -67,72 +70,200 @@
                                 <label for="trigger"></label>
                                 <span>Repeat</span>
                             </div>
+                            <br />
                         </div>
                         <div class="bg">
                             <div id="hidden_fields" style="padding-top:20px">
                                 <div class="chiller_cb">
-                                    <input  type="checkbox" name="hidden_field1" id="hidden_field1" value="true" class="group1" onClick="ckChange(this)" runat="server" />
+                                    <input type="checkbox" name="hidden_field1" id="hidden_field1" value="true" class="group1" onClick="ckChange(this)" runat="server" />
                                     <label for="hidden_field1">Daily</label>
                                     <span></span>
                                 </div>
                                 <br />
                                 <div class="chiller_cb">
-                                    <input type="checkbox" name="hidden_field2" id="hidden_field2" value="true" class="group1"  onClick="ckChange(this)" runat="server" />
+                                    <input type="checkbox" name="hidden_field2" id="hidden_field2" value="true" class="group1" onClick="ckChange(this)" runat="server" />
                                     <label for="hidden_field2">EvereyWeekDay (Monday To Friday)</label>
                                     <span></span>
                                 </div>
                                 <br />
                                 <div class="chiller_cb">
-                                    <input type="checkbox" name="hidden_field3" id="hidden_field3" value="true" class="group1"  onClick="ckChange(this)" runat="server"/>
-                                    <label for="hidden_field3">Weekly</label>
+                                    <input type="checkbox" name="hidden_field3" id="hidden_field3" value="true" class="group1" onClick="ckChange(this)" runat="server" />
+                                    <label for="hidden_field3">Weekly</label><br />
 
                                     <span></span>
-                                    
+
                                 </div>
                             </div>
                         </div>
-                       <div class="bg">
-                           <div id="weekly" style="padding-top:20px">
-                               
-
-                               <br />
-                               @Html.EditorFor(model => model.UntilDate, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date", style = "width:1000px" } })
-                               @Html.ValidationMessageFor(model => model.UntilDate, "", new { @class = "text-danger" })
+                        <div class="bg">
+                            <div id="weekly" style="padding-top:20px">
 
 
-                           </div>
-                        </div>
+                                <br />
+                                @Html.EditorFor(model => model.UntilDate, new { htmlAttributes = new { @class = "form-control", @placeholder = "Until Date", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.UntilDate, "", new { @class = "text-danger" })
 
+
+                            </div>
+                        </div><br />
+
+
+                        <div id="maps"></div>
+
+                        <input id="latlng" type="hidden" value="40.714224,-73.961452">
+
+
+
+                        //<input type="hidden" id="lng" value="" />
                         <script>
 
                             var daily = $("input[name=hidden_field2],input[name=hidden_field3]");
                             var everyweekday = $("input[name=hidden_field1],input[name=hidden_field3]");
                             var weekly = $("input[name=hidden_field1],input[name=hidden_field2]");
-                            $("input[name='hidden_field1']").change(function() {
-                            daily.prop("disabled",this.checked);
-                             });                      
+                            $("input[name='hidden_field1']").change(function () {
+                                daily.prop("disabled", this.checked);
+                            });
 
-                            $("input[name='hidden_field2']").change(function() {
-                            everyweekday.prop("disabled",this.checked);
-                            });    
-                            $("input[name='hidden_field3']").change(function() {
-                            weekly.prop("disabled",this.checked);
-                            });    
+                            $("input[name='hidden_field2']").change(function () {
+                                everyweekday.prop("disabled", this.checked);
+                            });
+                            $("input[name='hidden_field3']").change(function () {
+                                weekly.prop("disabled", this.checked);
+                            });
+
+                            //mapq js
+                            var maps, infoWindow;
+                           
+                            
+                            function initMap() {
+                                 var myLatLng = { lat: 36.806496, lng: 10.181532 };
+                                map = new google.maps.Map(document.getElementById('maps'), {
+                                    center: myLatLng,
+                                     mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                    zoom: 10
+                                });
+                                infoWindow = new google.maps.InfoWindow;
+
+                                // Try HTML5 geolocation.
+                                if (navigator.geolocation) {
+                                    navigator.geolocation.getCurrentPosition(function (position) {
+                                        var pos = {
+                                            lat: position.coords.latitude,
+                                            lng: position.coords.longitude
+                                        };
+                                        $('#latlng').val(pos.lat + ',' + pos.lng);
+
+                                        infoWindow.setPosition(pos);
+                                        infoWindow.setContent('Location found.');
+                                        infoWindow.open(map);
+                                        map.setCenter(pos);
+                                    }, function () {
+                                        handleLocationError(true, infoWindow, map.getCenter());
+                                    });
+                                } else {
+                                    // Browser doesn't support Geolocation
+                                    handleLocationError(false, infoWindow, map.getCenter());
+                                }
+                            }
+
+                            function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                                infoWindow.setPosition(pos);
+                                infoWindow.setContent(browserHasGeolocation ?
+                                    'Error: The Geolocation service failed.' :
+                                    'Error: Your browser doesn\'t support geolocation.');
+                                infoWindow.open(map);
+                            }
+                            //function initMap() {
+                            //    var myLatLng = { lat: 36.806496, lng: 10.181532 };
+                            //    map = new google.maps.Map(document.getElementById('maps'), {
+                            //        center: myLatLng,
+                            //        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            //        zoom: 10
+                            //    });
+                            //    infoWindow = new google.maps.InfoWindow;
+                            //    if (navigator.geolocation) {
+                            //        navigator.geolocation.getCurrentPosition(function (position) {
+                            //            var pos = {
+                            //                lat: position.coords.latitude,
+                            //                lng: position.coords.longitude
+                            //            };
+                                       
+
+                            //            marker = new google.maps.Marker({
+                            //                map: map,
+                            //                draggable: true,
+                            //                animation: google.maps.Animation.DROP,
+                            //                position: pos
+                            //            });
+                            //            marker.addListener('click', toggleBounce);
+
+                            //            infoWindow.setPosition(pos);
+                            //            infoWindow.setContent('Your Location.');
+                            //            infoWindow.open(map, marker);
+                            //            map.setCenter(pos);
 
 
-                                   
+                            //            // Try HTML5 geolocation.
+
+
+                            //            //$('#latlng').val(pos.lat + ',' + pos.lng);
+
+                            //            //JSON format (e.g: XML, text,....)
+                            //            //var destinations = [{ id_user:5, lat: 36.806496, lng: 10.181532 }, { id_user:6, lat: 36.806496, lng: 10.181532 }];
+                            //            //console.log(destinations[0].lat);
+                            //            //var destinations = { id_user:5, lat: 36.806496, lng: 10.181532 };
+                            //            ////// method 1 ////
+                            //            //var r = 6371.0710; // radius of the earth in kilometre
+                            //            //var rlat1 = pos.lat * (math.pi / 180); // convert degrees to radians
+                            //            //var rlat2 = destination.lat * (math.pi / 180); // convert degrees to radians
+                            //            //var difflat = rlat2 - rlat1; // radian difference (latitudes)
+                            //            //var difflon = (destination.lng - pos.lng) * (math.pi / 180); // radian difference (longitudes)
+
+                            //            //var d = 2 * r * math.asin(math.sqrt(math.sin(difflat / 2) * math.sin(difflat / 2) + math.cos(rlat1) * math.cos(rlat2) * math.sin(difflon / 2) * math.sin(difflon / 2)));
+
+                            //            //console.log('distance ' + d);
+
+                            //            //var line = new google.maps.polyline({ path: [destination, pos], map: map });
+
+
+                            //        }, function () {
+                            //            handleLocationError(true, infoWindow, map.getCenter());
+                            //        });
+                            //    } else {
+                            //        // Browser doesn't support Geolocation
+                            //        handleLocationError(false, infoWindow, map.getCenter());
+                            //    }
+                            //}
+                            //function toggleBounce() {
+                            //    if (marker.getAnimation() !== null) {
+                            //        marker.setAnimation(null);
+                            //    } else {
+                            //        marker.setAnimation(google.maps.Animation.BOUNCE);
+                            //    }
+                            //}
+
+
+                            //function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                            //    infoWindow.setPosition(pos);
+                            //    infoWindow.setContent(browserHasGeolocation ?
+                            //        'Error: The Geolocation service failed.' :
+                            //        'Error: Your browser doesn\'t support geolocation.');
+                            //    infoWindow.open(map);
+                            //    marker.setMap(map);
+                            //}
                         </script>
 
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEfEIgZrteSmVmtbjNTM7RMWXbAKv4JvE&callback=initMap" async defer></script>
                         <div>
 
-                            <button id ="Button" class="button" type="submit" value="Create" style="width:500px">Submit </button>
+                            <button id="Button" class="button" type="submit" value="Create" style="width:500px">Submit </button>
 
                         </div>
                     }
 
 
                 </div>
-                    </div>
+            </div>
         </div>
     </section>
 

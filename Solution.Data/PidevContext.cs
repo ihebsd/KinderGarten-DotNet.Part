@@ -1,7 +1,10 @@
 ﻿
 
 using Solution.Data.Configurations;
+using Solution.Data.Migrations;
 using Solution.Domain.Entities;
+using Swashbuckle.AspNetCore.Swagger;
+using System;
 using System.Data.Entity;
 
 namespace Solution.Data
@@ -17,8 +20,10 @@ namespace Solution.Data
         public DbSet<KinderGarten> KinderGartens { get; set; }
         public DbSet<Kid> Kids { get; set; }
         public DbSet<CarPool> CarPools { get; set; }
+        public DbSet<GeoLocation> GeoLocations{ get; set; }
 
-       
+      
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new DirecteurConfiguration());
@@ -27,11 +32,12 @@ namespace Solution.Data
 
            
         }
-
+       
         
 
         public System.Data.Entity.DbSet<Solution.Domain.Entities.Parent> Parents { get; set; }
 
+       
     }
 }
 
