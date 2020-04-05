@@ -11,6 +11,15 @@ namespace Solution.Service
     public interface IEventService : IService<Event>
     {
         IEnumerable<Event> SearchEventByName(string searchString);
+        int Sumpercategory (Category category);
+        int SumEvent();
+        int SumEducation();
+        int SumEntr();
+
+        int SumOther();
+
+
+
 
     }
 }

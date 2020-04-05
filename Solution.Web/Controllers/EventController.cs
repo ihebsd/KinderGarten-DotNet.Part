@@ -89,7 +89,20 @@ namespace Solution.Web.Controllers
             return View(es);
         }
         public ActionResult Create()
-        {         
+        {
+            int someven = EventService.SumEvent();
+            ViewBag.som = someven;
+
+            int somecatother = EventService.SumOther();
+            ViewBag.other = somecatother;
+            int somecatent = EventService.SumEntr();
+            ViewBag.ent = somecatent;
+            int somecatedu = EventService.SumEducation();
+            ViewBag.edu = somecatedu;
+
+
+
+
             return View();
         }
 
@@ -97,8 +110,12 @@ namespace Solution.Web.Controllers
         [HttpPost]
         public ActionResult Create(EventModel em, HttpPostedFileBase Image)
         {
-            Event ev = new Event();
+          
 
+            Event ev = new Event();
+          //  int somcateg = EventService.Sumpercategory(ev.Category);
+          //  ViewBag.cat = somcateg;
+           
             ev.Name = em.Name;         
             ev.AdminConfirmtion = false;
             ev.Category = em.Category;

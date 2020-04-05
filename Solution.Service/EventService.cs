@@ -53,7 +53,52 @@ namespace Solution.Service
             }
             return EventDomain;
         }
+        
 
-    
+        public int Sumpercategory (Category category)
+        {
+            int x=0;
+            IEnumerable<Event> EventDomain = GetMany();
+            foreach (var item in EventDomain)                
+            {               
+                if (EventDomain.Equals(category))
+                x = +1;
+            }
+            return x;
+
+        }
+        public int SumEvent()        {
+            
+                return GetMany().Count();
+            
+        }
+        public int SumEducation()
+        {
+            int sum = 0;
+            IEnumerable<Event> EventDomain = GetMany();
+
+            return sum = EventDomain.Where(x => x.Category.ToString() == "Educative").Count();
+
+        }
+        public int SumOther()
+        {
+            int sum = 0;
+            IEnumerable<Event> EventDomain = GetMany();
+
+            return sum = EventDomain.Where(x => x.Category.ToString() == "Other").Count();
+
+        }
+        public int SumEntr()
+        {
+
+            int sum = 0;
+            IEnumerable<Event> EventDomain = GetMany();
+
+            return sum = EventDomain.Where(x => x.Category.ToString() == "Entertainment").Count();
+
+        }
+
+
+
     }
 }
