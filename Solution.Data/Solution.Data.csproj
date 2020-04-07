@@ -84,6 +84,22 @@
     <Compile Include="Migrations\202004041658215_mymig3.designer.cs">
       <DependentUpon>202004041658215_mymig3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004051452203_mymig4.cs" />
+    <Compile Include="Migrations\202004051452203_mymig4.designer.cs">
+      <DependentUpon>202004051452203_mymig4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004061350416_mymig5.cs" />
+    <Compile Include="Migrations\202004061350416_mymig5.designer.cs">
+      <DependentUpon>202004061350416_mymig5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004061446513_mymig6.cs" />
+    <Compile Include="Migrations\202004061446513_mymig6.designer.cs">
+      <DependentUpon>202004061446513_mymig6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004061727270_mymig7.cs" />
+    <Compile Include="Migrations\202004061727270_mymig7.designer.cs">
+      <DependentUpon>202004061727270_mymig7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,6 +130,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004041658215_mymig3.resx">
       <DependentUpon>202004041658215_mymig3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004051452203_mymig4.resx">
+      <DependentUpon>202004051452203_mymig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004061350416_mymig5.resx">
+      <DependentUpon>202004061350416_mymig5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004061446513_mymig6.resx">
+      <DependentUpon>202004061446513_mymig6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004061727270_mymig7.resx">
+      <DependentUpon>202004061727270_mymig7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -26,10 +26,6 @@ namespace Solution.Data
             modelBuilder.Configurations.Add(new DirecteurConfiguration());
            // modelBuilder.Configurations.Add(new ClaimConfiguration());
            // modelBuilder.Configurations.Add(new ReputationConfiguration());
-
-
-
-
         }
 
         

@@ -376,3 +376,9 @@ C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Web\bin\System.Memory.xm
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Web\bin\System.Numerics.Vectors.xml
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Web\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Web\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Web\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Web\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Web\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Web\bin\Microsoft.AspNet.SignalR.SystemWeb.xml

@@ -51,3 +51,7 @@ C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.mymig1.resources
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.mymig2.resources
 C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.mymig3.resources
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.mymig4.resources
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.mymig5.resources
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.mymig6.resources
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.mymig7.resources

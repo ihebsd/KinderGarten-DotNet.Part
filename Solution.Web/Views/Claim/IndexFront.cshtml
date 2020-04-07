@@ -61,35 +61,46 @@
                             </div>
                             <a href="@Url.Action("create", "Claim")" class="button b_green_green_light">Add claim</a>
                         </form>
-                        @foreach (var item in Model)
-                        {
-                            <div class="shop_item">
-                                <div class="shop_block_img">
-                                    <a href="shop_item.html"><img src="img/shop/item-1.jpg" alt=""></a>
-                                </div>
-                                <div class="item_describe">
-                                    <h5><a href="shop_item.html">@Html.DisplayFor(modelItem => item.Name)</a></h5>
+                        <table>
+                            <tr>
+                                <th>
+                                    @Html.ActionLink("Name", "IndexFront", new { sortOrder = ViewBag.NameSortParm })
+                                </th>                               
+                                <th>
+                                    @Html.ActionLink("ClaimDate", "IndexFront", new { sortOrder = ViewBag.DateSortParm })
+                                </th>
+                                <th></th>
+                            </tr>
+                            </table>
+                            @foreach (var item in Model)
+                            {
+                                <div class="shop_item">
+                                    <div class="shop_block_img">
+                                        <a href="shop_item.html"><img src="img/shop/item-1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item_describe">
+                                        <h5><a href="shop_item.html">@Html.DisplayFor(modelItem => item.Name)</a></h5>
 
-                                    <div class="item_content">
-                                        @Html.DisplayFor(modelItem => item.Description)
-                                    </div>
-                                    <div class="item_price">
-                                        @Html.DisplayFor(modelItem => item.ClaimType)
-                                    </div>
-                                    <div class="item_content">
-                                        @Html.DisplayFor(modelItem => item.ClaimDate)
-                                    </div>
-                                    <div class="item_price">
-                                        @Html.DisplayFor(modelItem => item.status)
-                                    </div>
-                                    <div>
-                                        @Html.ActionLink("Edit", "Edit", new { id = item.ComplaintId }) |
-                                        @Html.ActionLink("Details", "DetailsFront", new { id = item.ComplaintId }) |
-                                        @Html.ActionLink("Delete", "DeleteFront", new { id = item.ComplaintId })
+                                        <div class="item_content">
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </div>
+                                        <div class="item_price">
+                                            @Html.DisplayFor(modelItem => item.ClaimType)
+                                        </div>
+                                        <div class="item_content">
+                                            @Html.DisplayFor(modelItem => item.ClaimDate)
+                                        </div>
+                                        <div class="item_price">
+                                            @Html.DisplayFor(modelItem => item.status)
+                                        </div>
+                                        <div>
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.ComplaintId }) |
+                                            @Html.ActionLink("Details", "DetailsFront", new { id = item.ComplaintId }) |
+                                            @Html.ActionLink("Delete", "DeleteFront", new { id = item.ComplaintId })
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        }                      
+                            }
                     </div>
                     
 

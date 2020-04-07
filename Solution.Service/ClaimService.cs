@@ -60,5 +60,14 @@ namespace Solution.Service
                 return false;
             }
         }
+        List<Claim> getMandates()
+        {
+            IEnumerable<Claim> m = (from complaints in utk.getRepository<Claim>().GetAll()
+                                    select complaints);
+            List<Claim> list = m.ToList<Claim>();
+            return list;
+        }
+
+
     }
 }

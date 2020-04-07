@@ -15,6 +15,7 @@ namespace Solution.Domain.Entities
         [DataType(DataType.Date)]
         public DateTime FeedBackDate { get; set; }
         public string Description  { get; set; }
+        public string sentiment { get; set; }
         public int? ParentId { get; set; }
         [ForeignKey("ParentId ")]
         public virtual User Parent { get; set; }

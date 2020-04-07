@@ -13,6 +13,9 @@ namespace Solution.Web
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new System.Net.Http.Headers.MediaTypeHeaderValue("applicatio/json"));
+
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

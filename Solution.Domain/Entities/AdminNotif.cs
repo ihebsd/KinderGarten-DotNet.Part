@@ -14,8 +14,7 @@ namespace Solution.Domain.Entities
         public int Id { get; set; }
         public string msg { get; set; }
         public DateTime Datenotif { get; set; }
-        public int? UserId { get; set; }
-        [ForeignKey("UserId ")]
-        public virtual User User { get; set; }
+        public string username { get; set; }
+        public string userid { get; set; }
     }
 }

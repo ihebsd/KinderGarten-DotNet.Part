@@ -24,15 +24,22 @@ namespace Solution.Service
         {
             utk.Dispose();
         }
-       /* public IEnumerable<FeedBack> SearchKReputationByName(string searchString)
-        {
-            IEnumerable<FeedBack> FeedBackDomain = GetMany();
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                FeedBackDomain = GetMany(x => x.Name.Contains(searchString));
-            }
+        /* public IEnumerable<FeedBack> SearchKReputationByName(string searchString)
+         {
+             IEnumerable<FeedBack> FeedBackDomain = GetMany();
+             if (!String.IsNullOrEmpty(searchString))
+             {
+                 FeedBackDomain = GetMany(x => x.Name.Contains(searchString));
+             }
 
-            return FeedBackDomain;
-        }*/
+             return FeedBackDomain;
+         }*/
+        public List<FeedBack> getMandates()
+        {
+            IEnumerable<FeedBack> m = (from events in utk.getRepository<FeedBack>().GetAll()
+                                    select events);
+            List<FeedBack> list = m.ToList<FeedBack>();
+            return list;
+        }
     }
 }

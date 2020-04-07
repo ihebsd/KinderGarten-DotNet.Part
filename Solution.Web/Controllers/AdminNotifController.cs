@@ -31,8 +31,9 @@ namespace Solution.Web.Controllers
                     Id = p.Id,
                     msg = p.msg,
                     Datenotif = p.Datenotif,
-                    UserId = p.UserId
-                   
+                    userid = p.userid,
+                    username = p.username
+
                 });
             }
             int listfilms = notifs.Count();
@@ -61,7 +62,8 @@ namespace Solution.Web.Controllers
             {
                 Datenotif = today,
                 msg = adm.msg,
-               UserId= (int)Session["idu"]
+                userid = "1",
+                username = "Raslen"
             };
             MyService.Add(comp);
             MyService.Commit();

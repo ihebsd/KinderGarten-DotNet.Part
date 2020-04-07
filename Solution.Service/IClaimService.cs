@@ -12,6 +12,7 @@ namespace Solution.Service
     {
         IEnumerable<Claim> SearchKClaimByName(string searchString);
         bool SendEmail(string toEmail, string subject, string emailBody);
+       
 
     }
 }

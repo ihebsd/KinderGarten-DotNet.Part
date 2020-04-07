@@ -1,0 +1,65 @@
+﻿@model Solution.Web.Models.AdminNotifModel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <body>
+        <br /><br /><div style="margin-left:10%" class="col-md-9">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken() <form action="#">
+                    <div class="card">
+                        <div class="card-header bg-white header-elements-inline">
+                            <h6 class="card-title">Deleting Notification</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                    <a class="list-icons-item" data-action="remove"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer bg-white">
+                            <div class="row">
+                                <div class="col-lg-10 ml-lg-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button type="submit" style="margin-left:-20%" class="btn btn-light">@Html.ActionLink("Back to List", "Index")</button>
+                                        <button type="submit" class="btn bg-warning ml-3">Delete <i class="icon-trash ml-2"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+
+                            <h1>Notice : </h1><br />
+                            <h4><i>Before deleting this notification it is good to know that is a <b class="animated  fadeIn infinite delay-1s">SAAS</b> application and by using the AWS to ensure high availability, that means that all informations are copied ...</i></h4>
+
+                        </div>
+
+                        <div class="card-footer bg-white">
+                            <div class="row">
+                                <div class="col-lg-10 ml-lg-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+
+                                        <button type="submit" style="margin-left:-20%" class="btn btn-light">@Html.ActionLink("Back to List", "Index")</button>
+                                        <button type="submit" class="btn bg-warning ml-3">Delete <i class="icon-trash ml-2"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+
+
+
+            }
+        </div>
+
+    </body>
