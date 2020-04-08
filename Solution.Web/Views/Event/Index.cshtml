@@ -38,25 +38,27 @@
     </section>
     <div class="text-center section">
         <ul class="filter">
-            <li class="active"><a href="#" data-filter="*">All</a></li>
-            <li><a href="#" data-filter=".drawing">Entertainment</a></li>
-            <li><a href="#" data-filter=".events">Educative</a></li>
-            <li><a href="#" data-filter=".reading">Other</a></li>
 
-            @using (Html.BeginForm())
-            {
-                <table>
-                    <tr>
-                        <td>
+            <div class="grids_brief">
+                <li class="active"><a href="#" data-filter="*">All</a></li>
+                <li><a href="#" data-filter=".drawing">Entertainment</a></li>
+                <li><a href="#" data-filter=".events">Educative</a></li>
+                <li><a href="#" data-filter=".reading">Other</a></li>
 
-                            <div id="search_open" class="gc_search_box" style="display: block;">
-                                @Html.TextBox("searchString")
-                                <button><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            }
+                @using (Html.BeginForm())
+                {
+                    <table>
+                        <tr>
+                            <td>
+
+                                <div id="search_open" class="gc_search_box" style="display: block;">
+                                    @Html.TextBox("searchString")
+                                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                }
         </ul>
 
         @foreach (var item in Model)
@@ -79,11 +81,11 @@
                             </div>
                             <div class="date_events_right b_green_green_light">
                                 <p class="block_time pb_10"><i class="fa fa-clock-o"><span></span></i>8:00 am - 2:00 pm</p>
-                                <p class="block_time normal"><i class="fa fa-map-marker"><span></span></i>@Html.DisplayFor(modelItem => item.Category)</p>
+                                <p class="block_time normal"> <span> </span> <h1>Category :</h1> <h3> @Html.DisplayFor(modelItem => item.Category)</h3></p>
                             </div>
                         </div>
                         <div class="grids_brief">
-                            <h4 class="grids_title t_green_green_light"><a href="event.html">@Html.DisplayFor(modelItem => item.Category)</a></h4>
+                            <h4 class="grids_title t_green_green_light"><a href="event.html">@Html.DisplayFor(modelItem => item.Name)</a></h4>
                             <p class="grids_title t_red">@Html.DisplayFor(modelItem => item.Description)</p>
                         </div>
                         <div class="grids_brief">
