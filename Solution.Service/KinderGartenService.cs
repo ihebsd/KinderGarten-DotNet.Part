@@ -40,6 +40,11 @@ namespace Solution.Service
 
             return KindergartenDomain;
         }
-
+        public void IncNbVue(int? id)
+        {
+            KinderGarten k = GetById((int)id);
+            k.nbVue++;
+            Commit();
+        }
     }
 }

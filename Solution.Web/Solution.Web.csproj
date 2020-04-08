@@ -182,6 +182,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KinderGartenController.cs" />
+    <Compile Include="Controllers\KinderGartenWebApiController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -460,6 +461,8 @@
     <Content Include="Content\Front\hts-cache\readme.txt" />
     <Content Include="Content\Front\hts-log.txt" />
     <Content Include="Content\Front\index.html" />
+    <Content Include="Content\Uploads\whitestar.gif" />
+    <Content Include="Content\Uploads\yellowstar.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -565,7 +568,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Uploads\" />
+    <Folder Include="Views\KinderGartenWebApi\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

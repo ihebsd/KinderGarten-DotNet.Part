@@ -1,6 +1,6 @@
 ﻿
 
-using Microsoft.AspNet.Identity;
+using Solution.Data;
 using Solution.Domain.Entities;
 using Solution.Service;
 using Solution.Web.Models;
@@ -15,7 +15,7 @@ namespace Solution.Web.Controllers
 {
     public class KinderGartenController : Controller
     {
-       
+        PidevContext db = new PidevContext();
         IKinderGartenService KindergartenService;
         IUserService userService;
         public KinderGartenController()
@@ -47,7 +47,9 @@ namespace Solution.Web.Controllers
                     Name=k.Name,
                     NbrEmp=k.NbrEmp,
                     Phone=k.Phone,
-                    DirecteurId=k.DirecteurId
+                    DirecteurId=k.DirecteurId,
+                    nbVue=k.nbVue
+                    
                 };
                 kindergartens.Add(ks);
                
@@ -87,9 +89,11 @@ namespace Solution.Web.Controllers
                 NbrEmp = k.NbrEmp,
                 Phone = k.Phone,
                 DirecteurId =(int) k.DirecteurId,
+                nbVue = k.nbVue,
                 nameDir = userService.GetById((int)k.DirecteurId).email
 
             };
+            KindergartenService.IncNbVue(id);
             return View(ks);
         }
         
@@ -231,5 +235,6 @@ namespace Solution.Web.Controllers
                     return RedirectToAction("Index");
                 
         }
+       
     }
 }

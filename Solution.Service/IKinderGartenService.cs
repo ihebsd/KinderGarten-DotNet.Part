@@ -11,6 +11,7 @@ namespace Solution.Service
     public interface IKinderGartenService : IService<KinderGarten>
     {
         IEnumerable<KinderGarten> SearchKindergartenByName(string searchString);
+        void IncNbVue(int? id);
 
     }
 }

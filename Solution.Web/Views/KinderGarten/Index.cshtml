@@ -4,6 +4,24 @@
     ViewBag.Title = "Index";
 }
     <body>
+        <ul class="filter">
+           
+
+            @using (Html.BeginForm())
+            {
+                <table>
+                    <tr>
+                        <td>
+
+                            <div id="search_open" class="gc_search_box" style="display: block;">
+                                @Html.TextBox("searchString")
+                                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            }
+        </ul>
 
         @foreach (var item in Model)
         {
@@ -37,11 +55,12 @@
                             <div class="grids_brief ml_250">
                                 <h4 class="grids_title t_red"><a href="Details/@Html.DisplayFor(modelItem => item.KinderGartenId)">@Html.DisplayFor(modelItem => item.Name)</a></h4>
                                 <p class="grids_description t_grey">@Html.DisplayFor(modelItem => item.Description)</p>
+                                <i class=""> @Html.DisplayFor(modelItem => item.nbVue)Views</i>&emsp;<br />
+
                                 @if (Session["idu"].Equals(item.DirecteurId))
                                 {
-                                    <p>@Html.ActionLink("Delete", "Delete", new { id = item.KinderGartenId })</p>
-                                    <p>@Html.ActionLink("Edit", "Edit", new { id = item.KinderGartenId })</p>
-
+                                    <button class="btn"><i class="fa fa-edit">@Html.ActionLink("Edit", "Edit", new { id = item.KinderGartenId })</i></button>
+                                    <button class="btn"><i class="fa fa-trash-o">@Html.ActionLink("Delete", "Delete", new { id = item.KinderGartenId })</i></button>
                                 }
                             </div>
                         </div>

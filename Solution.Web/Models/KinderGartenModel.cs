@@ -36,6 +36,8 @@ namespace Solution.Web.Models
         [Required(ErrorMessage = "Champs obligatoire")]
         [Range(0, int.MaxValue)]
         public int NbrEmp { get; set; }
+        public int nbVue { get; set; }
+
         [Display(Name = "Directeur")]
         public int? DirecteurId { get; set; }
     }
