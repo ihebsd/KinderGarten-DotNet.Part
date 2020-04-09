@@ -108,10 +108,10 @@
                         </div><br />
 
 
-                        <div id="maps"></div>
+                        <div id="maps" hidden></div>
 
-                        <input id="latlng" type="hidden" value="40.714224,-73.961452">
-
+                        <input name="lat" id="lat" type="hidden" value="-73.961452">
+                        <input name="lng" id="lng" type="hidden" value="-73.961452">
 
 
                         //<input type="hidden" id="lng" value="" />
@@ -133,13 +133,12 @@
 
                             //mapq js
                             var maps, infoWindow;
-                           
-                            
+
                             function initMap() {
-                                 var myLatLng = { lat: 36.806496, lng: 10.181532 };
+                                var myLatLng = { lat: 36.806496, lng: 10.181532 };
                                 map = new google.maps.Map(document.getElementById('maps'), {
                                     center: myLatLng,
-                                     mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP,
                                     zoom: 10
                                 });
                                 infoWindow = new google.maps.InfoWindow;
@@ -151,12 +150,54 @@
                                             lat: position.coords.latitude,
                                             lng: position.coords.longitude
                                         };
-                                        $('#latlng').val(pos.lat + ',' + pos.lng);
-
+                                        $('#lat').val(pos.lat);
+                                        $('#lng').val(pos.lng);
+                                        marker = new google.maps.Marker({
+                                            map: map,
+                                            position: myLatLng
+                                        });
+                                        marker = new google.maps.Marker({
+                                            map: map,
+                                            position: pos
+                                        });
                                         infoWindow.setPosition(pos);
                                         infoWindow.setContent('Location found.');
-                                        infoWindow.open(map);
+                                        infoWindow.open(map, marker);
                                         map.setCenter(pos);
+
+                                        //            // Try HTML5 geolocation.
+
+
+                                        //JSON format(e.g: XML, text, ....)
+                                        // var destinations = [{ id_user: 5, lat: 36.806496, lng: 10.181532 }, { id_user: 6, lat: 36.806496, lng: 10.181532 }];
+                                        //console.log(destinations[0].lat);
+                                        var destinations = { lat: 36.806496, lng: 10.181532 };
+                                        //// method 1 ////
+                                        //var r = 6371.0710; // radius of the earth in kilometre
+                                        //var rlat1 = pos.lat * (math.pi / 180); // convert degrees to radians
+                                        //var rlat2 = destinations.lat * (math.pi / 180); // convert degrees to radians
+                                        //var difflat = rlat2 - rlat1; // radian difference (latitudes)
+                                        //var difflon = (destinations.lng - pos.lng) * (math.pi / 180); // radian difference (longitudes)
+
+
+                                        //var d = 2 * r * math.asin(math.sqrt(math.sin(difflat / 2) * math.sin(difflat / 2) + math.cos(rlat1) * math.cos(rlat2) * math.sin(difflon / 2) * math.sin(difflon / 2)));
+
+
+                                        var R = 6371; // Radius of the earth in km
+                                        var dLat = deg2rad(destinations.lat - pos.lat);  // deg2rad below
+                                        var dLon = deg2rad(destinations.lng - pos.lng);
+                                        var a =
+                                            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                                            Math.cos(deg2rad(pos.lat)) * Math.cos(deg2rad(destinations.lat)) *
+                                            Math.sin(dLon / 2) * Math.sin(dLon / 2)
+                                            ;
+                                        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+                                        var d = R * c; // Distance in km
+
+                                        console.log('distance ' + d);
+
+                                        var line = new google.maps.polyline({ path: [destinations, pos], map: map });
+
                                     }, function () {
                                         handleLocationError(true, infoWindow, map.getCenter());
                                     });
@@ -166,91 +207,27 @@
                                 }
                             }
 
+                            function deg2rad(deg) {
+                                return deg * (Math.PI / 180)
+                            }
+
+                            //    , function () {
+                            //        handleLocationError(true, infoWindow, map.getCenter());
+                            //    });
+                            //} else {
+                            //     Browser doesn't support Geolocation
+                            //    handleLocationError(false, infoWindow, map.getCenter());
+                            //}
+
+
                             function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                                 infoWindow.setPosition(pos);
                                 infoWindow.setContent(browserHasGeolocation ?
                                     'Error: The Geolocation service failed.' :
                                     'Error: Your browser doesn\'t support geolocation.');
                                 infoWindow.open(map);
+                                marker.setMap(map);
                             }
-                            //function initMap() {
-                            //    var myLatLng = { lat: 36.806496, lng: 10.181532 };
-                            //    map = new google.maps.Map(document.getElementById('maps'), {
-                            //        center: myLatLng,
-                            //        mapTypeId: google.maps.MapTypeId.ROADMAP,
-                            //        zoom: 10
-                            //    });
-                            //    infoWindow = new google.maps.InfoWindow;
-                            //    if (navigator.geolocation) {
-                            //        navigator.geolocation.getCurrentPosition(function (position) {
-                            //            var pos = {
-                            //                lat: position.coords.latitude,
-                            //                lng: position.coords.longitude
-                            //            };
-                                       
-
-                            //            marker = new google.maps.Marker({
-                            //                map: map,
-                            //                draggable: true,
-                            //                animation: google.maps.Animation.DROP,
-                            //                position: pos
-                            //            });
-                            //            marker.addListener('click', toggleBounce);
-
-                            //            infoWindow.setPosition(pos);
-                            //            infoWindow.setContent('Your Location.');
-                            //            infoWindow.open(map, marker);
-                            //            map.setCenter(pos);
-
-
-                            //            // Try HTML5 geolocation.
-
-
-                            //            //$('#latlng').val(pos.lat + ',' + pos.lng);
-
-                            //            //JSON format (e.g: XML, text,....)
-                            //            //var destinations = [{ id_user:5, lat: 36.806496, lng: 10.181532 }, { id_user:6, lat: 36.806496, lng: 10.181532 }];
-                            //            //console.log(destinations[0].lat);
-                            //            //var destinations = { id_user:5, lat: 36.806496, lng: 10.181532 };
-                            //            ////// method 1 ////
-                            //            //var r = 6371.0710; // radius of the earth in kilometre
-                            //            //var rlat1 = pos.lat * (math.pi / 180); // convert degrees to radians
-                            //            //var rlat2 = destination.lat * (math.pi / 180); // convert degrees to radians
-                            //            //var difflat = rlat2 - rlat1; // radian difference (latitudes)
-                            //            //var difflon = (destination.lng - pos.lng) * (math.pi / 180); // radian difference (longitudes)
-
-                            //            //var d = 2 * r * math.asin(math.sqrt(math.sin(difflat / 2) * math.sin(difflat / 2) + math.cos(rlat1) * math.cos(rlat2) * math.sin(difflon / 2) * math.sin(difflon / 2)));
-
-                            //            //console.log('distance ' + d);
-
-                            //            //var line = new google.maps.polyline({ path: [destination, pos], map: map });
-
-
-                            //        }, function () {
-                            //            handleLocationError(true, infoWindow, map.getCenter());
-                            //        });
-                            //    } else {
-                            //        // Browser doesn't support Geolocation
-                            //        handleLocationError(false, infoWindow, map.getCenter());
-                            //    }
-                            //}
-                            //function toggleBounce() {
-                            //    if (marker.getAnimation() !== null) {
-                            //        marker.setAnimation(null);
-                            //    } else {
-                            //        marker.setAnimation(google.maps.Animation.BOUNCE);
-                            //    }
-                            //}
-
-
-                            //function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-                            //    infoWindow.setPosition(pos);
-                            //    infoWindow.setContent(browserHasGeolocation ?
-                            //        'Error: The Geolocation service failed.' :
-                            //        'Error: Your browser doesn\'t support geolocation.');
-                            //    infoWindow.open(map);
-                            //    marker.setMap(map);
-                            //}
                         </script>
 
                         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEfEIgZrteSmVmtbjNTM7RMWXbAKv4JvE&callback=initMap" async defer></script>

@@ -12,11 +12,11 @@ namespace Solution.Web.Models
     public class GeoLocationModel
     {
         [Key]
+        [ForeignKey("User")]
         public int? idGeo { get; set; }
         public string Address { get; set; }
-        public string latlng { get; set; }
-        public int? IdParent { get; set; }
-        [ForeignKey("idParent")]
-        public virtual Parent Parent { get; set; }
+        public string lat { get; set; }
+        public string lng { get; set; }
+        public virtual User User { get; set; }
     }
 }

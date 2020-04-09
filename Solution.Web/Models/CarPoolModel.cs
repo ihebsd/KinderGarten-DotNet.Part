@@ -32,6 +32,7 @@ namespace Solution.Web.Models
         public bool Daily { get; set; }
         public bool Weekly { get; set; }
         public bool EveryWeekDay { get; set; }
+        public bool Others { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? UntilDate { get; set; }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace Solution.Domain.Entities
     public class User
     {
         [Key]
+        [ForeignKey("GeoLocation")]
         public int idUser { get; set; }
         [Required(ErrorMessage = "Champs obligatoire")]
         [MaxLength(30)]
@@ -40,7 +42,7 @@ namespace Solution.Domain.Entities
         public System.Guid ActivationCode { get; set; }
         public string ResetPasswordCode { get; set; }
         public role role { get; set; }
-     
+        public virtual GeoLocation GeoLocation { get; set; }
 
         public override string ToString()
         {

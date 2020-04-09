@@ -1,8 +1,11 @@
 ﻿
 using Solution.Data;
 using Solution.Domain.Entities;
+using Solution.Service;
 using Solution.Web.Models;
 using System;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -16,6 +19,7 @@ namespace Solution.Presentation.Controllers
 {
     public class LoginController : Controller
     {
+        IGeoLocationService sc = new GeoLocationService();
         //Registration Action
         [HttpGet]
         public ActionResult Register()
@@ -102,17 +106,19 @@ namespace Solution.Presentation.Controllers
         //Login POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(UserLogin login)
+        public ActionResult Login(UserLogin login,string latlng, GeoLocationModel objCat)
         {
 
             string message = "";
             using (PidevContext db = new PidevContext())
             {
+
                 var v = db.Users.Where(x => x.email == login.email).FirstOrDefault();
                 if (v != null)
                 {
                     if (string.Compare(Crypto.Hash(login.password), v.password) == 0)
                     {
+                        
                         int timeout = login.RememberMe ? 43000 : 1; //One Year
                         var ticket = new FormsAuthenticationTicket(login.email + login.password, login.RememberMe, timeout);
                         string encypted = FormsAuthentication.Encrypt(ticket);
@@ -126,13 +132,16 @@ namespace Solution.Presentation.Controllers
                         Session["idu"] = v.idUser;
                         Session["v"] = v;
                         Session["v"] = v.role;
+                        
                         if (Session["v"].ToString() == "admin")
                         {
                             return RedirectToAction("Index", "UserBack");
                         }
                         else
                         {
+
                             return RedirectToAction("Index", "KinderGarten");
+
                         }
 
                     }
@@ -146,12 +155,15 @@ namespace Solution.Presentation.Controllers
                 {
                     message = "Invalid Crendential provided";
                 }
+
+               
             }
 
             ViewBag.message = message;
 
             return View();
         }
+        
         //LOgout
         [Authorize]
         [HttpPost]
