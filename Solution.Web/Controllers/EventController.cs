@@ -55,6 +55,34 @@ namespace Solution.Web.Controllers
             return View(events.ToList().ToPagedList(i ?? 1, 3));
 
         }
+        public ActionResult Index2(string searchString, int? i)
+        {
+            var userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;
+            var events = new List<EventModel>();
+            foreach (Event e in EventService.SearchEventByName(searchString))
+            {
+                EventModel es = new EventModel()
+                {
+                    AdminConfirmtion = e.AdminConfirmtion,
+                    Category = (Category)e.Category,
+                    Description = e.Description,
+                    Name = e.Name,
+                    EventId = e.EventId,
+                    image = e.image,
+                    DateEvent = e.DateEvent,
+
+
+                };
+                events.Add(es);
+            }
+
+            return View(events.ToList().ToPagedList(i ?? 1, 3));
+
+        }
 
         // GET: Event/Details/5
         public ActionResult Details(int? id)
@@ -228,5 +256,17 @@ namespace Solution.Web.Controllers
             return RedirectToAction("Index");
 
         }
+        [HttpPost]
+        public ActionResult Participate (int id)
+        {
+            var userId = (int)Session["idu"];
+            Event e = EventService.GetById(id);
+           
+
+            return RedirectToAction("Index2");
+
+        }
+
+
     }
 }

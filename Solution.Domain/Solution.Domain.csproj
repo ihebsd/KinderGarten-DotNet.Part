@@ -55,6 +55,8 @@
     <Compile Include="Entities\Directeur.cs" />
     <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\KinderGarten.cs" />
+    <Compile Include="Entities\Parent.cs" />
+    <Compile Include="Entities\Participation.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -31,5 +31,12 @@ namespace Solution.Domain.Entities
         //prop de navig
         [ForeignKey("DirecteurFk")]
         public virtual Directeur Directeur { get; set; }
+
+        public virtual ICollection<Parent> Parents { get; set; }
+
+
+
+
+
     }
 }

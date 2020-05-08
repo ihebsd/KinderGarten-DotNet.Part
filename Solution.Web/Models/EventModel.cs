@@ -25,6 +25,8 @@ namespace Solution.Web.Models
 
         //prop de navig
         [ForeignKey("DirecteurFK")]
-        public virtual User User { get; set; }
+        public virtual Directeur Directeur { get; set; }
+        public virtual ICollection<Parent> Parents { get; set; }
+
     }
 }
