@@ -73,8 +73,14 @@
                             <p class="grids_title t_red">@Html.DisplayFor(modelItem => item.Description)</p>
                         </div>
                         <div class="grids_brief">
-                            @Html.ActionLink("Participate", "Participate", new { id = item.EventId })  
-                            
+                            @if (item.Testpart == false)
+                            {
+                                @Html.ActionLink("Participate", "Participate", new { id = item.EventId })
+                            }
+                            @if (item.Testpart == true)
+                            {
+                                @Html.ActionLink("Annuler", "AnnulerPart", new { id = item.EventId })
+                            }
                         </div>
                     </div>
                 </div>

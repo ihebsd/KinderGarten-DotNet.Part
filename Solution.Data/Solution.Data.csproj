@@ -88,6 +88,10 @@
     <Compile Include="Migrations\202005072355138_participer.designer.cs">
       <DependentUpon>202005072355138_participer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005111503338_participer2.cs" />
+    <Compile Include="Migrations\202005111503338_participer2.designer.cs">
+      <DependentUpon>202005111503338_participer2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005072355138_participer.resx">
       <DependentUpon>202005072355138_participer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005111503338_participer2.resx">
+      <DependentUpon>202005111503338_participer2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

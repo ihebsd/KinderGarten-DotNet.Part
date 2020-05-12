@@ -10,8 +10,8 @@ using System.Web;
 using System.Web.Mvc;
 using PagedList;
 using PagedList.Mvc;
-
-
+using System.Threading.Tasks;
+using Solution.Data;
 
 namespace Solution.Web.Controllers
 {
@@ -64,7 +64,7 @@ namespace Solution.Web.Controllers
             ViewBag.phone = Phone2;
             var events = new List<EventModel>();
             foreach (Event e in EventService.SearchEventByName(searchString))
-            {
+            {              
                 EventModel es = new EventModel()
                 {
                     AdminConfirmtion = e.AdminConfirmtion,
@@ -74,6 +74,8 @@ namespace Solution.Web.Controllers
                     EventId = e.EventId,
                     image = e.image,
                     DateEvent = e.DateEvent,
+                    Testpart = EventService.test(userId, e)
+
 
 
                 };
@@ -256,17 +258,93 @@ namespace Solution.Web.Controllers
             return RedirectToAction("Index");
 
         }
-        [HttpPost]
-        public ActionResult Participate (int id)
+        public async Task<ActionResult> Participate(int id)
         {
             var userId = (int)Session["idu"];
             Event e = EventService.GetById(id);
-           
+            int x = EventService.NbrParticipant(e.EventId);
+            if(x < e.number_P)
+                {
+                Participation p = new Participation();
+                p.EventId = e.EventId;
+                p.ParentId = userId;
+                using (var context = new PidevContext())
+                {
+
+                    context.Participation.Add(p);
+                    context.SaveChanges();
+                }
+
+            }
+          
+
 
             return RedirectToAction("Index2");
 
         }
+        PidevContext pidevContext;
+        public async Task<ActionResult> AnnulerPart(int id)
+        {
 
+            /*if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            Participation p = new Participation()
+            {
+                EventId=id,
+            ParentId= (int)Session["idu"]
+            };
+            if (p == null)
+                return HttpNotFound();
+            ParticipationService.Delete(p);
+            ParticipationService.Commit(); */
+            List<Participation> deletedCustomer = new List<Participation>();
+            Participation deletedCustomer1 = null;
+            using (var context = new PidevContext())
+            {
+                deletedCustomer = context.Participation.Where(c => c.EventId == id
+
+                    ).ToList();
+                foreach (Participation p in deletedCustomer)
+                {
+                    if (p.ParentId == (int)Session["idu"] && p.EventId == id)
+                    {
+                        deletedCustomer1 = p;
+                    }
+                }
+            }
+
+            using (var context = new PidevContext())
+            {
+                context.Participation.Attach(deletedCustomer1);
+                context.Participation.Remove(deletedCustomer1);
+                context.SaveChanges();
+            }
+
+            return RedirectToAction("Index2");
+
+        }
+        public ActionResult ListDesParticipantparEven(int id,int ?i)
+        {
+            var userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;      
+       
+            var users = new List<User>();
+            User e = new User();
+
+            foreach (User u in EventService.ListParticipantbyEvent(id))
+            {
+                e.prenom = u.prenom;
+                e.nom = u.nom;
+                e.email = u.email;                
+                users.Add(u);
+            }
+
+            return View(users.ToList().ToPagedList(i ?? 1, 4));
+
+        }
 
     }
 }

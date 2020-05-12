@@ -14,8 +14,13 @@ namespace Solution.Service
     {
         static IDatabaseFactory Factory = new DatabaseFactory();
         static IUnitOfWork utk = new UnitOfWork(Factory);
+        IParticipationService ParticipationService;
+        IUserService UserService;
+
         public EventService() : base(utk)
         {
+            ParticipationService = new ParticipationService();
+            UserService = new UserService();
         }
 
         public void Add(KinderGarten entity)
@@ -42,7 +47,7 @@ namespace Solution.Service
         {
             utk.Dispose();
         }
-            
+
 
         public IEnumerable<Event> SearchEventByName(string searchString)
         {
@@ -53,24 +58,25 @@ namespace Solution.Service
             }
             return EventDomain;
         }
-        
 
-        public int Sumpercategory (Category category)
+
+        public int Sumpercategory(Category category)
         {
-            int x=0;
+            int x = 0;
             IEnumerable<Event> EventDomain = GetMany();
-            foreach (var item in EventDomain)                
-            {               
+            foreach (var item in EventDomain)
+            {
                 if (EventDomain.Equals(category))
-                x = +1;
+                    x = +1;
             }
             return x;
 
         }
-        public int SumEvent()        {
-            
-                return GetMany().Count();
-            
+        public int SumEvent()
+        {
+
+            return GetMany().Count();
+
         }
         public int SumEducation()
         {
@@ -98,8 +104,31 @@ namespace Solution.Service
 
         }
 
-   
+        public Boolean test(int id, Event ev)
+        {
+            foreach (var p in ParticipationService.GetMany())
+            {
+                if (p.EventId == ev.EventId && p.ParentId == id)
+                    return true;
+            }
 
+            return false;
+        }
+        public int NbrParticipant(int idEvent)
+        {
+            int x = 0;
+            foreach (var p in ParticipationService.GetMany())
+            {
+                if (p.EventId == idEvent)
+                    x += 1;
+            }
+            return x;
+        }
+        public IEnumerable<User> ListParticipantbyEvent(int eventId)
+        {
+            IEnumerable<Participation> ParticipationDomain = ParticipationService.GetMany();
+            return ParticipationDomain.Where(p => p.EventId == eventId).Select(p => UserService.GetById(p.ParentId));
+        }
 
     }
 }

@@ -21,6 +21,7 @@ namespace Solution.Web.Models
         public string Description { get; set; }
         public string image { get; set; }
         public bool AdminConfirmtion { get; set; }
+        public bool Testpart { get; set; }
         public int DirecteurFK { get; set; }
 
         //prop de navig
