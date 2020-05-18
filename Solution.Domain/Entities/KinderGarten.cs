@@ -36,6 +36,7 @@ namespace Solution.Domain.Entities
         [Range(0, int.MaxValue)]
         public int NbrEmp { get; set; }
         public int nbVue { get; set; }
+        public string Votes { get; set; }
         public int? DirecteurId { get; set; }
         [ForeignKey("DirecteurId ")]
         public virtual Directeur Directeur { get; set; }

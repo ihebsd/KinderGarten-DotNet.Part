@@ -1,0 +1,17 @@
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\Solution.Data.dll.config
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\Solution.Data.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\Solution.Data.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\EntityFramework.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\Solution.Domain.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\Solution.Domain.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\Solution.Domain.dll.config
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\EntityFramework.xml
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.csprojAssemblyReference.cache
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.Migrations.hhh.resources
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.Migrations.hhh1.resources
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.csproj.GenerateResource.cache
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.csproj.CopyComplete
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.pdb

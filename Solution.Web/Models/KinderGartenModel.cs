@@ -37,7 +37,7 @@ namespace Solution.Web.Models
         [Range(0, int.MaxValue)]
         public int NbrEmp { get; set; }
         public int nbVue { get; set; }
-
+        public String Votes { get; set; }
         [Display(Name = "Directeur")]
         public int? DirecteurId { get; set; }
     }

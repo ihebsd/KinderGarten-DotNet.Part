@@ -15,6 +15,8 @@ namespace Solution.Data
         }
         public DbSet<User> Users { get; set; }
         public DbSet<KinderGarten> KinderGartens { get; set; }
+        public DbSet<VoteLog> VoteModels { get; set; }
+
 
 
 

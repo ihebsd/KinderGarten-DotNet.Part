@@ -4,6 +4,7 @@ using Solution.Service;
 using Solution.Web.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -41,6 +42,7 @@ namespace Solution.Web.Controllers
                     Cost = p.Cost,
                     Phone = p.Phone,
                     Description = p.Description,
+                    DateCreation=p.DateCreation
 
                 });
             }
@@ -53,8 +55,8 @@ namespace Solution.Web.Controllers
         {
             return reclams;
         }
-
-        // GET: api/FeedBackApi/5
+        [HttpGet]
+        [Route("api/KinderGarten/Details")]
         public KinderGarten Get(int id)
         {
             KinderGarten comp = MyService.GetById(id);
@@ -71,8 +73,7 @@ namespace Solution.Web.Controllers
 
             return stdregreply;
         }
-        // POST: api/FeedBackApi
-        [Route("api/KinderGarten")]
+        [Route("api/KinderGarten/Create")]
         public IHttpActionResult PostNewFeed(KinderGartenModel p)
         {
 
@@ -81,7 +82,6 @@ namespace Solution.Web.Controllers
             {
                 ctx.KinderGartens.Add(new KinderGarten()
                 {
-                    KinderGartenId=p.KinderGartenId,
                     Name = p.Name,
                     Image = p.Image,
                     Address = p.Address,
@@ -91,9 +91,14 @@ namespace Solution.Web.Controllers
                     Description = p.Description,
                     DirecteurId =p.DirecteurId,
                     DateCreation=DateTime.Now,
+                    Votes="0,0,0,0,0"
                 });
 
-                ctx.SaveChanges();
+                    // Your code...
+                    // Could also be before try if you know the exception occurs in SaveChanges
+
+                    ctx.SaveChanges();
+                
             }
 
             return Ok();

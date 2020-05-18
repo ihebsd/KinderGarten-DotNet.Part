@@ -60,17 +60,13 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\202002291545457_kindergarten.cs" />
-    <Compile Include="Migrations\202002291545457_kindergarten.designer.cs">
-      <DependentUpon>202002291545457_kindergarten.cs</DependentUpon>
+    <Compile Include="Migrations\202005152332001_hhhh.cs" />
+    <Compile Include="Migrations\202005152332001_hhhh.designer.cs">
+      <DependentUpon>202005152332001_hhhh.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202004021225457_hhh.cs" />
-    <Compile Include="Migrations\202004021225457_hhh.designer.cs">
-      <DependentUpon>202004021225457_hhh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004051139593_kinder.cs" />
-    <Compile Include="Migrations\202004051139593_kinder.designer.cs">
-      <DependentUpon>202004051139593_kinder.cs</DependentUpon>
+    <Compile Include="Migrations\202005172041435_nh.cs" />
+    <Compile Include="Migrations\202005172041435_nh.designer.cs">
+      <DependentUpon>202005172041435_nh.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -91,14 +87,11 @@
     <Folder Include="CustomConventions\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202002291545457_kindergarten.resx">
-      <DependentUpon>202002291545457_kindergarten.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202005152332001_hhhh.resx">
+      <DependentUpon>202005152332001_hhhh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004021225457_hhh.resx">
-      <DependentUpon>202004021225457_hhh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004051139593_kinder.resx">
-      <DependentUpon>202004051139593_kinder.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202005172041435_nh.resx">
+      <DependentUpon>202005172041435_nh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

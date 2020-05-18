@@ -175,7 +175,7 @@ namespace Solution.Presentation.Controllers
         public void SendVerificationLinkEmail(string email, string activationCode, string emailFor = "VerifyAccount")
         {
 
-            var verifyUrl = "https://localhost:44326/Login/" + emailFor + "/" + activationCode;
+            var verifyUrl = "http://localhost:44326/Login/" + emailFor + "/" + activationCode;
             // var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
             var fromEmail = new MailAddress("hsine.gabsi@esprit.tn", "Congratulation for sign in");
