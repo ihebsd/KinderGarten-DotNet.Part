@@ -18,6 +18,7 @@ namespace Solution.Web.Controllers
     public class LoginApiController : ApiController
     {
         [HttpGet]
+        [Route("api/LoginApi/VerifyAccount")]
         public IEnumerable<bool> VerifyAccount(string id)
         {
             bool Status = false;
@@ -137,15 +138,79 @@ namespace Solution.Web.Controllers
 
             }
         }
-        [HttpGet]
-        [Route("api/Login/GetByEmail")]
-        public User GetByEmail(string email)
+
+        [AllowAnonymous]
+        [Route("api/LoginApi/ForgotPassword")]
+        public IHttpActionResult ForgotPassword(UserLogin us)
         {
-            using (var ctx = new PidevContext())
+
+
+            using (PidevContext db = new PidevContext())
             {
-                User v = ctx.Users.Where(x => x.email == email).FirstOrDefault();
-                return v;
+                var account = db.Users.Where(x => x.email == us.email).FirstOrDefault();
+                if (account != null)
+                {
+                    string resetCode = Guid.NewGuid().ToString();
+                    SendVerificationLinkEmail(account.email, resetCode, "ResetPassword");
+                    account.ResetPasswordCode = resetCode;
+
+                    db.Configuration.ValidateOnSaveEnabled = false;
+                    db.SaveChanges();
+                }
+                else
+                {
+                }
+
             }
+            return Ok();
+
+
+        }
+        [HttpGet]
+        [Route("api/LoginApi/Verify")]
+        public IEnumerable<bool> Verify(string id)
+        {
+            bool Exist = false;
+            using (PidevContext db = new PidevContext())
+            {
+                db.Configuration.ValidateOnSaveEnabled = false;
+
+                var v = db.Users.Where(x => x.ResetPasswordCode == id).FirstOrDefault();
+                if (v != null)
+                {
+
+                    Exist = true;
+
+                    return new List<bool> { Exist };
+                }
+
+            }
+
+            return new List<bool> { Exist };
+        }
+
+        [Route("api/LoginApi/ResetPassword")]
+
+        public IHttpActionResult ResetPassword(UserLogin model)
+        {
+
+            using (PidevContext db = new PidevContext())
+            {
+                var user = db.Users.Where(x => x.ResetPasswordCode == model.ResetPasswordCode).FirstOrDefault();
+                if (user != null)
+                {
+                    user.password = Crypto.Hash(model.password);
+                    user.Confirmpassword = Crypto.Hash(model.Confirmpassword);
+
+                    user.ResetPasswordCode = "";
+                    db.Configuration.ValidateOnSaveEnabled = false;
+                    db.SaveChanges();
+                }
+            }
+
+
+            return Ok();
         }
     }
 }
+

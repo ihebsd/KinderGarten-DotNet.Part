@@ -33,6 +33,7 @@ namespace Solution.Web.Models
         [DataType(DataType.Password)]
         [Compare("password", ErrorMessage = "not the same pasword")]
         public string Confirmpassword { get; set; }
+        public string ResetPasswordCode { get; set; }
         public bool IsEmailVerified { get; set; }
 
 
