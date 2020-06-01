@@ -51,3 +51,5 @@ C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arct
 C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Service.Pattern\obj\Debug\Service.Pattern.csproj.CopyComplete
 C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Service.Pattern\obj\Debug\Service.Pattern.dll
 C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Service.Pattern\obj\Debug\Service.Pattern.pdb
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Service.Pattern\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Service.Pattern\bin\Debug\Newtonsoft.Json.xml

@@ -41,3 +41,5 @@ C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arct
 C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\obj\Debug\Solution.Domain.dll
 C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\obj\Debug\Solution.Domain.pdb
 C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\obj\Debug\Solution.Domain.csprojAssemblyReference.cache
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Debug\Newtonsoft.Json.xml

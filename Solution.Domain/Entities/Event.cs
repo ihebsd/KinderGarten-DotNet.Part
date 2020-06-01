@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,12 +19,13 @@ namespace Solution.Domain.Entities
     {
         public int EventId { get; set; }
         public string Name { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
         public Category Category { get; set; }
         public int number_P { get; set; }
         [DataType(DataType.Date)]
         public DateTime DateEvent { get; set; }
-        public DateTime HeureD { get; set; }
-        public DateTime HeureF { get; set; }        
+        public String HeureD { get; set; }
+        public String HeureF { get; set; }        
         public string Description { get; set; }
         public string image { get; set; }
         public bool AdminConfirmtion { get; set; }

@@ -65,26 +65,25 @@ namespace Solution.Web.Controllers
         public IHttpActionResult PostNewFeed(EventModel postt)
         {
 
-            if (!ModelState.IsValid)
-                return BadRequest("Invalid data.");
+           
 
             using (var ctx = new PidevContext())
             {
+                //string str = "Other";
                 ctx.Events.Add(new Event()
                 {
-                    EventId = postt.EventId,
-                    DateEvent = DateTime.Today,
+                    DateEvent = DateTime.Now,
                     Name = postt.Name,
-                    AdminConfirmtion = false,
-                    image = postt.image,
                     Description = postt.Description,
                     number_P = postt.number_P,
-                    Category = postt.Category,   
-                    DirecteurFk=postt.DirecteurFK,
-                    HeureD = DateTime.Today,
-                    HeureF = DateTime.Today
+                    image=postt.image,
+                  Category=postt.Category,
+                    //Animal animal = (Animal)Enum.Parse(typeof(Animal), str);
+                    DirecteurFk = 1,
+                    HeureD = postt.HeureD,
+                    HeureF = postt.HeureF
 
-                });
+                }); ;
 
                 ctx.SaveChanges();
             }
@@ -92,23 +91,24 @@ namespace Solution.Web.Controllers
             return Ok();
         }
 
-        // PUT: api/EventWebApi/5
-        public IHttpActionResult Put(EventModel student)
+        [Route("api/EventApi/Put")]
+        public IHttpActionResult Put(int id, EventModel student)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Not a valid model");
+          
 
             using (var ctx = new PidevContext())
             {
-                var existingStudent = ctx.Events.Where(s => s.EventId == student.EventId)
+                var existingStudent = ctx.Events.Where(s => s.EventId == id)
                                                         .FirstOrDefault<Event>();
 
                 if (existingStudent != null)
                 {
                     existingStudent.Name = student.Name;
                     existingStudent.number_P = student.number_P;
-                    existingStudent.Category = student.Category;
+                    //existingStudent.Category = student.Category;
                     existingStudent.Description = student.Description;
+                    existingStudent.image = student.image;
+
                     ctx.SaveChanges();
                 }
                 else

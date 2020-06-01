@@ -260,10 +260,14 @@ namespace Solution.Web.Controllers
         }
         public async Task<ActionResult> Participate(int id)
         {
+            
             var userId = (int)Session["idu"];
             Event e = EventService.GetById(id);
             int x = EventService.NbrParticipant(e.EventId);
-            if(x < e.number_P)
+           // bool plein = x < e.number_P;
+           // ViewBag.pl = plein;
+           // TempData["notice"] = "Event is full";
+            if (x < e.number_P)
                 {
                 Participation p = new Participation();
                 p.EventId = e.EventId;
@@ -276,9 +280,7 @@ namespace Solution.Web.Controllers
                 }
 
             }
-          
-
-
+        
             return RedirectToAction("Index2");
 
         }
