@@ -185,8 +185,8 @@ namespace Solution.Web.Controllers
         {
             List<Kid> query = ServicePar.GetMany().ToList();
             //var userId = (int)Session["idu"];
-            // var kidss = db.Kids;
-            //  var query = kidss.Where(z => z.idParent == userId).Select(z=>z.FirstName).ToList();
+            //var kidss = db.Kids;
+            //var query = kidss.Where(z => z.idParent == userId).Select(z => z.FirstName).ToList();
             ViewBag.MyKid = new SelectList(query, "IdKid", "FirstName");
 
             return View();
@@ -205,10 +205,6 @@ namespace Solution.Web.Controllers
 
             if (ModelState.IsValid)
             {
-
-
-
-
 
                 if (hidden_field1)
                     c.Daily = true;

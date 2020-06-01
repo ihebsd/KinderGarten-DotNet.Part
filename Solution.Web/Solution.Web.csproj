@@ -195,6 +195,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CarPoolApiController.cs" />
     <Compile Include="Controllers\CarPoolController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KinderGartenController.cs" />
@@ -752,7 +753,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>6415</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44326/</IISUrl>
+          <IISUrl>http://localhost:44326/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
