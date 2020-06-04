@@ -37,7 +37,7 @@ namespace Solution.Presentation.Controllers
                 // Email is already Exist
                 if (isExist)
                 {
-                    //ModelState.AddModelError("EmailExist", "Email already exist");
+                  //  ModelState.AddModelError("EmailExist", "Email already exist");
                     message = "Email already exist";
                     return View(user);
                 }
@@ -130,9 +130,14 @@ namespace Solution.Presentation.Controllers
                         {
                             return RedirectToAction("Index", "UserBack");
                         }
-                        else
+                        if(Session["v"].ToString() == "Directeur")
                         {
-                            return RedirectToAction("Index", "KinderGarten");
+                            return RedirectToAction("Index", "Event");
+                        }
+                        if(Session["v"].ToString() == "Parent")
+                        {
+                            return RedirectToAction("Index2", "Event");
+
                         }
 
                     }

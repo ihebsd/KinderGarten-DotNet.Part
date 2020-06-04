@@ -1,0 +1,13 @@
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Release\Solution.Domain.dll.config
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Release\Solution.Domain.dll
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Release\Solution.Domain.pdb
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Release\EntityFramework.dll
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Release\Newtonsoft.Json.dll
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Release\EntityFramework.xml
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\bin\Release\Newtonsoft.Json.xml
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\obj\Release\Solution.Domain.csproj.CopyComplete
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\obj\Release\Solution.Domain.dll
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\obj\Release\Solution.Domain.pdb
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Domain\obj\Release\Solution.Domain.csprojAssemblyReference.cache

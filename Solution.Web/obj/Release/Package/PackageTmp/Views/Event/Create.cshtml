@@ -1,0 +1,139 @@
+﻿@model Solution.Domain.Entities.Event
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Event", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <div class="row">
+            <h4>Event</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="reg_box">
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = " Name", style = "width: 350px" })
+
+                </div>
+
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Description, new { @class = "form-control", @placeholder = " Description", style = "width: 350px" })
+                </div>
+
+
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.number_P, new { @class = "form-control", @placeholder = " Number of participants", style = "width: 350px" })
+                </div>
+
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.DateEvent, new { @class = "form-control", @placeholder = " Date", style = "width: 350px" })
+                </div>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.HeureD, new { @class = "form-control", @placeholder = " Start Hour", style = "width: 350px" })
+                </div>
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.HeureF, new { @class = "form-control", @placeholder = " End Hour", style = "width: 350px" })
+                </div>
+
+
+
+                <div class="col-md-10">
+                    @Html.EnumDropDownListFor(model => model.Category, "", new { @class = "form-control", @placeholder = " Date", style = "width: 350px" })
+                    @Html.ValidationMessageFor(model => model.Category, "")
+                </div>
+
+
+
+
+
+
+
+                <div class="col-md-10">
+                    @Html.TextBox("Image", null, new
+                         {
+                             type = "file",
+                             @class = "form-input-styled"
+                         })
+                    @Html.ValidationMessageFor(model => model.image, "", new { @class = "text-danger" })
+
+
+                </div>
+            </div>
+
+            <button class="button" type="submit" onclick="create()">Create</button>
+
+
+            <script type="text/javascript">
+
+                function create() {
+                    toastr.success("Your Project was create succefully !");
+                }
+            </script>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="sidebar">
+            <div class="categories b_green">
+                <h4 class="title">Categories</h4>
+                <ul>
+                    <li><a href="#">All <span>@ViewBag.som</span></a></li>
+                    <li><a href="#">Education <span>@ViewBag.edu</span></a></li>
+                    <li><a href="#">Entertainment <span>@ViewBag.ent</span></a></li>
+                    <li><a href="#">Other <span>@ViewBag.other</span></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
+            }
+
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>

@@ -39,7 +39,8 @@ namespace Solution.Web.Controllers
                     number_P = i.number_P,
                     Category = i.Category,
                     HeureD = i.HeureD,
-                    HeureF= i.HeureF                   
+                    HeureF= i.HeureF    ,
+                    image=i.image
 
                 });
             }
@@ -64,21 +65,16 @@ namespace Solution.Web.Controllers
         [Route("api/EventPost")]
         public IHttpActionResult PostNewFeed(EventModel postt)
         {
-
-           
-
             using (var ctx = new PidevContext())
             {
-                //string str = "Other";
                 ctx.Events.Add(new Event()
                 {
-                    DateEvent = DateTime.Now,
+                    DateEvent = postt.DateEvent,
                     Name = postt.Name,
                     Description = postt.Description,
                     number_P = postt.number_P,
                     image=postt.image,
-                  Category=postt.Category,
-                    //Animal animal = (Animal)Enum.Parse(typeof(Animal), str);
+                    Category=postt.Category,
                     DirecteurFk = 1,
                     HeureD = postt.HeureD,
                     HeureF = postt.HeureF
@@ -94,28 +90,28 @@ namespace Solution.Web.Controllers
         [Route("api/EventApi/Put")]
         public IHttpActionResult Put(int id, EventModel student)
         {
-          
 
-            using (var ctx = new PidevContext())
-            {
-                var existingStudent = ctx.Events.Where(s => s.EventId == id)
-                                                        .FirstOrDefault<Event>();
 
+            Event existingStudent = MyService.GetById(id);
                 if (existingStudent != null)
                 {
                     existingStudent.Name = student.Name;
                     existingStudent.number_P = student.number_P;
-                    //existingStudent.Category = student.Category;
+                    existingStudent.Category = student.Category;
                     existingStudent.Description = student.Description;
                     existingStudent.image = student.image;
+                    existingStudent.HeureD = student.HeureD;
+                    existingStudent.HeureF = student.HeureF;
+                    existingStudent.DateEvent = student.DateEvent;
 
-                    ctx.SaveChanges();
+                MyService.Update(existingStudent);
+                MyService.Commit();
                 }
                 else
                 {
                     return NotFound();
                 }
-            }
+            
 
             return Ok();
         }
