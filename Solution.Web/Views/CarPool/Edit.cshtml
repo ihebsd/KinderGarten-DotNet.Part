@@ -39,7 +39,7 @@
                             @Html.HiddenFor(model => model.Id)
                             <br />
 
-                            @Html.DropDownList("idKid", ViewBag.MyKid as SelectList, "Select a Kid", new { @class = "form-control", style = "width:1000px" })
+                            @Html.DropDownListFor(m => m.idKid, (IEnumerable<SelectListItem>)ViewBag.Kidsss, "Select a Kid", new { @class = "form-control", style = "width:1000px" })
                             @Html.ValidationMessageFor(model => model.idKid, "", new { @class = "text-danger" })
 
                             <br />
@@ -60,11 +60,55 @@
 
 
                         </div>
+                        <div class="reg_checkbox">
+                            <div>
+                                <input type="checkbox" class="form-check-input filled-in"
+                                       style="padding-left:7%;align-items:flex-start;" id="trigger" />
+                                <label for="trigger"></label>
+                                <span>Repeat</span>
+                            </div>
+                            <br />
+                        </div>
+                        <div class="bg">
+                            <div id="hidden_fields" style="padding-top:20px">
+                                <div class="chiller_cb">
+                                    <input type="checkbox" name="hidden_field1" id="hidden_field1" value="true" class="group1" onClick="ckChange(this)" runat="server" />
+                                    <label for="hidden_field1">Daily</label>
+                                    <span></span>
+                                </div>
+                                <br />
+                                <div class="chiller_cb">
+                                    <input type="checkbox" name="hidden_field2" id="hidden_field2" value="true" class="group1" onClick="ckChange(this)" runat="server" />
+                                    <label for="hidden_field2">EvereyWeekDay (Monday To Friday)</label>
+                                    <span></span>
+                                </div>
+                                <br />
+                                <div class="chiller_cb">
+                                    <input type="checkbox" name="hidden_field3" id="hidden_field3" value="true" class="group1" onClick="ckChange(this)" runat="server" />
+                                    <label for="hidden_field3">Weekly</label><br />
+
+                                    <span></span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg">
+                            <div id="weekly" style="padding-top:20px">
 
 
-                        <button class="button" type="submit" value="Save" style="width:500px">Update </button>
-                        
+                                <br />
+                                @Html.EditorFor(model => model.UntilDate, new { htmlAttributes = new { @class = "form-control", @placeholder = "Until Date", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.UntilDate, "", new { @class = "text-danger" })
 
+
+                            </div>
+                        </div><br />
+
+                        <div>
+
+                            <button id="Button" class="button" type="submit" value="Create" style="width:500px">Submit </button>
+
+                        </div>
                     }
 
 

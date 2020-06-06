@@ -13,56 +13,57 @@
 <body>
 
 
-    <section id="authorization_page" class="authorization_page">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10 dot">
-                    <h2 class="section-title">CarPooling</h2>
-                    <p class="section-description pb_20">Log in to your account<br>Don’t have an account yet? - <a href="">Show More</a></p>
+        <section id="authorization_page" class="authorization_page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 dot">
+                        <h2 class="section-title">CarPooling</h2>
+                        <p class="section-description pb_20">Create your Carpool<br>For More Information <a href="">Show More</a></p>
+                    </div>
+                    <div class="col-md-1"></div>
                 </div>
-                <div class="col-md-1"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    @using (Html.BeginForm())
-                    {
+                <div class="row">
+                    <div class="col-md-12">
+                        @using (Html.BeginForm())
+                        {
 
-                        @Html.AntiForgeryToken()
-                        <div class="text-success">
-                            <h3>@ViewBag.Message</h3>
-                        </div>
-                        <div class="bg">
-                            <h3 align="left">Which Of your kids will be in this carpool?</h3>
+                            @Html.AntiForgeryToken()
+                            <div class="text-success">
+                                <h3>@ViewBag.Message</h3>
+                            </div>
+                            <div class="bg">
+                                <h3 align="left">Which Of your kids will be in this carpool?</h3>
 
 
-                            @Html.DropDownList("idKid", ViewBag.MyKid as SelectList, "Select a Kid", new { @class = "form-control", style = "width:1000px" })
-                            @Html.ValidationMessageFor(model => model.idKid, "", new { @class = "text-danger" })
+                                
+                                @Html.DropDownListFor(m => m.idKid, (IEnumerable<SelectListItem>)ViewBag.Kidsss , "Select a Kid", new { @class = "form-control", style = "width:1000px" })
+                                @Html.ValidationMessageFor(model => model.idKid, "", new { @class = "text-danger" })
 
-                            <br />
-                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", @placeholder = "Title", style = "width:1000px" } })
-                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
-                            <br />
-                            @Html.EditorFor(model => model.From, new { htmlAttributes = new { @class = "form-control", @placeholder = "From", style = "width:1000px" } })
-                            @Html.ValidationMessageFor(model => model.From, "", new { @class = "text-danger" })
-                            <br />
-                            @Html.EditorFor(model => model.To, new { htmlAttributes = new { @class = "form-control", @placeholder = "To", style = "width:1000px" } })
-                            @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })
-                            <br />
-                            @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control", @placeholder = "Time", style = "width:1000px" } })
-                            @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
-                            <br />
-                            @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date", style = "width:1000px" } })
-                            @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
-                            <br />
-                            @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @placeholder = "Message", style = "width:1000px" } })
-                            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
-                            <br />
-                            @Html.EditorFor(model => model.NbPlaceDispo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Number of places available", style = "width:1000px" } })
-                            @Html.ValidationMessageFor(model => model.NbPlaceDispo, "", new { @class = "text-danger" })
-                            <br />
+                                <br />
+                                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", @placeholder = "Title", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.From, new { htmlAttributes = new { @class = "form-control", @placeholder = "From", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.From, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.To, new { htmlAttributes = new { @class = "form-control", @placeholder = "To", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control", @placeholder = "Time", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @placeholder = "Message", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.NbPlaceDispo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Number of places available", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.NbPlaceDispo, "", new { @class = "text-danger" })
+                                <br />
 
-                        </div>
+                            </div>
                         <div class="reg_checkbox">
                             <div>
                                 <input type="checkbox" class="form-check-input filled-in"

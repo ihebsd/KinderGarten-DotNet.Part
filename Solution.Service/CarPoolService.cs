@@ -15,10 +15,14 @@ namespace Solution.Service
         private static IDatabaseFactory dbfactory = new DatabaseFactory();
         private static IUnitOfWork UOW = new UnitOfWork(dbfactory);
         private Context db = new Context();
+        IUserService UserService;
+        IGeoLocationService GeoLocationService;
         public CarPoolService() : base(UOW)
         {
+            UserService = new UserService();
+            GeoLocationService = new GeoLocationService();
         }
-        public IEnumerable<CarPool> SearchCarpoolByTo(string searchString)
+        public IEnumerable<CarPool> SearchParentByTo(string searchString)
         {
             IEnumerable<CarPool> carPoolDomain = GetMany();
             if (!String.IsNullOrEmpty(searchString))
@@ -28,5 +32,7 @@ namespace Solution.Service
 
             return carPoolDomain;
         }
+
+
     }
 }

@@ -1,9 +1,10 @@
 ﻿@model IEnumerable<Solution.Web.Models.CarPoolModel>
-
 @{
     ViewBag.Title = "MyIndex";
     Layout = "~/Views/Shared/_LayoutCarpool.cshtml";
 }
+@using PagedList;
+@using PagedList.Mvc;
     <section id="authorization_page" class="authorization_page">
         <div class="container">
             <div class="row">
@@ -631,7 +632,7 @@
                 </div>
             </div>
         </div>
-        
+
 
 
 
@@ -640,9 +641,6 @@
                 <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
                 <li class="active"><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
                 <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
             </ul>
         </div>
@@ -717,4 +715,3 @@
         </script>
 
     </section>
-                                               

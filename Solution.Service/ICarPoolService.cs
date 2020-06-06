@@ -10,6 +10,6 @@ namespace Solution.Service
 {
     public interface ICarPoolService : IService<CarPool>
     {
-        IEnumerable<CarPool> SearchCarpoolByTo(string searchString);
+        IEnumerable<CarPool> SearchParentByTo(string searchString);
     }
 }

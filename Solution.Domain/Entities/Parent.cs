@@ -11,6 +11,8 @@ namespace Solution.Domain.Entities
     {
         public virtual ICollection<CarPool> CarPools { get; set; }
         public virtual ICollection<Kid> Kids { get; set; }
-
+        public int idGeo { get; set; }
+        [ForeignKey("idGeo")]
+        public virtual GeoLocation GeoLocation { get; set; }
     }
 }

@@ -260,49 +260,9 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\202003042028433_Dead.cs" />
-    <Compile Include="Migrations\202003042028433_Dead.designer.cs">
-      <DependentUpon>202003042028433_Dead.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003051100553_Pooool.cs" />
-    <Compile Include="Migrations\202003051100553_Pooool.designer.cs">
-      <DependentUpon>202003051100553_Pooool.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003162015531_check.cs" />
-    <Compile Include="Migrations\202003162015531_check.designer.cs">
-      <DependentUpon>202003162015531_check.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003231433416_indexx.cs" />
-    <Compile Include="Migrations\202003231433416_indexx.designer.cs">
-      <DependentUpon>202003231433416_indexx.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003261608459_tt1.cs" />
-    <Compile Include="Migrations\202003261608459_tt1.designer.cs">
-      <DependentUpon>202003261608459_tt1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003291614456_WEBTEST.cs" />
-    <Compile Include="Migrations\202003291614456_WEBTEST.designer.cs">
-      <DependentUpon>202003291614456_WEBTEST.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003300233324_daily.cs" />
-    <Compile Include="Migrations\202003300233324_daily.designer.cs">
-      <DependentUpon>202003300233324_daily.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003302257269_UntilDates.cs" />
-    <Compile Include="Migrations\202003302257269_UntilDates.designer.cs">
-      <DependentUpon>202003302257269_UntilDates.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004050323009_geoo.cs" />
-    <Compile Include="Migrations\202004050323009_geoo.designer.cs">
-      <DependentUpon>202004050323009_geoo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004052150280_latlng.cs" />
-    <Compile Include="Migrations\202004052150280_latlng.designer.cs">
-      <DependentUpon>202004052150280_latlng.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004062045223_others.cs" />
-    <Compile Include="Migrations\202004062045223_others.designer.cs">
-      <DependentUpon>202004062045223_others.cs</DependentUpon>
+    <Compile Include="Migrations\202006041407374_kinder.cs" />
+    <Compile Include="Migrations\202006041407374_kinder.designer.cs">
+      <DependentUpon>202006041407374_kinder.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -323,42 +283,12 @@
     <Folder Include="CustomConventions\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003042028433_Dead.resx">
-      <DependentUpon>202003042028433_Dead.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003051100553_Pooool.resx">
-      <DependentUpon>202003051100553_Pooool.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003162015531_check.resx">
-      <DependentUpon>202003162015531_check.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003231433416_indexx.resx">
-      <DependentUpon>202003231433416_indexx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003261608459_tt1.resx">
-      <DependentUpon>202003261608459_tt1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003291614456_WEBTEST.resx">
-      <DependentUpon>202003291614456_WEBTEST.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003300233324_daily.resx">
-      <DependentUpon>202003300233324_daily.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003302257269_UntilDates.resx">
-      <DependentUpon>202003302257269_UntilDates.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004050323009_geoo.resx">
-      <DependentUpon>202004050323009_geoo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004052150280_latlng.resx">
-      <DependentUpon>202004052150280_latlng.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004062045223_others.resx">
-      <DependentUpon>202004062045223_others.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="Content\PagedList.css" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\PagedList.css" />
+    <EmbeddedResource Include="Migrations\202006041407374_kinder.resx">
+      <DependentUpon>202006041407374_kinder.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

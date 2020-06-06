@@ -1,7 +1,6 @@
 ﻿
 
 using Solution.Data.Configurations;
-using Solution.Data.Migrations;
 using Solution.Domain.Entities;
 using System.Data.Entity;
 
@@ -26,19 +25,16 @@ namespace Solution.Data
             modelBuilder.Configurations.Add(new DirecteurConfiguration());
 
             modelBuilder.Configurations.Add(new ParentConfiguration());
-            modelBuilder.Entity<User>()
-               .HasOptional(s => s.GeoLocation)
-               .WithRequired(ad => ad.User);
-            modelBuilder.Entity<User>()
+           
+            modelBuilder.Entity<Parent>()
              .HasRequired(s => s.GeoLocation)
-             .WithRequiredPrincipal(ad => ad.User);
+             .WithRequiredPrincipal(ad => ad.Parent);
+
         }
        
         
 
         public System.Data.Entity.DbSet<Solution.Domain.Entities.Parent> Parents { get; set; }
-
-       
-    }
+            }
 }
 
