@@ -8,13 +8,14 @@ using System.Web;
 
 namespace Solution.Web.Models
 {
-    public class EventModel
+    public class EventModel 
     {
         public int EventId { get; set; }
         public string Name { get; set; }
         public Category Category { get; set; }
         public int number_P { get; set; }
         [DataType(DataType.Date)]
+        [Required(ErrorMessage = "DateEvent can't be")]
         public DateTime DateEvent { get; set; }
         public String HeureD { get; set; }
         public String HeureF { get; set; }
@@ -23,6 +24,8 @@ namespace Solution.Web.Models
         public bool AdminConfirmtion { get; set; }
         public bool Testpart { get; set; }
         public int DirecteurFK { get; set; }
+        public string qrCode { get; set; }
+
 
         //prop de navig
         [ForeignKey("DirecteurFK")]

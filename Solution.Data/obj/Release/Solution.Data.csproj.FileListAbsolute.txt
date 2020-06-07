@@ -15,4 +15,5 @@ C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arct
 C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Release\Solution.Data.csproj.CopyComplete
 C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Release\Solution.Data.dll
 C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Release\Solution.Data.pdb
-C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Release\Solution.Data.Migrations.Azuresqlserve.resources
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Release\Solution.Data.Migrations.kindergartennn.resources
+C:\Users\Culer\Desktop\.net project\Pi Dev PAAS SAAS KinderGarten\Solution-4Arctic-2020\Solution.Data\obj\Release\Solution.Data.Migrations.qrcode.resources

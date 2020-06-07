@@ -31,13 +31,17 @@
                 </div>
 
                 <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.DateEvent, new { @class = "form-control", @placeholder = " Date", style = "width: 350px" })
+                    @Html.EditorFor(model => model.DateEvent, new { htmlAttributes = new { @class = "form-control", @placeholder = "DateEvent", style = "width:350px" } })
+                    @Html.ValidationMessageFor(model => model.DateEvent, "", new { @class = "text-danger" })
+
                 </div>
                 <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.HeureD, new { @class = "form-control", @placeholder = " Start Hour", style = "width: 350px" })
+                    @Html.EditorFor(model => model.HeureD, new { htmlAttributes = new { @class = "form-control", @placeholder = "HeureD", style = "width:350px" } })
+
                 </div>
                 <div class="col-md-10">
-                    @Html.TextBoxFor(model => model.HeureF, new { @class = "form-control", @placeholder = " End Hour", style = "width: 350px" })
+                    @Html.EditorFor(model => model.HeureF, new { htmlAttributes = new { @class = "form-control", @placeholder = "HeureF", style = "width:350px" } })
+
                 </div>
 
 

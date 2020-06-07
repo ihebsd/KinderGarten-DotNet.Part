@@ -40,7 +40,9 @@ namespace Solution.Web.Controllers
                     Category = i.Category,
                     HeureD = i.HeureD,
                     HeureF= i.HeureF    ,
-                    image=i.image
+                    image=i.image,
+                    qrCode = i.qrCode
+
 
                 });
             }
@@ -77,7 +79,8 @@ namespace Solution.Web.Controllers
                     Category=postt.Category,
                     DirecteurFk = 1,
                     HeureD = postt.HeureD,
-                    HeureF = postt.HeureF
+                    HeureF = postt.HeureF,
+                    qrCode = postt.qrCode,
 
                 }); ;
 
@@ -133,6 +136,23 @@ namespace Solution.Web.Controllers
             }
 
             return Ok();
+        }
+        [HttpGet]
+        [Route("api/EventApi/Details")]
+        public Event GetbyId(int id)
+        {
+            Event ev = MyService.GetById(id);
+
+            return ev;
+        }
+        [HttpGet]
+        [Route("api/EventApi/QrCode")]
+        public IEnumerable<Event> GetByqrCode(String id)
+        {
+            List<Event> Kinder = new List<Event>();
+            Kinder.Add(MyService.FindEventByQrCode(id));
+
+            return Kinder;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Solution.Domain.Entities
         Entertainment,Educative,Other
 
     }
-    public class Event
+    public class Event 
     {
         public int EventId { get; set; }
         public string Name { get; set; }
@@ -23,11 +23,13 @@ namespace Solution.Domain.Entities
         public Category Category { get; set; }
         public int number_P { get; set; }
         [DataType(DataType.Date)]
+        [Required(ErrorMessage = "DateEvent can't be")]
         public DateTime DateEvent { get; set; }
         public String HeureD { get; set; }
         public String HeureF { get; set; }        
         public string Description { get; set; }
         public string image { get; set; }
+        public string qrCode { get; set; }
         public bool AdminConfirmtion { get; set; }
         public int DirecteurFk { get; set; }
 

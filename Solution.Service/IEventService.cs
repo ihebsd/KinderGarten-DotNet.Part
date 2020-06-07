@@ -22,7 +22,7 @@ namespace Solution.Service
         IEnumerable<User> ListParticipantbyEvent(int id);
 
 
-
+        Event FindEventByQrCode(string qrcode);
 
 
     }

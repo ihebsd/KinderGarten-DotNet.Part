@@ -7,13 +7,13 @@ namespace Solution.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class kindergartennn : IMigrationMetadata
+    public sealed partial class azurekindergarten : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(kindergartennn));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(azurekindergarten));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006031301218_kindergartennn"; }
+            get { return "202006061715216_azurekindergarten"; }
         }
         
         string IMigrationMetadata.Source

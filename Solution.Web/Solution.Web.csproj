@@ -190,6 +190,7 @@
     <Compile Include="Controllers\EventWebApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KinderGartenController.cs" />
+    <Compile Include="Controllers\LoginApiController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -529,6 +530,7 @@
     <Content Include="Content\Front\hts-cache\doit.log" />
     <Content Include="Content\Front\hts-cache\new.zip" />
     <Content Include="Content\Front\hts-cache\winprofile.ini" />
+    <None Include="Properties\PublishProfiles\KinderGartenAzure - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -582,7 +584,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

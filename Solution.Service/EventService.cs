@@ -129,6 +129,12 @@ namespace Solution.Service
             IEnumerable<Participation> ParticipationDomain = ParticipationService.GetMany();
             return ParticipationDomain.Where(p => p.EventId == eventId).Select(p => UserService.GetById(p.ParentId));
         }
+        public Event FindEventByQrCode(string qrcode)
+        {
+            Event @event;
+            @event = GetMany().Where(e => e.qrCode == qrcode).FirstOrDefault();
+            return @event;
+        }
 
     }
 }
