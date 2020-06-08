@@ -34,8 +34,8 @@
                         <span class="contact_icon"><i class="fa fa-phone"></i></span>
                         <ul>
                             <li class="title">Phone</li>
-                            <li><span>tel: </span>888-258-1669</li>
-                            <li><span>tel: </span>888-258-1669</li>
+                            <li><span>tel: </span>+216 24 037 141</li>
+
                         </ul>
                     </div>
                     <div class="col-md-6 col-sm-6 contact_block">
@@ -77,11 +77,28 @@
                         </ul>
                     </div>
                 </div>
+                <div class="row">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div class="col-md-6 col-sm-6 contact_block">
+                        <span class="contact_icon"><i class="fa fa-map-signs"></i></span>
+                        <ul>
+                            <li class="title">Current Location</li>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
                 <div class="sidebar">
 
-                    <div class="working_hours">
+                    <div class="working_hours" display="right">
 
                         <h4><span><a href="@Url.Action("createkid", "CarPool")"><i class="fa fa-plus-circle"> Add Kids </i></a></span></h4>
 
@@ -93,23 +110,35 @@
                         {
                             if (@att.idParent == (int)Session["idu"])
                             {
-
-                    <ul>
-                        
-                        <h5 class="author_description">
-
-                            <img style="width:50px;height:50px;" class="author_avatar" src="~/Content/Uploads/cute-success-kid-1920x1080.0.0.jpg" alt=""><br />
-
-                        </h5>
-
-                    </ul>
-
-
-                                <ul align="left">
+                                <ul align="left" class="col-md-4">
                                     <li class="day">@att.FirstName</li>
                                     <li><b>@att.Age      YO</b></li>
 
                                 </ul>
+                                <ul>
+                                    <li anlign="left">
+                                        <h5 class="author_description ">
+
+                                            <img style="width:50px;height:50px;" class="author_avatar" src="~/Content/Uploads/cute-success-kid-1920x1080.0.0.jpg" alt=""><br />
+
+                                        </h5>
+                                    </li>
+
+                                    <li anlign="right">
+                                        <a href="@Url.Action("DeleteKid", new {id = att.IdKid})"
+                                           onclick="return confirm('Are you sure you want to Delete?')"
+                                           style=""><i class="fa fa-remove"></i></a>
+                                    </li>
+
+
+
+
+                                </ul>
+
+
+
+
+
 
 
                             }
@@ -123,6 +152,7 @@
         <br />
         <br />
         <div id="maps"></div>
+
 
         <input name="lat" id="lat" type="hidden" value="-73.961452">
         <input name="lng" id="lng" type="hidden" value="35.675820">
@@ -144,8 +174,7 @@
 <br />
 <br />
 <br />
-<br />
-<br />
+
 <br />
 <br />
 <script>
@@ -228,7 +257,7 @@
                     position: pos
                 });
                 infoWindow.setPosition(pos);
-                infoWindow.setContent('Location found.');
+                infoWindow.setContent('Your Location .');
                 infoWindow.open(map, marker);
                 map.setCenter(pos);
 

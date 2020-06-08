@@ -29,7 +29,10 @@ namespace Solution.Service
         {
             return GetMany(f => f.nom.Contains(nom));
         }
+        public IEnumerable<User> GetUserById(int id)
+        {
+            return GetMany(f => f.idUser == id);
+        }
 
-      
     }
 }

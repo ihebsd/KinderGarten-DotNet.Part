@@ -131,7 +131,7 @@ namespace Solution.Web.Controllers
                     Date = collection.Date,
                     Message = collection.Message,
                     NbPlaceDispo = collection.NbPlaceDispo,
-                    idKid = 5,
+                    idKid = 3,
                     Weekly = collection.Weekly,
                     Daily = collection.Daily,
                     EveryWeekDay = collection.EveryWeekDay,
@@ -166,7 +166,7 @@ namespace Solution.Web.Controllers
                     existingStudent.Daily = student.Daily;
                     existingStudent.EveryWeekDay = student.EveryWeekDay;
                     existingStudent.Message = student.Message;
-                    existingStudent.idKid = 5;
+                    existingStudent.idKid = 3;
                     existingStudent.UntilDate = student.UntilDate;
                 MyService.Update(existingStudent);
                 MyService.Commit();

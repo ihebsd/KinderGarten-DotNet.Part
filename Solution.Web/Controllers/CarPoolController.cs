@@ -469,9 +469,10 @@ namespace Solution.Web.Controllers
 
         }
         UserLogin cs;
-        public ActionResult Profil(string searchString, string map)
+        public ActionResult Profil(string id, string map)
         {
             var userId = (int)Session["idu"];
+
             List<GeoLocation> geo = db.GeoLocations.ToList<GeoLocation>();
             ViewBag.Geo = geo;
 
@@ -490,7 +491,7 @@ namespace Solution.Web.Controllers
                         nom = c.nom,
                         prenom = c.prenom,
                         email = c.email,
-                        
+
 
 
                     };
@@ -503,7 +504,7 @@ namespace Solution.Web.Controllers
             return View(cs);
         }
         public ActionResult createkid()
-        {           
+        {
             return View();
 
         }
@@ -524,7 +525,7 @@ namespace Solution.Web.Controllers
                 c.FirstName = collection.FirstName;
                 c.LastName = collection.LastName;
                 c.Age = collection.Age;
-                c.IsCheked = false ;
+                c.IsCheked = false;
 
 
                 sc.Add(c);
@@ -545,6 +546,46 @@ namespace Solution.Web.Controllers
             ks.Delete(c);
             ks.Commit();
             return RedirectToAction("Profil");
+        }
+        //contacter parent
+        public ActionResult Contacter(int id)
+        {
+            int? idcar = sc.GetById(id).idParent;
+
+            //List<GeoLocation> geoU = db.GeoLocations.Where(f => f.ParentFK == idcar).ToList();
+            //ViewBag.Geoo = geoU;
+
+            List<User> pru = db.Users.ToList<User>();
+            ViewBag.Usr = pru;
+
+            List<Kid> kidss = db.Kids.Where(f => f.idParent == idcar).ToList<Kid>();
+            ViewBag.Kids = kidss;
+
+            
+
+            foreach (User c in ViewBag.Usr)
+            {
+                if (c.idUser == idcar)
+                {
+                    cs = new UserLogin()
+                    {
+
+                        nom = c.nom,
+                        prenom = c.prenom,
+                        email = c.email,
+
+
+
+                    };
+
+
+
+                }
+
+                
+            }
+            return View(cs);
+
         }
     }
 }

@@ -11,5 +11,6 @@ namespace Solution.Service
     public interface ICarPoolService : IService<CarPool>
     {
         IEnumerable<CarPool> SearchParentByTo(string searchString);
+       
     }
 }
