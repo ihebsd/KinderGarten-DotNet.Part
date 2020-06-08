@@ -1,0 +1,326 @@
+﻿@model Solution.Web.Models.KinderGartenModel
+
+@{
+    ViewBag.Title = "Details";
+}
+<body>
+    <section id="single_event" class="single_event">
+        <div class="container">
+            <div class="row pb_20">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 dot">
+                    <h2 class="section-title">@Html.DisplayFor(model => model.Name)</h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row sideber_height" style="position: relative;">
+                <div class="col-md-9">
+                    <div class="main_block">
+                        <div class="main_block_img">
+                            @{string path = "~/Content/Uploads/" + @Html.DisplayFor(model => model.Image);}
+
+                            <img src="@Url.Content(path)" alt="">
+                        </div>
+
+                        <div class="main_block_description pb_10">
+                            <h4>Description</h4>
+                            <p>@Html.DisplayFor(model => model.Description)</p>
+                        </div>
+                        <div class="main_block_gallery">
+                            <h4>Gallery</h4>
+                            <p>Kindergarten and elementary school teachers prepare younger students for future schooling by teaching them basic subjects such as math and reading. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                            <div id="single_event_gallery" class="single_event_gallery owl-carousel owl-theme owl-loaded owl-drag">
+
+
+
+
+                                <div class="owl-stage-outer">
+                                    <div class="owl-stage" style="transform: translate3d(-987px, 0px, 0px); transition: all 0s ease 0s; width: 1974px;">
+                                        <div class="owl-item cloned" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_1.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_1.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item cloned" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_2.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_2.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item cloned" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_3.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_3.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item cloned" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_4.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_4.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_1.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_1.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_2.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_2.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item active" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_3.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_3.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item active" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_4.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_4.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item cloned active" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_1.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_1.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item cloned active" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_2.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_2.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item cloned" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_3.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_3.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><div class="owl-item cloned" style="width: 164.5px;">
+                                            <div class="item">
+                                                <div class="col-md-12 col-portfolio">
+                                                    <div class="event_gallery_block">
+                                                        <figure>
+                                                            <div class="event_gallery_img">
+                                                                <img src="img/events/events_gallery_4.jpg" alt="">
+                                                            </div>
+                                                            <figcaption>
+                                                                <div class="portfolio-lead">
+                                                                    <div class="event_gallery_full_screen">
+                                                                        <a class="teacher_link_img" href="img/events/events_gallery_4.jpg">
+                                                                            <img src="img/icons/search_gallery.png" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </figcaption>
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="owl-nav disabled"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots disabled"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div id="sidebar" class="sidebar" style="">
+                        <div class="info_block t_white">
+                            <div class="date b_blue_light">
+                                <ul>
+                                    <li class="date_number">@Html.DisplayFor(model => model.DateCreation.Day)</li>
+                                    <li class="date_month">@Convert.ToDateTime(Model.DateCreation).ToString("MMM-yyyy")</li>
+                                </ul>
+                            </div>
+                            <div class="contact b_blue">
+                                <ul>
+                                    <li class="fz_18"><i class="fa fa-clock-o"></i>@Html.DisplayFor(model => model.NbrEmp)</li>
+                                    <li class="fz_18"><i class="fa fa-phone"></i>@Html.DisplayFor(model => model.Phone)</li>
+                                    <li class="fz_15 normal">
+                                        <i class="fa fa-envelope"></i>@Html.DisplayFor(model => model.nameDir)
+                                    </li>
+                                    <li class="fz_14 lh_16 normal"><i class="fa fa-map-marker"></i>@Html.DisplayFor(model => model.Address)</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

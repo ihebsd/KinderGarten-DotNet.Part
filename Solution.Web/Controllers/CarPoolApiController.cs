@@ -166,7 +166,7 @@ namespace Solution.Web.Controllers
                     existingStudent.Daily = student.Daily;
                     existingStudent.EveryWeekDay = student.EveryWeekDay;
                     existingStudent.Message = student.Message;
-                    existingStudent.idKid = student.idKid;
+                    existingStudent.idKid = 5;
                     existingStudent.UntilDate = student.UntilDate;
                 MyService.Update(existingStudent);
                 MyService.Commit();

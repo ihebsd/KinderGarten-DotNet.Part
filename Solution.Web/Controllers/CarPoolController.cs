@@ -36,6 +36,7 @@ namespace Solution.Web.Controllers
         IUserService ps = new UserService();
         IKidService ServicePar;
         ICarPoolService sc = new CarPoolService();
+        IKidService ks = new KidService();
         IService<CarPool> servCar;
         public CarPoolController()
         {
@@ -73,8 +74,8 @@ namespace Solution.Web.Controllers
                                    Lat = s.lat,
                                    Lng = s.lng
                                }).ToList();
-                        
-            
+
+
 
 
 
@@ -257,8 +258,9 @@ namespace Solution.Web.Controllers
 
 
         // GET: CarPool/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details()
         {
+
             return View();
         }
 
@@ -316,12 +318,12 @@ namespace Solution.Web.Controllers
                 c.From = collection.From;
                 c.To = collection.To;
                 c.Time = collection.Time;
-                if(startDate >= c.Date)
+                if (startDate >= c.Date)
                 {
                     c.Date = collection.Date;
                 }
-                
-               
+
+
                 c.Message = collection.Message;
                 c.NbPlaceDispo = collection.NbPlaceDispo;
                 c.idKid = collection.idKid;
@@ -464,6 +466,86 @@ namespace Solution.Web.Controllers
             {
                 return View();
             }
+
+        }
+        UserLogin cs;
+        public ActionResult Profil(string searchString, string map)
+        {
+            var userId = (int)Session["idu"];
+            List<GeoLocation> geo = db.GeoLocations.ToList<GeoLocation>();
+            ViewBag.Geo = geo;
+
+            List<Kid> kidss = db.Kids.ToList<Kid>();
+            ViewBag.Kids = kidss;
+
+
+            foreach (User c in ps.GetMany())
+            {
+                if (c.idUser == userId)
+                {
+
+                    cs = new UserLogin()
+                    {
+
+                        nom = c.nom,
+                        prenom = c.prenom,
+                        email = c.email,
+                        
+
+
+                    };
+
+
+                }
+
+
+            }
+            return View(cs);
+        }
+        public ActionResult createkid()
+        {           
+            return View();
+
+        }
+        // add kid
+        [HttpPost]
+        public ActionResult createkid(KidModel collection)
+        {
+
+            IKidService sc = new KidService();
+            Kid c = new Kid();
+
+            if (ModelState.IsValid)
+            {
+
+
+
+                c.idParent = (int)Session["idu"];
+                c.FirstName = collection.FirstName;
+                c.LastName = collection.LastName;
+                c.Age = collection.Age;
+                c.IsCheked = false ;
+
+
+                sc.Add(c);
+                sc.Commit();
+
+
+                return RedirectToAction("Profil");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public ActionResult DeleteKid(int id)
+        {
+            Kid c = ks.GetById(id);
+
+            ks.Delete(c);
+            ks.Commit();
+            return RedirectToAction("Profil");
         }
     }
 }
+

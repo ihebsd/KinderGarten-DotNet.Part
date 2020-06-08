@@ -18,6 +18,11 @@ namespace Solution.Web
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Login", action = "Login", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "Kid",
+                url: "{controller}/{action}",
+                defaults: new { controller = "CarPool", action = "AddKid"}
+            );
         }
     }
 }

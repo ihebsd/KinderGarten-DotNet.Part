@@ -198,6 +198,7 @@
     <Compile Include="Controllers\CarPoolApiController.cs" />
     <Compile Include="Controllers\CarPoolController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KidsController.cs" />
     <Compile Include="Controllers\KinderGartenController.cs" />
     <Compile Include="Controllers\LoginApiController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -443,7 +444,6 @@
     <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\count\jquery.countdown.min.js" />
     <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\count\jquery.countup.min.js" />
     <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\functionsf899.js" />
-    <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\imagesloaded\imagesloaded.pkgd.js" />
     <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\isotope\isotope.pkgd.min.js" />
     <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\jquery-ui\jquery-ui.min.js" />
     <Content Include="Content\Front\fvdthemes.com\html\yeahkids\js\jquery-ui\jQuery-UITouchPunch.js" />
@@ -568,6 +568,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Properties\PublishProfiles\SolutionWeb20200606115334 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -701,11 +702,13 @@
     <Content Include="Views\CarPool\Search.cshtml" />
     <Content Include="Views\CarPool\GetData.cshtml" />
     <Content Include="Views\CarPool\Nearme.cshtml" />
-    <Content Include="Views\CarPool\Profil.cshtml" />
     <Content Include="Views\CarPool\IndexNearme.cshtml" />
+    <Content Include="Views\CarPool\Profil.cshtml" />
+    <Content Include="Views\CarPool\createkid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Front\fvdthemes.com\html\yeahkids\js\imagesloaded\" />
     <Folder Include="Views\Transport\" />
   </ItemGroup>
   <ItemGroup>

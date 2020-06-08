@@ -33,9 +33,9 @@ namespace Solution.Data.Infrastructure
         }
         public virtual void Update(T entity)
         {
-            
-            dataContext.Entry(entity).State = EntityState.Modified;
             dbset.Attach(entity);
+
+            dataContext.Entry(entity).State = EntityState.Modified;
            // dataContext.SaveChanges();
         }
         public virtual void Delete(T entity)

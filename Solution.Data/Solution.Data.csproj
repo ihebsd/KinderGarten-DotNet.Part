@@ -260,9 +260,9 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\202006041407374_kinder.cs" />
-    <Compile Include="Migrations\202006041407374_kinder.designer.cs">
-      <DependentUpon>202006041407374_kinder.cs</DependentUpon>
+    <Compile Include="Migrations\202006080100452_kindergartenazure2.cs" />
+    <Compile Include="Migrations\202006080100452_kindergartenazure2.designer.cs">
+      <DependentUpon>202006080100452_kindergartenazure2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -286,8 +286,8 @@
     <Content Include="Content\PagedList.css" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006041407374_kinder.resx">
-      <DependentUpon>202006041407374_kinder.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006080100452_kindergartenazure2.resx">
+      <DependentUpon>202006080100452_kindergartenazure2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

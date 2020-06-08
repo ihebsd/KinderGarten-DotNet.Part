@@ -1,0 +1,138 @@
+﻿@model Solution.Web.Models.KidModel
+
+@{
+    ViewBag.Title = "createkid";
+    Layout = "~/Views/Shared/_LayoutCarpool.cshtml";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <section id="authorization_page" class="authorization_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 dot">
+                    <h2 class="section-title">Add Your Kid</h2>
+                    <p class="section-description pb_20"><br></p>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    @using (Html.BeginForm())
+                    {
+
+                        @Html.AntiForgeryToken()
+                        <div class="text-success">
+                            <h3>@ViewBag.Message</h3>
+                        </div>
+                        <div class="bg">
+                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new {  @class = "form-control", @placeholder = "FirstName", style = "width:1000px" } })
+                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                            <br />
+                            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new {  @class = "form-control", @placeholder = "LastName", style = "width:1000px" } })
+                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                            <br />
+                            @Html.EditorFor(model => model.Age, new { htmlAttributes = new {  @class = "form-control", @placeholder = "Age", style = "width:1000px" } })
+                            @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+                            <br />
+
+
+                        </div>
+                        <div align="center">
+
+                            <button id="Button" class="button" type="submit" value="Create" style="width:500px">Submit </button>
+
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<body>
+
+
+
+
+</body>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
