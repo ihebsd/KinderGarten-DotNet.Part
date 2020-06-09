@@ -64,10 +64,12 @@
                         <table>
                             <tr>
                                 <th>
-                                    @Html.ActionLink("Name", "IndexFront", new { sortOrder = ViewBag.NameSortParm })
-                                </th>                               
+                                    @Html.ActionLink("Filter by Name", "IndexFront", new { sortOrder = ViewBag.NameSortParm })
+                                </th>
+                            </tr>
+                            <tr>
                                 <th>
-                                    @Html.ActionLink("ClaimDate", "IndexFront", new { sortOrder = ViewBag.DateSortParm })
+                                    @Html.ActionLink("Filter by Claim Date", "IndexFront", new { sortOrder = ViewBag.DateSortParm })
                                 </th>
                                 <th></th>
                             </tr>

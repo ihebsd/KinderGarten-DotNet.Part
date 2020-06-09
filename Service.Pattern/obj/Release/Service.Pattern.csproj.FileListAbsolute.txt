@@ -1,0 +1,15 @@
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\Service.Pattern.dll.config
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\Service.Pattern.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\Service.Pattern.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\Solution.Data.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\EntityFramework.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\Solution.Domain.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\Solution.Data.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\Solution.Data.dll.config
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\EntityFramework.xml
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\Solution.Domain.pdb
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\bin\Release\Solution.Domain.dll.config
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\obj\Release\Service.Pattern.csprojAssemblyReference.cache
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\obj\Release\Service.Pattern.csproj.CopyComplete
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\obj\Release\Service.Pattern.dll
+C:\Users\Raslen\Desktop\PI-kinder\KinderGarten\Service.Pattern\obj\Release\Service.Pattern.pdb

@@ -68,37 +68,9 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\202004041400011_mymig.cs" />
-    <Compile Include="Migrations\202004041400011_mymig.designer.cs">
-      <DependentUpon>202004041400011_mymig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004041437495_mymig1.cs" />
-    <Compile Include="Migrations\202004041437495_mymig1.designer.cs">
-      <DependentUpon>202004041437495_mymig1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004041636306_mymig2.cs" />
-    <Compile Include="Migrations\202004041636306_mymig2.designer.cs">
-      <DependentUpon>202004041636306_mymig2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004041658215_mymig3.cs" />
-    <Compile Include="Migrations\202004041658215_mymig3.designer.cs">
-      <DependentUpon>202004041658215_mymig3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004051452203_mymig4.cs" />
-    <Compile Include="Migrations\202004051452203_mymig4.designer.cs">
-      <DependentUpon>202004051452203_mymig4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004061350416_mymig5.cs" />
-    <Compile Include="Migrations\202004061350416_mymig5.designer.cs">
-      <DependentUpon>202004061350416_mymig5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004061446513_mymig6.cs" />
-    <Compile Include="Migrations\202004061446513_mymig6.designer.cs">
-      <DependentUpon>202004061446513_mymig6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004061727270_mymig7.cs" />
-    <Compile Include="Migrations\202004061727270_mymig7.designer.cs">
-      <DependentUpon>202004061727270_mymig7.cs</DependentUpon>
+    <Compile Include="Migrations\202006091549511_azuerekinder.cs" />
+    <Compile Include="Migrations\202006091549511_azuerekinder.designer.cs">
+      <DependentUpon>202006091549511_azuerekinder.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -119,29 +91,8 @@
     <Folder Include="CustomConventions\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004041400011_mymig.resx">
-      <DependentUpon>202004041400011_mymig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004041437495_mymig1.resx">
-      <DependentUpon>202004041437495_mymig1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004041636306_mymig2.resx">
-      <DependentUpon>202004041636306_mymig2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004041658215_mymig3.resx">
-      <DependentUpon>202004041658215_mymig3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004051452203_mymig4.resx">
-      <DependentUpon>202004051452203_mymig4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004061350416_mymig5.resx">
-      <DependentUpon>202004061350416_mymig5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004061446513_mymig6.resx">
-      <DependentUpon>202004061446513_mymig6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004061727270_mymig7.resx">
-      <DependentUpon>202004061727270_mymig7.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006091549511_azuerekinder.resx">
+      <DependentUpon>202006091549511_azuerekinder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

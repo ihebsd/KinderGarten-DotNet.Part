@@ -788,6 +788,7 @@
     <Content Include="Content\Front1\www.radiustheme.com\demo\html\psdboss\akkhor\akkhor\webfonts\fa-solid-900.woff" />
     <Content Include="Content\Front1\www.radiustheme.com\demo\html\psdboss\akkhor\akkhor\webfonts\fa-solid-900d41d.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Properties\PublishProfiles\KinderGartenAzure - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

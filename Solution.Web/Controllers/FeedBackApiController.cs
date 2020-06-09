@@ -61,7 +61,7 @@ namespace Solution.Web.Controllers.Api
             FeedBackModel stdregreply = new FeedBackModel();
             MyService.Add(studentregd);
             stdregreply.Description = studentregd.Description;
-            stdregreply.ParentId = studentregd.ParentId;
+            stdregreply.ParentId = 2;
             stdregreply.FeedBackDate = DateTime.Today;
 
             return stdregreply;
@@ -71,8 +71,7 @@ namespace Solution.Web.Controllers.Api
         public IHttpActionResult PostNewFeed(FeedBackModel student)
         {
            
-            if (!ModelState.IsValid)
-                return BadRequest("Invalid data.");
+           
 
             using (var ctx = new PidevContext())
             {
@@ -80,7 +79,7 @@ namespace Solution.Web.Controllers.Api
                 {
                     FeedBackId = student.FeedBackId,
                     Description = student.Description,
-                    ParentId = student.ParentId,
+                    ParentId = 2,
                     FeedBackDate = DateTime.Today
                 });
 
@@ -90,11 +89,10 @@ namespace Solution.Web.Controllers.Api
             return Ok();
         }
 
-        // PUT: api/FeedBackApi/5
+        // PUT: api/FeedBackPut/5
         public IHttpActionResult Put(FeedBackModel student)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Not a valid model");
+            
 
             using (var ctx = new PidevContext())
             {
@@ -104,6 +102,7 @@ namespace Solution.Web.Controllers.Api
                 if (existingStudent != null)
                 {
                     existingStudent.Description = student.Description;
+                    existingStudent.ParentId = 2;
                     ctx.SaveChanges();
                 }
                 else

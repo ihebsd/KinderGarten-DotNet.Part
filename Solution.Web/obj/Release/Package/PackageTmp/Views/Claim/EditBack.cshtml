@@ -1,0 +1,165 @@
+﻿@model Solution.Web.Models.ClaimModel
+
+@{
+    ViewBag.Title = "EditBack";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/global_assets/css/icons/icomoon/styles.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/assets/css/bootstrap.min.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/assets/css/bootstrap_limitless.min.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/assets/css/layout.min.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/assets/css/components.min.css") rel="stylesheet" type="text/css">
+    <script src=@Url.Content("/global_assets/js/plugins/loaders/progressbar.min.js")></script>
+
+
+    <script src=@Url.Content("/global_assets/js/demo_pages/components_progress.js")></script>
+
+
+
+    <link href=@Url.Content("/assets/css/colors.min.css") rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+    <!-- Core JS files -->
+    <script src=@Url.Content("/global_assets/js/main/jquery.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/main/bootstrap.bundle.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/loaders/blockui.min.js")></script>
+    <!-- /core JS files -->
+    <!-- Theme JS files -->
+    <!-- Theme JS files -->
+    <script src=@Url.Content("global_assets/js/plugins/notifications/jgrowl.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/notifications/noty.min.js")></script>
+    <link rel="stylesheet" href="http://www.jacklmoore.com/colorbox/example1/colorbox.css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://www.jacklmoore.com/colorbox/jquery.colorbox.js"></script>
+    <script src=@Url.Content("/assets/js/app.js")></script>
+    <script src=@Url.Content("/global_assets/js/demo_pages/extra_jgrowl_noty.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/visualization/d3/d3.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/visualization/d3/d3_tooltip.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/forms/styling/switchery.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/forms/selects/bootstrap_multiselect.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/ui/moment/moment.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/pickers/daterangepicker.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/forms/styling/switchery.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/forms/styling/uniform.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/forms/selects/select2.min.js")></script>
+    <link href=@Url.Content("/assets/css/colors.min.css") rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+    <!-- Core JS files -->
+    <script src=@Url.Content("/global_assets/js/main/jquery.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/main/bootstrap.bundle.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/loaders/blockui.min.js")></script>
+    <!-- /core JS files -->
+    <!-- Theme JS files -->
+    <!-- Theme JS files -->
+    <script src=@Url.Content("global_assets/js/plugins/notifications/jgrowl.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/notifications/noty.min.js")></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/global_assets/css/icons/icomoon/styles.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/assets/css/bootstrap.min.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/assets/css/bootstrap_limitless.min.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/assets/css/layout.min.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/assets/css/components.min.css") rel="stylesheet" type="text/css">
+    <link href=@Url.Content("/assets/css/colors.min.css") rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src=@Url.Content("/global_assets/js/demo_pages/form_checkboxes_radios.js")></script>
+    <!-- /global stylesheets -->
+    <!-- Core JS files -->
+    <script src=@Url.Content("/global_assets/js/main/jquery.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/main/bootstrap.bundle.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/loaders/blockui.min.js")></script>
+    <!-- /core JS files -->
+    <!-- Theme JS files -->
+    <script src=@Url.Content("/global_assets/js/plugins/visualization/d3/d3.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/visualization/d3/d3_tooltip.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/forms/styling/switchery.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/forms/selects/bootstrap_multiselect.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/ui/moment/moment.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/pickers/daterangepicker.js")></script>
+    <script src=@Url.Content("/assets/js/app.js")></script>
+    <script src=@Url.Content("/global_assets/js/demo_pages/dashboard.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/extensions/jquery_ui/interactions.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/extensions/jquery_ui/touch.min.js")></script>
+    <script src=@Url.Content("/assets/js/app.js")></script>
+    <script src=@Url.Content("/global_assets/js/demo_pages/components_collapsible.js")></script>
+
+    <script src=@Url.Content("/assets/js/app.js")></script>
+    <script src=@Url.Content("/global_assets/js/demo_pages/extra_jgrowl_noty.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/visualization/d3/d3.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/visualization/d3/d3_tooltip.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/forms/styling/switchery.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/forms/selects/bootstrap_multiselect.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/ui/moment/moment.min.js")></script>
+    <script src=@Url.Content("/global_assets/js/plugins/pickers/daterangepicker.js")></script>
+    <script src=@Url.Content("/assets/js/app.js")></script>
+    <script src=@Url.Content("/global_assets/js/demo_pages/dashboard.js")></script>
+
+    <script src=@Url.Content("/assets/js/app.js")></script>
+    <script src=@Url.Content("/global_assets/js/demo_pages/dashboard.js")></script>
+    <script src=@Url.Content("/global_assets/js/demo_pages/form_actions.js")></script>
+
+    <!-- /theme JS files -->
+</head>
+<body>
+        <div style="margin-left:10%" class="col-md-9">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken() <form action="#">
+                    <div class="card">
+                        <div class="card-header bg-white header-elements-inline">
+                            <h6 class="card-title">Updating Reclamation</h6>
+                            <div class="header-elements">
+                                <div class="list-icons">
+                                    <a class="list-icons-item" data-action="collapse"></a>
+                                    <a class="list-icons-item" data-action="reload"></a>
+                                    <a class="list-icons-item" data-action="remove"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info border-0 alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                            <div class="pace-demo">
+                                <div class="theme_xbox_sm">
+                                    <div class="pace_progress" data-progress-text="60%" data-progress="60"></div>
+                                    <div class="pace_activity"></div>
+                                </div>
+                            </div>
+                            <span style="margin-left:10%" class="font-weight-semibold">Heads up!</span> This alert needs your attention, it's <a href="#" class="alert-link">super important</a>. Does this reclamation <a href="#" class="alert-link">Corrected ?</a>
+
+                        </div>
+
+                        <div style="margin-left:83%" class="form-check form-check-switchery form-check-switchery-double">
+                            <label class="form-check-label">
+                                <b>Not Done</b>
+                                <input type="checkbox" class="form-check-input-switchery" data-fouc>
+                                <b>Done</b>
+                            </label>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="row">
+                                <div class="col-lg-10 ml-lg-auto">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <button type="submit" style="margin-left:-20%" class="btn btn-light">@Html.ActionLink("Back to List", "Index")</button>
+                                        <button type="submit" class="btn bg-green-400 ml-3">Update <i class="icon-reload-alt ml-2"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            }
+        </div>
+    </body>
+</html>
+

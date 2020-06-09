@@ -72,14 +72,12 @@ namespace Solution.Web.Controllers.Api
         [Route("api/ClaimPost")]
         public IHttpActionResult PostNewFeed(ClaimModel student)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Invalid data.");
+    
 
             using (var ctx = new PidevContext())
             {
                 ctx.Claims.Add(new Claim()
                 {
-                    ComplaintId = student.ComplaintId,
                     Description = student.Description,
                     Name = student.Name,
                     ParentId = student.ParentId,
@@ -97,14 +95,14 @@ namespace Solution.Web.Controllers.Api
 
         // PUT: api/ClaimApi/5
         
-        public IHttpActionResult Put(ClaimModel student)
+        public IHttpActionResult Put(ClaimModel student, int id)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Not a valid model");
+           
+
 
             using (var ctx = new PidevContext())
             {
-                var existingStudent = ctx.Claims.Where(s => s.ComplaintId == student.ComplaintId)
+                var existingStudent = ctx.Claims.Where(s => s.ComplaintId == id)
                                                         .FirstOrDefault<Claim>();
                 if (existingStudent != null)
                 {
@@ -123,7 +121,7 @@ namespace Solution.Web.Controllers.Api
         }
 
         // DELETE: api/ClaimApi/5
-        
+
         public IHttpActionResult Delete(int id)
         {
             if (id <= 0)

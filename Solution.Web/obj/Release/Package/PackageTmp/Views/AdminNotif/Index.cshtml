@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Solution.Web.Models.AdminNotifModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <body onpageshow="create()">
+        @foreach (var item in Model)
+        {
+            <div class="content">
+
+                <!-- Inner container -->
+                <div class="d-flex align-items-start flex-column flex-md-row">
+
+                    <!-- Left content -->
+                    <div class="w-100 overflow-auto order-2 order-md-1">
+
+                        <!-- List -->
+                        <div class="card card-body">
+                            <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+                                <div class="mr-lg-3 mb-3 mb-lg-0">
+                                    <a href=@Url.Content("/global_assets/bell.png") data-popup="lightbox">
+                                        <img src=@Url.Content("/global_assets/bell.png") width="96" alt="">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <i style="margin-left:90%; color:red" class="icon-trash">@Html.ActionLink(" Delete", "Delete", new { id = item.Id })</i>
+                                    <h6 class="media-title font-weight-semibold">
+                                        <a href="#" style="color:salmon">New Reclamation</a>
+                                    </h6>
+                                    <p class="mb-3">@Html.DisplayFor(modelItem => item.msg)</p>
+
+                                    <ul class="list-inline list-inline-dotted mb-0">
+                                        <li class="list-inline-item">Date :  <a href="#">@Html.DisplayFor(modelItem => item.Datenotif)</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </body>

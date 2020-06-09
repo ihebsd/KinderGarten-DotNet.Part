@@ -108,14 +108,7 @@ namespace Solution.Web.Controllers
                 ClaimType = claimM.ClaimType,
                 status = "In_progress"
             };
-            DateTime today2 = DateTime.Now;
-            AdminNotif comp2 = new AdminNotif()
-            {
-                Datenotif = today2,
-                msg = claims.ClaimType,
-                userid = "1",
-                username = "Raslen"
-            };
+            
             ClaimsService.Add(claims);
             ClaimsService.Commit();
             bool result2 = false;

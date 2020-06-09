@@ -1,0 +1,69 @@
+﻿@model  Solution.Web.Models.UserLogin
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+
+}
+
+    <html lang="zxx">
+
+    <!-- Mirrored from fvdthemes.com/html/yeahkids/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:49:44 GMT -->
+
+
+    <body>
+
+
+        <section id="authorization_page" class="authorization_page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 dot">
+                        <h2 class="section-title">Log In</h2>
+                        <p class="section-description pb_20">Log in to your account<br>Don’t have an account yet? - <a href="/Login/Register">Register</a></p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        @using (Html.BeginForm("Login", "Login", htmlAttributes: new { id = "loginform" }, method: FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <div class="text-success">
+                                <h3>@ViewBag.Message</h3> 
+                            </div>
+                            <div class="reg_box">
+                                @Html.TextBoxFor(m => m.email, new { @class = "form-control", @placeholder = "Your mail" })
+                                @Html.ValidationMessageFor(m => m.email, "", new { @class = "text-danger" })
+                                @Html.PasswordFor(m => m.password, new { @class = "form-control", @placeholder = "Password" })
+                                @Html.ValidationMessageFor(m => m.password, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="reg_checkbox">
+                                @Html.EditorFor(model => model.RememberMe)
+                                @Html.ValidationMessageFor(model => model.RememberMe, "", new { @class = "text-danger" })
+                                <input type="checkbox" class="checkbox" id="checkbox">
+                                <label for="checkbox"></label>
+                                <span>Remember Me</span>
+                            </div>
+                           
+                            <button class="button" type="submit" value="Login">Log In</button>
+
+                            <div class="forgot_pass">
+                                <a href="/Login/ForgotPassword">I forgot my password</a>
+                            </div>
+
+
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </body>
+
+    <!-- Mirrored from fvdthemes.com/html/yeahkids/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:49:47 GMT -->
+    </html>
