@@ -18,10 +18,10 @@ namespace Solution.Service
 
         int SumOther();
         Boolean test(int id, Event ev);
+
         int NbrParticipant(int id);
         IEnumerable<User> ListParticipantbyEvent(int id);
-
-
+        int nbrdeparticipant();
         Event FindEventByQrCode(string qrcode);
 
 

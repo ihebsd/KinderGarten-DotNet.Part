@@ -14,33 +14,39 @@
                 <div class="events">
                     <div class="teacher_block grey_block">
                         <div class="teacher_avatar">
-                            <img src="img/teacher/teacher_7.jpg" alt="">
+                            <img src="~/Content/Uploads/nonvalid.jpg" alt="">
                         </div>
                         <div class="teacher_about">
-                            <h3><a href="teacher.html">@Html.DisplayFor(modelItem => item.nom)  @Html.DisplayFor(modelItem => item.prenom) </a></h3>
-                            <span>@Html.DisplayFor(modelItem => item.email)</span>
+                            <h3>
+                                <a href="teacher.html">First Name : @Html.DisplayFor(modelItem => item.nom)</a>
+                                <br />
+                                <a>  LastName : @Html.DisplayFor(modelItem => item.prenom) </a>
+                                <br />
+
+                                <span>Mail : @Html.DisplayFor(modelItem => item.email)</span>
+                                <br />
+                                <br />
+                            </h3>
                             <div class="teacher_link social_icon t_green_dark">
+
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
                                 </ul>
                             </div>
+
                         </div>
+                        <h1><a href="/Event/Index">Back To Event List</a></h1>
+
                     </div>
                 </div>
             </div>
         }
 
-        <div class="blog_nav">
-            <ul class="pagination">
 
-                <li>
-                    @Html.PagedListPager(Model, i => Url.Action("ListDesParticipantparEven", "User"))
-                </li>
-
-            </ul>
-        </div>
 
         <br />
         <br />

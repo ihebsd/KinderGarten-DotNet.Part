@@ -42,10 +42,7 @@
         <ul class="filter">
 
             <div class="grids_brief">
-                <li class="active"><a href="#" data-filter="*">All</a></li>
-                <li><a href="#" data-filter=".drawing">Entertainment</a></li>
-                <li><a href="#" data-filter=".events">Educative</a></li>
-                <li><a href="#" data-filter=".reading">Other</a></li>
+                
 
                 @using (Html.BeginForm())
                 {
@@ -82,7 +79,7 @@
                                 </div>
                             </div>
                             <div class="date_events_right b_green_green_light">
-                                <p class="block_time pb_10"><i class="fa fa-clock-o"><span></span></i>8:00 am - 2:00 pm</p>
+                                <p class="block_time pb_10"><i class="fa fa-clock-o"><span></span></i>Place Number : @Html.DisplayFor(modelItem => item.number_P) </p>
                                 <p class="block_time normal"> <span> </span> <h1>Category :</h1> <h3> @Html.DisplayFor(modelItem => item.Category)</h3></p>
                             </div>
                         </div>

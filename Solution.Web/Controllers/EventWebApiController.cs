@@ -39,8 +39,8 @@ namespace Solution.Web.Controllers
                     number_P = i.number_P,
                     Category = i.Category,
                     HeureD = i.HeureD,
-                    HeureF= i.HeureF    ,
-                    image=i.image,
+                    HeureF = i.HeureF,
+                    image = i.image,
                     qrCode = i.qrCode
 
 
@@ -56,11 +56,24 @@ namespace Solution.Web.Controllers
         }
 
         // GET api/<controller>/5
-        public Event Get(int id)
+        public IEnumerable<EventModel> Get(int id)
         {
-            Event ev = MyService.GetById(id);
+            Event i = MyService.GetById(id);
 
-            return ev;
+            return new List<EventModel>() { new EventModel() {
+                EventId = i.EventId,
+                    DateEvent = i.DateEvent,
+                    Name = i.Name,
+                    Description = i.Description,
+                    number_P = i.number_P,
+                    Category = i.Category,
+                    HeureD = i.HeureD,
+                    HeureF= i.HeureF    ,
+                    image=i.image,
+                    qrCode = i.qrCode
+
+            } 
+            };
         }
 
         // POST: api/EventWebApi
@@ -75,8 +88,8 @@ namespace Solution.Web.Controllers
                     Name = postt.Name,
                     Description = postt.Description,
                     number_P = postt.number_P,
-                    image=postt.image,
-                    Category=postt.Category,
+                    image = postt.image,
+                    Category = postt.Category,
                     DirecteurFk = 1,
                     HeureD = postt.HeureD,
                     HeureF = postt.HeureF,
@@ -96,25 +109,25 @@ namespace Solution.Web.Controllers
 
 
             Event existingStudent = MyService.GetById(id);
-                if (existingStudent != null)
-                {
-                    existingStudent.Name = student.Name;
-                    existingStudent.number_P = student.number_P;
-                    existingStudent.Category = student.Category;
-                    existingStudent.Description = student.Description;
-                    existingStudent.image = student.image;
-                    existingStudent.HeureD = student.HeureD;
-                    existingStudent.HeureF = student.HeureF;
-                    existingStudent.DateEvent = student.DateEvent;
+            if (existingStudent != null)
+            {
+                existingStudent.Name = student.Name;
+                existingStudent.number_P = student.number_P;
+                existingStudent.Category = student.Category;
+                existingStudent.Description = student.Description;
+                existingStudent.image = student.image;
+                existingStudent.HeureD = student.HeureD;
+                existingStudent.HeureF = student.HeureF;
+                existingStudent.DateEvent = student.DateEvent;
 
                 MyService.Update(existingStudent);
                 MyService.Commit();
-                }
-                else
-                {
-                    return NotFound();
-                }
-            
+            }
+            else
+            {
+                return NotFound();
+            }
+
 
             return Ok();
         }

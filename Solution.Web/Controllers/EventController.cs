@@ -40,9 +40,10 @@ namespace Solution.Web.Controllers
                 EventModel es = new EventModel()
                 {
                     AdminConfirmtion = e.AdminConfirmtion,
-                    Category =(Category)e.Category,
+                    Category = (Category)e.Category,
                     Description = e.Description,
                     Name = e.Name,
+                    number_P = e.number_P,
                     EventId = e.EventId,
                     image = e.image,
                     DateEvent = e.DateEvent,                
@@ -60,6 +61,8 @@ namespace Solution.Web.Controllers
             var userId = (int)Session["idu"];
             String Phone2 = userService.GetById(userId).login;
             String mail = userService.GetById(userId).email;
+            int nbpar = EventService.nbrdeparticipant();
+            ViewBag.nbrpar = nbpar;
             ViewBag.home = mail;
             ViewBag.phone = Phone2;
             var events = new List<EventModel>();
@@ -72,6 +75,7 @@ namespace Solution.Web.Controllers
                     Description = e.Description,
                     Name = e.Name,
                     EventId = e.EventId,
+                    number_P = e.number_P,
                     image = e.image,
                     DateEvent = e.DateEvent,
                     Testpart = EventService.test(userId, e)
@@ -92,6 +96,8 @@ namespace Solution.Web.Controllers
             var userId = (int)Session["idu"];
             String Phone2 = userService.GetById(userId).login;
             String mail = userService.GetById(userId).email;
+            int nbpar = EventService.nbrdeparticipant();
+            ViewBag.nbrpar = nbpar ;
             ViewBag.home = mail;
             ViewBag.phone = Phone2;
             if (id == null)
@@ -182,22 +188,25 @@ namespace Solution.Web.Controllers
 
         // POST: Event/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, EventModel em)
+        public ActionResult Edit(int id, EventModel em, HttpPostedFileBase Image)
         {
             try
             {
                 Event e = EventService.GetById(id);
                 em.Name = e.Name;
-                //ImageUrl = Image.FileName,
+                em.image = Image.FileName;
                 em.Category = e.Category;
                 em.DateEvent = e.DateEvent;
                 em.Description = e.Description;
                 em.number_P = e.number_P;
+                var path2 = Path.Combine(Server.MapPath("~/Content/Uploads"), Image.FileName);
+                Image.SaveAs(path2);
                 EventService.Update(e);
                 EventService.Commit();
+                
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
                 return View(em);
             }

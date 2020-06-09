@@ -114,6 +114,10 @@ namespace Solution.Service
 
             return false;
         }
+       
+
+
+
         public int NbrParticipant(int idEvent)
         {
             int x = 0;
@@ -135,6 +139,8 @@ namespace Solution.Service
             @event = GetMany().Where(e => e.qrCode == qrcode).FirstOrDefault();
             return @event;
         }
-
+        public int nbrdeparticipant() {
+            return ParticipationService.GetMany().Count();
+        }
     }
 }

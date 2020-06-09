@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="date_events_right b_green_green_light">
-                                    <p class="block_time pb_10"><i class="fa fa-clock-o"><span></span></i>8:00 am - 2:00 pm</p>
+                                    <p class="block_time pb_10"><i class="fa fa-clock-o"><span></span></i>Place Number : @Html.DisplayFor(modelItem => item.number_P)</p>
                                     <p class="block_time normal"> <span> </span> <h1>Category :</h1> <h3> @Html.DisplayFor(modelItem => item.Category)</h3></p>
                                 </div>
                             </div>
@@ -85,6 +85,13 @@
                                 {
                                     @Html.ActionLink("Annuler", "AnnulerPart", new { id = item.EventId })
                                 }
+                                <div>
+
+                                    @if ( ViewBag.nbrpar > item.number_P)
+                                    {
+                                        <h4>Closed Event - Full Places</h4>
+                                    }
+                                </div>
 
 
 

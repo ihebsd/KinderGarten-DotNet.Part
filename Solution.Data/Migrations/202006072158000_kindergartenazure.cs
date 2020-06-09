@@ -3,14 +3,10 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class azurekindergarten : DbMigration
+    public partial class kindergartenazure : DbMigration
     {
         public override void Up()
         {
-            DropForeignKey("dbo.Claims", "ParentId", "dbo.Users");
-            DropForeignKey("dbo.FeedBacks", "ParentId", "dbo.Users");
-            DropIndex("dbo.Claims", new[] { "ParentId" });
-            DropIndex("dbo.FeedBacks", new[] { "ParentId" });
             CreateTable(
                 "dbo.Events",
                 c => new
@@ -31,6 +27,45 @@
                 .PrimaryKey(t => t.EventId)
                 .ForeignKey("dbo.Users", t => t.DirecteurFk, cascadeDelete: true)
                 .Index(t => t.DirecteurFk);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        idUser = c.Int(nullable: false, identity: true),
+                        nom = c.String(nullable: false, maxLength: 30),
+                        prenom = c.String(nullable: false, maxLength: 30),
+                        login = c.String(nullable: false, maxLength: 30),
+                        email = c.String(nullable: false),
+                        password = c.String(nullable: false),
+                        Confirmpassword = c.String(nullable: false),
+                        IsEmailVerified = c.Boolean(nullable: false),
+                        ActivationCode = c.Guid(nullable: false),
+                        ResetPasswordCode = c.String(),
+                        role = c.Int(nullable: false),
+                        Echelon = c.Int(),
+                        Discriminator = c.String(nullable: false, maxLength: 128),
+                    })
+                .PrimaryKey(t => t.idUser);
+            
+            CreateTable(
+                "dbo.KinderGartens",
+                c => new
+                    {
+                        KinderGartenId = c.Int(nullable: false, identity: true),
+                        Name = c.String(nullable: false, maxLength: 30),
+                        Description = c.String(nullable: false, maxLength: 30),
+                        Address = c.String(nullable: false, maxLength: 30),
+                        Cost = c.Single(nullable: false),
+                        Phone = c.Int(nullable: false),
+                        DateCreation = c.DateTime(nullable: false),
+                        Image = c.String(nullable: false, maxLength: 30),
+                        NbrEmp = c.Int(nullable: false),
+                        DirecteurId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.KinderGartenId)
+                .ForeignKey("dbo.Users", t => t.DirecteurId, cascadeDelete: true)
+                .Index(t => t.DirecteurId);
             
             CreateTable(
                 "dbo.Participations",
@@ -59,72 +94,27 @@
                 .Index(t => t.Parent_idUser)
                 .Index(t => t.Event_EventId);
             
-            AddColumn("dbo.Users", "Echelon", c => c.Int());
-            DropColumn("dbo.Users", "Ban");
-            DropTable("dbo.AdminNotifs");
-            DropTable("dbo.Claims");
-            DropTable("dbo.FeedBacks");
         }
         
         public override void Down()
         {
-            CreateTable(
-                "dbo.FeedBacks",
-                c => new
-                    {
-                        FeedBackId = c.Int(nullable: false, identity: true),
-                        FeedBackDate = c.DateTime(nullable: false),
-                        Description = c.String(),
-                        sentiment = c.String(),
-                        ParentId = c.Int(),
-                    })
-                .PrimaryKey(t => t.FeedBackId);
-            
-            CreateTable(
-                "dbo.Claims",
-                c => new
-                    {
-                        ComplaintId = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        Description = c.String(nullable: false),
-                        ClaimDate = c.DateTime(nullable: false),
-                        ParentId = c.Int(),
-                        ClaimType = c.String(),
-                        status = c.String(),
-                    })
-                .PrimaryKey(t => t.ComplaintId);
-            
-            CreateTable(
-                "dbo.AdminNotifs",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        msg = c.String(),
-                        Datenotif = c.DateTime(nullable: false),
-                        username = c.String(),
-                        userid = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            AddColumn("dbo.Users", "Ban", c => c.Int(nullable: false));
             DropForeignKey("dbo.Participations", "Parent_idUser", "dbo.Users");
             DropForeignKey("dbo.Participations", "EventId", "dbo.Events");
             DropForeignKey("dbo.ParentEvents", "Event_EventId", "dbo.Events");
             DropForeignKey("dbo.ParentEvents", "Parent_idUser", "dbo.Users");
+            DropForeignKey("dbo.KinderGartens", "DirecteurId", "dbo.Users");
             DropForeignKey("dbo.Events", "DirecteurFk", "dbo.Users");
             DropIndex("dbo.ParentEvents", new[] { "Event_EventId" });
             DropIndex("dbo.ParentEvents", new[] { "Parent_idUser" });
             DropIndex("dbo.Participations", new[] { "Parent_idUser" });
             DropIndex("dbo.Participations", new[] { "EventId" });
+            DropIndex("dbo.KinderGartens", new[] { "DirecteurId" });
             DropIndex("dbo.Events", new[] { "DirecteurFk" });
-            DropColumn("dbo.Users", "Echelon");
             DropTable("dbo.ParentEvents");
             DropTable("dbo.Participations");
+            DropTable("dbo.KinderGartens");
+            DropTable("dbo.Users");
             DropTable("dbo.Events");
-            CreateIndex("dbo.FeedBacks", "ParentId");
-            CreateIndex("dbo.Claims", "ParentId");
-            AddForeignKey("dbo.FeedBacks", "ParentId", "dbo.Users", "idUser");
-            AddForeignKey("dbo.Claims", "ParentId", "dbo.Users", "idUser");
         }
     }
 }
