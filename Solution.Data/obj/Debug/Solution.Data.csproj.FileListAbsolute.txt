@@ -179,3 +179,4 @@ D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.D
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\bin\Debug\System.Web.Http.xml
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.kindergartenazure2.resources
 D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.csproj.GenerateResource.cache
+D:\ALL\4Artic\SEMESRE2\PI-PaaS-SaaS\Dot.Net\KinderGarten\KinderGarten\Solution.Data\obj\Debug\Solution.Data.Migrations.CSaisie.resources

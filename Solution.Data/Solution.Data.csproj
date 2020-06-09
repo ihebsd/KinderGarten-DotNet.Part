@@ -264,6 +264,10 @@
     <Compile Include="Migrations\202006080100452_kindergartenazure2.designer.cs">
       <DependentUpon>202006080100452_kindergartenazure2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006090208450_CSaisie.cs" />
+    <Compile Include="Migrations\202006090208450_CSaisie.designer.cs">
+      <DependentUpon>202006090208450_CSaisie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -288,6 +292,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202006080100452_kindergartenazure2.resx">
       <DependentUpon>202006080100452_kindergartenazure2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006090208450_CSaisie.resx">
+      <DependentUpon>202006090208450_CSaisie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

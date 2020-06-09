@@ -25,6 +25,7 @@ namespace Solution.Domain.Entities
         [Required(AllowEmptyStrings = false, ErrorMessage = "Date is required")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [ValidateDateRange]
         public DateTime Date { get; set; }
         [Required(AllowEmptyStrings = false, ErrorMessage = "Message is required")]
         public string Message { get; set; }
@@ -39,8 +40,25 @@ namespace Solution.Domain.Entities
         public int? idParent { get; set; }
         [ForeignKey("idParent")]
         public virtual Parent Parent { get; set; }
+        [Display(Name = "Kid")]
+        [Required(ErrorMessage = "{0} is required.")]
         public int? idKid { get; set; }
         [ForeignKey("idKid")]
         public virtual Kid Kid { get; set; }
+    }
+    public class ValidateDateRange : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            // your validation logic
+            if (Convert.ToDateTime(value) >= DateTime.Today)
+            {
+                return ValidationResult.Success;
+            }
+            else
+            {
+                return new ValidationResult("Date is not in given range.");
+            }
+        }
     }
 }

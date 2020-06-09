@@ -281,12 +281,15 @@ namespace Solution.Web.Controllers
         // POST: CarPool/Create
         [HttpPost]
         [WebMethod]
+        [ValidateAntiForgeryToken]
         public ActionResult create(CarPoolModel collection, bool hidden_field1 = false, bool hidden_field2 = false, bool hidden_field3 = false)
         {
 
             ICarPoolService sc = new CarPoolService();
-            var startDate = DateTime.Today;
             CarPool c = new CarPool();
+            DateTime date = DateTime.Parse(c.Date.ToString());
+            
+            DateTime today = DateTime.Today;
 
             if (ModelState.IsValid)
             {
@@ -317,12 +320,14 @@ namespace Solution.Web.Controllers
                 c.Title = collection.Title;
                 c.From = collection.From;
                 c.To = collection.To;
+                
+                   
+                
+                    
                 c.Time = collection.Time;
-                if (startDate >= c.Date)
-                {
-                    c.Date = collection.Date;
-                }
-
+               
+                c.Date = collection.Date;
+                
 
                 c.Message = collection.Message;
                 c.NbPlaceDispo = collection.NbPlaceDispo;
@@ -333,7 +338,7 @@ namespace Solution.Web.Controllers
                 sc.Commit();
 
 
-                return RedirectToAction("Index");
+                return RedirectToAction("MyIndex");
             }
             else
             {
@@ -426,7 +431,7 @@ namespace Solution.Web.Controllers
                     db.Entry(CarPoolToUpdate).State = EntityState.Modified;
                     db.SaveChanges();
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("MyIndex");
                 }
                 catch (RetryLimitExceededException /* dex */)
                 {
@@ -460,7 +465,7 @@ namespace Solution.Web.Controllers
             {
                 // TODO: Add delete logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("MyIndex");
             }
             catch
             {
