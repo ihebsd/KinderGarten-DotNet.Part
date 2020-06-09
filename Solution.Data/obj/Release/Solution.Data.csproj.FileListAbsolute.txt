@@ -9,9 +9,8 @@ C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\Solu
 C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\EntityFramework.xml
 C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.csprojAssemblyReference.cache
-C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.Migrations.hhh.resources
-C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.Migrations.hhh1.resources
-C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.csproj.GenerateResource.cache
 C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.csproj.CopyComplete
 C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.dll
 C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.Migrations.kindergartenazure.resources
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Data\obj\Release\Solution.Data.csproj.GenerateResource.cache

@@ -29,8 +29,15 @@ namespace Solution.Web.Controllers
         // GET: KinderGarten
         public ActionResult Index(string searchString)
         {
+            int userId;
+            try { userId = (int)Session["idu"]; }
+            catch
+            {
+                return RedirectToAction("Login", "Login");
+            }
 
-            var userId = (int)Session["idu"];
+
+
             String Phone2 = userService.GetById(userId).login;
             String mail = userService.GetById(userId).email;
             ViewBag.home = mail;
@@ -64,6 +71,7 @@ namespace Solution.Web.Controllers
         {
             if (idK.HasValue)
             {
+
                 string usern = userService.GetById((int)Session["idu"]).prenom;
 
                 var isIt = db.VoteModels.Where(v => v.UserName.Equals(usern, StringComparison.CurrentCultureIgnoreCase)
@@ -81,7 +89,13 @@ namespace Solution.Web.Controllers
         {
             bool test = HasVoted(id);
             ViewBag.test = test;
-            var userId = (int)Session["idu"];
+            int userId;
+            try { userId = (int)Session["idu"]; }
+            catch
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
             String Phone2 = userService.GetById(userId).login;
             String mail = userService.GetById(userId).email;
             ViewBag.home = mail;
@@ -119,12 +133,19 @@ namespace Solution.Web.Controllers
 
 
         // GET: KinderGarten/Create
-
+        String date;
         public ActionResult Create()
         {
-            var userId = (int)Session["idu"];
+            int userId;
+            try { userId = (int)Session["idu"]; }
+            catch
+            {
+                return RedirectToAction("Login", "Login");
+            }
             String Phone2 = userService.GetById(userId).login;
             String mail = userService.GetById(userId).email;
+            
+
             ViewBag.home = mail;
             ViewBag.phone = Phone2;
 
@@ -161,6 +182,13 @@ namespace Solution.Web.Controllers
         // GET: KinderGarten/Edit/5
         public ActionResult Edit(int id)
         {
+            int userId = (int)Session["idu"];
+            String Phone2 = userService.GetById(userId).login;
+            String mail = userService.GetById(userId).email;
+
+
+            ViewBag.home = mail;
+            ViewBag.phone = Phone2;
             KinderGarten t = KindergartenService.GetById(id);
             KinderGartenModel tm = new KinderGartenModel();
 
@@ -258,7 +286,7 @@ namespace Solution.Web.Controllers
 
         }
         UserService UserService = new UserService();
-        public  JsonResult SendRating(string r, string s, string id, string url)
+        public JsonResult SendRating(string r, string s, string id, string url)
         {
             int autoId = 0;
             Int16 thisVote = 0;
@@ -279,13 +307,11 @@ namespace Solution.Web.Controllers
             string usern = userService.GetById((int)Session["idu"]).prenom;
             switch (s)
             {
-                case "5": // school voting
-                    // check if he has already voted
+                case "5":
                     var isIt = db.VoteModels.Where(v => v.SectionId == sectionId &&
                         v.UserName.Equals(usern, StringComparison.CurrentCultureIgnoreCase) && v.VoteForId == autoId).FirstOrDefault();
                     if (isIt != null)
                     {
-                        // keep the school voting flag to stop voting by this member
                         HttpCookie cookie = new HttpCookie(url, "true");
                         Response.Cookies.Add(cookie);
                         return Json("<br />You have already rated this post, thanks !");
@@ -334,6 +360,7 @@ namespace Solution.Web.Controllers
                         db.Entry(sch).State = EntityState.Modified;
                         sch.Votes = updatedVotes;
                         db.SaveChanges();
+                        
 
                         VoteLog vm = new VoteLog()
                         {

@@ -16,23 +16,23 @@ namespace Solution.Web.Controllers
     public class KinderGartenWebApiController : ApiController
     {
         IKinderGartenService MyService = null;
-        private KinderGartenService ms = new KinderGartenService();
-        List<KinderGartenModel> reclams = new List<KinderGartenModel>();
+        private KinderGartenService ks = new KinderGartenService();
+        List<KinderGartenModel> kinderGartenModels = new List<KinderGartenModel>();
         PidevContext db = new PidevContext();
         public KinderGartenWebApiController()
         {
             MyService = new KinderGartenService();
             Index();
-            reclams = Index().ToList();
+            kinderGartenModels = Index().ToList();
 
         }
         public List<KinderGartenModel> Index()
         {
-            List<KinderGarten> mandates = ms.GetMany().ToList();
-            List<KinderGartenModel> mandatesXml = new List<KinderGartenModel>();
-            foreach (KinderGarten p in mandates)
+            List<KinderGarten> kinderGartens = ks.GetMany().ToList();
+            List<KinderGartenModel> kinderGartenModels1 = new List<KinderGartenModel>();
+            foreach (KinderGarten p in kinderGartens)
             {
-                mandatesXml.Add(new KinderGartenModel
+                kinderGartenModels1.Add(new KinderGartenModel
                 {
                     KinderGartenId = p.KinderGartenId,
                     Name = p.Name,
@@ -42,39 +42,33 @@ namespace Solution.Web.Controllers
                     Cost = p.Cost,
                     Phone = p.Phone,
                     Description = p.Description,
-                    DateCreation=p.DateCreation
+                    DateCreation = p.DateCreation,
+                    longitude=p.longitude,
+                    latitude=p.latitude,
+                    DirecteurId=p.DirecteurId,
+
 
                 });
             }
-            return mandatesXml;
+            return kinderGartenModels1;
         }
-        // GET: api/FeedBackApi
         [HttpGet]
         [Route("api/KinderGarten")]
         public IEnumerable<KinderGartenModel> Get()
         {
-            return reclams;
+            return kinderGartenModels;
         }
         [HttpGet]
         [Route("api/KinderGarten/Details")]
         public KinderGarten Get(int id)
         {
-            KinderGarten comp = MyService.GetById(id);
+            KinderGarten Kinder = MyService.GetById(id);
 
-            return comp;
+            return Kinder;
         }
-        public KinderGartenModel registerStudent(KinderGarten studentregd)
-        {
-            KinderGartenModel stdregreply = new KinderGartenModel();
-            MyService.Add(studentregd);
-            stdregreply.Description = studentregd.Description;
-            stdregreply.DirecteurId = studentregd.DirecteurId;
-            stdregreply.DateCreation = DateTime.Today;
 
-            return stdregreply;
-        }
         [Route("api/KinderGarten/Create")]
-        public IHttpActionResult PostNewFeed(KinderGartenModel p)
+        public IHttpActionResult Create(KinderGartenModel kgm)
         {
 
 
@@ -82,63 +76,73 @@ namespace Solution.Web.Controllers
             {
                 ctx.KinderGartens.Add(new KinderGarten()
                 {
-                    Name = p.Name,
-                    Image = p.Image,
-                    Address = p.Address,
-                    NbrEmp = p.NbrEmp,
-                    Cost = p.Cost,
-                    Phone = p.Phone,
-                    Description = p.Description,
-                    DirecteurId =p.DirecteurId,
-                    DateCreation=DateTime.Now,
-                    Votes="0,0,0,0,0"
+                    Name = kgm.Name,
+                    Image = kgm.Image,
+                    Address = kgm.Address,
+                    NbrEmp = kgm.NbrEmp,
+                    Cost = kgm.Cost,
+                    Phone = kgm.Phone,
+                    Description = kgm.Description,
+                    DirecteurId = kgm.DirecteurId,
+                    DateCreation = DateTime.Now,
+                    latitude=kgm.latitude,
+                    longitude=kgm.longitude,
+                    Votes = "0,0,0,0,0"
                 });
 
-                    // Your code...
-                    // Could also be before try if you know the exception occurs in SaveChanges
+                // Your code...
+                // Could also be before try if you know the exception occurs in SaveChanges
 
-                    ctx.SaveChanges();
-                
+                ctx.SaveChanges();
+
+
             }
 
             return Ok();
         }
+        [Route("api/KinderGarten/Put")]
 
-        // PUT: api/FeedBackApi/5
-        public IHttpActionResult Put(KinderGartenModel student)
+        public IHttpActionResult Put(int id, KinderGartenModel kgm)
         {
-            
-            using (var ctx = new PidevContext())
-            {
-                var existingStudent = ctx.KinderGartens.Where(s => s.KinderGartenId == student.KinderGartenId)
-                                                        .FirstOrDefault<KinderGarten>();
 
-                if (existingStudent != null)
+
+            KinderGarten kg = MyService.GetById(id);
+
+                if (kg != null)
                 {
-                    existingStudent.Description = student.Description;
-                    ctx.SaveChanges();
+                    kg.Address = kgm.Address;
+                    kg.Description = kgm.Description;
+                    kg.Cost = kgm.Cost;
+                    kg.Name = kgm.Name;
+                    kg.NbrEmp = kgm.NbrEmp;
+                    kg.Phone = kgm.Phone;
+                    kg.Image = kgm.Image;
+                kg.longitude = kgm.longitude;
+                kg.latitude = kgm.latitude;
+                MyService.Update(kg);
+                MyService.Commit();
                 }
                 else
                 {
                     return NotFound();
                 }
-            }
+            
 
             return Ok();
         }
+        [Route("api/KinderGarten/Delete")]
 
-        // DELETE: api/FeedBackApi/5
         public IHttpActionResult Delete(int id)
         {
             if (id <= 0)
-                return BadRequest("Not a valid student id");
+                return BadRequest("Not a valid KinderGarten id");
 
             using (var ctx = new PidevContext())
             {
-                var student = ctx.KinderGartens
-                    .Where(s => s.KinderGartenId == id)
+                var Kinder = ctx.KinderGartens
+                    .Where(k => k.KinderGartenId == id)
                     .FirstOrDefault();
-                ctx.Entry(student).State = System.Data.Entity.EntityState.Deleted;
+                ctx.Entry(Kinder).State = System.Data.Entity.EntityState.Deleted;
                 ctx.SaveChanges();
             }
 

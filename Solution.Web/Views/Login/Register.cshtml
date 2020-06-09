@@ -60,17 +60,9 @@
                             <label for="checkbox"></label>
                             <span>I agree to the <a href="#">Terms of service</a></span>
                         </div>
-                        <button class="button" type="submit" value="Register">Register</button>
+                        <button class="button" type="submit" value="Register" onclick="return confirm('Verify your email please')" >Register</button>
                     }
-                    <script>
-                        var form = document.getElementById('registerform');
-
-                        function myFunction() {
-                            if (form.checkValidity()) {
-                                alert("Registred succesfully ! Check your email to verify your account");
-                            }
-                        }
-                    </script>
+                   
                     @Html.ActionLink("You have already an account ?", "Login", "Register")
 
                 </div>

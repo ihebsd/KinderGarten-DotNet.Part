@@ -38,6 +38,8 @@ namespace Solution.Web.Models
         public int NbrEmp { get; set; }
         public int nbVue { get; set; }
         public String Votes { get; set; }
+        public string longitude { get; set; }
+        public string latitude { get; set; }
         [Display(Name = "Directeur")]
         public int? DirecteurId { get; set; }
     }

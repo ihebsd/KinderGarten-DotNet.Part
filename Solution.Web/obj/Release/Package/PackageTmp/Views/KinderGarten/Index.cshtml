@@ -4,8 +4,10 @@
     ViewBag.Title = "Index";
 }
     <body>
+      <h2><a href="./Create">Create New</a></h2>  
+
         <ul class="filter">
-           
+
 
             @using (Html.BeginForm())
             {
@@ -45,7 +47,7 @@
                                     <p>@Convert.ToDateTime(item.DateCreation).ToString("MMM-yyyy")</p>
                                 </div>
                                 <div class="events_one_center b_red_dark">
-                                    <p class="block_time"><i class="fa fa-clock-o"><span></span></i>@Html.DisplayFor(modelItem => item.Phone)</p>
+                                    <p class="block_time"><i class="fa fa-phone"><span></span></i>@Html.DisplayFor(modelItem => item.Phone)</p>
                                 </div>
                                 <div class="events_one_bottom b_grey_light">
 

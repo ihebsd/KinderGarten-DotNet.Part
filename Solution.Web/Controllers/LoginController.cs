@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
@@ -153,10 +154,10 @@ namespace Solution.Presentation.Controllers
             return View();
         }
         //LOgout
-        [Authorize]
-        [HttpPost]
-        public ActionResult Logout()
+
+        public async Task<ActionResult> Logout()
         {
+
             FormsAuthentication.SignOut();
             return RedirectToAction("Login", "Login");
         }
@@ -175,7 +176,7 @@ namespace Solution.Presentation.Controllers
         public void SendVerificationLinkEmail(string email, string activationCode, string emailFor = "VerifyAccount")
         {
 
-            var verifyUrl = "http://localhost:44326/Login/" + emailFor + "/" + activationCode;
+            var verifyUrl = "https://kindergartenazure.azurewebsites.net/Login/" + emailFor + "/" + activationCode;
             // var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
             var fromEmail = new MailAddress("hsine.gabsi@esprit.tn", "Congratulation for sign in");

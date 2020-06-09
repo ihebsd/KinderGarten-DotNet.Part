@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class hhhh : DbMigration
+    public partial class kindergartenazure : DbMigration
     {
         public override void Up()
         {
@@ -22,6 +22,8 @@
                         NbrEmp = c.Int(nullable: false),
                         nbVue = c.Int(nullable: false),
                         Votes = c.String(),
+                        longitude = c.String(),
+                        latitude = c.String(),
                         DirecteurId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.KinderGartenId)

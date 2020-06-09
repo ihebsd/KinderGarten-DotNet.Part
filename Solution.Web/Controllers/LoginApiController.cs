@@ -138,7 +138,23 @@ namespace Solution.Web.Controllers
 
             }
         }
+        [HttpGet]
+        [Route("api/GetUserById")]
+        public IEnumerable<User> GetUserById(int id)
+        {
+            using (var ctx = new PidevContext())
+            {
+                User v = ctx.Users.Where(x => x.idUser == id).FirstOrDefault();
+                if (v != null)
+                {
 
+                    return new List<User> { v };
+
+                }
+                return null;
+
+            }
+        }
         [AllowAnonymous]
         [Route("api/LoginApi/ForgotPassword")]
         public IHttpActionResult ForgotPassword(UserLogin us)

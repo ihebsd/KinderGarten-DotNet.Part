@@ -60,13 +60,9 @@
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
-    <Compile Include="Migrations\202005152332001_hhhh.cs" />
-    <Compile Include="Migrations\202005152332001_hhhh.designer.cs">
-      <DependentUpon>202005152332001_hhhh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202005172041435_nh.cs" />
-    <Compile Include="Migrations\202005172041435_nh.designer.cs">
-      <DependentUpon>202005172041435_nh.cs</DependentUpon>
+    <Compile Include="Migrations\202006052101499_kindergartenazure.cs" />
+    <Compile Include="Migrations\202006052101499_kindergartenazure.designer.cs">
+      <DependentUpon>202006052101499_kindergartenazure.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PidevContext.cs" />
@@ -87,11 +83,8 @@
     <Folder Include="CustomConventions\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005152332001_hhhh.resx">
-      <DependentUpon>202005152332001_hhhh.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005172041435_nh.resx">
-      <DependentUpon>202005172041435_nh.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006052101499_kindergartenazure.resx">
+      <DependentUpon>202006052101499_kindergartenazure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
