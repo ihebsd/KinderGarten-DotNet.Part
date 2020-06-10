@@ -29,10 +29,12 @@ namespace Solution.Web.Controllers
         {
             
                var userId = (int)Session["idu"];
-            String Phone2 = userService.GetById(userId).login;
+            String nom = userService.GetById(userId).nom;
+            String prenom = userService.GetById(userId).prenom;
             String mail = userService.GetById(userId).email;
             ViewBag.home = mail;
-            ViewBag.phone = Phone2;
+            ViewBag.nom = nom;
+            ViewBag.prenom = prenom;
             var kindergartens = new List<KinderGartenModel>();
             foreach (KinderGarten k in KindergartenService.SearchKindergartenByName(searchString))
             {

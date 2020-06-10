@@ -74,16 +74,46 @@ namespace Solution.Web.Controllers
 
             return ev;
         }
+        [Route("api/GetKids")]
+        public IEnumerable<KidModel> GetKidsByIdParent(int idp)
+        {
 
+            List<Kid> kids;
+            using (var ctx = new PidevContext())
+            {
+                kids = ctx.Kids.Where(c => c.idParent == idp).ToList();
+
+            }
+            List<KidModel> mandatesXml = new List<KidModel>();
+            foreach (Kid c in kids)
+            {
+                mandatesXml.Add(new KidModel()
+                {IdKid=c.IdKid,
+                FirstName=c.FirstName});
+            }
+            return mandatesXml;
+        }
+        [Route("api/GetIdKid")]
+        public IEnumerable<int> GetIdKidsByName(String idp)
+        {
+
+            Kid kids;
+            using (var ctx = new PidevContext())
+            {
+                kids = ctx.Kids.Where(c => c.FirstName == idp).FirstOrDefault();
+
+            }
+            return new List<int>(){(int) kids.IdKid};
+        }
         [Route("api/MyCar")]
         public IEnumerable<CarPoolModel> GetByIdParent(int idp)
         {
             List<CarPool> car;
             using (var ctx = new PidevContext())
             {
-                 car = ctx.CarPools.Where(c => c.idParent == idp).ToList();
-                
-                    }
+                car = ctx.CarPools.Where(c => c.idParent == idp).ToList();
+
+            }
             List<CarPoolModel> mandatesXml = new List<CarPoolModel>();
             foreach (CarPool c in car)
             {
@@ -131,7 +161,7 @@ namespace Solution.Web.Controllers
                     Date = collection.Date,
                     Message = collection.Message,
                     NbPlaceDispo = collection.NbPlaceDispo,
-                    idKid = 3,
+                    idKid = collection.idKid,
                     Weekly = collection.Weekly,
                     Daily = collection.Daily,
                     EveryWeekDay = collection.EveryWeekDay,
@@ -154,28 +184,28 @@ namespace Solution.Web.Controllers
             CarPool existingStudent = MyService.GetById(idcar);
 
             if (existingStudent != null)
-                {
+            {
 
-                    existingStudent.Title = student.Title;
-                    existingStudent.From = student.From;
-                    existingStudent.Time = student.Time;
-                    existingStudent.To = student.To;
-                    existingStudent.Date = student.Date;
-                    existingStudent.NbPlaceDispo = student.NbPlaceDispo;
-                    existingStudent.Weekly = student.Weekly;
-                    existingStudent.Daily = student.Daily;
-                    existingStudent.EveryWeekDay = student.EveryWeekDay;
-                    existingStudent.Message = student.Message;
-                    existingStudent.idKid = 3;
-                    existingStudent.UntilDate = student.UntilDate;
+                existingStudent.Title = student.Title;
+                existingStudent.From = student.From;
+                existingStudent.Time = student.Time;
+                existingStudent.To = student.To;
+                existingStudent.Date = student.Date;
+                existingStudent.NbPlaceDispo = student.NbPlaceDispo;
+                existingStudent.Weekly = student.Weekly;
+                existingStudent.Daily = student.Daily;
+                existingStudent.EveryWeekDay = student.EveryWeekDay;
+                existingStudent.Message = student.Message;
+                existingStudent.idKid = 3;
+                existingStudent.UntilDate = student.UntilDate;
                 MyService.Update(existingStudent);
                 MyService.Commit();
             }
-                else
-                {
-                    return NotFound();
-                }
-            
+            else
+            {
+                return NotFound();
+            }
+
 
             return Ok();
         }

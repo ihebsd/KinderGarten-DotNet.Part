@@ -31,6 +31,7 @@ namespace Solution.Web.Controllers
     public class CarPoolController : Controller
     {
 
+
         private PidevContext db = new PidevContext();
         IUserService Service;
         IUserService ps = new UserService();
@@ -38,6 +39,7 @@ namespace Solution.Web.Controllers
         ICarPoolService sc = new CarPoolService();
         IKidService ks = new KidService();
         IService<CarPool> servCar;
+
         public CarPoolController()
         {
             Service = new UserService();
@@ -75,7 +77,13 @@ namespace Solution.Web.Controllers
                                    Lng = s.lng
                                }).ToList();
 
-
+            var userId = (int)Session["idu"];
+            String nom = ps.GetById(userId).nom;
+            String prenom = ps.GetById(userId).prenom;
+            String mail = ps.GetById(userId).email; 
+            ViewBag.home = mail;
+            ViewBag.nom = nom;
+            ViewBag.prenom = prenom;
 
 
 
@@ -151,6 +159,14 @@ namespace Solution.Web.Controllers
         }
         public ActionResult IndexNearme(string searchString, int[] array, int? i)
         {
+            var userId = (int)Session["idu"];
+            String nom = ps.GetById(userId).nom;
+            String prenom = ps.GetById(userId).prenom;
+            String mail = ps.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.nom = nom;
+            ViewBag.prenom = prenom;
+
             List<Kid> Kids = ServicePar.GetMany().ToList();
             ViewBag.MyKid = new SelectList(Kids, "IdKid", "FirstName");
 
@@ -209,6 +225,13 @@ namespace Solution.Web.Controllers
         // GET: CarPool
         public ActionResult MyIndex(string searchString, string map)
         {
+            var userId = (int)Session["idu"];
+            String nom = ps.GetById(userId).nom;
+            String prenom = ps.GetById(userId).prenom;
+            String mail = ps.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.nom = nom;
+            ViewBag.prenom = prenom;
             List<Kid> Kids = ServicePar.GetMany().ToList();
             ViewBag.MyKid = new SelectList(Kids, "IdKid", "FirstName");
 
@@ -220,7 +243,7 @@ namespace Solution.Web.Controllers
 
 
 
-            var userId = (int)Session["idu"];
+            
             var carps = new List<CarPoolModel>();
 
             foreach (CarPool c in sc.SearchParentByTo(searchString))
@@ -267,8 +290,15 @@ namespace Solution.Web.Controllers
         // GET: CarPool/Create
         public ActionResult Create(string FirstName)
         {
-            //List<Kid> query = ServicePar.GetMany().ToList();
             var userId = (int)Session["idu"];
+            String nom = ps.GetById(userId).nom;
+            String prenom = ps.GetById(userId).prenom;
+            String mail = ps.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.nom = nom;
+            ViewBag.prenom = prenom;
+            //List<Kid> query = ServicePar.GetMany().ToList();
+            
             var kidss = db.Kids;
             ViewBag.Kidsss = kidss.Where(z => z.idParent == userId).Select(m => new SelectListItem { Value = m.IdKid.ToString(), Text = m.FirstName });
             //IEnumerable<SelectListItem> query = kidss.Where(z => z.idParent == userId).Select(z => new SelectListItem
@@ -349,6 +379,14 @@ namespace Solution.Web.Controllers
         // GET: CarPool/Edit/5
         public ActionResult Edit(int? id, bool hidden_field1 = false, bool hidden_field2 = false, bool hidden_field3 = false)
         {
+            var userId = (int)Session["idu"];
+            String nom = ps.GetById(userId).nom;
+            String prenom = ps.GetById(userId).prenom;
+            String mail = ps.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.nom = nom;
+            ViewBag.prenom = prenom;
+
             var CarPoolToUpdate = db.CarPools.Find(id);
             if (hidden_field1)
                 CarPoolToUpdate.Daily = true;
@@ -385,7 +423,7 @@ namespace Solution.Web.Controllers
             // var kidss = db.Kids;
             //  var query = kidss.Where(z => z.idParent == userId).Select(z=>z.FirstName).ToList();
             //ViewBag.MyKid = new SelectList(query, "IdKid", "FirstName");
-            var userId = (int)Session["idu"];
+            
             var kidss = db.Kids;
             ViewBag.Kidsss = kidss.Where(z => z.idParent == userId).Select(m => new SelectListItem { Value = m.IdKid.ToString(), Text = m.FirstName });
             return View(c);
@@ -477,6 +515,12 @@ namespace Solution.Web.Controllers
         public ActionResult Profil(string id, string map)
         {
             var userId = (int)Session["idu"];
+            String nom = ps.GetById(userId).nom;
+            String prenom = ps.GetById(userId).prenom;
+            String mail = ps.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.nom = nom;
+            ViewBag.prenom = prenom;
 
             List<GeoLocation> geo = db.GeoLocations.ToList<GeoLocation>();
             ViewBag.Geo = geo;
@@ -517,6 +561,13 @@ namespace Solution.Web.Controllers
         [HttpPost]
         public ActionResult createkid(KidModel collection)
         {
+            var userId = (int)Session["idu"];
+            String nom = ps.GetById(userId).nom;
+            String prenom = ps.GetById(userId).prenom;
+            String mail = ps.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.nom = nom;
+            ViewBag.prenom = prenom;
 
             IKidService sc = new KidService();
             Kid c = new Kid();
@@ -555,6 +606,14 @@ namespace Solution.Web.Controllers
         //contacter parent
         public ActionResult Contacter(int id)
         {
+            var userId = (int)Session["idu"];
+            String nom = ps.GetById(userId).nom;
+            String prenom = ps.GetById(userId).prenom;
+            String mail = ps.GetById(userId).email;
+            ViewBag.home = mail;
+            ViewBag.nom = nom;
+            ViewBag.prenom = prenom;
+
             int? idcar = sc.GetById(id).idParent;
 
             //List<GeoLocation> geoU = db.GeoLocations.Where(f => f.ParentFK == idcar).ToList();
