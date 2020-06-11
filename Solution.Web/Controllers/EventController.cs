@@ -188,11 +188,11 @@ namespace Solution.Web.Controllers
 
         // POST: Event/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, EventModel em, HttpPostedFileBase Image)
+        public ActionResult Edit(int id, EventModel e, HttpPostedFileBase Image)
         {
             try
             {
-                Event e = EventService.GetById(id);
+                Event em = EventService.GetById(id);
                 em.Name = e.Name;
                 em.image = Image.FileName;
                 em.Category = e.Category;
@@ -201,14 +201,14 @@ namespace Solution.Web.Controllers
                 em.number_P = e.number_P;
                 var path2 = Path.Combine(Server.MapPath("~/Content/Uploads"), Image.FileName);
                 Image.SaveAs(path2);
-                EventService.Update(e);
+                EventService.Update(em);
                 EventService.Commit();
                 
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
-                return View(em);
+                return View(e);
             }
         }
 
