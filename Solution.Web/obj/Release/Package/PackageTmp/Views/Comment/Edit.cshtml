@@ -1,0 +1,34 @@
+﻿@model Solution.Web.Models.CommentVM
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<div class="leave_reply b_light">
+    <h3>Edit  Comment</h3>
+    <div class="contact_form_white">
+        @using (Html.BeginForm("Edit", "Comment", FormMethod.Post
+                       ))
+        {
+            @Html.AntiForgeryToken()
+            <div id="form-messages"></div>
+            @Html.TextBoxFor(model => model.post, new { @class = "form-control", @placeholder = " Publication Title", style = "width: 350px" })
+               
+                <button class="button" type="submit">Send</button>
+
+        }
+    </div>
+
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

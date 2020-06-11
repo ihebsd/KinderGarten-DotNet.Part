@@ -1,0 +1,26 @@
+﻿@model Solution.Web.Models.CommentVM
+
+
+
+    <div class="level_one">
+        <div class="comment_content">
+            <div class="avatar">
+                <img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/blog/author1.jpg" alt="">
+            </div>
+            <div class="block_comment">
+                <div class="head_comment">
+                    <div class="comment_title">
+                        <h5> @Html.DisplayFor(modelItem => modelItem.nomUser)</h5>
+                        <p class="date"><i class="fa fa-calendar"></i>  @Html.DisplayFor(modelItem => modelItem.dateCom)</p>
+                    </div>
+                    <div class="replay">
+                        <a href="./../../Comment/Edit/@(Model.CommentId)">Update Commentaire</a>
+                        <a href="./../../Comment/Delete/@(Model.CommentId)">Delete Commentaire</a>
+                    </div>
+                </div>
+                <div class="comment_describe">
+                    <p> @Html.DisplayFor(modelItem => modelItem.post)</p>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,157 @@
+﻿@model IEnumerable<Solution.Web.Models.PublicationVM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div class="col-md-9">
+
+    <div class="shop_block_list">
+        <h2><a href="./Create">Add New Publication</a></h2>
+        @foreach (var item in Model)
+        {
+         
+            <div class="shop_item">
+                <div class="shop_block_img">
+                    @{string path = "~/Content/Uploads/" + @item.imagePub;}
+
+                    <img src="@Url.Content(path)" width="50" height="50">
+                </div>
+                <div class="item_describe">
+                    <h5><a href="shop_item.html">Name : @Html.DisplayFor(modelItem => item.titlePub)</a></h5>
+
+                    <div class="item_content">
+                        <p>Description : @Html.DisplayFor(modelItem => item.descriptionPub) </p>
+                        <br />
+                        <br />
+                        <br />
+                        @if (Session["idu"].Equals(item.ParentFK))
+                        {
+                            <a href="./Edit/@(item.PublicationId) " class="button b_blue">Update</a>
+
+                            <br />
+
+                            <br />
+                            <br />
+                            <a href="./Delete/@(item.PublicationId) " class="button b_red">Delete</a>
+
+                            <br />
+                            <br />
+                        }
+                        else
+                        {
+                            <h3>
+                                <div class="comment_date">
+                                    <ul>
+                                        <li class="finger_up">
+                                            @if(!item.TestLike(item.PublicationId, (int)Session["idu"]))
+                                            {
+                                            <a href="./Like/@(item.PublicationId)">
+                                                <i class="fa fa-thumbs-up"></i>
+                                            </a>
+                                            }
+                                            else
+                                            {<a href="./AnnulerLike/@(item.PublicationId)">
+                                                <i class="fa fa-thumbs-up"></i>
+                                            </a>}
+                                            @(item.nbLike)
+                                        </li>
+
+                                        <li class="finger_down">
+                                            @if (!item.TestDislike(item.PublicationId, (int)Session["idu"]))
+                                            {<a href="./Dislike/@(item.PublicationId)">
+                                                    <i class="fa fa-thumbs-down"></i>
+                                                </a>
+                                            }
+                                            else
+                                            {
+                                                <a href="./AnnulerDisLike/@(item.PublicationId)">
+                                                    <i class="fa fa-thumbs-down"></i>
+                                                </a>
+                                            }
+
+                                            @(item.nbDislike)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </h3>
+                        }
+                    </div>
+
+                    <a href="./Details/@(item.PublicationId) " class="button b_green_green_light">Details</a>
+
+                </div>
+
+
+
+            </div>
+
+        }
+
+    </div>
+
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
