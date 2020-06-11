@@ -78,13 +78,14 @@ namespace Solution.Web.Controllers
                                }).ToList();
 
             var userId = (int)Session["idu"];
+            int id = ps.GetById(userId).idUser;
             String nom = ps.GetById(userId).nom;
             String prenom = ps.GetById(userId).prenom;
             String mail = ps.GetById(userId).email; 
             ViewBag.home = mail;
             ViewBag.nom = nom;
             ViewBag.prenom = prenom;
-
+            ViewBag.id = id;
 
 
 
