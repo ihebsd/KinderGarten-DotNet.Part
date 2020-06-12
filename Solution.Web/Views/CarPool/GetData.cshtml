@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Solution.Web.Models.GeoLocationModel>
+
+@{
+    ViewBag.Title = "GetData";
+    Layout = "~/Views/Shared/_LayoutCarpool.cshtml";
+}
+
+<h2>GetData</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.latlng)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latlng)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idGeo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idGeo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idGeo })
+        </td>
+    </tr>
+}
+
+</table>

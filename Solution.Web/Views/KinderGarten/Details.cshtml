@@ -1,0 +1,67 @@
+﻿@model Solution.Web.Models.KinderGartenModel
+
+@{
+    ViewBag.Title = "Details";
+}
+<body>
+    <section id="single_event" class="single_event">
+        <div class="container">
+            <div class="row pb_20">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 dot">
+                    <h2 class="section-title">@Html.DisplayFor(model => model.Name)</h2>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row sideber_height" style="position: relative;">
+                <div class="col-md-9">
+                    <div class="main_block">
+                        <div class="main_block_img">
+                            @{string path = "~/Content/Uploads/" + @Html.DisplayFor(model => model.Image);}
+
+                            <img src="@Url.Content(path)" alt="">
+                        </div>
+                        <div class="tr" style="background-color:#f1f1f1;">
+                            <div class="td0">Please rate this school</div>
+                            @if (!ViewBag.test)
+                            {<div class="td">@Html.Partial("_VoteNow", Model.KinderGartenId.ToString())</div> }
+                        else
+                        { <text><span style="color:green;">Thanks for your vote !</span></text>}
+                            <div class="td">@Html.Partial("_VoteShow", Model.Votes.ToString())</div>
+
+                        </div>
+                        <div class="main_block_description pb_10">
+                            <h4>Description</h4>
+                            <p>@Html.DisplayFor(model => model.Description)</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div id="sidebar" class="sidebar" style="">
+                        <div class="info_block t_white">
+                            <div class="date b_blue_light">
+                                <ul>
+                                    <li class="date_number">@Html.DisplayFor(model => model.DateCreation.Day)</li>
+                                    <li class="date_month">@Convert.ToDateTime(Model.DateCreation).ToString("MMM-yyyy")</li>
+                                </ul>
+                            </div>
+                            <div class="contact b_blue">
+                                <ul>
+                                    <li class="fz_18"><i class="fa fa-clock-o"></i>@Html.DisplayFor(model => model.NbrEmp)</li>
+                                    <li class="fz_18"><i class="fa fa-phone"></i>@Html.DisplayFor(model => model.Phone)</li>
+                                    <li class="fz_15 normal">
+                                        <i class="fa fa-envelope"></i>@Html.DisplayFor(model => model.nameDir)
+                                    </li>
+                                    <li class="fz_14 lh_16 normal"><i class="fa fa-map-marker"></i>@Html.DisplayFor(model => model.Address)</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

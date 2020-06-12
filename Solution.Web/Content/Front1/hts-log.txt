@@ -1,0 +1,26 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 25 Feb 2020 17:58:12 at https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/index.html -O1 "C:\Users\Raslen\Documents\admin" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:58:43	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/style.css (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/index.html)
+17:58:43	Warning: 	Retry after error -4 (No data (connection closed)) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/modernizr-3.6.0.min.js (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/index.html)
+17:58:51	Warning: 	File not parsed, looks like binary: https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/webfonts/fa-brands-400.woff2
+17:58:51	Error: 	"Not Found" (404) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/webfonts/fa-brands-400.svg (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/all.min.css)
+17:58:51	Warning: 	File not parsed, looks like binary: https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/webfonts/fa-regular-400.woff2
+17:58:51	Error: 	"Not Found" (404) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/webfonts/fa-regular-400.svg (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/all.min.css)
+17:58:51	Warning: 	File not parsed, looks like binary: https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/webfonts/fa-solid-900.woff2
+17:58:51	Error: 	"Not Found" (404) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/webfonts/fa-solid-900.svg (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/all.min.css)
+17:58:51	Warning: 	File not parsed, looks like binary: https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/fonts/Flaticon.woff2
+17:58:58	Error: 	"Not Found" (404) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/js/jquery.smoothscroll.min.js (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/student-promotion.html)
+17:58:58	Error: 	"Not Found" (404) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/images/sort_both.png (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/jquery.dataTables.min.css)
+17:58:58	Error: 	"Not Found" (404) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/images/sort_asc.png (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/jquery.dataTables.min.css)
+17:58:58	Error: 	"Not Found" (404) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/images/sort_desc.png (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/jquery.dataTables.min.css)
+17:58:58	Error: 	"Not Found" (404) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/images/sort_asc_disabled.png (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/jquery.dataTables.min.css)
+17:58:58	Error: 	"Not Found" (404) at link https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/images/sort_desc_disabled.png (from https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/css/jquery.dataTables.min.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 46 seconds : 131 links scanned, 119 files written (5530403 bytes overall) [2058289 bytes received at 44745 bytes/sec], 5464234 bytes transferred using HTTP compression in 99 files, ratio 29%, 21.8 requests per connection
+(9 errors, 6 warnings, 0 messages)

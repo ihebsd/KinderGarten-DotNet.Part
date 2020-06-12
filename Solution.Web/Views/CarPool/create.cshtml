@@ -1,0 +1,256 @@
+﻿@model Solution.Web.Models.CarPoolModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutCarpool.cshtml";
+
+}
+
+<html lang="zxx">
+
+<!-- Mirrored from fvdthemes.com/html/yeahkids/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:49:44 GMT -->
+
+<body>
+
+
+        <section id="authorization_page" class="authorization_page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 dot">
+                        <h2 class="section-title">CarPooling</h2>
+                        <p class="section-description pb_20">Create your Carpool<br>For More Information <a href="">Show More</a></p>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        @using (Html.BeginForm())
+                        {
+                            
+                            @Html.AntiForgeryToken()
+                            <div class="text-success">
+                                <h3>@ViewBag.Message</h3>
+                            </div>
+
+                            <div class="bg">
+                                <h3 align="left">Which Of your kids will be in this carpool?</h3>
+
+                                
+
+                                @Html.DropDownListFor(m => m.idKid, (IEnumerable<SelectListItem>)ViewBag.Kidsss, "Select a Kid", new { @class = "form-control", style = "width:1000px" } )
+                                @Html.ValidationMessageFor(model => model.idKid, "", new { @class = "text-danger" })
+
+                                <br />
+                                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control", @placeholder = "Title", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.From, new { htmlAttributes = new { @class = "form-control", @placeholder = "From", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.From, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.To, new { htmlAttributes = new { @class = "form-control", @placeholder = "To", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.To, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control", @placeholder = "Time", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control", @placeholder = "Date", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control", @placeholder = "Message", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                                <br />
+                                @Html.EditorFor(model => model.NbPlaceDispo, new { htmlAttributes = new { @class = "form-control", @placeholder = "Number of places available", style = "width:1000px" } })
+                                @Html.ValidationMessageFor(model => model.NbPlaceDispo, "", new { @class = "text-danger" })
+                                <br />
+
+                            </div>
+                            <div class="reg_checkbox">
+                                <div>
+                                    <input type="checkbox" class="form-check-input filled-in"
+                                           style="padding-left:7%;align-items:flex-start;" id="trigger" />
+                                    <label for="trigger"></label>
+                                    <span>Repeat</span>
+                                </div>
+                                <br />
+                            </div>
+                            <div class="bg">
+                                <div id="hidden_fields" style="padding-top:20px">
+                                    <div class="chiller_cb">
+                                        <input type="checkbox" name="hidden_field1" id="hidden_field1" value="true" class="group1" onClick="ckChange(this)" runat="server" />
+                                        <label for="hidden_field1">Daily</label>
+                                        <span></span>
+                                    </div>
+                                    <br />
+                                    <div class="chiller_cb">
+                                        <input type="checkbox" name="hidden_field2" id="hidden_field2" value="true" class="group1" onClick="ckChange(this)" runat="server" />
+                                        <label for="hidden_field2">EvereyWeekDay (Monday To Friday)</label>
+                                        <span></span>
+                                    </div>
+                                    <br />
+                                    <div class="chiller_cb">
+                                        <input type="checkbox" name="hidden_field3" id="hidden_field3" value="true" class="group1" onClick="ckChange(this)" runat="server" />
+                                        <label for="hidden_field3">Weekly</label><br />
+
+                                        <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg">
+                                <div id="weekly" style="padding-top:20px">
+
+
+                                    <br />
+                                    @Html.EditorFor(model => model.UntilDate, new { htmlAttributes = new { @class = "form-control", @placeholder = "Until Date", style = "width:1000px" } })
+                                    @Html.ValidationMessageFor(model => model.UntilDate, "", new { @class = "text-danger" })
+
+
+                                </div>
+                            </div><br />
+
+
+                            <div id="maps" hidden></div>
+
+                            <input name="lat" id="lat" type="hidden" value="-73.961452">
+                            <input name="lng" id="lng" type="hidden" value="-73.961452">
+
+
+                            //<input type="hidden" id="lng" value="" />
+                            <script>
+
+                                var daily = $("input[name=hidden_field2],input[name=hidden_field3]");
+                                var everyweekday = $("input[name=hidden_field1],input[name=hidden_field3]");
+                                var weekly = $("input[name=hidden_field1],input[name=hidden_field2]");
+                                $("input[name='hidden_field1']").change(function () {
+                                    daily.prop("disabled", this.checked);
+                                });
+
+                                $("input[name='hidden_field2']").change(function () {
+                                    everyweekday.prop("disabled", this.checked);
+                                });
+                                $("input[name='hidden_field3']").change(function () {
+                                    weekly.prop("disabled", this.checked);
+                                });
+
+                                //mapq js
+                                var maps, infoWindow;
+
+                                function initMap() {
+                                    var myLatLng = { lat: 36.806496, lng: 10.181532 };
+                                    map = new google.maps.Map(document.getElementById('maps'), {
+                                        center: myLatLng,
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                        zoom: 10
+                                    });
+                                    infoWindow = new google.maps.InfoWindow;
+
+                                    // Try HTML5 geolocation.
+                                    if (navigator.geolocation) {
+                                        navigator.geolocation.getCurrentPosition(function (position) {
+                                            var pos = {
+                                                lat: position.coords.latitude,
+                                                lng: position.coords.longitude
+                                            };
+                                            $('#lat').val(pos.lat);
+                                            $('#lng').val(pos.lng);
+                                            marker = new google.maps.Marker({
+                                                map: map,
+                                                position: myLatLng
+                                            });
+                                            marker = new google.maps.Marker({
+                                                map: map,
+                                                position: pos
+                                            });
+                                            infoWindow.setPosition(pos);
+                                            infoWindow.setContent('Location found.');
+                                            infoWindow.open(map, marker);
+                                            map.setCenter(pos);
+
+                                            //            // Try HTML5 geolocation.
+
+
+                                            //JSON format(e.g: XML, text, ....)
+                                            // var destinations = [{ id_user: 5, lat: 36.806496, lng: 10.181532 }, { id_user: 6, lat: 36.806496, lng: 10.181532 }];
+                                            //console.log(destinations[0].lat);
+                                            var destinations = { lat: 36.806496, lng: 10.181532 };
+                                            //// method 1 ////
+                                            //var r = 6371.0710; // radius of the earth in kilometre
+                                            //var rlat1 = pos.lat * (math.pi / 180); // convert degrees to radians
+                                            //var rlat2 = destinations.lat * (math.pi / 180); // convert degrees to radians
+                                            //var difflat = rlat2 - rlat1; // radian difference (latitudes)
+                                            //var difflon = (destinations.lng - pos.lng) * (math.pi / 180); // radian difference (longitudes)
+
+
+                                            //var d = 2 * r * math.asin(math.sqrt(math.sin(difflat / 2) * math.sin(difflat / 2) + math.cos(rlat1) * math.cos(rlat2) * math.sin(difflon / 2) * math.sin(difflon / 2)));
+
+
+                                            var R = 6371; // Radius of the earth in km
+                                            var dLat = deg2rad(destinations.lat - pos.lat);  // deg2rad below
+                                            var dLon = deg2rad(destinations.lng - pos.lng);
+                                            var a =
+                                                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                                                Math.cos(deg2rad(pos.lat)) * Math.cos(deg2rad(destinations.lat)) *
+                                                Math.sin(dLon / 2) * Math.sin(dLon / 2)
+                                                ;
+                                            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+                                            var d = R * c; // Distance in km
+
+                                            console.log('distance ' + d);
+
+                                            var line = new google.maps.polyline({ path: [destinations, pos], map: map });
+
+                                        }, function () {
+                                            handleLocationError(true, infoWindow, map.getCenter());
+                                        });
+                                    } else {
+                                        // Browser doesn't support Geolocation
+                                        handleLocationError(false, infoWindow, map.getCenter());
+                                    }
+                                }
+
+                                function deg2rad(deg) {
+                                    return deg * (Math.PI / 180)
+                                }
+
+                                //    , function () {
+                                //        handleLocationError(true, infoWindow, map.getCenter());
+                                //    });
+                                //} else {
+                                //     Browser doesn't support Geolocation
+                                //    handleLocationError(false, infoWindow, map.getCenter());
+                                //}
+
+
+                                function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                                    infoWindow.setPosition(pos);
+                                    infoWindow.setContent(browserHasGeolocation ?
+                                        'Error: The Geolocation service failed.' :
+                                        'Error: Your browser doesn\'t support geolocation.');
+                                    infoWindow.open(map);
+                                    marker.setMap(map);
+                                }
+                            </script>
+
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEfEIgZrteSmVmtbjNTM7RMWXbAKv4JvE&callback=initMap" async defer></script>
+                            <div>
+
+                                <button id="Button" class="button" type="submit" value="Create" style="width:500px">Submit </button>
+
+                            </div>
+                        }
+
+
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    @Url.Action("Index", "Carpool")
+</body>
+
+
+</html>
+
+

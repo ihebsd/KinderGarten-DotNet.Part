@@ -1,0 +1,60 @@
+﻿@model Solution.Web.Models.ClaimModel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken() <form action="#">
+        <div class="card">
+            <div class="card-header bg-white header-elements-inline">
+                <h6 class="card-title">Deleting Claim</h6>
+                <div class="header-elements">
+                    <div class="list-icons">
+                        <a class="list-icons-item" data-action="collapse"></a>
+                        <a class="list-icons-item" data-action="reload"></a>
+                        <a class="list-icons-item" data-action="remove"></a>
+                    </div>
+                </div>
+            </div>
+             @if (ViewBag.DEL != null)
+            {
+                <div class="alert alert-warning border-0 alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                    <span class="font-weight-semibold">@ViewBag.DEL</span>
+                </div>
+            }
+            <div class="card-footer bg-white">
+                <div class="row">
+                    <div class="col-lg-10 ml-lg-auto">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button type="submit" style="margin-left:-20%" class="btn btn-light">@Html.ActionLink("Back to List", "Index")</button>
+                            <button type="submit" class="btn bg-warning ml-3">Delete <i class="icon-trash ml-2"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+
+                <h1>Notice : </h1><br />
+                <h4><i>Are you to delete this claim ?</i></h4>
+
+            </div>
+
+            <div class="card-footer bg-white">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+}
+  </div>

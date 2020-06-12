@@ -1,0 +1,77 @@
+﻿@model Solution.Web.Models.PublicationVM
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("Create", "Publication", FormMethod.Post,
+                new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="container">
+        <div class="row">
+            <h4>Create Pub</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="reg_box">
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.titlePub, new { @class = "form-control", @placeholder = " Publication Title", style = "width: 350px" })
+
+                </div>
+
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.descriptionPub, new { @class = "form-control", @placeholder = " Publication Description", style = "width: 350px" })
+
+                </div>
+            </div>
+            <div class="reg_box">
+
+                <div class="col-md-10">
+                    @Html.TextBox("file", null, new
+                         {
+                             type = "file",
+                             @class = "form-input-styled"
+                         })
+                    @Html.ValidationMessageFor(model => model.imagePub, "", new { @class = "text-danger" })
+
+
+
+                </div>
+            </div>
+            <button class="button" type="submit" onclick="create()">Create</button>
+
+        </div>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+

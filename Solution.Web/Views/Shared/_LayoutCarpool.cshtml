@@ -1,0 +1,558 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from fvdthemes.com/html/yeahkids/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:44:48 GMT -->
+<head>
+
+    <link href="src/jquery-weekdays.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous">
+    </script>
+    <script src="src/jquery-weekdays.js"></script>
+
+
+
+    <style>
+        #maps {
+            height: 400px;
+        }
+
+        body {
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bg {
+            height: 100%;
+            display: flex;
+            padding-left: 7%;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .span_pseudo, .chiller_cb span:before, .chiller_cb span:after {
+            content: "";
+            display: inline-block;
+            background: #fff;
+            width: 0;
+            height: 0.2rem;
+            position: absolute;
+            transform-origin: 0% 0%;
+        }
+
+        .chiller_cb {
+            position: relative;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+            .chiller_cb input {
+                display: none;
+            }
+
+                .chiller_cb input:checked ~ span {
+                    background: #fd2727;
+                    border-color: #fd2727;
+                }
+
+                    .chiller_cb input:checked ~ span:before {
+                        width: 1rem;
+                        height: 0.15rem;
+                        transition: width 0.1s;
+                        transition-delay: 0.3s;
+                    }
+
+                    .chiller_cb input:checked ~ span:after {
+                        width: 0.4rem;
+                        height: 0.15rem;
+                        transition: width 0.1s;
+                        transition-delay: 0.2s;
+                    }
+
+                .chiller_cb input:disabled ~ span {
+                    background: #ececec;
+                    border-color: #dcdcdc;
+                }
+
+                .chiller_cb input:disabled ~ label {
+                    color: #dcdcdc;
+                }
+
+                    .chiller_cb input:disabled ~ label:hover {
+                        cursor: default;
+                    }
+
+            .chiller_cb label {
+                padding-left: 5rem;
+                position: relative;
+                z-index: 2;
+                cursor: pointer;
+                margin-bottom: 0;
+                font-size: medium;
+            }
+
+            .chiller_cb span {
+                display: inline-block;
+                width: 1.2rem;
+                height: 1.2rem;
+                border: 2px solid #ccc;
+                position: absolute;
+                left: 0;
+                transition: all 0.2s;
+                z-index: 1;
+                box-sizing: content-box;
+            }
+
+                .chiller_cb span:before {
+                    transform: rotate(-55deg);
+                    top: 1rem;
+                    left: 0.37rem;
+                }
+
+                .chiller_cb span:after {
+                    transform: rotate(35deg);
+                    bottom: 0.35rem;
+                    left: 0.2rem;
+                }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+
+            // Get the form fields and hidden div
+            var checkbox = $("#trigger");
+            var hidden = $("#hidden_fields");
+            var weekly = $("#hidden_field3");
+            var hidenn = $("#weekly");
+            // Hide the fields.
+            // Use JS to do this in case the user doesn't have JS
+            // enabled.
+            hidden.hide();
+            hidenn.hide();
+
+            // Setup an event listener for when the state of the
+            // checkbox changes.
+            checkbox.change(function () {
+                // Check to see if the checkbox is checked.
+                // If it is, show the fields and populate the input.
+                // If not, hide the fields.
+                if (checkbox.is(':checked')) {
+                    // Show the hidden fields.
+                    hidden.show();
+                    // Populate the input.
+
+                } else {
+                    // Make sure that the hidden fields are indeed
+                    // hidden.
+                    hidden.hide();
+
+                    // You may also want to clear the value of the
+                    // hidden fields here. Just in case somebody
+                    // shows the fields, enters data to them and then
+                    // unticks the checkbox.
+                    //
+                    // This would do the job:
+                    //
+                    // $("#hidden_field").val("");
+                }
+            });
+
+            weekly.change(function () {
+                if (weekly.is(':checked')) {
+
+                    hidenn.show();
+
+
+                } else {
+
+                    hidenn.hide();
+                }
+
+            });
+
+
+
+        });
+
+    </script>
+
+
+
+
+
+
+
+    <meta charset="utf-8">
+    <title>Yeah Kids - Children & Kindergarten HTML Template</title>
+    <meta name="description" content="">
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="shortcut icon" href="~/Content/Front/fvdthemes.com/html/yeahkids/img/favicon/favicon1.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="~/Content/Front/fvdthemes.com/html/yeahkids/img/favicon/apple-touch-icon.html">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/Front/fvdthemes.com/html/yeahkids/img/favicon/apple-touch-icon-72x72.html">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/Front/fvdthemes.com/html/yeahkids/img/favicon/apple-touch-icon-114x114.html">
+
+    <!-- Stylesheets -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/css/bootstrap/bootstrap.min.css")>
+
+    <link rel="stylesheet" href=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/css/style5fd0.css?114")>
+
+    <link rel="stylesheet" href=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/css/mediab6ae.css?037")>
+
+    <!--[if lt IE 9 ]>
+    <script src="/js/html5shiv-master/html5shiv.js"></script><meta content="no" http-equiv="imagetoolbar">
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="loader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+    <header id="home">
+        <div class="section_logo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="logo_block">
+                            <a href="index.html">
+                                <img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/header/icons8-carpool-48.png" alt="">
+                                <h1>Let's Carpool</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <div class="reg_block">
+                            <ul>
+                                <li><a href="mailto:office@yeahkids.com" class="fa fa-user"></a> @ViewBag.nom   @ViewBag.prenom @ViewBag.id</li>
+                                <li class="reg_style">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="14px"
+                                         viewBox="0 0 14 14" style="enable-background: new 0 0 14 14;" xml:space="preserve">
+                                    <g transform="translate(96 384)">
+                                    <path class="svg_icons svg_phone" d="M-82.1-372.8l-0.1-0.2c-0.2-0.5-0.7-1-1.2-1.1l-1.8-0.5c-0.5-0.1-1.2,0-1.6,0.4l-0.7,0.7c-2.4-0.7-4.3-2.6-5-5
+										l0.7-0.7c0.4-0.4,0.5-1.1,0.4-1.6l-0.5-1.8c-0.1-0.5-0.6-1-1.1-1.2l-0.2-0.1c-0.5-0.2-1.2,0-1.6,0.4l-1,1c-0.2,0.2-0.3,0.7-0.3,0.7
+										c0,3.2,1.2,6.2,3.4,8.4c2.2,2.2,5.3,3.5,8.4,3.4c0,0,0.5-0.1,0.7-0.3l1-1C-82.1-371.6-81.9-372.3-82.1-372.8L-82.1-372.8z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									</g>
+								</svg>
+                                    @ViewBag.home
+
+                                </li>
+                                <li class="reg_style">
+                                    @if (Request.IsAuthenticated)
+                                    {
+                                        using (Html.BeginForm("Logout", "Login", FormMethod.Post, new { id = "logoutForm" }))
+                                        {
+                                        <li>
+                                            <a href="javascript:document.getElementById('logoutForm').submit()">
+                                                <span class="ti-shift-left">
+
+                                                    <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="14px"
+                                                         viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
+                                                    <path class="svg_icons svg_key" d="M0,11.5l0,1.8C0,13.7,0.3,14,0.7,14h1.8c0.2,0,0.4-0.1,0.5-0.2l0.5-0.5v-1.4h1.4v-1.4h1.4l1-1
+									c0.5,0.2,1.1,0.3,1.8,0.3c2.7,0,4.9-2.2,4.9-4.9S11.8,0,9.1,0S4.2,2.2,4.2,4.9c0,0.6,0.1,1.2,0.3,1.8L0.2,11C0.1,11.1,0,11.3,0,11.5
+									z M8.4,3.8c0-1,0.8-1.8,1.8-1.8s1.8,0.8,1.8,1.8s-0.8,1.8-1.8,1.8S8.4,4.8,8.4,3.8z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</svg>
+                                                    Logout
+                                                </span>
+                                            </a>
+                                        </li>
+                                    }
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a href="/Login/Login">
+                                            <span class="ti-user"></span>
+                                            <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="14px"
+                                                 viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
+                                            <path class="svg_icons svg_key" d="M0,11.5l0,1.8C0,13.7,0.3,14,0.7,14h1.8c0.2,0,0.4-0.1,0.5-0.2l0.5-0.5v-1.4h1.4v-1.4h1.4l1-1
+									c0.5,0.2,1.1,0.3,1.8,0.3c2.7,0,4.9-2.2,4.9-4.9S11.8,0,9.1,0S4.2,2.2,4.2,4.9c0,0.6,0.1,1.2,0.3,1.8L0.2,11C0.1,11.1,0,11.3,0,11.5
+									z M8.4,3.8c0-1,0.8-1.8,1.8-1.8s1.8,0.8,1.8,1.8s-0.8,1.8-1.8,1.8S8.4,4.8,8.4,3.8z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</svg>
+
+                                            Log out
+                                        </a>
+                                    </li>
+                                }
+
+                                </ul>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section_menu">
+                <div class="mnu_fixed">
+                    <div class="mnu_wave"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="search hidden-sm hidden-xs">
+                                    <div class="icon_search hidden-sm hidden-xs">
+                                        <a class="btnopen" href="#"><i class="fa fa-search"></i></a>
+
+                                    </div>
+                                    <form asp-action="index">
+                                        <div class="input_search">
+                                            <button type="submit" hidden></button>
+                                            <i class="btnsearch"><i class="fa fa-search"></i></i>
+                                            <i> <a class="btnclose" href="#">×</a></i>
+                                            @Html.TextBox("searchString")
+
+
+
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="mnu hidden-sm hidden-xs">
+                                    <ul>
+                                        <li class="drop7">
+                                            <div class="col-lg-offset-3" style="border: 1px solid black">
+                                                <a class="fa fa-plus" href="@Url.Action("create", "CarPool")"> Create </a>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                        </li>
+                                        <li>
+
+                                        
+                                        </li>
+                                        <li class="drop6">
+                                            <a class="fa fa-home" href="@Url.Action("index", "KinderGarten")">  Home</a>
+                                        </li>
+                                        <li class="drop7">
+
+                                            <a class="fa fa-list" href="@Url.Action("Index", "CarPool")">  Carpools</a>
+                                        </li>
+                                        <li class="drop3">
+                                            <a class="fa fa-list " href="@Url.Action("MyIndex", "CarPool")">  My Carpool </a>
+                                        </li>
+                                        <li class="drop1">
+                                            <a class="fa fa-user " href="@Url.Action("Profil", "CarPool")">  Profil </a>
+                                        </li>
+
+
+
+                                        @*<li class="drop1">
+            <a class="fa fa-user " href="@Url.Action("Profil", "CarPool")"> Profil </a>
+        </li>*@
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div>
+            @RenderBody()
+        </div>
+        <!--  Footer-->
+        <footer>
+            <div class="overlay_footer_land"></div>
+            <div class="container">
+                <div class="row pb_40">
+                    <div class="col-md-3 col-sm-12 col-xs-12 mb_15">
+                        <div class="footer_about">
+                            <h3>About</h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                            <p class="footer_time"><i class="fa fa-clock-o"><span></span></i>Mon-Fri: 8.00 AM - 6.00 PM</p>
+                            <div class="footer_social social_icon">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 mb_15">
+                        <h3>Tweets</h3>
+                        <div class="footer_tweets">
+                            <p><i class="fa fa-twitter"></i>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><i class="fa fa-twitter"></i>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><i class="fa fa-twitter"></i>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 mb_15">
+                        <h3>Instagram</h3>
+                        <div class="footer_instagram">
+                            <ul>
+                                <li><a href="#"><img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/footer/footer_1.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/footer/footer_2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/footer/footer_3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/footer/footer_4.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/footer/footer_5.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/footer/footer_6.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 mb_15">
+                        <h3>Newsletters</h3>
+                        <div class="footer_newsletters">
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                            <div class="footer_mail">
+                                <form method="post" id="contact_form_footer">
+                                    <div class="form-group">
+                                        <input id="email_footer" name="email" type="text" placeholder="Your email">
+                                    </div>
+                                    <div id="messegeResultFooter" class="messegeResult">
+                                        <p>The message was successfully sent</p>
+                                        <button type="submit">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container_fluent copywriting">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Copyright © 2017 Yeah Kids Template by <a href="http://fvdthemes.com/" target="_blank">FVD Themes</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Replace end-->
+        <!-- go to top -->
+        <a href="#home" class="scrollup"><span><i class="fa fa-angle-up"></i></span></a>
+        <!-- end go to top -->
+        <!-- JS -->
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/jquery/jquery.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/owl.carousel/owl.carousel.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/bootstrap/bootstrap.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/isotope/isotope.pkgd.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/imagesloaded/imagesloaded.pkgd.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/magnific-popup/magnific-popup.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/parallax/parallax.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/page-scroll-to-id/jquery.malihu.PageScroll2id.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/wow/wow.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/object-fit-images/ofi.browser.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/count/jquery.countdown.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/count/jquery.countup.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/waypoints/jquery.waypoints.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/jquery-ui/jquery-ui.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/slick/slick.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/validate/validate.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/sticky-kit-master/sticky-kit.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/slider-pro-master/jquery.sliderPro.min.js")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/functionsf899.js?100")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/send28fd.js?031")></script>
+        <script src=@Url.Content("/Content/Front/fvdthemes.com/html/yeahkids/js/parallax-object/parallax.min.js")></script>
+        <script>
+            var scene = document.getElementById('scene');
+            var parallax = new Parallax(scene);</script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbXi2uWlIICzBfpjQ_xBVI6ae1M-cmBzg&amp;callback=window.initMap"
+                async defer></script>
+        <!--End JS -->
+
+
+    </body>
+
+    <!-- Mirrored from fvdthemes.com/html/yeahkids/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 17 Feb 2020 17:47:27 GMT -->
+</html>

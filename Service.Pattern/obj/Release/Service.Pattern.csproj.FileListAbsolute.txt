@@ -1,0 +1,14 @@
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\bin\Release\Service.Pattern.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\bin\Release\Service.Pattern.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\bin\Release\Solution.Data.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\bin\Release\EntityFramework.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\bin\Release\Solution.Domain.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\bin\Release\Solution.Data.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\bin\Release\Solution.Data.dll.config
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\bin\Release\EntityFramework.xml
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\bin\Release\Solution.Domain.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\bin\Release\Solution.Domain.dll.config
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\obj\Release\Service.Pattern.csprojAssemblyReference.cache
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\obj\Release\Service.Pattern.csproj.CopyComplete
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\obj\Release\Service.Pattern.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Service.Pattern\obj\Release\Service.Pattern.pdb

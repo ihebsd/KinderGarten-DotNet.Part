@@ -1,0 +1,151 @@
+﻿@model Solution.Domain.Entities.Publication
+@using System.Collections.Generic;
+
+@{
+    ViewBag.Title = "Details";
+    var comments = ViewData["comments"] as IEnumerable<Solution.Web.Models.CommentVM>;
+
+}
+
+<h2>Details</h2>
+<section id="blog_page" class="blog_page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="blog_block">
+                    <h3 class="blog_title"> @Html.DisplayFor(modelItem => modelItem.titlePub)</h3>
+                    <div class="row blog_info">
+                        <div class="col-md-2 col-sm-2 col-xs-12 pr_0">
+                            <div class="date">
+                                <ul>
+                                    <li class="number">@Html.DisplayFor(modelItem => modelItem.datePub.Day)</li>
+                                    <li class="date_month">@Convert.ToDateTime(Model.datePub).ToString("MMM")<br>@Html.DisplayFor(modelItem => modelItem.datePub.Year)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12 prpl_0">
+                            <div class="author">
+                                <ul>
+                                    <li class="title">Posted by</li>
+                                    <li class="description"><a href="#">@ViewBag.nom @ViewBag.prenom</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-12 pl_0">
+                            <div class="tag">
+                                <ul>
+                                    <li class="title">Tags</li>
+                                    <li class="description"><a href="#">Education</a>, <a href="#">Event</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog_block_img wow fadeIn">
+                        @{string path = "~/Content/Uploads/" + Model.imagePub;}
+
+                        <img src="@Url.Content(path)" alt="">
+                    </div>
+                    <div class="blog_brief content">
+                        <p>
+                            Description : @Html.DisplayFor(modelItem => modelItem.descriptionPub)
+                        </p>
+
+                    </div>
+
+                    <div class="leave_reply b_light">
+                        <h3>Leave a Reply</h3>
+                        <table>
+                            <tr>
+
+
+                                <textarea id="comm" placeholder="votre commentaire"></textarea>
+
+
+                            </tr>
+                        </table>
+                    </div>
+                    @if (comments != null)
+                    {
+
+                        <div class="comments" id="table">
+                            <h4 class="title">@comments.Count() comment </h4>
+                            @foreach (var item in comments.Reverse())
+                            {
+                                <div class="level_one">
+                                    <div class="comment_content">
+                                        <div class="avatar">
+                                            <img src="~/Content/Front/fvdthemes.com/html/yeahkids/img/blog/author1.jpg" alt="">
+                                        </div>
+                                        <div class="block_comment">
+                                            <div class="head_comment">
+                                                <div class="comment_title">
+                                                    <h5> @Html.DisplayFor(modelItem => item.nomUser)</h5>
+                                                    <p class="date"><i class="fa fa-calendar"></i>  @Html.DisplayFor(modelItem => item.dateCom) @Html.DisplayFor(modelItem => item.dateCom.Hour):@Html.DisplayFor(modelItem => item.dateCom.Minute):@Html.DisplayFor(modelItem => item.dateCom.Second)</p>
+                                                </div>
+                                                <div class="replay">
+                                                    <a href="./../../Comment/Edit/@(item.CommentId)">Update Commentaire</a>
+                                                    
+                                                    <a href="./../../Comment/Delete/@(item.CommentId)">Delete Commentaire</a>
+
+                                                </div>
+                                            </div>
+                                            <div class="comment_describe">
+                                                <p> @Html.DisplayFor(modelItem => item.post)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+
+
+        @section scripts{
+            <!-- LikeBtn.com BEGIN -->
+
+            <script>(function (d, e, s) { if (d.getElementById("likebtn_wjs")) return; a = d.createElement(e); m = d.getElementsByTagName(e)[0]; a.async = 1; a.id = "likebtn_wjs"; a.src = s; m.parentNode.insertBefore(a, m) })(document, "script", "//w.likebtn.com/js/w/widget.js");</script><!-- LikeBtn.com END -->
+
+            <script>
+    $(function() {
+        function getContent(){
+            return document.getElementById("comm").value
+        }
+
+        $("#comm").keyup(function (e){
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if(keycode == '13'){
+
+                var contenu = document.getElementById("comm").value;
+                if (contenu == "") {
+                    window.console("un commentaire  ne peut pas etre vide ");
+                }
+                else {
+
+                    $.ajax({
+                        url: '@Url.Action("Details", "Publication")' + "?contenu=" + contenu,
+                        type: "POST",
+                        success: function (result) {
+                            $('#table').append(result)
+                            $("#comm").val("")
+                        }
+
+                    })
+
+                }
+            }
+
+
+        })
+    });
+
+
+            </script>
+
+        }
+</section>
+

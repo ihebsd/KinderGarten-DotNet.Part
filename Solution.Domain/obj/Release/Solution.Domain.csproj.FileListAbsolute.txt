@@ -1,0 +1,10 @@
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Domain\bin\Release\Solution.Domain.dll.config
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Domain\bin\Release\Solution.Domain.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Domain\bin\Release\Solution.Domain.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Domain\bin\Release\EntityFramework.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Domain\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Domain\bin\Release\EntityFramework.xml
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Domain\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Domain\obj\Release\Solution.Domain.csproj.CopyComplete
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Domain\obj\Release\Solution.Domain.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Domain\obj\Release\Solution.Domain.pdb

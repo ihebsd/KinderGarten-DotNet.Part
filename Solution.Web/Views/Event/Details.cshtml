@@ -1,0 +1,142 @@
+﻿@model Solution.Web.Models.EventModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<body>
+    <section id="blog_page" class="blog_page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="blog_block">
+                        <h3 class="blog_title">@Html.DisplayFor(model => model.Name)</h3>
+                        <div class="row blog_info">
+                            <div class="col-md-2 col-sm-2 col-xs-12 pr_0">
+                                <div class="date">
+                                    <ul>
+                                        <li class="number">@Html.DisplayFor(model => model.DateEvent.Day)</li>
+                                        <li class="date_month">@Convert.ToDateTime(Model.DateEvent).ToString("MMM-yyyy")</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-12 prpl_0">
+                                <div class="author">
+                                    <ul>
+                                        <li class="title">Particpant Number :</li>
+                                        <li class="description"><a href="#">@(ViewBag.nbrpar)
+                                    </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-sm-7 col-xs-12 pl_0">
+                                <div class="tag">
+                                    <ul>
+                                        <li class="title">Tags</li>
+                                        <li class="description"><a href="#">@Html.DisplayFor(model => model.Category)</a>, <a href="#">Event</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog_block_img wow fadeIn">
+                            @{string path = "~/Content/Uploads/" + @Html.DisplayFor(model => model.image);}
+
+                            <img src="@Url.Content(path)" alt="">
+                        </div>
+                        <div class="blog_brief content">
+                            <h2>Description : </h2>
+                            <h1>
+                                @Html.DisplayFor(model => model.Description)
+                            </h1>
+                            <h1><a href="/Event/Index">Back To Event List</a></h1>
+</div>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />       <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />       <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />       <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />       <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+
+
+</body>

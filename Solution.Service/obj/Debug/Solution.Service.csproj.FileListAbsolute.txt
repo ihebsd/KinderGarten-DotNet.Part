@@ -1,0 +1,48 @@
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Service.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Service.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\Service.Pattern.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Data.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Domain.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\EntityFramework.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Data.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Data.dll.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Domain.pdb
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Domain.dll.config
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\bin\Debug\EntityFramework.xml
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.csprojAssemblyReference.cache
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.csproj.CopyComplete
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.dll
+C:\Users\asus\source\repos\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Service.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Service.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\Service.Pattern.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Data.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Domain.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\EntityFramework.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Data.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Data.dll.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Domain.pdb
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\Solution.Domain.dll.config
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\bin\Debug\EntityFramework.xml
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.csprojAssemblyReference.cache
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.csproj.CopyComplete
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.dll
+C:\Users\Hsine\Desktop\jardin d'enfant\Solution-4Arctic-2020\Solution.Service\obj\Debug\Solution.Service.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\Solution.Service.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\Solution.Service.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\Service.Pattern.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\Solution.Data.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\Solution.Domain.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\EntityFramework.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\Solution.Data.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\Solution.Data.dll.config
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\Solution.Domain.pdb
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\Solution.Domain.dll.config
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\bin\Debug\EntityFramework.xml
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\obj\Debug\Solution.Service.csprojAssemblyReference.cache
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\obj\Debug\Solution.Service.csproj.CopyComplete
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\obj\Debug\Solution.Service.dll
+C:\Users\Hsine\Desktop\KinderGarten2\KinderGarten\Solution.Service\obj\Debug\Solution.Service.pdb

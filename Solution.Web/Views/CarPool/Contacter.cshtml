@@ -1,0 +1,165 @@
+﻿@model Solution.Web.Models.UserLogin
+
+@{
+    ViewBag.Title = "Contacter";
+    Layout = "~/Views/Shared/_LayoutCarpool.cshtml";
+}
+
+<section id="contact_page" class="contact_page">
+    <div class="container">
+        <div class="row pb_50">
+            <div class="col-md-1"></div>
+
+
+            <div class="col-md-10 dot">
+                <h2 align="left">@Html.DisplayFor(model => model.nom)   @Html.DisplayFor(model => model.prenom) </h2>
+            </div>
+
+            <div class="author_block">
+                <div class="shop_block_img">
+                    <a href=""> <img style="width:100px;height:100px;" class="author_avatar" src="~/Content/Uploads/67073055_2132007100435973_726767406319403008_n.jpg" alt=""></a>
+                </div>
+
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 contact_link">
+                <p class="contact-description"></p>
+                <div class="row pb_50">
+                    <div class="col-md-6 col-sm-6 contact_block">
+                        <span class="contact_icon"><i class="fa fa-phone"></i></span>
+                        <ul>
+                            <li class="title">Phone</li>
+                            <li><span>tel: </span>+216 24 037 141</li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact_block">
+                        <span class="contact_icon"><i class="fa fa-envelope"></i></span>
+                        <ul>
+                            <li class="title">Email</li>
+                            <li><a href="https://mail.google.com/mail/">@Html.DisplayFor(model => model.email)</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 contact_block">
+                        <span class="contact_icon"><i class="fa fa-share-alt"></i></span>
+                        <ul class="social_icon">
+                            <li class="title">Follow Us</li>
+                            <li class="b_blue_dark_social"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="b_blue_social"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="b_red_social"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="b_linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li class="b_red_social"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-6 contact_block">
+                        @*<span class="contact_icon"><i class="fa fa-map-marker"></i></span>
+                            <ul>
+                                <li class="title">Location</li>
+                                <li>
+                                    <p>
+                                        @foreach (var att in ViewBag.Geoo)
+                                        {
+
+                                                @att.Address
+
+                                        }
+                                    </p>
+                                </li>
+                            </ul>*@
+                    </div>
+                </div>
+                <div class="row">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div class="col-md-6 col-sm-6 contact_block">
+                        @*<span class="contact_icon"><i class="fa fa-map-signs"></i></span>
+                            <ul>
+                                <li class="title">Current Location</li>
+                                <li>
+
+                                </li>
+                            </ul>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="sidebar">
+
+                    <div class="working_hours" display="right">
+
+                        @*<h4><span><a href="@Url.Action("createkid", "CarPool")"><i class="fa fa-plus-circle"> Add Kids </i></a></span></h4>*@
+
+
+                        <h3> Kids :</h3><br /><br />
+
+
+                        @foreach (var att in ViewBag.Kids)
+                        {
+
+                            <ul align="left" class="col-md-4">
+                                <li class="day">@att.FirstName</li>
+                                <li><b>@att.Age      YO</b></li>
+
+                            </ul>
+                            <ul>
+                                <li anlign="left">
+                                    <h5 class="author_description ">
+
+                                        <img style="width:50px;height:50px;" class="author_avatar" src="~/Content/Uploads/cute-success-kid-1920x1080.0.0.jpg" alt=""><br />
+
+                                    </h5>
+                                </li>
+
+
+
+
+
+
+                            </ul>
+
+
+
+
+
+
+
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+    </div>
+</section>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<br />
+<br />
