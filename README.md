@@ -11,7 +11,7 @@ We suggest a set up of a social network for kindergartens and parents. The appli
 
 With other services :
 - **KinderGarten Space** : Profile Management, Communicate with Parents, Statistics and dashboard..
-- **Parent Space** : Profile Management, Search, Rating..
+- **Parent Space** : Profile Management, Event Participation, Carpooling, FeedBacks, Search, Rating..
 - **News feed, chat, and messaging** : Posts, Comments, Messages, and Notifications..
 - **Admin Space** : KinderGarten, Claim Management, Reputation, Statistics..
 
