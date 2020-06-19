@@ -35,5 +35,5 @@ Right click on the Solution Web and choose "Setup as a startup project"
 The Login page runs in your default Browser.
 
 ### :open_book: Result
-Hint: Using RestFul Api we make another JEE Project <a href="https://www.linkedin.com/in/iheb-sidhom-00474a190/" target="_blank">`KinderGarten_JEEPART`</a> ! :sparkles:
+Hint: Using RestFul Api we make another JEE Project <a href="https://github.com/ihebsd/KinderGarten-JEEPart">`KinderGarten_JEEPART`</a> ! :sparkles:
 
