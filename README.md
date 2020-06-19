@@ -26,6 +26,6 @@ $ Add-migration Migration
 ```
 $ Update-database
 ```
-#### Final Step to run project
+#### Setup Solution.web as a startup project
 
-Setup Solution.web as a startup project.
+Right click on the Solution Web and choose "Setup as a startup project"
