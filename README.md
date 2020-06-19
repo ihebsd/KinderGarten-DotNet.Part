@@ -48,7 +48,8 @@ Right Click on Solution'JardinD'Enfant' and choose Rebuild Solution.
 The Login page runs in your default Browser.
 
 ### :open_book: Result
+<p align="center">
 <img src="https://user-images.githubusercontent.com/47121168/85171006-7fe3be80-b26e-11ea-9a93-58ccdadccbb9.PNG" width="750"/> 
-
+</p>
 Hint: Using RestFul Api we did a JEE Application <a href="https://github.com/ihebsd/KinderGarten-JEEPart">`KinderGarten_JEEPART`</a> ! :sparkles:
 
