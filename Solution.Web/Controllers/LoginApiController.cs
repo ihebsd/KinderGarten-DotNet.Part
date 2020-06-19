@@ -44,7 +44,7 @@ namespace Solution.Web.Controllers
         public void SendVerificationLinkEmail(string email, string activationCode, string emailFor = "VerifyAccount")
         {
 
-            var verifyUrl = "http://localhost:9080/POC_PI_AWS-web/rest/user/" + emailFor + "/" + activationCode;
+            var verifyUrl = "http://34.66.231.241/POC_PI_AWS-web/rest/user/" + emailFor + "/" + activationCode;
             // var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, verifyUrl);
 
             var fromEmail = new MailAddress("hsine.gabsi@esprit.tn", "Congratulation for sign in");
