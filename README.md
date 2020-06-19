@@ -39,10 +39,16 @@ $ Update-database
 
 Right click on the Solution Web and choose "Setup as a startup project"
 
+#### Rebuild Solution
+
+Right Click on Solution'JardinD'Enfant' and choose Rebuild Solution.
+
 #### Run IIS Express
 
 The Login page runs in your default Browser.
 
 ### :open_book: Result
+<img src="https://user-images.githubusercontent.com/47121168/85171006-7fe3be80-b26e-11ea-9a93-58ccdadccbb9.PNG" width="750"/> 
+
 Hint: Using RestFul Api we make another JEE Project <a href="https://github.com/ihebsd/KinderGarten-JEEPart">`KinderGarten_JEEPART`</a> ! :sparkles:
 
