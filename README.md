@@ -10,10 +10,10 @@
 We suggest a set up of a social network for kindergartens and parents. The application must offer parents to register for a kindergarten, communication kindergarten / parents and parents / parents.
 
 With other services :
-KinderGarten Space : Profile Management, Communicate with Parents, Statistics and dashboard..
-Parent Space : Profile Management, Search, Rating..
-News feed, chat, and messaging : Posts, Comments, Messages, and Notifications..
-Admin Space : KinderGarten, Claim Management, Reputation, Statistics..
+- KinderGarten Space : Profile Management, Communicate with Parents, Statistics and dashboard..
+- Parent Space : Profile Management, Search, Rating..
+- News feed, chat, and messaging : Posts, Comments, Messages, and Notifications..
+- Admin Space : KinderGarten, Claim Management, Reputation, Statistics..
 
 ## Getting started !
 
