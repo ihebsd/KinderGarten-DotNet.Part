@@ -30,7 +30,7 @@ You must download Visual Studio 2019, During instalation you must tick DotNet We
 $ Enable-Migration
 ```
 ```
-$ Add-migration Migration
+$ Add-migration migration_name
 ```
 ```
 $ Update-database
